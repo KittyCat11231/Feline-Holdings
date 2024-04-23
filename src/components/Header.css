@@ -1,0 +1,14 @@
+.top-logo {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+    padding-top: 10px;
+}
+
+.yellow-header {
+    background-color: #ffc90e;
+    width: 100%;
+    height: 15px;
+}

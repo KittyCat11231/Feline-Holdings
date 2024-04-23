@@ -1,0 +1,78 @@
+.dropdown-button {
+    background-color: #ff7f27;
+    padding: 9px 16px;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.dropdown {
+    background-color: #ff7f27;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.dropdown-container {
+    position: absolute;
+}
+
+.dropdown-content {
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 43px;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.3rem;
+}
+
+.intra-mobile {
+    color: white;
+    background-color: #4d4d4d;
+}
+
+.roy-mobile {
+    color: white;
+    background-color: #5a86a8;
+}
+
+.mbs-mobile {
+    color: white;
+    background-color: blue;
+}
+
+.bart-mobile {
+    color: white;
+    background-color: #30acdf;
+}
+
+.fossack-mobile {
+    color: white;
+    background-color: #003875;
+}
+
+.other-mobile {
+    color: #7f7f7f;
+    background-color: #ffc90e;
+}
+
+.news-mobile {
+    color: white;
+    background-color: #ff7f27;
+}
+
+.about-mobile {
+    color: #7f7f7f;
+    background-color: #ffc90e;
+}
+
+.display-none {
+    display: none;
+}
