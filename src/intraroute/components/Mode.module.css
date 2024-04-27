@@ -1,0 +1,16 @@
+.modeBox {
+    background-color: #4d4d4d;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 17px;
+    padding-right: 17px;
+    border-radius: 23px;
+}
+
+.intraLogos {
+    height: 23px;
+}

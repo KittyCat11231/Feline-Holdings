@@ -1,0 +1,22 @@
+.arrow-box {
+    background-color: #4d4d4d;
+    height: 197px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow {
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+
+.stop-count {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 5px;
+}

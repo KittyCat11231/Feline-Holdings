@@ -1,0 +1,11 @@
+.line {
+    width: 50px;
+    margin-left: 28px;
+    margin-top: -3px;
+}
+
+.line {
+    /* IntraBahn mainline #5CDBD5 */
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(80%) sepia(39%) saturate(537%) hue-rotate(121deg) brightness(91%) contrast(92%);
+}

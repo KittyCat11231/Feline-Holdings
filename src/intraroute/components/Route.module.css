@@ -1,0 +1,35 @@
+.routeContainer {
+    background-color: #5CDBD5;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 35px;
+    border-radius: 60px;
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+}
+
+.bullet {
+    height: 65px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.routeName {
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+.modeBox {
+    margin-bottom: -20px;
+    margin-left: 90px;
+    z-index: 2;
+    position: relative;
+}
