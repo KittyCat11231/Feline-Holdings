@@ -9,3 +9,116 @@
     /* https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(80%) sepia(39%) saturate(537%) hue-rotate(121deg) brightness(91%) contrast(92%);
 }
+
+.lineContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.nextToLine {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+.nextToLine p:not(.meta) {
+    color: #5CDBD5;
+}
+
+.destinationContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+.towards {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.destinationCity {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-left: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.destinationStopName {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 8px;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.stop {
+    display: flex;
+    direction: row;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.city {
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0px;
+}
+
+.code {
+    margin-top: 14px;
+    margin-left: 9px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+}
+
+.stopName {
+    font-weight: 600;
+    margin-top: -3px;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+}
+
+.metaContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.meta1, .meta2 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    background-color: #5CDBD5;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+}
+
+.meta2 {
+    margin-left: 10px;
+}
+
+.meta {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.stopCount {
+    margin-top: 95px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
