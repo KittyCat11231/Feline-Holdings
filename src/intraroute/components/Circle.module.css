@@ -1,0 +1,19 @@
+.circleContainer {
+    display: inline-block;
+}
+
+.circle {
+    height: 66px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    z-index: 1;
+}
+
+.bahnMainlin {
+    /* IntraBahn mainline #5CDBD5 */
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(80%) sepia(39%) saturate(537%) hue-rotate(121deg) brightness(91%) contrast(92%);
+}

@@ -10,7 +10,7 @@ function Stop() {
     return (
         <div>
             <div className={styles.modeBox}>
-                <Mode />
+                <Mode mode='bahn' type='mainline' />
             </div>
             <div className={styles.routeContainer}>
                 <img className={styles.bullet} src={bulletBahnWhite1} alt='IntraBahn 1' />

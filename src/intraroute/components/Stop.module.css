@@ -10,15 +10,11 @@
     padding-right: 35px;
     border-radius: 60px;
     margin-top: -3px;
-    margin-left: 3px;
+    margin-left: 0px;
 }
 
 .stopContainer p {
     color: white;
-}
-
-.circle {
-    height: 60px;
 }
 
 .stopInfo {

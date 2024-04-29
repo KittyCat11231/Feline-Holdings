@@ -1,5 +1,4 @@
 .modeBox {
-    background-color: #4d4d4d;
     display: flex;
     align-items: center;
     width: fit-content;
@@ -11,6 +10,94 @@
     border-radius: 23px;
 }
 
+.intraBox {
+    background-color: #4d4d4d;
+}
+
+.omegaBox {
+    background-color: #7f0000;
+}
+
+.segvilleBox {
+    background-color: #f15a24;
+}
+
+.waypointBox {
+    background-color: #041c21;
+}
+
+.waypointHopperBox {
+    background-color: #e16326;
+}
+
+.volantiBox {
+    background-color: #be210c;
+}
+
+.skywestBox {
+    background-color: #eeeeee;
+}
+
+.gemsBox {
+    background-color: #eeeeee;
+}
+
+.heampsteadBox {
+    background-color: #ce3d00;
+}
+
+.easternBox {
+    background-color: #f0731f;
+}
+
+.mcrBox {
+    background-color: #1300fe;
+}
+
 .intraLogos {
+    height: 23px;
+}
+
+.omegaLogo {
+    height: 23px;
+}
+
+.segvilleLogos {
+    height: 23px;
+}
+
+.waypointLogo {
+    height: 23px;
+}
+
+.volantiLogo {
+    height: 23px;
+}
+
+.skywestLogo {
+    height: 23px;
+}
+
+.gemsLogo {
+    height: 23px;
+}
+
+.heampsteadLogo {
+    height: 23px;
+}
+
+.easternLogo {
+    height: 23px;
+}
+
+.mcrLogo {
+    height: 23px;
+}
+
+.railScarLogo {
+    height: 23px;
+}
+
+.railLumevaLogo {
     height: 23px;
 }

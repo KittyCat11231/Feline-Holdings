@@ -2,12 +2,13 @@ import React from 'react';
 import styles from './Stop.module.css';
 
 import circleWhite from '../assets/circle-white.svg';
+import Circle from './Circle';
 
 function Stop() {
     return (
         <div>
             <div className={styles.stopContainer}>
-                <img className={styles.circle} src={circleWhite} alt='white circle' />
+                <Circle />
                 <div className={styles.stopInfo}>
                     <div className={styles.cityCode}>
                         <p className={styles.city}>Whiteley</p>
