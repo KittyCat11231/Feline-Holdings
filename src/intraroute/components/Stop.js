@@ -8,7 +8,7 @@ function Stop() {
     return (
         <div>
             <div className={styles.stopContainer}>
-                <Circle />
+                <Circle mode='bahn' type='mainline' />
                 <div className={styles.stopInfo}>
                     <div className={styles.cityCode}>
                         <p className={styles.city}>Whiteley</p>
