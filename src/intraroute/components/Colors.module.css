@@ -1,0 +1,427 @@
+.grayBackground {
+    background-color: #4d4d4d;
+}
+
+.grayColor {
+    color: #4d4d4d;
+}
+
+.blackBackground {
+    background-color: black;
+}
+
+.blackColor {
+    color: black;
+}
+
+.whiteBackground {
+    background-color: white;
+}
+
+.whiteColor {
+    color: white;
+}
+
+.bahnMainlineBackground {
+    background-color: #5CDBD5;
+}
+
+.bahnMainlineColor {
+    color: #5CDBD5;
+}
+
+.bahnMainlineFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(80%) sepia(39%) saturate(537%) hue-rotate(121deg) brightness(91%) contrast(92%);
+}
+
+.bahnExpressBackground {
+    background-color: #F27FA5;
+}
+
+.bahnExpressColor {
+    color: #F27FA5;
+}
+
+.bahnExpressFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(80%) sepia(35%) saturate(3597%) hue-rotate(294deg) brightness(97%) contrast(96%);
+}
+
+.bahnBranchBackground {
+    background-color: #DC0000;
+}
+
+.bahnBranchColor {
+    color: #DC0000;
+}
+
+.bahnBranchFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(12%) sepia(88%) saturate(4974%) hue-rotate(6deg) brightness(98%) contrast(125%);
+}
+
+.bahnShuttleBackground {
+    background-color: #00D93A;
+}
+
+.bahnShuttleColor {
+    color: #00D93A;
+}
+
+.bahnShuttleFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(62%) sepia(67%) saturate(2778%) hue-rotate(91deg) brightness(100%) contrast(104%);
+}
+
+.airSegvilleBackground {
+    background-color: #c1272d;
+}
+
+.airSegvilleColor {
+    color: #c1272d;
+}
+
+.airSegvilleFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(16%) sepia(97%) saturate(3082%) hue-rotate(347deg) brightness(87%) contrast(86%);
+}
+
+.airWaypointBackground {
+    background-color: #faa918;
+}
+
+.airWaypointColor {
+    color: #faa918;
+}
+
+.airWaypointFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(62%) sepia(67%) saturate(596%) hue-rotate(351deg) brightness(103%) contrast(96%);
+}
+
+.airVolantiBackground {
+    background-color: #00663f;
+}
+
+.airVolantiColor {
+    color: #00663f;
+}
+
+.airVolantiFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(27%) sepia(16%) saturate(5373%) hue-rotate(128deg) brightness(93%) contrast(101%);
+}
+
+.airGemsEmeraldBackground {
+    background-color: #30fe47;
+}
+
+.airGemsEmeraldColor {
+    color: #30fe47;
+}
+
+.airGemsEmeraldFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(75%) sepia(90%) saturate(599%) hue-rotate(62deg) brightness(102%) contrast(99%);
+}
+
+.airGemsGoldBackground {
+    background-color: #ffff4c;
+}
+
+.airGemsGoldColor {
+    color: #ffff4c;
+}
+
+.airGemsGoldFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(83%) sepia(95%) saturate(371%) hue-rotate(347deg) brightness(109%) contrast(100%);
+}
+
+.airGemsDiamondBackground {
+    background-color: #30fefe;
+}
+
+.airGemsDiamondColor {
+    color: #30fefe;
+}
+
+.airGemsDiamondFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(88%) sepia(99%) saturate(971%) hue-rotate(131deg) brightness(101%) contrast(99%);
+}
+
+.airGemsLapisBackground {
+    background-color: #0000f7;
+}
+
+.airGemsLapisColor {
+    color: #0000f7;
+}
+
+.airGemsLapisFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(10%) sepia(94%) saturate(7259%) hue-rotate(246deg) brightness(82%) contrast(147%);
+}
+
+.airSkywestBackground {
+    background-color: #157d9e;
+}
+
+.airSkywestColor {
+    color: #157d9e;
+}
+
+.airSkywestFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(44%) sepia(69%) saturate(7413%) hue-rotate(176deg) brightness(91%) contrast(84%);
+}
+
+.airHeampsteadBackground {
+    background-color: #ff8c0f;
+}
+
+.airHeampsteadColor {
+    color: #ff8c0f;
+}
+
+.airHeampsteadFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(66%) sepia(65%) saturate(3742%) hue-rotate(352deg) brightness(104%) contrast(101%);
+}
+
+.airEasternBackground {
+    background-color: #faa61a;
+}
+
+.airEasternColor {
+    color: #faa61a;
+}
+
+.airEasternFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(69%) sepia(59%) saturate(1285%) hue-rotate(347deg) brightness(101%) contrast(96%);
+}
+
+.railPinkBackground {
+    background-color: #d06d8e;
+}
+
+.railPinkColor {
+    color: #d06d8e;
+}
+
+.railPinkFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(77%) sepia(50%) saturate(3518%) hue-rotate(297deg) brightness(86%) contrast(86%);
+}
+
+.railCyanBackground {
+    background-color: #4fbcb7;
+}
+
+.railCyanColor {
+    color: #4fbcb7;
+}
+
+.railCyanFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(78%) sepia(13%) saturate(1505%) hue-rotate(127deg) brightness(84%) contrast(86%);
+}
+
+.railBlueBackground {
+    background-color: #334cb2;
+}
+
+.railBlueColor {
+    color: #334cb2;
+}
+
+.railBlueFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(24%) sepia(38%) saturate(3701%) hue-rotate(218deg) brightness(92%) contrast(88%);
+}
+
+.railYellowBackground {
+    background-color: #e5e533;
+}
+
+.railYellowColor {
+    color: #e5e533;
+}
+
+.railYellowFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(93%) sepia(73%) saturate(3497%) hue-rotate(336deg) brightness(116%) contrast(80%);
+}
+
+.railLimeBackground {
+    background-color: #00d93a;
+}
+
+.railLimeColor {
+    color: #00d93a;
+}
+
+.railLimeFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(62%) sepia(94%) saturate(929%) hue-rotate(82deg) brightness(86%) contrast(115%);
+}
+
+.railOrangeBackground {
+    background-color: #d87f33;
+}
+
+.railOrangeColor {
+    color: #d87f33;
+}
+
+.railOrangeFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(62%) sepia(20%) saturate(1580%) hue-rotate(344deg) brightness(87%) contrast(93%);
+}
+
+.railDarkRedBackground {
+    background-color: #993333;
+}
+
+.railDarkRedColor {
+    color: #993333;
+}
+
+.railDarkRedFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    /* check this color, loss 3.4 */
+    filter: invert(25%) sepia(29%) saturate(1866%) hue-rotate(318deg) brightness(102%) contrast(99%);
+}
+
+.railTanBackground {
+    background-color: #d1b1a1;
+}
+
+.railTanColor {
+    color: #d1b1a1;
+}
+
+.railTanFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(82%) sepia(4%) saturate(1572%) hue-rotate(335deg) brightness(90%) contrast(87%);
+}
+
+.railPurpleBackground {
+    background-color: #b24cd8;
+}
+
+.railPurpleColor {
+    color: #b24cd8;
+}
+
+.railPurpleFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(65%) sepia(79%) saturate(6411%) hue-rotate(258deg) brightness(90%) contrast(87%);
+}
+
+.railRedBackground {
+    background-color: #ff0000;
+}
+
+.railRedColor {
+    color: #ff0000;
+}
+
+.railRedFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(20%) sepia(86%) saturate(6478%) hue-rotate(357deg) brightness(93%) contrast(121%);
+}
+
+.railBrownBackground {
+    background-color: #976d4d;
+}
+
+.railBrownColor {
+    color: #976d4d;
+}
+
+.railBrownFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(44%) sepia(16%) saturate(1018%) hue-rotate(343deg) brightness(99%) contrast(91%);
+}
+
+.railMCRBackground {
+    background-color: #334cb2;
+}
+
+.railMCRColor {
+    color: #334cb2;
+}
+
+.railMCRFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(21%) sepia(98%) saturate(1816%) hue-rotate(220deg) brightness(86%) contrast(85%);
+}
+
+.busOmegaBackground {
+    background-color: #ff0000;
+}
+
+.busOmegaColor {
+    color: #ff0000;
+}
+
+.busOmegaFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(20%) sepia(86%) saturate(6478%) hue-rotate(357deg) brightness(93%) contrast(121%);
+}
+
+.sailMainlineBackground {
+    background-color: #3AB3DA;
+}
+
+.sailMainlineColor {
+    color: #3AB3DA;
+}
+
+.sailMainlineFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(53%) sepia(40%) saturate(659%) hue-rotate(148deg) brightness(106%) contrast(98%);
+}
+
+.sailExpressBackground {
+    background-color: #C74EBD;
+}
+
+.sailExpressColor {
+    color: #C74EBD;
+}
+
+.sailExpressFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(41%) sepia(17%) saturate(3462%) hue-rotate(264deg) brightness(97%) contrast(87%);
+}
+
+.sailBranchBackground {
+    background-color: #B02E26;
+}
+
+.sailBranchColor {
+    color: #B02E26;
+}
+
+.sailBranchFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(31%) sepia(43%) saturate(1676%) hue-rotate(327deg) brightness(86%) contrast(110%);
+}
+
+.railLocalBackground {
+    background-color: #334cb2;
+}
+
+.railLocalColor {
+    color: #334cb2;
+}
+
+.railLocalFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(21%) sepia(98%) saturate(1816%) hue-rotate(220deg) brightness(86%) contrast(85%);
+}

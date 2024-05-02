@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Stop.module.css';
+import colorStyles from './Colors.module.css';
 
 import circleWhite from '../assets/circle-white.svg';
 import Circle from './Circle';

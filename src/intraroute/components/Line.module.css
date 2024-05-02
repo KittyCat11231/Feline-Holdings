@@ -4,12 +4,6 @@
     margin-top: -3px;
 }
 
-.line {
-    /* IntraBahn mainline #5CDBD5 */
-    /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(80%) sepia(39%) saturate(537%) hue-rotate(121deg) brightness(91%) contrast(92%);
-}
-
 .lineContainer {
     display: flex;
     flex-direction: row;
@@ -19,10 +13,6 @@
     width: fit-content;
     height: fit-content;
     margin-left: 20px;
-}
-
-.nextToLine p:not(.meta) {
-    color: #5CDBD5;
 }
 
 .destinationContainer {
@@ -58,7 +48,7 @@
 .stop {
     display: flex;
     direction: row;
-    margin-top: 25px;
+    margin-top: 23px;
     margin-bottom: 0px;
 }
 
@@ -94,7 +84,6 @@
 .meta1, .meta2 {
     margin-top: 5px;
     margin-bottom: 0px;
-    background-color: #5CDBD5;
     width: fit-content;
     height: fit-content;
     padding-top: 5px;
@@ -111,7 +100,6 @@
 .meta {
     margin-top: 0px;
     margin-bottom: 0px;
-    color: white;
     font-weight: 600;
     font-size: 1.2rem;
 }

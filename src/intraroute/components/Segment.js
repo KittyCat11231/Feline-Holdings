@@ -9,8 +9,8 @@ function Segment() {
     return (
         <div className={styles.segmentBox}>
             <Dots />
-            <Route />
-            <Line />
+            <Route mode='bahn' type='mainline' routeName='Intrepid' />
+            <Line mode='bahn' type='mainline' destinationCity='Whiteley' destinationStopName='Quins Junction' city='Zaquar' stopName='Loreen Terminal' code='ZQL' meta1='Ticket Machine A1' meta2='Track 4' stopCount='3' />
             <Stop />
         </div>
     )
