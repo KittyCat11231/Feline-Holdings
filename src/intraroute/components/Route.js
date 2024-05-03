@@ -2,10 +2,9 @@ import React from 'react';
 import styles from './Route.module.css';
 import colorStyles from './Colors.module.css';
 import Mode from './Mode';
+import Bullet from './Bullet';
 
 import circle from '../assets/circle-white.svg';
-
-import bulletBahnWhite1 from '../assets/intrabahn/bullets/1-white.png';
 
 function Route(props) {
     let containerColor;
@@ -128,7 +127,7 @@ function Route(props) {
                 <Mode mode={props.mode} type={props.type} />
             </div>
             <div className={`${styles.routeContainer} ${containerColor}`}>
-                <img className={styles.bullet} src={bulletBahnWhite1} alt='IntraBahn 1' />
+                <Bullet mode={props.mode} type={props.type} route={props.route} />
                 <p className={`${styles.routeName} ${routeNameColor}`}>{props.routeName}</p>
             </div>
         </div>

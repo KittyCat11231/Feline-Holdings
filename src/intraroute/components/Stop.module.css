@@ -1,5 +1,4 @@
 .stopContainer {
-    background-color: #5CDBD5;
     display: flex;
     align-items: center;
     width: fit-content;
@@ -11,10 +10,6 @@
     border-radius: 60px;
     margin-top: -3px;
     margin-left: 0px;
-}
-
-.stopContainer p {
-    color: white;
 }
 
 .stopInfo {
@@ -64,14 +59,12 @@
     margin-top: 0px;
     margin-bottom: 0px;
     font-weight: 600;
-    color: white;
     font-size: 1.2rem;
 }
 
 .meta1, .meta2 {
     margin-top: 0px;
     margin-bottom: 0px;
-    background-color: #5CDBD5;
     height: fit-content;
     width: fit-content;
     padding-top: 5px;

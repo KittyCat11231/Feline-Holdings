@@ -1,0 +1,39 @@
+Scarborough,Lumoise City,railScarLUM,LUM,railScar1west,null,null
+Scarborough,Lumoise City,railScarLUM,LUM,railScar1east,null,null
+,,,,,,
+Scarborough,Mini-Golf,railScarGLF,GLF,railScar1west,null,null
+Scarborough,Mini-Golf,railScarGLF,GLF,railScar1east,null,null
+,,,,,,
+Scarborough,CIDC,railScarCID,CID,railScar1west,null,null
+Scarborough,CIDC,railScarCID,CID,railScar1east,null,null
+,,,,,,
+Scarborough,Suburbs,railScarSUB,SUB,railScar1west,null,null
+Scarborough,Suburbs,railScarSUB,SUB,railScar1east,null,null
+Scarborough,Suburbs,railScarSUB,SUB,railScar2north,null,null
+Scarborough,Suburbs,railScarSUB,SUB,railScar2south,null,null
+,,,,,,
+Scarborough,Beaufort,railScarBAU,BAU,railScar1west,null,null
+Scarborough,Beaufort,railScarBAU,BAU,railScar1east,null,null
+,,,,,,
+Scarborough,MCR HQ,railScarMCR,MCR,railScar2north,null,null
+Scarborough,MCR HQ,railScarMCR,MCR,railScar2south,null,null
+Scarborough,MCR HQ,railScarMCR,MCR,railScar3west,null,null
+Scarborough,MCR HQ,railScarMCR,MCR,railScar3east,null,null
+,,,,,,
+Scarborough,Veterans' Memorial,railScarVET,VET,railScar2north,null,null
+Scarborough,Veterans' Memorial,railScarVET,VET,railScar2south,null,null
+,,,,,,
+Scarborough,City Plaza,railScarCTY,CTY,railScar2north,null,null
+Scarborough,City Plaza,railScarCTY,CTY,railScar2south,null,null
+,,,,,,
+Scarborough,Fairstone Heights,railScarFAI,FAI,railScar2north,null,null
+Scarborough,Fairstone Heights,railScarFAI,FAI,railScar2south,null,null
+,,,,,,
+Scarborough,Stadium,railScarSTD,STD,railScar3west,null,null
+Scarborough,Stadium,railScarSTD,STD,railScar3east,null,null
+,,,,,,
+Scarborough,North Rockham,railScarNRH,NRH,railScar3west,null,null
+Scarborough,North Rockham,railScarNRH,NRH,railScar3east,null,null
+,,,,,,
+Scarborough,Old Rockham,railScarORH,ORH,railScar3west,null,null
+Scarborough,Old Rockham,railScarORH,ORH,railScar3east,null,null

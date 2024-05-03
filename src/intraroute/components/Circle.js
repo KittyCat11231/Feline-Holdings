@@ -4,6 +4,9 @@ import styles from './Circle.module.css';
 import busGray from '../assets/circle-icons/bus-gray.svg';
 import busOmega from '../assets/circle-icons/bus-omega.svg';
 import ferryGray from '../assets/circle-icons/ferry-gray.svg';
+import ferrySailMainline from '../assets/circle-icons/ferry-sail-mainline.svg';
+import ferrySailExpress from '../assets/circle-icons/ferry-sail-express.svg';
+import ferrySailBranch from '../assets/circle-icons/ferry-sail-branch.svg';
 import heliGray from '../assets/circle-icons/heli-gray.svg';
 import heliEastern from '../assets/circle-icons/heli-eastern.svg';
 import heliHeampstead from '../assets/circle-icons/heli-heampstead.svg';
@@ -44,11 +47,23 @@ function Circle(props) {
     if (props.mode === 'bus') {
         srcToUse = busGray;
     }
-    if (props.mode === 'omega') {
+    if (props.mode === 'omega' && props.type === 'null') {
+        srcToUse = busGray;
+    }
+    if (props.mode === 'omega' && props.type !== 'null') {
         srcToUse = busOmega;
     }
-    if (props.mode === 'sail') {
+    if (props.mode === 'sail' && props.type === 'null') {
         srcToUse = ferryGray;
+    }
+    if (props.mode === 'sail' && props.type === 'mainline') {
+        srcToUse = ferrySailMainline;
+    }
+    if (props.mode === 'sail' && props.type === 'express') {
+        srcToUse = ferrySailExpress;
+    }
+    if (props.mode === 'sail' && props.type === 'branch') {
+        srcToUse = ferrySailBranch;
     }
     if (props.mode === 'air' && props.type === 'heli') {
         srcToUse = heliGray;
@@ -62,10 +77,13 @@ function Circle(props) {
     if (props.mode === 'air' && props.type === 'segHeli') {
         srcToUse = heliSegville;
     }
-    if (props.mode === 'railScar' || props.mode === 'railLumeva') {
+    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type === 'null') {
+        srcToUse = metroGray;
+    }
+    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type !== 'null') {
         srcToUse = metroMCR;
     }
-    if (props.mode === 'air' && props.type === 'mainline') {
+    if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'null')) {
         srcToUse = planeGray;
     }
     if (props.mode === 'air' && props.type === 'gemsDiamond') {
@@ -92,8 +110,11 @@ function Circle(props) {
     if (props.mode === 'air' && (props.type === 'waypoint' || props.type === 'waypoint-hopper')) {
         srcToUse = planeWaypoint;
     }
-    if (props.mode === 'poseidon') {
+    if (props.mode === 'air' && props.type === 'poseidon') {
         srcToUse = seaplaneGray;
+    }
+    if (props.mode === 'bahn' && props.type === 'null') {
+        srcToUse = trainGray;
     }
     if (props.mode === 'bahn' && props.type === 'branch') {
         srcToUse = trainBahnBranch;
@@ -106,6 +127,9 @@ function Circle(props) {
     }
     if (props.mode === 'bahn' && props.type === 'shuttle') {
         srcToUse = trainBahnShuttle;
+    }
+    if (props.mode === 'rail' && props.type === 'null') {
+        srcToUse = trainGray;
     }
     if (props.mode === 'rail' && props.type === 'mcr') {
         srcToUse = trainMCR;

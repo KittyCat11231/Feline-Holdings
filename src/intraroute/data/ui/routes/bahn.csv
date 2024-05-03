@@ -1,0 +1,12 @@
+bahn1north,mainline,bulletBahn1,IntraBahn 1,Intrepid,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1south,mainline,bulletBahn1,IntraBahn 1,Intrepid,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1Xnorth,express,bulletBahn1X,IntraBahn 1X,Intrepid Express,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1Xsouth,express,bulletBahn1X,IntraBahn 1X,Intrepid Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1Inorth,branch,bulletBahn1I,IntraBahn 1i,Schillerton Branch North,bahnWHQ,Whiteley,Quins Junction,
+bahn1Isouth,branch,bulletBahn1I,IntraBahn 1i,Schillerton Branch North,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1Jnorth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1Jsouth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahn1JXnorth,branch,bulletBahn1JX,IntraBahn 1jX,Schillerton Branch South Express,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1JXsouth,branch,bulletBahn1JX,IntraBahn 1jX,Schillerton Branch South Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
+bahnZQcw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,null,null,
+bahnZQccw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,null,null,

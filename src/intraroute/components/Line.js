@@ -198,6 +198,10 @@ function Line(props) {
         renderDestContainer = false;
         renderStopCount = false;
     }
+    let renderStopName = true;
+    if (props.stopName === 'null') {
+        renderStopName = false;
+    }
     let renderMeta1 = false;
     let renderMeta2 = false;
     if (props.meta1 !== 'null') {
@@ -223,7 +227,7 @@ function Line(props) {
                     <p className={`${styles.city} ${mainColor}`}>{props.city}</p>
                     <p className={`${styles.code} ${mainColor}`}>({props.code})</p>
                 </div>
-                <p className={`${styles.stopName} ${mainColor}`}>{props.stopName}</p>
+                {renderStopName ? <p className={`${styles.stopName} ${mainColor}`}>{props.stopName}</p> : ''}
                 <div className={styles.metaContainer}>
                     {renderMeta1 ?
                         <div className={`${styles.meta1} ${containerColor}`}>

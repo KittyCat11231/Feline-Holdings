@@ -1,0 +1,6 @@
+railScar1west,S1,Nimitz Line,railScarBAU,Scarborough,Beaufort,railScarSUB,railScarCID,railScarGLF,railScarLUM
+railScar1east,S1,Nimitz Line,railScarLUM,Scarborough,Lumoise City,railScarGLF,railScarCID,railScarSUB,railScarBAU
+railScar2north,S2,Fairstone Line,railScarSUB,Scarborough,Suburbs,railScarMCR,railScarVET,railScarCTY,railScarFAI
+railScar2south,S2,Fairstone Line,railScarFAI,Scarborough,Fairstone Heights,railScarCTY,railScarVET,railScarMCR,railScarSUB
+railScar3west,S3,Rockham Line,railScarORH,Scarborough,Old Rockham,railScarNRH,railScarSTD,railScarMCR,
+railScar3east,S3,Rockham Line,railScarMCR,Scarborough,MCR HQ,railScarSTD,railScarNRH,railScarORH,
