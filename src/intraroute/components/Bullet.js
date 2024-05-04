@@ -88,13 +88,119 @@ import bulletMCR7 from '../assets/intrarail/bullets/mcr-7-white.png';
 import bulletMCR8 from '../assets/intrarail/bullets/mcr-8-white.png';
 import bulletMCR9 from '../assets/intrarail/bullets/mcr-9-white.png';
 
+import bahnData from '../data/ui/routes/bahn.json';
+import railData from '../data/ui/routes/rail.json';
+
 function Bullet(props) {
-    let useBullets = false;
-    if (props.mode === 'bahn' || props.mode === 'rail') {
-        useBullets = true;
-}
+
+    let bulletMap = new Map();
+
+    bulletMap.set('bulletBahn1', bulletBahn1);
+    bulletMap.set('bulletBahn1X', bulletBahn1X);
+    bulletMap.set('bulletBahn1A', bulletBahn1A);
+    bulletMap.set('bulletBahn1AX', bulletBahn1AX);
+    bulletMap.set('bulletBahn1B', bulletBahn1B);
+    bulletMap.set('bulletBahn1BX', bulletBahn1BX);
+    bulletMap.set('bulletBahn1C', bulletBahn1C);
+    bulletMap.set('bulletBahn1CX', bulletBahn1CX);
+    bulletMap.set('bulletBahn1D', bulletBahn1D);
+    bulletMap.set('bulletBahn1DX', bulletBahn1DX);
+    bulletMap.set('bulletBahn1E', bulletBahn1E);
+    bulletMap.set('bulletBahn1EX', bulletBahn1EX);
+    bulletMap.set('bulletBahn1F', bulletBahn1F);
+    bulletMap.set('bulletBahn1FX', bulletBahn1FX);
+    bulletMap.set('bulletBahn1G', bulletBahn1G);
+    bulletMap.set('bulletBahn1GX', bulletBahn1GX);
+    bulletMap.set('bulletBahn1H', bulletBahn1H);
+    bulletMap.set('bulletBahn1HX', bulletBahn1HX);
+    bulletMap.set('bulletBahn1I', bulletBahn1I);
+    bulletMap.set('bulletBahn1IX', bulletBahn1IX);
+    bulletMap.set('bulletBahn1J', bulletBahn1J);
+    bulletMap.set('bulletBahn1JX', bulletBahn1JX);
+    bulletMap.set('bulletBahnRF', bulletBahnRF);
+    bulletMap.set('bulletBahnWV', bulletBahnWV);
+    bulletMap.set('bulletBahnZQ', bulletBahnZQ);
+    
+    bulletMap.set('bulletRail1', bulletRail1);
+    bulletMap.set('bulletRail2', bulletRail2);
+    bulletMap.set('bulletRail3', bulletRail3);
+    bulletMap.set('bulletRail4', bulletRail4);
+    bulletMap.set('bulletRail6', bulletRail6);
+    bulletMap.set('bulletRail7', bulletRail7);
+    bulletMap.set('bulletRail11', bulletRail11);
+    bulletMap.set('bulletRail12', bulletRail12);
+    bulletMap.set('bulletRail13', bulletRail13);
+    bulletMap.set('bulletRail14', bulletRail14);
+    bulletMap.set('bulletRail15', bulletRail15);
+    bulletMap.set('bulletRail16', bulletRail16);
+    bulletMap.set('bulletRail17', bulletRail17);
+    bulletMap.set('bulletRail18', bulletRail18);
+    bulletMap.set('bulletRail20', bulletRail20);
+    bulletMap.set('bulletRail21', bulletRail21);
+    bulletMap.set('bulletRail22', bulletRail22);
+    bulletMap.set('bulletRail23', bulletRail23);
+    bulletMap.set('bulletRail24', bulletRail24);
+    bulletMap.set('bulletRail26', bulletRail26);
+    bulletMap.set('bulletRail29', bulletRail29);
+    bulletMap.set('bulletRail32', bulletRail32);
+    bulletMap.set('bulletRail33', bulletRail33);
+    bulletMap.set('bulletRail34', bulletRail34);
+    bulletMap.set('bulletRail36', bulletRail36);
+    bulletMap.set('bulletRail37', bulletRail37);
+    bulletMap.set('bulletRail38', bulletRail38);
+    bulletMap.set('bulletRail39', bulletRail39);
+    bulletMap.set('bulletRail40', bulletRail40);
+    bulletMap.set('bulletRail42', bulletRail42);
+    bulletMap.set('bulletRail43', bulletRail43);
+    bulletMap.set('bulletRail46', bulletRail46);
+    bulletMap.set('bulletRail48', bulletRail48);
+    bulletMap.set('bulletRail49', bulletRail49);
+    bulletMap.set('bulletRail50', bulletRail50);
+    bulletMap.set('bulletRail51', bulletRail51);
+    bulletMap.set('bulletRail52', bulletRail52);
+    bulletMap.set('bulletRail54', bulletRail54);
+    bulletMap.set('bulletRail55', bulletRail55);
+    bulletMap.set('bulletRail56', bulletRail56);
+    bulletMap.set('bulletRail57', bulletRail57);
+    bulletMap.set('bulletRail58', bulletRail58);
+    bulletMap.set('bulletRail59', bulletRail59);
+    bulletMap.set('bulletRail63', bulletRail63);
+    bulletMap.set('bulletRail64', bulletRail64);
+    bulletMap.set('bulletRail66', bulletRail66);
+    bulletMap.set('bulletRail66X', bulletRail66X);
+    bulletMap.set('bulletRail67', bulletRail67);
+    bulletMap.set('bulletRail69', bulletRail69);
+    bulletMap.set('bulletRail70', bulletRail70);
+    bulletMap.set('bulletMCR1', bulletMCR1);
+    bulletMap.set('bulletMCR1A', bulletMCR1A);
+    bulletMap.set('bulletMCR2', bulletMCR2);
+    bulletMap.set('bulletMCR3', bulletMCR3);
+    bulletMap.set('bulletMCR4', bulletMCR4);
+    bulletMap.set('bulletMCR5', bulletMCR5);
+    bulletMap.set('bulletMCR6', bulletMCR6);
+    bulletMap.set('bulletMCR7', bulletMCR7);
+    bulletMap.set('bulletMCR8', bulletMCR8);
+    bulletMap.set('bulletMCR9', bulletMCR9);
+
+    let routes;
+    if (props.mode === 'bahn') {
+        routes = bahnData;
+    }
+    if (props.mode === 'rail') {
+        routes = railData;
+    }
+
+    let bullet;
+    let altText;
+    for (let i = 0; i < routes.length; i++) {
+        if (routes[i].id === props.route) {
+            bullet = bulletMap.get(routes[i].bullet);
+            altText = routes[i].altText;
+        }
+    }
+
     return (
-        <img className={styles.bullet} src={bulletBahn1} alt='IntraBahn 1' />
+        <img className={styles.bullet} src={bullet} alt={altText} />
     )
 }
 

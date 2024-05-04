@@ -3,8 +3,8 @@ import styles from './Route.module.css';
 import colorStyles from './Colors.module.css';
 import Mode from './Mode';
 import Bullet from './Bullet';
-
-import circle from '../assets/circle-white.svg';
+import Circle from './Circle';
+import Num from './Num';
 
 function Route(props) {
     let containerColor;
@@ -121,13 +121,30 @@ function Route(props) {
     if (props.mode === 'railScar' || props.mode === 'railLumeva') {
         containerColor = colorStyles.railLocalBackground;
     }
+
+    let useBullet = false;
+    let useNum = false;
+    let useCircle = false;
+
+    if (props.mode === 'bahn' || props.mode === 'rail') {
+        useBullet = true;
+    }
+    if (props.mode === 'sail' || props.mode === 'railScar'|| props.mode === 'railLumeva') {
+        useNum = true;
+    }
+    if (useBullet === false && useNum === false) {
+        useCircle = true;
+    }
+
     return (
         <div>
             <div className={styles.modeBox}>
                 <Mode mode={props.mode} type={props.type} />
             </div>
             <div className={`${styles.routeContainer} ${containerColor}`}>
-                <Bullet mode={props.mode} type={props.type} route={props.route} />
+                {useBullet ? <Bullet mode={props.mode} type={props.type} route={props.route} /> : ''}
+                {useNum ? <Num mode={props.mode} type={props.type} num={props.num} /> : ''}
+                {useCircle ? <Circle mode={props.mode} type={props.type} /> : ''}
                 <p className={`${styles.routeName} ${routeNameColor}`}>{props.routeName}</p>
             </div>
         </div>

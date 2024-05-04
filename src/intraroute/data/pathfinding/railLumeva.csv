@@ -1,0 +1,25 @@
+Peacopolis,West,railLumevaPCW,railLumevaCBD,1,railLumeva1south
+,,,,,
+Peacopolis,CBD,railLumevaCBD,railLumevaPCW,1,railLumeva1north
+Peacopolis,CBD,railLumevaCBD,railLumevaMAY,1,railLumeva1south
+,,,,,
+Peacopolis,Mayor's Residence,railLumevaMAY,railLumevaCBD,1,railLumeva1north
+Peacopolis,Mayor's Residence,railLumevaMAY,railLumevaHGH,1,railLumeva1south
+,,,,,
+Foresne,Highlands,railLumevaHGH,railLumevaMAY,1,railLumeva1north
+Foresne,Highlands,railLumevaHGH,railLumevaFLV,1,railLumeva1south
+,,,,,
+Foresne,Liveray,railLumevaFLV,railLumevaHGH,1,railLumeva1north
+Foresne,Liveray,railLumevaFLV,railLumevaBLM,1,railLumeva1south
+Foresne,Liveray,railLumevaFLV,railFLV,30,walk
+,,,,,
+Foresne,Blomrand,railLumevaBLM,railLumevaFLV,1,railLumeva1north
+Foresne,Blomrand,railLumevaBLM,railLumevaFSN,1,railLumeva1south
+,,,,,
+Foresne,Central,railLumevaFSN,railLumevaBLM,1,railLumeva1north
+Foresne,Central,railLumevaFSN,railLumevaLOW,1,railLumeva1south
+,,,,,
+Foresne,Lowland,railLumevaLOW,railLumevaFSN,1,railLumeva1north
+Foresne,Lowland,railLumevaLOW,railLumevaHIN,1,railLumeva1south
+,,,,,
+Foresne,Hincothe,railLumevaHIN,railLumevaLOW,1,railLumeva1north

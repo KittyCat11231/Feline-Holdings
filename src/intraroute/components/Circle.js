@@ -171,7 +171,7 @@ function Circle(props) {
         srcToUse = trainRailYellow;
     }
     return (
-            <img className={styles.circle} src={srcToUse} alt='circle' />
+        <img className={styles.circle} src={srcToUse} alt='icon' />
     )
 }
 
