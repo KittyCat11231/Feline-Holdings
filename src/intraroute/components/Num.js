@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './Num.module.css';
 import colorStyles from './Colors.module.css';
 
-import circle from '../assets/circle-white.svg';
-
 function Num(props) {
     let containerColor;
     let mainColor;
@@ -202,10 +200,7 @@ function Num(props) {
     }
 
     return (
-        <div className={styles.container}>
-            <img className={styles.circle} src={circle} alt='circle' />
-            <p className={`${styles.num} ${styles.mainColor}`}>[ 1 ]</p>
-        </div>
+        <p className={`${styles.num} ${mainColor}`}>[ {props.num} ]</p>
     )
 }
 

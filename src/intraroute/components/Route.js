@@ -5,6 +5,7 @@ import Mode from './Mode';
 import Bullet from './Bullet';
 import Circle from './Circle';
 import Num from './Num';
+import CircleWhite from './CircleWhite';
 
 function Route(props) {
     let containerColor;
@@ -141,11 +142,14 @@ function Route(props) {
             <div className={styles.modeBox}>
                 <Mode mode={props.mode} type={props.type} />
             </div>
-            <div className={`${styles.routeContainer} ${containerColor}`}>
-                {useBullet ? <Bullet mode={props.mode} type={props.type} route={props.route} /> : ''}
-                {useNum ? <Num mode={props.mode} type={props.type} num={props.num} /> : ''}
-                {useCircle ? <Circle mode={props.mode} type={props.type} /> : ''}
-                <p className={`${styles.routeName} ${routeNameColor}`}>{props.routeName}</p>
+            <div className={styles.container}>
+                <div className={`${styles.routeContainer} ${containerColor}`}>
+                    {useBullet ? <Bullet mode={props.mode} type={props.type} route={props.route} /> : ''}
+                    {useNum ? <CircleWhite /> : ''}
+                    {useCircle ? <Circle mode={props.mode} type={props.type} /> : ''}
+                    <p className={`${styles.routeName} ${routeNameColor}`}>{props.routeName}</p>
+                </div>
+                {useNum ? <div className={styles.num}><Num mode={props.mode} type={props.type} num={props.num} /></div> : ''}
             </div>
         </div>
     )

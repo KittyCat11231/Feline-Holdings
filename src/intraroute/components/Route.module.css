@@ -1,3 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+
+.num {
+    position: absolute;
+    z-index: 2;
+    top: 37px;
+    left: 25px;
+}
+
 .routeContainer {
     display: flex;
     align-items: center;

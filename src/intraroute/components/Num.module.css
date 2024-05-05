@@ -1,14 +1,9 @@
-.circle {
-    height: 66px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
 .num {
-    font-weight: 600;
-    font-size: 1.8rem;
+    font-weight: 700;
+    font-size: 1.4rem;
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 0;
+    margin-left: 0px;
     margin-right: 0;
+    text-align: center;
 }
