@@ -15,7 +15,7 @@ function parseFiles(mode) {
             this.id = id;
         }
         adjacentStops = [];
-        shortestTime = Infinity;
+        shortestTime = null;
         explored = false;
         previousStop;
         pathToStop = false;

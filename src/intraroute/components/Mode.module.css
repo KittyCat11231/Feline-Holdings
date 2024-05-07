@@ -35,11 +35,11 @@
 }
 
 .skywestBox {
-    background-color: #eeeeee;
+    background-color: #414141;
 }
 
 .gemsBox {
-    background-color: #eeeeee;
+    background-color: #ffffff;
 }
 
 .heampsteadBox {
@@ -100,4 +100,8 @@
 
 .railLumevaLogo {
     height: 23px;
+}
+
+.whiteOutline {
+    outline: 6px solid white;
 }

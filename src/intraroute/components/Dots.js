@@ -9,6 +9,7 @@ function Dots(props) {
     let containerColor;
     let mainColor;
     let filterColor;
+    let src = dotsColor;
     if (props.mode === 'bahn') {
         if (props.type === 'mainline') {
             containerColor = colorStyles.bahnMainlineBackground;
@@ -35,6 +36,7 @@ function Dots(props) {
         if (props.type === 'mainline' || props.type === 'heli' || props.type === 'poseidon') {
             containerColor = colorStyles.grayBackground;
             mainColor = colorStyles.grayColor;
+            src = dotsGray;
         }
         if (props.type === 'segville' || props.type === 'segHeli') {
             containerColor = colorStyles.airSegvilleBackground;
@@ -156,6 +158,7 @@ function Dots(props) {
     if (props.mode === 'bus') {
         containerColor = colorStyles.grayBackground;
         mainColor = colorStyles.grayColor;
+        src = dotsGray;
     }
     if (props.mode === 'omega') {
         containerColor = colorStyles.busOmegaBackground;
@@ -184,8 +187,13 @@ function Dots(props) {
         mainColor = colorStyles.railLocalColor;
         filterColor = colorStyles.railLocalFilter;
     }
+    if (props.mode === 'mrtYellowLine') {
+        containerColor = colorStyles.yellowBackground;
+        mainColor = colorStyles.yellowColor;
+        filterColor = colorStyles.yellowFilter;
+    }
     return (
-        <img className={`${styles.dots} ${filterColor}`} src={dotsColor} alt='A dotted line' />
+        <img className={`${styles.dots} ${filterColor}`} src={src} alt='A dotted line' />
     )
 }
 

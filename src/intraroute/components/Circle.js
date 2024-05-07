@@ -41,19 +41,20 @@ import trainRailPurple from '../assets/circle-icons/train-rail-purple.svg';
 import trainRailRed from '../assets/circle-icons/train-rail-red.svg';
 import trainRailTan from '../assets/circle-icons/train-rail-tan.svg';
 import trainRailYellow from '../assets/circle-icons/train-rail-yellow.svg';
+import mrtLogo from '../assets/mrt-logo.svg';
 
 function Circle(props) {
     let srcToUse;
     if (props.mode === 'bus') {
         srcToUse = busGray;
     }
-    if (props.mode === 'omega' && props.type === 'null') {
+    if (props.mode === 'omega' && props.type === 'origin') {
         srcToUse = busGray;
     }
-    if (props.mode === 'omega' && props.type !== 'null') {
+    if (props.mode === 'omega' && props.type !== 'origin') {
         srcToUse = busOmega;
     }
-    if (props.mode === 'sail' && props.type === 'null') {
+    if (props.mode === 'sail' && props.type === 'origin') {
         srcToUse = ferryGray;
     }
     if (props.mode === 'sail' && props.type === 'mainline') {
@@ -77,13 +78,13 @@ function Circle(props) {
     if (props.mode === 'air' && props.type === 'segHeli') {
         srcToUse = heliSegville;
     }
-    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type === 'null') {
+    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type === 'origin') {
         srcToUse = metroGray;
     }
-    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type !== 'null') {
+    if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type !== 'origin') {
         srcToUse = metroMCR;
     }
-    if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'null')) {
+    if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'origin')) {
         srcToUse = planeGray;
     }
     if (props.mode === 'air' && props.type === 'gemsDiamond') {
@@ -107,13 +108,13 @@ function Circle(props) {
     if (props.mode === 'air' && props.type === 'volanti') {
         srcToUse = planeVolanti;
     }
-    if (props.mode === 'air' && (props.type === 'waypoint' || props.type === 'waypoint-hopper')) {
+    if (props.mode === 'air' && (props.type === 'waypoint' || props.type === 'waypointHopper')) {
         srcToUse = planeWaypoint;
     }
     if (props.mode === 'air' && props.type === 'poseidon') {
         srcToUse = seaplaneGray;
     }
-    if (props.mode === 'bahn' && props.type === 'null') {
+    if (props.mode === 'bahn' && props.type === 'origin') {
         srcToUse = trainGray;
     }
     if (props.mode === 'bahn' && props.type === 'branch') {
@@ -128,7 +129,7 @@ function Circle(props) {
     if (props.mode === 'bahn' && props.type === 'shuttle') {
         srcToUse = trainBahnShuttle;
     }
-    if (props.mode === 'rail' && props.type === 'null') {
+    if (props.mode === 'rail' && props.type === 'origin') {
         srcToUse = trainGray;
     }
     if (props.mode === 'rail' && props.type === 'mcr') {
@@ -169,6 +170,9 @@ function Circle(props) {
     }
     if (props.mode === 'rail' && props.type === 'yellow') {
         srcToUse = trainRailYellow;
+    }
+    if (props.mode === 'mrtYellowLine') {
+        srcToUse = mrtLogo;
     }
     return (
         <img className={styles.circle} src={srcToUse} alt='icon' />

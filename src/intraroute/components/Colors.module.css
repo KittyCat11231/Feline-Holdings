@@ -127,16 +127,16 @@
 }
 
 .airGemsGoldBackground {
-    background-color: #ffff4c;
+    background-color: #FFEC00;
 }
 
 .airGemsGoldColor {
-    color: #ffff4c;
+    color: #FFEC00;
 }
 
 .airGemsGoldFilter {
     /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(83%) sepia(95%) saturate(371%) hue-rotate(347deg) brightness(109%) contrast(100%);
+    filter: invert(77%) sepia(100%) saturate(1961%) hue-rotate(359deg) brightness(101%) contrast(107%);
 }
 
 .airGemsDiamondBackground {
@@ -349,16 +349,16 @@
 }
 
 .railMCRBackground {
-    background-color: #334cb2;
+    background-color: #3f6edc;
 }
 
 .railMCRColor {
-    color: #334cb2;
+    color: #3f6edc;
 }
 
 .railMCRFilter {
     /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(21%) sepia(98%) saturate(1816%) hue-rotate(220deg) brightness(86%) contrast(85%);
+    filter: invert(37%) sepia(86%) saturate(3183%) hue-rotate(212deg) brightness(94%) contrast(82%);
 }
 
 .busOmegaBackground {
@@ -414,14 +414,31 @@
 }
 
 .railLocalBackground {
-    background-color: #334cb2;
+    background-color: #1300fe;
 }
 
 .railLocalColor {
-    color: #334cb2;
+    color: #1300fe;
 }
 
 .railLocalFilter {
     /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(21%) sepia(98%) saturate(1816%) hue-rotate(220deg) brightness(86%) contrast(85%);
+    filter: invert(14%) sepia(74%) saturate(7386%) hue-rotate(250deg) brightness(84%) contrast(147%);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.yellowBackground {
+    background-color: #FFEC00;
+}
+
+.yellowColor {
+    color: #FFEC00
+}
+
+.yellowFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(77%) sepia(100%) saturate(1961%) hue-rotate(359deg) brightness(101%) contrast(107%);
 }

@@ -122,6 +122,12 @@ function Route(props) {
     if (props.mode === 'railScar' || props.mode === 'railLumeva') {
         containerColor = colorStyles.railLocalBackground;
     }
+    let renderMode = true;
+    if (props.mode === 'mrtYellowLine') {
+        containerColor = colorStyles.yellowBackground;
+        routeNameColor = colorStyles.blackColor;
+        renderMode = false;
+    }
 
     let useBullet = false;
     let useNum = false;
@@ -139,17 +145,22 @@ function Route(props) {
 
     return (
         <div>
-            <div className={styles.modeBox}>
-                <Mode mode={props.mode} type={props.type} />
-            </div>
+            {renderMode ?
+                <div className={styles.modeBox}>
+                    <Mode mode={props.mode} type={props.type} />
+                </div>
+                :
+                <div className={`${styles.modeBox} ${colorStyles.hidden}`}>
+                    <Mode mode={props.mode} type={props.type} />
+                </div>
+            }
             <div className={styles.container}>
                 <div className={`${styles.routeContainer} ${containerColor}`}>
                     {useBullet ? <Bullet mode={props.mode} type={props.type} route={props.route} /> : ''}
-                    {useNum ? <CircleWhite /> : ''}
+                    {useNum ? <Num mode={props.mode} type={props.type} num={props.num} /> : ''}
                     {useCircle ? <Circle mode={props.mode} type={props.type} /> : ''}
                     <p className={`${styles.routeName} ${routeNameColor}`}>{props.routeName}</p>
                 </div>
-                {useNum ? <div className={styles.num}><Num mode={props.mode} type={props.type} num={props.num} /></div> : ''}
             </div>
         </div>
     )

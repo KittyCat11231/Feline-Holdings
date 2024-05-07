@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+.codeshare1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: 0px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.codeshare2 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: 25px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.slash {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-left: 25px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+}
+
+.bufferText {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    visibility: hidden;
+}

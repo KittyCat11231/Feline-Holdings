@@ -10,7 +10,7 @@ import segHeliLogo from '../logos/segville-air-heli-lines-white.svg';
 import waypointLogo from '../logos/waypoint-white.svg';
 import waypointHopperLogo from '../logos/waypoint-hopper-white.svg';
 import volantiLogo from '../logos/italiani-volanti-white.svg';
-import skywestLogo from '../logos/skywest-airlines.png';
+import skywestLogo from '../logos/skywest-airlines-white.svg';
 import gemsLogo from '../logos/gems-airline.png';
 import heampsteadLogo from '../logos/heampstead-charter-white.svg';
 import easternLogo from '../logos/eastern-airways-heli-lines-white.svg';
@@ -126,8 +126,17 @@ function Mode(props) {
         boxStyles = styles.mcrBox;
         logoStyles = styles.railLumevaLogo;
     }
+
+    let outlineStyle = styles.nonExistantStyle;
+    if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'heli' || props.type === 'poseidon')) {
+        outlineStyle = styles.whiteOutline;
+    }
+    if ((props.mode === 'rail' && props.type ==='mcr') || props.mode === 'bus' || props.mode === 'railScar' || props.mode === 'railLumeva') {
+        outlineStyle = styles.whiteOutline;
+    }
+
     return (
-        <div className={`${styles.modeBox} ${boxStyles}`}>
+        <div className={`${styles.modeBox} ${outlineStyle} ${boxStyles}`}>
             <img className={logoStyles} src={srcToUse} alt='IntraBahn' />
         </div>
     )

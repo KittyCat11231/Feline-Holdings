@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Num.module.css';
 import colorStyles from './Colors.module.css';
 
+import circle from '../assets/circle-white.svg';
+
 function Num(props) {
     let containerColor;
     let mainColor;
@@ -199,8 +201,26 @@ function Num(props) {
         }
     }
 
+    let renderNumSail = false;
+    let renderNumRailScar = false;
+    let renderNumRailLumeva = false;
+    if (props.mode === 'sail') {
+        renderNumSail = true;
+    }
+    if (props.mode === 'railLumeva') {
+        renderNumRailLumeva = true;
+    }
+    if (props.mode === 'railScar') {
+        renderNumRailScar = true;
+    }
+
     return (
-        <p className={`${styles.num} ${mainColor}`}>[ {props.num} ]</p>
+        <div className={styles.container}>
+            <img className={styles.circle} src={circle} alt='circle' />
+            {renderNumSail ? <p className={`${styles.numSail} ${mainColor}`}>[ {props.num} ]</p> : ''}
+            {renderNumRailScar ? <p className={`${styles.numRailScar} ${mainColor}`}>{props.num}</p> : ''}
+            {renderNumRailLumeva ? <p className={`${styles.numRailLumeva} ${mainColor}`}>{props.num}</p> : ''}
+        </div>
     )
 }
 

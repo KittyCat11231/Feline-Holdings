@@ -25,6 +25,14 @@
     flex-direction: row;
 }
 
+.cityCodeNoStopName {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    translate: 0px 15px;
+}
+
 .city {
     margin-top: 0px;
     margin-bottom: 0px;

@@ -27,6 +27,7 @@ footer {
 @media (min-width: 900.5px) {
   footer{
     height: 9.3rem;
+    margin-top: 9.3rem;
   }
 
   #content-wrap {
@@ -37,6 +38,7 @@ footer {
 @media (max-width: 900.5px) {
   footer{
     height: 13rem;
+    margin-top: 13rem;
   }
 
   #content-wrap {

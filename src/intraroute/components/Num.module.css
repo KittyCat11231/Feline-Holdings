@@ -1,9 +1,40 @@
-.num {
+.numSail {
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 0;
+    font-size: 1.3rem;
+    margin-top: -54px;
     margin-bottom: 0;
     margin-left: 0px;
     margin-right: 0;
     text-align: center;
+}
+
+.numRailLumeva {
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-top: -58px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.numRailScar {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: -62px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.container {
+    height: 66px;
+    width: fit-content;
+}
+
+.circle {
+    height: 66px;
+    margin-top: auto;
+    margin-bottom: auto;
 }

@@ -6,6 +6,7 @@ import lineGray from '../assets/segment-gray.svg';
 import lineColor from '../assets/segment-color.svg';
 import DestinationContainer from './DestinationContainer';
 import LineBuffer from './LineBuffer';
+import Codeshares from './Codeshares';
 
 function Line(props) {
     let containerColor;
@@ -192,11 +193,24 @@ function Line(props) {
         mainColor = colorStyles.railLocalColor;
         filterColor = colorStyles.railLocalFilter;
     }
+    if (props.mode === 'mrtYellowLine') {
+        containerColor = colorStyles.yellowBackground;
+        mainColor = colorStyles.blackColor;
+        filterColor = colorStyles.yellowFilter;
+    }
     let renderDestContainer = true;
     let renderStopCount = true;
+    let renderCodeshares = false;
+    let renderLineBuffer = false;
     if (props.mode === 'air') {
         renderDestContainer = false;
         renderStopCount = false;
+    }
+    if (props.codeshare1 !=='null') {
+        renderCodeshares = true;
+    }
+    if (renderDestContainer === false && renderCodeshares === false) {
+        renderLineBuffer = true;
     }
     let renderStopName = true;
     if (props.stopName === 'null') {
@@ -221,7 +235,15 @@ function Line(props) {
             <div className={styles.nextToLine}>
                 {renderDestContainer ?
                     <DestinationContainer mode={props.mode} type={props.type} destinationCity={props.destinationCity} destinationStopName={props.destinationStopName} />
-                    : <LineBuffer />
+                    : ''
+                }
+                {renderCodeshares ?
+                    <Codeshares codeshare1={props.codeshare1} codeshare2={props.codeshare2} color={mainColor} />
+                    : ''
+                }
+                {renderLineBuffer ?
+                    <LineBuffer />
+                    : ''
                 }
                 <div className={styles.stop}>
                     <p className={`${styles.city} ${mainColor}`}>{props.city}</p>

@@ -13,7 +13,7 @@ function Stop(props) {
     let filterColor;
     let textColor = colorStyles.whiteColor;
     if (props.mode === 'bahn') {
-        if (props.type === 'null') {
+        if (props.type === 'origin') {
             containerColor = colorStyles.grayBackground;
         }
         if (props.type === 'mainline') {
@@ -38,7 +38,7 @@ function Stop(props) {
         }
     }
     if (props.mode === 'air') {
-        if (props.type === 'null' || props.type === 'mainline' || props.type === 'heli' || props.type === 'poseidon') {
+        if (props.type === 'origin' || props.type === 'mainline' || props.type === 'heli' || props.type === 'poseidon') {
             containerColor = colorStyles.grayBackground;
             mainColor = colorStyles.grayColor;
         }
@@ -95,7 +95,7 @@ function Stop(props) {
         }
     }
     if (props.mode === 'rail') {
-        if (props.type === 'null') {
+        if (props.type === 'origin') {
             containerColor = colorStyles.grayBackground;
         }
         if (props.type === 'black') {
@@ -169,7 +169,7 @@ function Stop(props) {
         mainColor = colorStyles.grayColor;
     }
     if (props.mode === 'omega') {
-        if (props.type === 'null') {
+        if (props.type === 'origin') {
             containerColor = colorStyles.grayBackground;
         } else {
             containerColor = colorStyles.busOmegaBackground;
@@ -178,7 +178,7 @@ function Stop(props) {
         }
     }
     if (props.mode === 'sail') {
-        if (props.type === 'null') {
+        if (props.type === 'origin') {
             containerColor = colorStyles.grayBackground;
         }
         if (props.type === 'mainline') {
@@ -198,7 +198,7 @@ function Stop(props) {
         }
     }
     if (props.mode === 'railScar' || props.mode === 'railLumeva') {
-        if (props.type === 'null') {
+        if (props.type === 'origin') {
             containerColor = colorStyles.grayBackground;
         } else {
             containerColor = colorStyles.railLocalBackground;
@@ -206,9 +206,17 @@ function Stop(props) {
             filterColor = colorStyles.railLocalFilter;
         }
     }
+    if (props.mode === 'mrtYellowLine') {
+        containerColor = colorStyles.yellowBackground;
+        mainColor = colorStyles.yellowColor;
+        filterColor = colorStyles.yellowFilter;
+        textColor = colorStyles.blackColor;
+    }
     let renderStopName = true;
+    let dontRenderStopName = false;
     if (props.stopName === 'null') {
         renderStopName = false;
+        dontRenderStopName = true;
     }
     let renderMeta1 = false;
     let renderMeta2 = false;
@@ -223,11 +231,19 @@ function Stop(props) {
             <div className={`${styles.stopContainer} ${containerColor}`}>
                 <Circle mode={props.mode} type={props.type} />
                 <div className={styles.stopInfo}>
-                    <div className={styles.cityCode}>
-                        <p className={`${styles.city} ${textColor}`}>{props.city}</p>
-                        <p className={`${styles.code} ${textColor}`}>({props.code})</p>
-                    </div>
+                    {renderStopName ?
+                        <div className={styles.cityCode}>
+                            <p className={`${styles.city} ${textColor}`}>{props.city}</p>
+                            <p className={`${styles.code} ${textColor}`}>({props.code})</p>
+                        </div>
+                        :
+                        <div className={styles.cityCodeNoStopName}>
+                            <p className={`${styles.city} ${textColor}`}>{props.city}</p>
+                            <p className={`${styles.code} ${textColor}`}>({props.code})</p>
+                        </div>
+                    }
                     {renderStopName ? <p className={`${styles.stopName} ${textColor}`}>{props.stopName}</p> : ''}
+                    {dontRenderStopName ? <p className={`${styles.stopName} ${colorStyles.hidden}`}>{props.stopName}</p> : ''}
                 </div>
             </div>
             <div className={styles.metaContainer}>

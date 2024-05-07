@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dotsContainer {
+    margin-left: 8%;
+    margin-top: -51px;
+}
+
+.dots {
+    width: 50px;
+    margin-left: 28px;
+    margin-bottom: -26px;
+}
+
+.walkContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 85px;
+    margin-left: 28px;
+}
+
+.walkIcon {
+    height: 80px;
+}
+
+.cartIcon {
+    height: 70px;
+}
+
+.walkText {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-top: 18px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 0px;
+    color: #4d4d4d;
+}
+
+.cartText {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    margin-right: 0px;
+    color: #4d4d4d;
+}
+
+.segment {
+    margin-top: -51px;
+}
