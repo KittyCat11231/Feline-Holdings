@@ -33,52 +33,6 @@ function addToAllStops(modeStops) {
     }
 }
 
-if (useAir === true) {
-    addToAllStops(airStops);
-}
-if (useBahn === true) {
-    addToAllStops(bahnStops);
-}
-if (useBus === true) {
-    addToAllStops(busStops);
-    addToAllStops(omegaStops);
-}
-if (useRail === true) {
-    addToAllStops(railStops);
-}
-if (useRailLocal === true) {
-    addToAllStops(railLumevaStops);
-    addToAllStops(railScarStops);
-}
-if (useSail === true) {
-    addToAllStops(sailStops);
-}
-
-const stopsMap = new Map();
-
-for (let i = 0; i < allStops.length; i++) {
-    window[allStops[i].id] = allStops[i];
-    stopsMap.set(allStops[i].id, allStops[i]);
-    allStops[i].shortestTime = Infinity;
-}
-
-class pathSegment {
-    constructor(stop1, stop2, routes, stopCount) {
-        this.stop1 = stop1;
-        this.stop2 = stop2;
-        this.routes = routes;
-        this.stopCount = stopCount;
-    }
-}
-
-let start = stopsMap.get('bahnKNX');
-let end = stopsMap.get('omegaKIT');
-
-let unselected;
-stopsMap.set('unselected', unselected);
-
-let finalPath;
-
 function findCommonElements(arr1, arr2) {
     return arr1.filter(element => arr2.includes(element));
 }
@@ -111,6 +65,65 @@ function filterRoutes(pathArray) {
     }
 }
 
+if (useAir === true) {
+    addToAllStops(airStops);
+}
+if (useBahn === true) {
+    addToAllStops(bahnStops);
+}
+if (useBus === true) {
+    addToAllStops(busStops);
+    addToAllStops(omegaStops);
+}
+if (useRail === true) {
+    addToAllStops(railStops);
+}
+if (useRailLocal === true) {
+    addToAllStops(railLumevaStops);
+    addToAllStops(railScarStops);
+}
+if (useSail === true) {
+    addToAllStops(sailStops);
+}
+
+const stopsMap = new Map();
+
+for (let i = 0; i < allStops.length; i++) {
+    window[allStops[i].id] = allStops[i];
+    stopsMap.set(allStops[i].id, allStops[i]);
+    allStops[i].shortestTime = Infinity;
+    for (let j = 0; j < allStops[i].adjacentStops.length; j++) {
+        allStops[i].adjacentStops[j].weight = Number(allStops[i].adjacentStops[j].weight);
+
+        // removes \r from adjacent stop routes in JSON imported data:
+
+        for (let k = 0; k < allStops[i].adjacentStops[j].routes.length; k++) {
+            if (allStops[i].adjacentStops[j].routes[k] === '\r') {
+                allStops[i].adjacentStops[j].routes = removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
+            } else if (allStops[i].adjacentStops[j].routes[k].includes('\r')) {
+                allStops[i].adjacentStops[j].routes[k] = allStops[i].adjacentStops[j].routes[k].replace('\r', '');
+            }
+        }
+    }
+}
+
+class pathSegment {
+    constructor(stop1, stop2, routes, stopCount) {
+        this.stop1 = stop1;
+        this.stop2 = stop2;
+        this.routes = routes;
+        this.stopCount = stopCount;
+    }
+}
+
+let start = stopsMap.get('bahnKNX');
+let end = stopsMap.get('omegaKIT');
+
+let unselected;
+stopsMap.set('unselected', unselected);
+
+let finalPath;
+
 function pathfinding() {
 
     if (start === unselected || end === unselected) {
@@ -137,8 +150,6 @@ function pathfinding() {
         }
     }
 
-    debugger;
-
     // dijkstra's algorithm loop
 
     while (unexploredStops.length > 0) {
@@ -148,7 +159,6 @@ function pathfinding() {
         // Iterates through every adjacent stop.
 
         for (let i = 0; i < currentStop.adjacentStops.length; i++) {
-            console.log('for loop pass ' + i);
             let adjStop = stopsMap.get(currentStop.adjacentStops[i].id);
             let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
             if (!(adjStop)) {
@@ -160,27 +170,21 @@ function pathfinding() {
 
             let transferNeeded;
 
-            function buildPathToStop() {
-
+            if (currentStop.pathToStop !== false) {
                 let pathToCurrentStop = JSON.parse(JSON.stringify(currentStop.pathToStop));
 
                 for (let i = (pathToCurrentStop.length - 1); i >= 0; i--) {
                     adjStopPath.unshift(pathToCurrentStop[i]);
                 }
-
+            
                 let commonRoutes = findCommonElements(adjStopPath[adjStopPath.length - 1].routes, adjStopPath[adjStopPath.length - 2].routes);
-
+            
                 if (commonRoutes.length > 0) {
                     filterRoutes(adjStopPath);
                     transferNeeded = false;
                 } else {
                     transferNeeded = true;
                 }
-
-            }
-
-            if (currentStop.pathToStop !== false) {
-                buildPathToStop();
             } else {
                 transferNeeded = false;
             }
@@ -193,7 +197,7 @@ function pathfinding() {
                 adjStop.shortestTime = adjStopNewTime;
                 adjStop.previousStop = currentStop;
                 adjStop.pathToStop = adjStopPath;
-            }
+            } 
         }
 
         // Puts unexplored stops with a non-infinity shortest time in their own array.
@@ -259,7 +263,6 @@ function pathfinding() {
             console.log('ERROR: New current stop assignment failed.');
             console.log('currentStop:');
             console.log(currentStop);
-            debugger;
             break;
         }
     }
