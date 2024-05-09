@@ -123,6 +123,7 @@ let unselected;
 stopsMap.set('unselected', unselected);
 
 let finalPath;
+let errorCheck = false;
 
 function pathfinding() {
 
@@ -263,26 +264,28 @@ function pathfinding() {
             console.log('ERROR: New current stop assignment failed.');
             console.log('currentStop:');
             console.log(currentStop);
+            errorCheck = true;
             break;
         }
     }
 
-    // Creates a finalPath array, with pathSegments with the same routes condensed into a single object.
+    if (errorCheck === false) {
+        finalPath = end.pathToStop;
 
-    finalPath = end.pathToStop;
-
-
-    // Iterates through every pathSegment.
-    for (let i = 0; i < (finalPath.length - 1);) {
-        // If the current pathSegment has the same routes as the next pathSegment, combines them together.
-        if (deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
-            finalPath[i].stop2 = finalPath[i + 1].stop2;
-            finalPath[i].stopCount += 1;
-            finalPath = removeFromArray(finalPath, finalPath[i + 1])
-        } else {
-            i += 1;
-            // i only increases if the if statement is false, so the loop will always double check its work.
+        // Iterates through every pathSegment.
+        for (let i = 0; i < (finalPath.length - 1);) {
+            // If the current pathSegment has the same routes as the next pathSegment, combines them together.
+            if (deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
+                finalPath[i].stop2 = finalPath[i + 1].stop2;
+                finalPath[i].stopCount += 1;
+                finalPath = removeFromArray(finalPath, finalPath[i + 1])
+            } else {
+                i += 1;
+                // i only increases if the if statement is false, so the loop will always double check its work.
+            }
         }
+    } else {
+        finalPath = 'error';
     }
 }
 
