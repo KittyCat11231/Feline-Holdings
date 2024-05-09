@@ -1,0 +1,1 @@
+import { finalPath } from './pathfinding.js';
