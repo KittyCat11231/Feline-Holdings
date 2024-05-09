@@ -23,3 +23,15 @@ import railScarStops from '../data/ui/stops/railScar.json';
 
 import sailRoutes from '../data/ui/routes/sail.json';
 import sailStops from '../data/ui/stops/sail.json';
+
+let useAir = true;
+let useBahn = true;
+let useBus = true;
+let useRail = true;
+let useRailLocal = true;
+let useSail = true;
+
+let allStops = [];
+let allRoutes = [];
+
+function addToAllStops(modeStops) {
