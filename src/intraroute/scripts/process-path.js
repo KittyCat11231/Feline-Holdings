@@ -9,3 +9,17 @@ import bahnStops from '../data/ui/stops/bahn.json';
 import busRoutes from '../data/ui/routes/bus.json';
 import busStops from '../data/ui/stops/bus.json';
 
+import omegaRoutes from '../data/ui/routes/omega.json';
+import omegaStops from '../data/ui/stops/omega.json';
+
+import railRoutes from '../data/ui/routes/rail.json';
+import railStops from '../data/ui/stops/rail.json';
+
+import railLumevaRoutes from '../data/ui/routes/railLumeva.json';
+import railLumevaStops from '../data/ui/stops/railLumeva.json';
+
+import railScarRoutes from '../data/ui/routes/railScar.json';
+import railScarStops from '../data/ui/stops/railScar.json';
+
+import sailRoutes from '../data/ui/routes/sail.json';
+import sailStops from '../data/ui/stops/sail.json';
