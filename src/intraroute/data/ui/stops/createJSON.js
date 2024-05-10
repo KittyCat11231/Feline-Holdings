@@ -64,7 +64,7 @@ function parseFiles(mode) {
         stops.push(new stop(preStops[0].id, preStops[0].mode, preStops[0].city, preStops[0].stopName, preStops[0].code, preStops[0].keywords))
         for (let i = 1; i < preStops.length; i++) {
             if (preStops[i].id !== preStops[i - 1].id) {
-                stops.push(new stop(preStops[i].id, preStops[i].mode, preStops[i].city, preStops[i].stopName, preStops[i].code, preStops[i].keywords))
+                stops.push(new stop(preStops[i].id, preStops[i].stopMode, preStops[i].city, preStops[i].stopName, preStops[i].code, preStops[i].keywords))
             }
             stops[stops.length - 1].routes.push(new routeInfo(preStops[i].route, preStops[i].meta1, preStops[i].meta2));
         }
