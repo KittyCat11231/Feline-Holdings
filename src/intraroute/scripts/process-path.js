@@ -47,14 +47,11 @@ function removeFromArray(array, removeMe) {
     return newArray;
 }
 
-console.log(airStops[0])
-
 if (useAir === true) {
     for (let i = 0; i < airStops.length; i++) {
         for (let j = 0; j < airStops[i].routes.length; j++) {
             let routeSplit = airStops[i].routes[j].route.split('to');
             airStops[i].routes[j].route = routeSplit[0] + 'to';
-            console.log(airStops[i].routes[j].route + 'to');
         }
     }
     addToArray(airStops, allStops);
@@ -143,6 +140,7 @@ for (let i = 0; i < allRoutes.length; i++) {
 }
 
 class stopStandalone {
+    element = 'stopStandalone';
     constructor (mode, city, stopName, code) {
         this.mode = mode;
         this.city = city;
@@ -162,6 +160,7 @@ class stopInSegment {
 }
 
 class segment {
+    element = 'segment';
     constructor (routes, stop1, stop2, stopCount) {
         this.routes = routes;
         this.stop1 = stop1;
@@ -188,6 +187,7 @@ class segmentRoute {
 }
 
 class walk {
+    element = 'walk';
     constructor (route) {
         this.route = route;
     }
@@ -211,8 +211,6 @@ function processPath() {
         if (!(finalPath[i].routes.includes('walk') || finalPath[i].routes.includes('walkToBluemont') || finalPath[i].routes.includes('walkToMandela') || finalPath[i].routes.includes('yellowLineToForestville') || finalPath[i].routes.includes('yellowLineToParkour') || finalPath[i].routes.includes('marinaShuttleNorth') || finalPath[i].routes.includes('marinaShuttleSouth'))) {
             let segmentRoutes = [];
             for (let j = 0; j < finalPath[i].routes.length; j++) {
-                console.log(finalPath[i].routes[j]);
-                console.log(routesMap.get(finalPath[i].routes[j]));
                 let mode = routesMap.get(finalPath[i].routes[j]).mode;
                 let type = routesMap.get(finalPath[i].routes[j]).type;
                 let route = finalPath[i].routes[j];
@@ -278,7 +276,6 @@ function processPath() {
             processedPath.push(new stopStandalone(mode, city, stopName, code));
         }
     }
-    console.log(processedPath);
 }
 
 processPath();

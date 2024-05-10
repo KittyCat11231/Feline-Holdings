@@ -9,73 +9,57 @@ import processedPath from '../scripts/process-path';
 
 function Path() {
     console.log(processedPath);
+    let pathElements = [];
+
+    for (let i = 0; i < processedPath.length; i++) {
+        if (processedPath[i].element === 'segment') {
+            let mode = processedPath[i].routes[0].mode;
+            let type = processedPath[i].routes[0].type;
+            let route = processedPath[i].routes[0].route;
+            let num = processedPath[i].routes[0].num;
+            let routeName = processedPath[i].routes[0].routeName;
+            let destinationCity = processedPath[i].routes[0].destinationCity;
+            let destinationStopName = processedPath[i].routes[0].destinationStopName;
+            let codeshare1 = processedPath[i].routes[0].codeshare1;
+            let codeshare2 = processedPath[i].routes[0].codeshare2;
+            let stop1city = processedPath[i].routes[0].stop1.city;
+            let stop1stopName = processedPath[i].routes[0].stop1.stopName;
+            let stop1code = processedPath[i].routes[0].stop1.code;
+            let stop1meta1 = processedPath[i].routes[0].stop1.meta1;
+            let stop1meta2 = processedPath[i].routes[0].stop1.meta2;
+            let stopCount = processedPath[i].stopCount;
+            let stop2city = processedPath[i].routes[0].stop2.city;
+            let stop2stopName = processedPath[i].routes[0].stop2.stopName;
+            let stop2code = processedPath[i].routes[0].stop2.code;
+            let stop2meta1 = processedPath[i].routes[0].stop2.meta1;
+            let stop2meta2 = processedPath[i].routes[0].stop2.meta2;
+            pathElements.push(<div className={styles.segment}><Segment mode={mode} type={type} route={route} num={num} routeName={routeName} destinationCity={destinationCity} destinationStopName={destinationStopName} codeshare1={codeshare1} codeshare2={codeshare2} stop1city={stop1city} stop1stopName={stop1stopName} stop1code={stop1code} stop1meta1={stop1meta1} stop1meta2={stop1meta2} stopCount={stopCount} stop2city={stop2city} stop2stopName={stop2stopName} stop2code={stop2code} stop2meta1={stop2meta1} stop2meta2={stop2meta2} /></div>)
+        }
+        if (processedPath[i].element === 'stopStandalone') {
+            let firstOrTransfer;
+            if (i === 0) {
+                firstOrTransfer = styles.firstStop;
+            } else {
+                firstOrTransfer = styles.transferStop
+            }
+            let mode = processedPath[i].mode;
+            let city = processedPath[i].city;
+            let stopName = processedPath[i].stopName;
+            let code = processedPath[i].code;
+            pathElements.push(<div className={`${styles.stop} ${firstOrTransfer}`}><Stop mode={mode} type='origin' city={city} stopName={stopName} code={code} meta1='null' meta2='null' /></div>)
+        }
+        if (processedPath[i].element === 'walk') {
+            pathElements.push(<Walk route={processedPath[i].route} />)
+        }
+    }
+
     return (
         <div>
-            <div className={`${styles.stop} ${styles.firstStop}`}>
-                <Stop mode='air' type='origin' city='MRT International Airport' stopName='null' code='MRI' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='air' type='skywest' route='skywest1toMRI' num='1' routeName='Flight 1' destinationCity='null' destinationStopName='null' codeshare1='IntraAir Flight 1301' codeshare2='null' stop1city='MRT International Airport' stop1stopName='null' stop1code='MRI' stop1meta1='Gate A6' stop1meta2='null' stopCount='1' stop2city='Whitechapel' stop2stopName='Sky Harbor' stop2code='WHT' stop2meta1='Gate B8' stop2meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='air' type='waypointHopper' route='wp101toMAX' num='101' routeName='Flight 101' destinationCity='null' destinationStopName='null' codeshare1='IntraAir Flight 1101' codeshare2='null' stop1city='Whitechapel' stop1stopName='Sky Harbor' stop1code='WHT' stop1meta1='Gate B7' stop1meta2='null' stopCount='1' stop2city='Murrville-Arcadia' stop2stopName='International Airport' stop2code='MAX' stop2meta1='Terminal 2' stop2meta2='Gate A1' />
-            </div>
-            <Walk route='walk' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='rail' type='origin' city='Murrville-Arcadia' stopName='International Airport' code='MAX' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='rail' type='red' route='rail51west' num='51' routeName='Victorian Regional' destinationCity='Foresne' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Murrville-Arcadia' stop1stopName='International Airport' stop1code='MAX' stop1meta1='Track 5' stop1meta2='null' stopCount='7' stop2city='Veldberg' stop2stopName='SE7' stop2code='VLD' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='rail' type='mcr' route='mcr4north' num='4' routeName='Southeast Longitudinal' destinationCity='Alexandriasburg' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Veldberg' stop1stopName='SE7' stop1code='VLD' stop1meta1='null' stop1meta2='null' stopCount='2' stop2city='New Stone City' stop2stopName='Intermodal Hub' stop2code='NSC' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <Walk route='walk' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='sail' type='origin' city='New Stone City' stopName='Intermodal Hub' code='NSC' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='sail' type='mainline' route='sail4north' num='4' routeName='Meridian' destinationCity='Zaquar' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='New Stone City' stop1stopName='Intermodal Hub' stop1code='NSC' stop1meta1='null' stop1meta2='null' stopCount='2' stop2city='Zaquar' stop2stopName='Winfrey Waterport' stop2code='ZQW' stop2meta1='Gate 5' stop2meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='sail' type='express' route='sail2Xnorth' num='2X' routeName='Intra Express' destinationCity='MRT Marina' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Zaquar' stop1stopName='Winfrey Waterport' stop1code='ZQW' stop1meta1='Gate 4' stop1meta2='null' stopCount='1' stop2city='MRT Marina' stop2stopName='null' stop2code='MMN' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <Walk route='marinaShuttleSouth' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='rail' type='origin' city='MRT Marina' stopName='null' code='MMN' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='rail' type='black' route='rail39south' num='39' routeName='Lakeshore Line' destinationCity='Achowalogen Takachsin-Covina' destinationStopName='International Airport' codeshare1='null' codeshare2='null' stop1city='MRT Marina' stop1stopName='null' stop1code='MMN' stop1meta1='Track 2' stop1meta2='null' stopCount='2' stop2city='Achowalogen Takachsin-Covina' stop2stopName='International Airport' stop2code='ATC' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <Walk route='walk' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='air' type='origin' city='Achowalogen Takachsin-Covina' stopName='International Airport' code='ATC' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='air' type='mainline' route='air408toWOI' num='408' routeName='Flight 408' destinationCity='null' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Achowalogen Takachsin-Covina' stop1stopName='International Airport' stop1code='ATC' stop1meta1='IntraAir Annex Terminal' stop1meta2='null' stopCount='1' stop2city='Western Ocean International Airport' stop2stopName='null' stop2code='WOI' stop2meta1='Gate A12' stop2meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='air' type='mainline' route='air418toAIR' num='418' routeName='Flight 418' destinationCity='null' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Western Ocean International Airport' stop1stopName='null' stop1code='WOI' stop1meta1='Gate B10' stop1meta2='null' stopCount='1' stop2city='Alturas' stop2stopName='InterRegional Airport' stop2code='AIR' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <Walk route='walk' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='omega' type='origin' city='Alturas' stopName='null' code='ALT' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='omega' type='null' route='omega802north' num='802' routeName='Route 802' destinationCity='Jones Beach' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Alturas' stop1stopName='null' stop1code='ALT' stop1meta1='null' stop1meta2='null' stopCount='1' stop2city='Fairfax' stop2stopName='Northern Cross' stop2code='FNC' stop2meta1='Gate S13' stop2meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='omega' type='null' route='omega808west' num='808' routeName='Route 808' destinationCity='Welcomeville' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Fairfax' stop1stopName='Northern Cross' stop1code='FNC' stop1meta1='Gate S22' stop1meta2='null' stopCount='2' stop2city='Parkour City' stop2stopName='null' stop2code='PAK' stop2meta1='null' stop2meta2='null' />
-            </div>
-            <Walk route='yellowLineToForestville' />
-            <div className={`${styles.stop} ${styles.transferStop}`}>
-                <Stop mode='omega' type='origin' city='Forestville' stopName='null' code='FST' meta1='null' meta2='null' />
-            </div>
-            <div className={styles.segment}>
-                <Segment mode='omega' type='null' route='omega816west' num='816' routeName='Route 816' destinationCity='Edenmorr' destinationStopName='null' codeshare1='null' codeshare2='null' stop1city='Forestville' stop1stopName='null' stop1code='FST' stop1meta1='null' stop1meta2='null' stopCount='1' stop2city='Edenmorr' stop2stopName='Bus Station' stop2code='EDM' stop2meta1='Platform 2' stop2meta2='null' />
-            </div>
+            {pathElements.map((pathElement) => {
+                return pathElement;
+            })}
         </div>
-    )
+        )
 }
 
 export default Path;
