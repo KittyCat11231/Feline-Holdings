@@ -243,6 +243,7 @@ function processPath() {
                 let stopCount = finalPath[i].stopCount;
                 segmentRoutes.push(new segmentRoute(mode, type, route, num, routeName, destinationCity, destinationStopName, codeshare1, codeshare2, stop1, stop2, stopCount))
             }
+            // need to change stop1 and stop2
             processedPath.push(new segment(segmentRoutes, finalPath[i].stop1, finalPath[i].stop2, stopCount));
         } else {
             processedPath.push(new walk(finalPath[i].routes[0]));
