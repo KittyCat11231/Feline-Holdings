@@ -291,4 +291,4 @@ function pathfinding() {
 
 pathfinding();
 
-export default { finalPath };
+export default finalPath;

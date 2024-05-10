@@ -5,10 +5,10 @@ import Segment from './Segment';
 import Stop from './Stop';
 import Walk from './Walk';
 
-import finalPath from '../scripts/pathfinding';
+import processedPath from '../scripts/process-path';
 
-function Path(props) {
-    console.log(finalPath);
+function Path() {
+    console.log(processedPath);
     return (
         <div>
             <div className={`${styles.stop} ${styles.firstStop}`}>

@@ -1,4 +1,4 @@
-import { finalPath } from './pathfinding.js';
+import finalPath from './pathfinding.js';
 
 import airRoutes from '../data/ui/routes/air.json';
 import airStops from '../data/ui/stops/air.json';
@@ -31,6 +31,8 @@ let useRail = true;
 let useRailLocal = true;
 let useSail = true;
 
+console.log(finalPath);
+
 let allStops = [];
 let allRoutes = [];
 
@@ -40,20 +42,21 @@ function addToArray(originArray, targetArray) {
     }
 }
 
-function findCommonElements(arr1, arr2) {
-    return arr1.filter(element => arr2.includes(element));
-}
-
 function removeFromArray(array, removeMe) {
     let newArray = array.filter((value) => value !== removeMe);
     return newArray;
 }
 
-function deepEqual(a, b) {
-    return JSON.stringify(a) === JSON.stringify(b);
-}
+console.log(airStops[0])
 
 if (useAir === true) {
+    for (let i = 0; i < airStops.length; i++) {
+        for (let j = 0; j < airStops[i].routes.length; j++) {
+            let routeSplit = airStops[i].routes[j].route.split('to');
+            airStops[i].routes[j].route = routeSplit[0] + 'to';
+            console.log(airStops[i].routes[j].route + 'to');
+        }
+    }
     addToArray(airStops, allStops);
     addToArray(airRoutes, allRoutes);
 }
@@ -82,6 +85,15 @@ if (useSail === true) {
     addToArray(sailRoutes, allRoutes);
 }
 
+for (let i = 0; i < finalPath.length; i++) {
+    for (let j = 0; j < finalPath[i].routes.length; j++) {
+        if (finalPath[i].routes[j].includes('to')) {
+            let routeSplit = finalPath[i].routes[j].split('to');
+            finalPath[i].routes[j] = routeSplit[0] + 'to';
+        }
+    }
+}
+
 const stopsMap = new Map();
 const routesMap = new Map();
 
@@ -96,10 +108,8 @@ for (let i = 0; i < allStops.length; i++) {
         }
     }
     for (let j = 0; j < allStops[i].routes.length; j++) {
-        if (allStops[i].routes[j] === '\r') {
-            allStops[i].routes = removeFromArray(allStops[i].routes, allStops[i].routes[j]);
-        } else if (allStops[i].routes[j].includes('\r')) {
-            allStops[i].routes[j] = allStops[i].routes[j].replace('\r', '');
+        if (allStops[i].routes[j].meta2.includes('\r')) {
+            allStops[i].routes[j].meta2 = allStops[i].routes[j].meta2.replace('\r', '');
         }
     }
 }
@@ -107,8 +117,10 @@ for (let i = 0; i < allStops.length; i++) {
 for (let i = 0; i < allRoutes.length; i++) {
     window[allRoutes[i].id] = allRoutes[i];
     routesMap.set(allRoutes[i].id, allRoutes[i]);
-    if (allRoutes[i].destinationStopName.includes('\r')) {
-        allRoutes[i].destinationStopName = allRoutes[i].destinationStopName.replace('\r', '');
+    if (allRoutes[i].destinationStopName) {
+        if (allRoutes[i].destinationStopName.includes('\r')) {
+            allRoutes[i].destinationStopName = allRoutes[i].destinationStopName.replace('\r', '');
+        }
     }
     if (Array.isArray(allRoutes[i].codeshares)) {
         for (let j = 0; j < allRoutes[i].codeshares.length; j++) {
@@ -199,6 +211,8 @@ function processPath() {
         if (!(finalPath[i].routes.includes('walk') || finalPath[i].routes.includes('walkToBluemont') || finalPath[i].routes.includes('walkToMandela') || finalPath[i].routes.includes('yellowLineToForestville') || finalPath[i].routes.includes('yellowLineToParkour') || finalPath[i].routes.includes('marinaShuttleNorth') || finalPath[i].routes.includes('marinaShuttleSouth'))) {
             let segmentRoutes = [];
             for (let j = 0; j < finalPath[i].routes.length; j++) {
+                console.log(finalPath[i].routes[j]);
+                console.log(routesMap.get(finalPath[i].routes[j]));
                 let mode = routesMap.get(finalPath[i].routes[j]).mode;
                 let type = routesMap.get(finalPath[i].routes[j]).type;
                 let route = finalPath[i].routes[j];
@@ -264,8 +278,9 @@ function processPath() {
             processedPath.push(new stopStandalone(mode, city, stopName, code));
         }
     }
+    console.log(processedPath);
 }
 
 processPath();
 
-export default { processedPath };
+export default processedPath;
