@@ -243,8 +243,16 @@ function processPath() {
                 let stopCount = finalPath[i].stopCount;
                 segmentRoutes.push(new segmentRoute(mode, type, route, num, routeName, destinationCity, destinationStopName, codeshare1, codeshare2, stop1, stop2, stopCount))
             }
-            // need to change stop1 and stop2
-            processedPath.push(new segment(segmentRoutes, finalPath[i].stop1, finalPath[i].stop2, stopCount));
+            let stop1city = stopsMap.get(finalPath[i].stop1).city;
+            let stop1stopName = stopsMap.get(finalPath[i].stop1).stopName;
+            let stop1code = stopsMap.get(finalPath[i].stop1).code;
+            let stop2city = stopsMap.get(finalPath[i].stop2).city;
+            let stop2stopName = stopsMap.get(finalPath[i].stop2).stopName;
+            let stop2code = stopsMap.get(finalPath[i].stop2).code;
+            let stop1 = new stopInSegment(stop1city, stop1stopName, stop1code, 'null', 'null');
+            let stop2 = new stopInSegment(stop2city, stop2stopName, stop2code, 'null', 'null');
+            let stopCount = finalPath[i].stopCount;
+            processedPath.push(new segment(segmentRoutes, stop1, stop2, stopCount));
         } else {
             processedPath.push(new walk(finalPath[i].routes[0]));
 
