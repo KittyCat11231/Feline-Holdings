@@ -116,8 +116,8 @@ class pathSegment {
     }
 }
 
-let start = stopsMap.get('bahnKNX');
-let end = stopsMap.get('omegaKIT');
+let start = stopsMap.get('omegaEDM');
+let end = stopsMap.get('omegaRDL');
 
 let unselected;
 stopsMap.set('unselected', unselected);

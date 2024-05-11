@@ -54,7 +54,7 @@ function parseFiles(mode) {
                 let routeMode = mode;
                 let type = row[3];
                 let bullet = null;
-                let num = row[2];
+                let num = row[1];
                 let altText = null;
                 let routeName = `Flight ${num}`;
                 let destination = null;

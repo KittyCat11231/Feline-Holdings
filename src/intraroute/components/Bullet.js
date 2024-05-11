@@ -196,6 +196,7 @@ function Bullet(props) {
         if (routes[i].id === props.route) {
             bullet = bulletMap.get(routes[i].bullet);
             altText = routes[i].altText;
+            console.log(routes[i]);
         }
     }
 

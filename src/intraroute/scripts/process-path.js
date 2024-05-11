@@ -220,19 +220,20 @@ function processPath() {
                 let destinationStopName = routesMap.get(finalPath[i].routes[j]).destinationStopName;
                 let codeshare1 = 'null';
                 let codeshare2 = 'null';
-                if (Array.isArray(finalPath[i].routes[j].codeshares)) {
-                    codeshare1 = finalPath[i].routes[j].codeshares[0];
-                    if (finalPath[i].routes[j].codeshares[1]) {
-                        codeshare2 = finalPath[i].routes[j].codeshares[1];
+                if (Array.isArray(routesMap.get(finalPath[i].routes[j]).codeshares)) {
+                    codeshare1 = routesMap.get(finalPath[i].routes[j]).codeshares[0];
+                    if (routesMap.get(finalPath[i].routes[j]).codeshares[1]) {
+                        codeshare2 = routesMap.get(finalPath[i].routes[j]).codeshares[1];
+                        debugger;
                     }
                 }
                 let stop1city = stopsMap.get(finalPath[i].stop1).city;
                 let stop1stopName = stopsMap.get(finalPath[i].stop1).stopName;
                 let stop1code = stopsMap.get(finalPath[i].stop1).code;
-                let stop1meta1;
-                let stop1meta2;
+                let stop1meta1 = 'null';
+                let stop1meta2 = 'null';
                 for (let k = 0; k < stopsMap.get(finalPath[i].stop1).routes.length; k++) {
-                    if (stopsMap.get(finalPath[i].stop1).routes[k] === route) {
+                    if (stopsMap.get(finalPath[i].stop1).routes[k].route === route) {
                         stop1meta1 = stopsMap.get(finalPath[i].stop1).routes[k].meta1;
                         stop1meta2 = stopsMap.get(finalPath[i].stop1).routes[k].meta2;
                         break;
@@ -241,10 +242,10 @@ function processPath() {
                 let stop2city = stopsMap.get(finalPath[i].stop2).city;
                 let stop2stopName = stopsMap.get(finalPath[i].stop2).stopName;
                 let stop2code = stopsMap.get(finalPath[i].stop2).code;
-                let stop2meta1;
-                let stop2meta2;
+                let stop2meta1 = 'null';
+                let stop2meta2 = 'null';
                 for (let k = 0; k < stopsMap.get(finalPath[i].stop2).routes.length; k++) {
-                    if (stopsMap.get(finalPath[i].stop2).routes[k] === route) {
+                    if (stopsMap.get(finalPath[i].stop2).routes[k].route === route) {
                         stop2meta1 = stopsMap.get(finalPath[i].stop2).routes[k].meta1;
                         stop2meta2 = stopsMap.get(finalPath[i].stop2).routes[k].meta2;
                         break;
@@ -253,6 +254,7 @@ function processPath() {
                 let stop1 = new stopInSegment(stop1city, stop1stopName, stop1code, stop1meta1, stop1meta2);
                 let stop2 = new stopInSegment(stop2city, stop2stopName, stop2code, stop2meta1, stop2meta2);
                 let stopCount = finalPath[i].stopCount;
+                console.log(routeName);
                 segmentRoutes.push(new segmentRoute(mode, type, route, num, routeName, destinationCity, destinationStopName, codeshare1, codeshare2, stop1, stop2, stopCount))
             }
             let stop1city = stopsMap.get(finalPath[i].stop1).city;

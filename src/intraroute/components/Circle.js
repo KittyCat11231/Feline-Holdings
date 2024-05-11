@@ -169,7 +169,7 @@ function Circle(props) {
         srcToUse = trainRailTan;
     }
     if (props.mode === 'rail' && props.type === 'yellow') {
-        srcToUse = trainRailYellow;
+        srcToUse = trainRailBlack;
     }
     if (props.mode === 'mrtYellowLine') {
         srcToUse = mrtLogo;

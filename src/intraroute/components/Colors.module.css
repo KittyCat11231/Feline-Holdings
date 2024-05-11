@@ -140,16 +140,16 @@
 }
 
 .airGemsDiamondBackground {
-    background-color: #30fefe;
+    background-color: #29f6f6;
 }
 
 .airGemsDiamondColor {
-    color: #30fefe;
+    color: #29f6f6;
 }
 
 .airGemsDiamondFilter {
     /* https://codepen.io/sosuke/pen/Pjoqqp */
-    filter: invert(88%) sepia(99%) saturate(971%) hue-rotate(131deg) brightness(101%) contrast(99%);
+    filter: invert(81%) sepia(45%) saturate(1617%) hue-rotate(140deg) brightness(107%) contrast(93%);
 }
 
 .airGemsLapisBackground {

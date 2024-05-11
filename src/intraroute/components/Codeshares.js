@@ -10,7 +10,7 @@ function Codeshares(props) {
         <div className={styles.container}>
             <p className={`${styles.codeshare1} ${props.color}`}>{props.codeshare1}</p>
             {renderCodeshare2 ? <p className={`${styles.slash} ${props.color}`}>/</p> : ''}
-            {renderCodeshare2 ? <p className={`${styles.codeshare2} ${props.color}`}>{props.codeshares}</p> : ''}
+            {renderCodeshare2 ? <p className={`${styles.codeshare2} ${props.color}`}>{props.codeshare2}</p> : ''}
             <p className={styles.bufferText}>Placeholder</p>
         </div>
     )
