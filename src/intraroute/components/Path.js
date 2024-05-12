@@ -55,9 +55,7 @@ function Path() {
 
     return (
         <div>
-            {pathElements.map((pathElement) => {
-                return pathElement;
-            })}
+            {pathElements}
         </div>
         )
 }
