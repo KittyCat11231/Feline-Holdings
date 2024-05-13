@@ -1,0 +1,42 @@
+.logoBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.topLogo {
+    height: 67px;
+}
+
+.search {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.bottomLogo {
+    height: 67px;
+}
+
+.footer1 p, .footer2 p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+
+.pGray {
+    color: #4d4d4d;
+}
+
+.footer1 {
+    margin-top: 25px;
+}
+
+.footer2 {
+    margin-top: 50px;
+}
+
+.buffer {
+    width: 100%;
+    height: 50px;
+}

@@ -23,7 +23,7 @@ function removeFromArray(array, removeMe) {
 
 let allStopsForSearch = [];
 
-function processStops(modeStops, mode) {
+function processStops(modeStops, mode, modeDisplay) {
     for (let i = 0; i < modeStops.length; i++) {
         for (let j = 0; j < modeStops[i].keywords.length; j++) {
             if (modeStops[i].keywords[j] === '\r' || modeStops[i].keywords[j] === 'null') {
@@ -37,18 +37,22 @@ function processStops(modeStops, mode) {
         if (modeStops[i].stopName !== 'null') {
             title = `${modeStops[i].city} ${modeStops[i].stopName}`;
         }
-        let keywords = modeStops[i].keywords;
+        title = `${title} (${modeStops[i].code}) (${modeDisplay})`;
+        let keywords = '';
+        for (let j = 0; j < modeStops[i].keywords.length; j++) {
+            keywords = keywords + ` ${modeStops[i].keywords[j]}`
+        }
         allStopsForSearch.push(new stop(id, title, mode, keywords))
     }
 }
 
-processStops(airStops, 'air');
-processStops(bahnStops, 'bahn');
-processStops(busStops, 'bus');
-processStops(omegaStops, 'omega');
-processStops(railStops, 'rail');
-processStops(railLumevaStops, 'railLumeva');
-processStops(railScarStops, 'railScar');
-processStops(sailStops, 'sail');
+processStops(airStops, 'air', 'IntraAir');
+processStops(bahnStops, 'bahn', 'IntraBahn');
+processStops(busStops, 'bus', 'IntraBus');
+processStops(omegaStops, 'omega', 'OMEGAbus!');
+processStops(railStops, 'rail', 'IntraRail');
+processStops(railLumevaStops, 'railLumeva', 'MCR Urban Lumeva');
+processStops(railScarStops, 'railScar', 'MCR Urban Scarborough');
+processStops(sailStops, 'sail', 'IntraSail');
 
 export default allStopsForSearch;

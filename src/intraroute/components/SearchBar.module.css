@@ -1,0 +1,19 @@
+.container {
+    height: 100%;
+}
+
+.search:focus-within {
+    position: relative;
+    z-index: 3;
+}
+
+.search ul { 
+    background: #dadada; 
+    border-radius: 15px;
+    width: 100%;
+}
+
+.search li {
+    font-size: 1.0rem;
+    margin-top: 10px;
+}

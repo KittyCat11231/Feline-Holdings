@@ -116,8 +116,8 @@ class pathSegment {
     }
 }
 
-let start = stopsMap.get('railACA');
-let end = stopsMap.get('airEIA');
+let start = stopsMap.get('omegaKIT');
+let end = stopsMap.get('omegaPEC');
 
 let unselected;
 stopsMap.set('unselected', unselected);
