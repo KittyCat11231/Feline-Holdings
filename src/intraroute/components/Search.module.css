@@ -43,3 +43,13 @@
 .random {
     margin-left: 10px;
 }
+
+.searchBarStart {
+    position: relative;
+    z-index: 5;
+}
+
+.searchBarEnd {
+    position: relative;
+    z-index: 3;
+}

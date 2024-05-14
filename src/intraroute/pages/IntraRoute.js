@@ -31,7 +31,7 @@ function IntraRoute() {
             <div className={styles.search}>
                 <Search start={start} setStart={setStart} end={end} setEnd={setEnd} />
             </div>
-            {(start === 'unselected' || end === 'unselected') ? <div className={styles.buffer}></div> : <Path start={start} end={end} />}
+            {(start === 'unselected' || end === 'unselected') ? <div className={styles.buffer}></div> : <div className={styles.path}><Path start={start} end={end} /></div>}
             <div className={styles.logoBox}>
                 <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
             </div>
@@ -43,6 +43,7 @@ function IntraRoute() {
             </div>
             <div className={styles.footer2}>
                 <p className={styles.pGray}>© {currentYearEdit} Intra. A Feline Holdings company.</p>
+                <p className={styles.pGray}>Icon from <a href="https://www.onlinewebfonts.com/icon">onlinewebfonts.com</a> is licensed by CC BY 4.0.</p>
                 <p className={styles.pGray}>Designed by Roy Disney Softworks. A Feline Holdings company.</p>
             </div>
         </div>

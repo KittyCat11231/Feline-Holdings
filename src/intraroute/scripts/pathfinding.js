@@ -124,15 +124,7 @@ function pathfinding(start, end, finalPath, processedPath) {
 
     let errorCheck = false;
 
-    if (start === 'random') {
-        start = stopsMap.get('bahnKNX');
-    }
-    if (end === 'random') {
-        end = stopsMap.get('bahnWHQ');
-    }
-
     if (start === end) {
-        alert('You can\'t choose the same stop for your origin and destination, you silly goose!');
         return;
     }
 

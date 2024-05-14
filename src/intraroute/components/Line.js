@@ -225,7 +225,7 @@ function Line(props) {
         renderMeta2 = true;
     }
     let stopCountPlural = true;
-    if (props.stopCount === '1') {
+    if (props.stopCount === 1) {
         stopCountPlural = false;
     }
     let stopCount = `${props.stopCount} stop${stopCountPlural ? 's' : ''} to...`;
