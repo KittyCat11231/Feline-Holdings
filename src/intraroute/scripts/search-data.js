@@ -5,7 +5,7 @@ import omegaStops from '../data/ui/stops/omega.json';
 import railStops from '../data/ui/stops/rail.json';
 import railLumevaStops from '../data/ui/stops/railLumeva.json';
 import railScarStops from '../data/ui/stops/railScar.json';
-import sailStops from '../data/ui/stops/railScar.json';
+import sailStops from '../data/ui/stops/sail.json';
 
 class stop {
     constructor(id, title, mode, keywords) {

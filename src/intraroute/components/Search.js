@@ -7,9 +7,10 @@ import swap from '../assets/search/swap.svg';
 import random from '../assets/search/random.svg';
 
 import SearchBar from './SearchBar';
-import SearchBarLegacy from './SearchBarLegacy';
 
 function Search(props) {
+    let setStart = props.setStart;
+    let setEnd = props.setEnd;
     return (
         <div className={styles.container}>
             <div className={styles.innerContainer}>

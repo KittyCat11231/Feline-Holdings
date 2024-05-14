@@ -22,8 +22,6 @@ import processPath from './process-path';
 
 function pathfinding(start, end, finalPath, processedPath) {
 
-    debugger;
-
     let useAir = true;
     let useBahn = true;
     let useBus = true;
@@ -126,10 +124,14 @@ function pathfinding(start, end, finalPath, processedPath) {
 
     let errorCheck = false;
 
-    if (start === unselected || end === unselected) {
-        alert('You must choose an origin and destination!');
-        return;
-    } else if (start === end) {
+    if (start === 'random') {
+        start = stopsMap.get('bahnKNX');
+    }
+    if (end === 'random') {
+        end = stopsMap.get('bahnWHQ');
+    }
+
+    if (start === end) {
         alert('You can\'t choose the same stop for your origin and destination, you silly goose!');
         return;
     }
