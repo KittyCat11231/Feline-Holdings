@@ -18,114 +18,113 @@ import railLumevaStops from '../data/pathfinding/railLumeva.json';
 import railScarStops from '../data/pathfinding/railScar.json';
 import sailStops from '../data/pathfinding/sail.json';
 
-let useAir = true;
-let useBahn = true;
-let useBus = true;
-let useRail = true;
-let useRailLocal = true;
-let useSail = true;
+import processPath from './process-path';
 
-let allStops = [];
+function pathfinding(start, end, finalPath, processedPath) {
 
-function addToAllStops(modeStops) {
-    for (let i = 0; i < modeStops.length; i++) {
-        allStops.push(modeStops[i]);
-    }
-}
+    debugger;
 
-function findCommonElements(arr1, arr2) {
-    return arr1.filter(element => arr2.includes(element));
-}
+    let useAir = true;
+    let useBahn = true;
+    let useBus = true;
+    let useRail = true;
+    let useRailLocal = true;
+    let useSail = true;
 
-function removeFromArray(array, removeMe) {
-    let newArray = array.filter((value) => value !== removeMe);
-    return newArray;
-}
+    let allStops = [];
 
-function deepEqual(a, b) {
-    return JSON.stringify(a) === JSON.stringify(b);
-}
-
-function filterRoutes(pathArray) {
-
-    let commonRoutesForFilter = findCommonElements(pathArray[pathArray.length - 1].routes, pathArray[pathArray.length - 2].routes);
-
-    if (!(commonRoutesForFilter)) {
-        return;
-    }
-
-    for (let i = (pathArray.length - 1); i >= 0; i--) {
-        let commonRoutes3 = findCommonElements(commonRoutesForFilter, pathArray[i].routes);
-
-        if (commonRoutes3.length > 0) {
-            pathArray[i].routes = commonRoutesForFilter
-        } else {
-            break;
+    function addToAllStops(modeStops) {
+        for (let i = 0; i < modeStops.length; i++) {
+            allStops.push(JSON.parse(JSON.stringify(modeStops[i])))
         }
     }
-}
 
-if (useAir === true) {
-    addToAllStops(airStops);
-}
-if (useBahn === true) {
-    addToAllStops(bahnStops);
-}
-if (useBus === true) {
-    addToAllStops(busStops);
-    addToAllStops(omegaStops);
-}
-if (useRail === true) {
-    addToAllStops(railStops);
-}
-if (useRailLocal === true) {
-    addToAllStops(railLumevaStops);
-    addToAllStops(railScarStops);
-}
-if (useSail === true) {
-    addToAllStops(sailStops);
-}
+    function findCommonElements(arr1, arr2) {
+        return arr1.filter(element => arr2.includes(element));
+    }
 
-const stopsMap = new Map();
+    function removeFromArray(array, removeMe) {
+        let newArray = array.filter((value) => value !== removeMe);
+        return newArray;
+    }
 
-for (let i = 0; i < allStops.length; i++) {
-    window[allStops[i].id] = allStops[i];
-    stopsMap.set(allStops[i].id, allStops[i]);
-    allStops[i].shortestTime = Infinity;
-    for (let j = 0; j < allStops[i].adjacentStops.length; j++) {
-        allStops[i].adjacentStops[j].weight = Number(allStops[i].adjacentStops[j].weight);
+    function deepEqual(a, b) {
+        return JSON.stringify(a) === JSON.stringify(b);
+    }
 
-        // removes \r from adjacent stop routes in JSON imported data:
+    function filterRoutes(pathArray) {
 
-        for (let k = 0; k < allStops[i].adjacentStops[j].routes.length; k++) {
-            if (allStops[i].adjacentStops[j].routes[k] === '\r') {
-                allStops[i].adjacentStops[j].routes = removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
-            } else if (allStops[i].adjacentStops[j].routes[k].includes('\r')) {
-                allStops[i].adjacentStops[j].routes[k] = allStops[i].adjacentStops[j].routes[k].replace('\r', '');
+        let commonRoutesForFilter = findCommonElements(pathArray[pathArray.length - 1].routes, pathArray[pathArray.length - 2].routes);
+
+        if (!(commonRoutesForFilter)) {
+            return;
+        }
+
+        for (let i = (pathArray.length - 1); i >= 0; i--) {
+            let commonRoutes3 = findCommonElements(commonRoutesForFilter, pathArray[i].routes);
+
+            if (commonRoutes3.length > 0) {
+                pathArray[i].routes = commonRoutesForFilter
+            } else {
+                break;
             }
         }
     }
-}
 
-class pathSegment {
-    constructor(stop1, stop2, routes, stopCount) {
-        this.stop1 = stop1;
-        this.stop2 = stop2;
-        this.routes = routes;
-        this.stopCount = stopCount;
+    if (useAir === true) {
+        addToAllStops(airStops);
     }
-}
+    if (useBahn === true) {
+        addToAllStops(bahnStops);
+    }
+    if (useBus === true) {
+        addToAllStops(busStops);
+        addToAllStops(omegaStops);
+    }
+    if (useRail === true) {
+        addToAllStops(railStops);
+    }
+    if (useRailLocal === true) {
+        addToAllStops(railLumevaStops);
+        addToAllStops(railScarStops);
+    }
+    if (useSail === true) {
+        addToAllStops(sailStops);
+    }
 
-let start = stopsMap.get('omegaKIT');
-let end = stopsMap.get('omegaPEC');
+    const stopsMap = new Map();
 
-let unselected;
-stopsMap.set('unselected', unselected);
+    for (let i = 0; i < allStops.length; i++) {
+        stopsMap.set(allStops[i].id, allStops[i]);
+        allStops[i].shortestTime = Infinity;
+        for (let j = 0; j < allStops[i].adjacentStops.length; j++) {
+            allStops[i].adjacentStops[j].weight = Number(allStops[i].adjacentStops[j].weight);
 
-let finalPath;
-let errorCheck = false;
+            // removes \r from adjacent stop routes in JSON imported data:
 
-function pathfinding() {
+            for (let k = 0; k < allStops[i].adjacentStops[j].routes.length; k++) {
+                if (allStops[i].adjacentStops[j].routes[k] === '\r') {
+                    allStops[i].adjacentStops[j].routes = removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
+                } else if (allStops[i].adjacentStops[j].routes[k].includes('\r')) {
+                    allStops[i].adjacentStops[j].routes[k] = allStops[i].adjacentStops[j].routes[k].replace('\r', '');
+                }
+            }
+        }
+    }
+
+    class pathSegment {
+        constructor(stop1, stop2, routes, stopCount) {
+            this.stop1 = stop1;
+            this.stop2 = stop2;
+            this.routes = routes;
+            this.stopCount = stopCount;
+        }
+    }
+
+    let unselected;
+    stopsMap.set('unselected', unselected);
+
+    let errorCheck = false;
 
     if (start === unselected || end === unselected) {
         alert('You must choose an origin and destination!');
@@ -134,6 +133,9 @@ function pathfinding() {
         alert('You can\'t choose the same stop for your origin and destination, you silly goose!');
         return;
     }
+
+    start = stopsMap.get(start);
+    end = stopsMap.get(end);
 
     start.shortestTime = 0;
     start.explored = true;
@@ -264,7 +266,9 @@ function pathfinding() {
             console.log('ERROR: New current stop assignment failed.');
             console.log('currentStop:');
             console.log(currentStop);
+            console.log(allStops);
             errorCheck = true;
+            debugger;
             break;
         }
     }
@@ -287,8 +291,9 @@ function pathfinding() {
     } else {
         finalPath = 'error';
     }
+
+    processPath(finalPath, processedPath);
+    console.log('test');
 }
 
-pathfinding();
-
-export default finalPath;
+export default pathfinding;

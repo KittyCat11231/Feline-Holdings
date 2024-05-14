@@ -5,11 +5,15 @@ import Segment from './Segment';
 import Stop from './Stop';
 import Walk from './Walk';
 
-import processedPath from '../scripts/process-path';
+import pathfinding from '../scripts/pathfinding';
 
-function Path() {
-    console.log(processedPath);
+function Path(props) {
     let pathElements = [];
+
+    let finalPath = [];
+    let processedPath = [];
+
+    pathfinding(props.start, props.end, finalPath, processedPath)
 
     for (let i = 0; i < processedPath.length; i++) {
         if (processedPath[i].element === 'segment') {

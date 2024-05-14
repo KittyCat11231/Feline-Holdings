@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './IntraRoute.module.css';
 
 import SearchBarTest from '../components/SearchBarTest';
@@ -18,15 +19,19 @@ function IntraRoute() {
     } else {
         currentYearEdit = `2024 - ${currentYear}`
     }
+
+    const [start, setStart] = useState('unselected');
+    const [end, setEnd] = useState('unselected');
+    
     return (
         <div>
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>
             <div className={styles.search}>
-                <Search />
+                <Search start={start} setStart={setStart} end={end} setEnd={setEnd} />
             </div>
-            <div className={styles.buffer}></div>
+            {(start === 'unselected' || end === 'unselected') ? <div className={styles.buffer}></div> : <Path start={start} end={end} />}
             <div className={styles.logoBox}>
                 <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
             </div>

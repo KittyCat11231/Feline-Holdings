@@ -6,9 +6,8 @@ import styles from './SearchBar.module.css';
 import allStopsForSearch from '../scripts/search-data';
 
 function SearchBar(props) {
-    const [start, setStart] = useState();
-    const [end, setEnd] = useState();
-
+    const setStart = props.setStart;
+    const setEnd = props.setEnd;
     const handleOnSelect = (item) => {
         console.log(item);
         if (props.startOrEnd === 'start') {
