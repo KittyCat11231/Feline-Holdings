@@ -1,22 +1,22 @@
-.yellow-footer {
+.yellowFooter {
     background-color: #ffc90e;
     width: 100%;
     height: 15px;
 }
 
-.orange-footer {
+.orangeFooter {
     background-color: #ff7f27;
     width: 100%;
     height: 45px;
 }
 
-.bottom-logo {
+.bottomLogo {
     width: 400px;
     margin-top: 3px;
 }
 
 @media (min-width: 900.5px) {
-    .footer-contents {
+    .footerContents {
         display: flex;
         flex-direction: row;
         justify-content: left;
@@ -24,7 +24,7 @@
         width: 100%;
     }
 
-    .footer-text {
+    .footerText {
         margin-left: auto;
         margin-right: auto;
         margin-top: 22px;
@@ -32,7 +32,7 @@
 }
 
 @media (max-width: 900.5px) {
-    .footer-contents {
+    .footerContents {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -40,27 +40,27 @@
         width: 100%;
     }
 
-    .footer-text {
+    .footerText {
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
     }
 
-    .bottom-logo {
+    .bottomLogo {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.footer-text p {
+.footerText p {
     text-align: center;
     color: #7f7f7f;
 }
 
-.footer-text-1 {
+.footerText1 {
     margin-top: 0;
 }
 
-.footer-text-2 {
+.footerText2 {
     margin-top: -18px;
 }

@@ -22,14 +22,12 @@ import railScarStops from '../data/ui/stops/railScar.json';
 import sailRoutes from '../data/ui/routes/sail.json';
 import sailStops from '../data/ui/stops/sail.json';
 
-function processPath(finalPath, processedPath) {
+function processPath(finalPath, processedPath, filters) {
 
-    let useAir = true;
-    let useBahn = true;
-    let useBus = true;
-    let useRail = true;
-    let useRailLocal = true;
-    let useSail = true;
+    if (finalPath === 'error') {
+        processedPath = 'error';
+        return;
+    }
 
     let allStops = [];
     let allRoutes = [];
@@ -45,7 +43,7 @@ function processPath(finalPath, processedPath) {
         return newArray;
     }
 
-    if (useAir === true) {
+    if (filters.useAir === true) {
         for (let i = 0; i < airStops.length; i++) {
             for (let j = 0; j < airStops[i].routes.length; j++) {
                 let routeSplit = airStops[i].routes[j].route.split('to');
@@ -55,27 +53,27 @@ function processPath(finalPath, processedPath) {
         addToArray(airStops, allStops);
         addToArray(airRoutes, allRoutes);
     }
-    if (useBahn === true) {
+    if (filters.useBahn === true) {
         addToArray(bahnStops, allStops);
         addToArray(bahnRoutes, allRoutes);
     }
-    if (useBus === true) {
+    if (filters.useBus === true) {
         addToArray(busStops, allStops);
         addToArray(busRoutes, allRoutes);
         addToArray(omegaStops, allStops);
         addToArray(omegaRoutes, allRoutes);
     }
-    if (useRail === true) {
+    if (filters.useRail === true) {
         addToArray(railStops, allStops);
         addToArray(railRoutes, allRoutes);
     }
-    if (useRailLocal === true) {
+    if (filters.useRailLocal === true) {
         addToArray(railLumevaStops, allStops);
         addToArray(railLumevaRoutes, allRoutes);
         addToArray(railScarStops, allStops);
         addToArray(railScarRoutes, allRoutes);
     }
-    if (useSail === true) {
+    if (filters.useSail === true) {
         addToArray(sailStops, allStops);
         addToArray(sailRoutes, allRoutes);
     }

@@ -1,13 +1,4 @@
-/*
-
-IntraRoute Pathfinding Script
-
-This script calculates pathfinding between the origin and destination set by the user and returns the best route.
-
-Designed for Intra by Roy Disney Softworks.
-Developed by kyle11231 with help from DNAmaster10 & scarycrumb.
-
-*/
+import React from 'react';
 
 import airStops from '../data/pathfinding/air.json';
 import bahnStops from '../data/pathfinding/bahn.json';
@@ -20,14 +11,8 @@ import sailStops from '../data/pathfinding/sail.json';
 
 import processPath from './process-path';
 
-function pathfinding(start, end, finalPath, processedPath) {
-
-    let useAir = true;
-    let useBahn = true;
-    let useBus = true;
-    let useRail = true;
-    let useRailLocal = true;
-    let useSail = true;
+function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
+    console.log('start of pathfinding function');
 
     let allStops = [];
 
@@ -69,25 +54,54 @@ function pathfinding(start, end, finalPath, processedPath) {
         }
     }
 
-    if (useAir === true) {
+    if (filters.useAir === true) {
         addToAllStops(airStops);
     }
-    if (useBahn === true) {
+    if (filters.useBahn === true) {
         addToAllStops(bahnStops);
     }
-    if (useBus === true) {
+    if (filters.useBus === true) {
         addToAllStops(busStops);
         addToAllStops(omegaStops);
     }
-    if (useRail === true) {
+    if (filters.useRail === true) {
         addToAllStops(railStops);
     }
-    if (useRailLocal === true) {
+    if (filters.useRailLocal === true) {
         addToAllStops(railLumevaStops);
         addToAllStops(railScarStops);
     }
-    if (useSail === true) {
+    if (filters.useSail === true) {
         addToAllStops(sailStops);
+    }
+
+    // filter out adjacent stops for non-selected modes:
+
+    for (let i = 0; i < allStops.length; i++) {
+        allStops[i].adjacentStops.forEach((stop) => {
+            let mode;
+            if (stop.id.indexOf('air') === 0 || stop.id.indexOf('seg') === 0 || stop.id.indexOf('wp') === 0 || stop.id.indexOf('volanti') === 0 || stop.id.indexOf('skywest') === 0 || stop.id.indexOf('gems') === 0 || stop.id.indexOf('heli') === 0 || stop.id.indexOf('segHeli') === 0 || stop.id.indexOf('heamp') === 0 || stop.id.indexOf('eastern') === 0 || stop.id.indexOf('poseidon') === 0) {
+                mode = 'air';
+            }
+            if (stop.id.indexOf('bahn') === 0) {
+                mode = 'bahn';
+            }
+            if (stop.id.indexOf('bus') === 0 || stop.id.indexOf('omega') === 0) {
+                mode = 'bus';
+            }
+            if ((stop.id.indexOf('rail') === 0 && !(stop.id.includes('railLumeva') || stop.id.includes('railScar'))) || stop.id.indexOf('mcr') === 0) {
+                mode = 'rail';
+            }
+            if (stop.id.indexOf('railLumeva') === 0 || stop.id.indexOf('railScar') === 0) {
+                mode = 'railLocal';
+            }
+            if (stop.id.indexOf('sail') === 0) {
+                mode = 'sail';
+            }
+            if ((mode === 'air' && filters.useAir === false) || (mode === 'bahn' && filters.useBahn === false) || (mode === 'bus' && filters.useBus === false) || (mode === 'rail' && filters.useRail === false) || (mode === 'railLocal' && filters.useRailLocal === false) || (mode === 'sail' && filters.useSail === false)) {
+                allStops[i].adjacentStops = removeFromArray(allStops[i].adjacentStops, stop);
+            }
+        })
     }
 
     const stopsMap = new Map();
@@ -125,6 +139,15 @@ function pathfinding(start, end, finalPath, processedPath) {
     let errorCheck = false;
 
     if (start === end) {
+        errorCheck = true;
+        finalPath = 'error';
+        return;
+    }
+
+    if (!(stopsMap.get(start)) || !(stopsMap.get(end))) {
+        errorCheck = true;
+        finalPath = 'error';
+        debugger;
         return;
     }
 
@@ -156,11 +179,9 @@ function pathfinding(start, end, finalPath, processedPath) {
         // Iterates through every adjacent stop.
 
         for (let i = 0; i < currentStop.adjacentStops.length; i++) {
+            console.log(currentStop.adjacentStops[i].id);
             let adjStop = stopsMap.get(currentStop.adjacentStops[i].id);
             let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
-            if (!(adjStop)) {
-                debugger;
-            }
             let routesLastLeg = currentStop.adjacentStops[i].routes;
             let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
             let adjStopPath = [pathLastLeg];
@@ -286,8 +307,7 @@ function pathfinding(start, end, finalPath, processedPath) {
         finalPath = 'error';
     }
 
-    processPath(finalPath, processedPath);
-    console.log('test');
+    processPath(finalPath, processedPath, filters);
 }
 
 export default pathfinding;

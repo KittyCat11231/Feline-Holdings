@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    height: 40px;
+}
+
+.modeBox {
+    margin-left: 10px;
+}
+
+.title {
+    margin-top: 1px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #4d4d4d;
+    user-select: none;
+}

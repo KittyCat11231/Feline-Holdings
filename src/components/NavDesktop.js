@@ -1,32 +1,32 @@
 import React from 'react';
-import './NavDesktop.css';
+import styles from './NavDesktop.module.css';
 
 function NavDesktop() {
     return (
-        <nav className="nav-desktop">
-            <div className="nav-button nav-intra">
-                <a href="https://felineholdings.com">Intra</a>
+        <nav>
+            <div className={`${styles.button} ${styles.intra}`}>
+                <a href="/">Intra</a>
             </div>
-            <div className="nav-button nav-roy">
-                <a href="https://felineholdings.com">Roy Disney</a>
+            <div className={`${styles.button} ${styles.roy}`}>
+                <a href="/">Roy Disney</a>
             </div>
-            <div className="nav-button nav-mbs">
-                <a href="https://felineholdings.com">MBS</a>
+            <div className={`${styles.button} ${styles.mbs}`}>
+                <a href="/">MBS</a>
             </div>
-            <div className="nav-button nav-bart">
-                <a href="https://felineholdings.com">BART</a>
+            <div className={`${styles.button} ${styles.bart}`}>
+                <a href="/">BART</a>
             </div>
-            <div className="nav-button nav-fossack">
-                <a href="https://felineholdings.com">Fossack Notseca</a>
+            <div className={`${styles.button} ${styles.fossack}`}>
+                <a href="/">Fossack Notseca</a>
             </div>
-            <div className="nav-button nav-other">
-                <a href="https://felineholdings.com">Other Companies</a>
+            <div className={`${styles.button} ${styles.other}`}>
+                <a href="/">Other Companies</a>
             </div>
-            <div className="nav-button nav-news">
-                <a href="https://felineholdings.com">News</a>
+            <div className={`${styles.button} ${styles.news}`}>
+                <a href="/">News</a>
             </div>
-            <div className="nav-button nav-about">
-                <a href="https://felineholdings.com">About Us</a>
+            <div className={`${styles.button} ${styles.about}`}>
+                <a href="/">About Us</a>
             </div>
         </nav>
     )

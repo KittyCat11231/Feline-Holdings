@@ -1,0 +1,31 @@
+.container {
+    width: 83%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+.label {
+    color: #4d4d4d;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    user-select: none;
+}
+
+.arrowDown {
+    margin-left: 10px;
+}
+
+.arrowRight {
+    margin-left: 10px;
+    transform: rotate(-90deg)
+}

@@ -6,42 +6,42 @@ nav {
     flex-wrap: wrap;
 }
 
-.nav-button {
+.button {
     margin: auto 15px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.nav-button a {
+.button a {
     color: white;
     text-decoration: none;
     font-size: 1.3rem;
 }
 
-.nav-intra:has(a:hover) {
+.intra:has(a:hover) {
     background-color: #4d4d4d;
 }
 
-.nav-roy:has(a:hover) {
+.roy:has(a:hover) {
     background-color: #5a86a8;
 }
 
-.nav-mbs:has(a:hover) {
+.mbs:has(a:hover) {
     background-color: blue;
 }
 
-.nav-bart:has(a:hover) {
+.bart:has(a:hover) {
     background-color: #30acdf;
 }
 
-.nav-fossack:has(a:hover) {
+.fossack:has(a:hover) {
     background-color: #003875;
 }
 
-.nav-other:has(a:hover), .nav-news:has(a:hover), .nav-about:has(a:hover) {
+.other:has(a:hover), .news:has(a:hover), .about:has(a:hover) {
     background-color: #ffc90e;
 }
 
-.nav-other a:hover, .nav-news a:hover, .nav-about a:hover {
+.other a:hover, .news a:hover, .about a:hover {
     color: #7f7f7f;
 }

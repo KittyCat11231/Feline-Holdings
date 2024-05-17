@@ -1,4 +1,4 @@
-.dropdown-button {
+.dropdownButton {
     background-color: #ff7f27;
     padding: 9px 16px;
     color: white;
@@ -14,11 +14,11 @@
     width: 100%
 }
 
-.dropdown-container {
+.dropdownContainer {
     position: absolute;
 }
 
-.dropdown-content {
+.dropdownContent {
     position: absolute;
     width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -26,49 +26,49 @@
     margin-top: 43px;
 }
 
-.dropdown-content a {
+.dropdownContent a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-size: 1.3rem;
 }
 
-.intra-mobile {
+.intra {
     color: white;
     background-color: #4d4d4d;
 }
 
-.roy-mobile {
+.roy {
     color: white;
     background-color: #5a86a8;
 }
 
-.mbs-mobile {
+.mbs {
     color: white;
     background-color: blue;
 }
 
-.bart-mobile {
+.bart {
     color: white;
     background-color: #30acdf;
 }
 
-.fossack-mobile {
+.fossack {
     color: white;
     background-color: #003875;
 }
 
-.other-mobile {
+.other {
     color: #7f7f7f;
     background-color: #ffc90e;
 }
 
-.news-mobile {
+.news {
     color: white;
     background-color: #ff7f27;
 }
 
-.about-mobile {
+.about {
     color: #7f7f7f;
     background-color: #ffc90e;
 }

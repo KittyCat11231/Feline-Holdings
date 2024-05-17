@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
-import IntraRoute from './intraroute/pages/IntraRoute'
+import IntraRoute from './intraroute/pages/IntraRoute';
+import Test from './pages/Test';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -19,8 +20,11 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/index" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/intraroute" element={<IntraRoute />} />
             <Route path="/IntraRoute" element={<IntraRoute />} />
+            <Route path="/test" element={<Test />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>
         </BrowserRouter>
