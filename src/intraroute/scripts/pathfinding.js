@@ -96,12 +96,16 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
             if (stop.id.indexOf('sail') === 0) {
                 mode = 'sail';
             }
-            if ((mode === 'air' && filters.useAir === false) ||
-                (mode === 'bahn' && filters.useBahn === false) ||
-                (mode === 'bus' && filters.useBus === false) ||
-                (mode === 'rail' && filters.useRail === false) ||
-                (mode === 'railLocal' && filters.useRailLocal === false) ||
-                (mode === 'sail' && filters.useSail === false)) {
+            const modes = {
+                air: 'useAir',
+                bahn: 'useBahn',
+                bus: 'useBus',
+                rail: 'useRail',
+                railLocal: 'useRailLocal',
+                sail: 'useSail'
+            };
+            
+            if (modes[mode] && filters[modes[mode]] === false) {
                 allStops[i].adjacentStops = removeFromArray(allStops[i].adjacentStops, stop);
             }
         })
