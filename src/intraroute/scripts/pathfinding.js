@@ -1,5 +1,3 @@
-import React from 'react';
-
 import airStops from '../data/pathfinding/air.json';
 import bahnStops from '../data/pathfinding/bahn.json';
 import busStops from '../data/pathfinding/bus.json';
