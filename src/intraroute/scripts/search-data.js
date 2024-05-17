@@ -23,25 +23,19 @@ function createAllStopsForSearch(allStopsForSearch) {
     }
     
     function processStops(modeStops, mode, modeDisplay) {
-        for (let i = 0; i < modeStops.length; i++) {
-            for (let j = 0; j < modeStops[i].keywords.length; j++) {
-                if (modeStops[i].keywords[j] === '\r' || modeStops[i].keywords[j] === 'null') {
-                    modeStops[i].keywords = removeFromArray(modeStops[i].keywords, modeStops[i].keywords[j]);
-                } else if (modeStops[i].keywords[j].includes('\r')) {
-                    modeStops[i].keywords[j] = modeStops[i].keywords[j].replace('\r', '');
-                }
+        for (let modeStop of modeStops) {
+            modeStop.keywords = modeStop.keywords.filter(keyword => {
+                return keyword !== '\r';
+            }).map(keyword => {
+                return keyword.replace('\r', '')
+            });
+            let title = modeStop.city;
+            if (modeStop.stopName !== 'null') {
+                title = `${modeStop.city} ${modeStop.stopName}`;
             }
-            let id = modeStops[i].id;
-            let title = modeStops[i].city;
-            if (modeStops[i].stopName !== 'null') {
-                title = `${modeStops[i].city} ${modeStops[i].stopName}`;
-            }
-            title = `${title} (${modeStops[i].code}) (${modeDisplay})`;
-            let keywords = '';
-            for (let j = 0; j < modeStops[i].keywords.length; j++) {
-                keywords = keywords + ` ${modeStops[i].keywords[j]}`
-            }
-            allStopsForSearch.push(new stop(id, title, mode, keywords))
+            title = `${title} (${modeStop.code}) (${modeDisplay})`;
+            let keywords = modeStop.keywords.join(' ');
+            allStopsForSearch.push(new stop(modeStop.id, title, mode, keywords))
         }
     }
     

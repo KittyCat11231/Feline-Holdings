@@ -44,10 +44,10 @@ function processPath(finalPath, processedPath, filters) {
     }
 
     if (filters.useAir === true) {
-        for (let i = 0; i < airStops.length; i++) {
-            for (let j = 0; j < airStops[i].routes.length; j++) {
-                let routeSplit = airStops[i].routes[j].route.split('to');
-                airStops[i].routes[j].route = routeSplit[0] + 'to';
+        for (let airStop of airStops) {
+            for (let route of airStop.routes) {
+                let routeSplit = route.route.split('to');
+                route.route = routeSplit[0] + 'to';
             }
         }
         addToArray(airStops, allStops);
@@ -90,48 +90,38 @@ function processPath(finalPath, processedPath, filters) {
     const stopsMap = new Map();
     const routesMap = new Map();
 
-    for (let i = 0; i < allStops.length; i++) {
-        stopsMap.set(allStops[i].id, allStops[i]);
-        for (let j = 0; j < allStops[i].keywords.length; j++) {
-            if (allStops[i].keywords[j] === '\r') {
-                allStops[i].keywords = removeFromArray(allStops[i].keywords, allStops[i].keywords[j]);
-            } else if (allStops[i].keywords[j].includes('\r')) {
-                allStops[i].keywords[j] = allStops[i].keywords[j].replace('\r', '');
-            }
-        }
-        for (let j = 0; j < allStops[i].routes.length; j++) {
-            if (allStops[i].routes[j].meta2.includes('\r')) {
-                allStops[i].routes[j].meta2 = allStops[i].routes[j].meta2.replace('\r', '');
-            }
-        }
-    }
+    allStops = allStops.map(stop => {
+        stopsMap.set(stop.id, stop);
+        stop.keywords = stop.keywords.filter(keyword => {
+            return keyword !== '\r';
+        }).map(keyword => {
+            return keyword.replace('\r', '')
+        })
+        stop.routes = stop.routes.map(route => {
+            route.meta2 = route.meta2.replace('\r', '');
+            return route;
+        });
+        return stop;
+    });
 
-    for (let i = 0; i < allRoutes.length; i++) {
-        routesMap.set(allRoutes[i].id, allRoutes[i]);
-        if (allRoutes[i].destinationStopName) {
-            if (allRoutes[i].destinationStopName.includes('\r')) {
-                allRoutes[i].destinationStopName = allRoutes[i].destinationStopName.replace('\r', '');
-            }
+    allRoutes = allRoutes.map(route => {
+        routesMap.set(route.id, route);
+        route.destinationStopName = route.destinationStopName?.replace('\r', '');
+        if (Array.isArray(route.codeshares)) {
+            route.codeshares = route.codeshares.filter(codeshare => {
+                return codeshare !== '\r';
+            }).map(codeshare => {
+                return codeshare.replace('\r', '')
+            })
         }
-        if (Array.isArray(allRoutes[i].codeshares)) {
-            for (let j = 0; j < allRoutes[i].codeshares.length; j++) {
-                if (allRoutes[i].codeshares[j] === '\r') {
-                    allRoutes[i].codeshares = removeFromArray(allRoutes[i].codeshares, allRoutes[i].codeshares[j]);
-                } else if (allRoutes[i].codeshares[j].includes('\r')) {
-                    allRoutes[i].codeshares[j] = allRoutes[i].codeshares[j].replace('\r', '');
-                }
-            }
+        if (Array.isArray(route.useFullNameIn)) {
+            route.useFullNameIn = route.useFullNameIn.filter(useFullNameIn => {
+                return useFullNameIn !== '\r';
+            }).map(useFullNameIn => {
+                return useFullNameIn.replace('\r', '')
+            })
         }
-        if (Array.isArray(allRoutes[i].useFullNameIn)) {
-            for (let j = 0; j < allRoutes[i].useFullNameIn.length; j++) {
-                if (allRoutes[i].useFullNameIn[j] === '\r') {
-                    allRoutes[i].useFullNameIn = removeFromArray(allRoutes[i].useFullNameIn, allRoutes[i].useFullNameIn[j]);
-                } else if (allRoutes[i].useFullNameIn[j].includes('\r')) {
-                    allRoutes[i].useFullNameIn[j] = allRoutes[i].useFullNameIn[j].replace('\r', '');
-                }
-            }
-        }
-    }
+    });
 
     class stopStandalone {
         element = 'stopStandalone';
@@ -198,74 +188,65 @@ function processPath(finalPath, processedPath, filters) {
 
     processedPath.push(new stopStandalone(originMode, originCity, originStopName, originCode))
 
-    for (let i = 0; i < finalPath.length; i++) {
-        if (!(finalPath[i].routes.includes('walk') || finalPath[i].routes.includes('walkToBluemont') || finalPath[i].routes.includes('walkToMandela') || finalPath[i].routes.includes('yellowLineToForestville') || finalPath[i].routes.includes('yellowLineToParkour') || finalPath[i].routes.includes('marinaShuttleNorth') || finalPath[i].routes.includes('marinaShuttleSouth'))) {
+    for (let path of finalPath) {
+        if (!path.routes.some(r => [
+            'walk',
+            'walkToBluemont',
+            'walkToMandela',
+            'yellowLineToForestville',
+            'yellowLineToParkour',
+            'marinaShuttleNorth',
+            'marinaShuttleSouth'
+        ].includes(r))) {
             let segmentRoutes = [];
-            for (let j = 0; j < finalPath[i].routes.length; j++) {
-                let mode = routesMap.get(finalPath[i].routes[j]).mode;
-                let type = routesMap.get(finalPath[i].routes[j]).type;
-                let route = finalPath[i].routes[j];
-                let num = routesMap.get(finalPath[i].routes[j]).num;
-                let routeName = routesMap.get(finalPath[i].routes[j]).routeName;
-                let destinationCity = routesMap.get(finalPath[i].routes[j]).destinationCity;
-                let destinationStopName = routesMap.get(finalPath[i].routes[j]).destinationStopName;
+            for (let routeID of path.routes) {
+                let route = routesMap.get(routeID);
                 let codeshare1 = 'null';
                 let codeshare2 = 'null';
-                if (Array.isArray(routesMap.get(finalPath[i].routes[j]).codeshares)) {
-                    codeshare1 = routesMap.get(finalPath[i].routes[j]).codeshares[0];
-                    if (routesMap.get(finalPath[i].routes[j]).codeshares[1]) {
-                        codeshare2 = routesMap.get(finalPath[i].routes[j]).codeshares[1];
+                if (Array.isArray(route.codeshares)) {
+                    codeshare1 = route.codeshares[0];
+                    if (route.codeshares[1]) {
+                        codeshare2 = route.codeshares[1];
                         debugger;
                     }
                 }
-                let stop1city = stopsMap.get(finalPath[i].stop1).city;
-                let stop1stopName = stopsMap.get(finalPath[i].stop1).stopName;
-                let stop1code = stopsMap.get(finalPath[i].stop1).code;
+                let stop1 = stopsMap.get(path.stop1);
                 let stop1meta1 = 'null';
                 let stop1meta2 = 'null';
-                for (let k = 0; k < stopsMap.get(finalPath[i].stop1).routes.length; k++) {
-                    if (stopsMap.get(finalPath[i].stop1).routes[k].route === route) {
-                        stop1meta1 = stopsMap.get(finalPath[i].stop1).routes[k].meta1;
-                        stop1meta2 = stopsMap.get(finalPath[i].stop1).routes[k].meta2;
+                for (let stopRoute of stop1.routes) {
+                    if (stopRoute === route) {
+                        stop1meta1 = stopRoute.meta1;
+                        stop1meta2 = stopRoute.meta2;
                         break;
                     }
                 }
-                let stop2city = stopsMap.get(finalPath[i].stop2).city;
-                let stop2stopName = stopsMap.get(finalPath[i].stop2).stopName;
-                let stop2code = stopsMap.get(finalPath[i].stop2).code;
+                let stop2 = stopsMap.get(path.stop2)
                 let stop2meta1 = 'null';
                 let stop2meta2 = 'null';
-                for (let k = 0; k < stopsMap.get(finalPath[i].stop2).routes.length; k++) {
-                    if (stopsMap.get(finalPath[i].stop2).routes[k].route === route) {
-                        stop2meta1 = stopsMap.get(finalPath[i].stop2).routes[k].meta1;
-                        stop2meta2 = stopsMap.get(finalPath[i].stop2).routes[k].meta2;
+                for (let stopRoute of stop2.routes) {
+                    if (stopRoute === route) {
+                        stop2meta1 = stopRoute.meta1;
+                        stop2meta2 = stopRoute.meta2;
                         break;
                     }
                 }
-                let stop1 = new stopInSegment(stop1city, stop1stopName, stop1code, stop1meta1, stop1meta2);
-                let stop2 = new stopInSegment(stop2city, stop2stopName, stop2code, stop2meta1, stop2meta2);
-                let stopCount = finalPath[i].stopCount;
-                segmentRoutes.push(new segmentRoute(mode, type, route, num, routeName, destinationCity, destinationStopName, codeshare1, codeshare2, stop1, stop2, stopCount))
+                let stop1InSegment = new stopInSegment(stop1.city, stop1.stopName, stop1.code, stop1meta1, stop1meta2);
+                let stop2InSegment = new stopInSegment(stop2.city, stop2.stopName, stop2.code, stop2meta1, stop2meta2);
+                let stopCount = path.stopCount;
+                segmentRoutes.push(new segmentRoute(route.mode, route.type, route, route.num, route.routeName, route.destinationCity, route.destinationStopName, codeshare1, codeshare2, stop1InSegment, stop2InSegment, stopCount))
             }
-            let stop1city = stopsMap.get(finalPath[i].stop1).city;
-            let stop1stopName = stopsMap.get(finalPath[i].stop1).stopName;
-            let stop1code = stopsMap.get(finalPath[i].stop1).code;
-            let stop2city = stopsMap.get(finalPath[i].stop2).city;
-            let stop2stopName = stopsMap.get(finalPath[i].stop2).stopName;
-            let stop2code = stopsMap.get(finalPath[i].stop2).code;
-            let stop1 = new stopInSegment(stop1city, stop1stopName, stop1code, 'null', 'null');
-            let stop2 = new stopInSegment(stop2city, stop2stopName, stop2code, 'null', 'null');
-            let stopCount = finalPath[i].stopCount;
-            processedPath.push(new segment(segmentRoutes, stop1, stop2, stopCount));
+            let stop1 = stopsMap.get(path.stop1);
+            let stop2 = stopsMap.get(path.stop2);
+
+            let stop1InSegment = new stopInSegment(stop1.city, stop1.stopName, stop1.code, 'null', 'null');
+            let stop2InSegment = new stopInSegment(stop2.city, stop2.stopName, stop2.code, 'null', 'null');
+            let stopCount = path.stopCount;
+            processedPath.push(new segment(segmentRoutes, stop1InSegment, stop2InSegment, stopCount));
         } else {
-            processedPath.push(new walk(finalPath[i].routes[0]));
+            processedPath.push(new walk(path.routes[0]));
 
-            let mode = stopsMap.get(finalPath[i].stop2).stopMode;
-            let city = stopsMap.get(finalPath[i].stop2).city;
-            let stopName = stopsMap.get(finalPath[i].stop2).stopName;
-            let code = stopsMap.get(finalPath[i].stop2).code;
-
-            processedPath.push(new stopStandalone(mode, city, stopName, code));
+            let stop2 = stopsMap.get(path.stop2);
+            processedPath.push(new stopStandalone(stop2.mode, stop2.city, stop2.stopName, stop2.code));
         }
     }
 }
