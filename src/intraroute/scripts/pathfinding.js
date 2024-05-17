@@ -78,25 +78,30 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
     for (let i = 0; i < allStops.length; i++) {
         allStops[i].adjacentStops.forEach((stop) => {
             let mode;
-            if (stop.id.indexOf('air') === 0 || stop.id.indexOf('seg') === 0 || stop.id.indexOf('wp') === 0 || stop.id.indexOf('volanti') === 0 || stop.id.indexOf('skywest') === 0 || stop.id.indexOf('gems') === 0 || stop.id.indexOf('heli') === 0 || stop.id.indexOf('segHeli') === 0 || stop.id.indexOf('heamp') === 0 || stop.id.indexOf('eastern') === 0 || stop.id.indexOf('poseidon') === 0) {
+            if (['air', 'seg', 'wp', 'volanti', 'skywest', 'gems', 'heli', 'segHeli', 'heamp', 'eastern', 'poseidon'].some(s => stop.id.indexOf(s) === 0)) {
                 mode = 'air';
             }
             if (stop.id.indexOf('bahn') === 0) {
                 mode = 'bahn';
             }
-            if (stop.id.indexOf('bus') === 0 || stop.id.indexOf('omega') === 0) {
+            if (['bus', 'omega'].some(s => stop.id.indexOf(s) === 0)) {
                 mode = 'bus';
             }
-            if ((stop.id.indexOf('rail') === 0 && !(stop.id.includes('railLumeva') || stop.id.includes('railScar'))) || stop.id.indexOf('mcr') === 0) {
+            if (stop.id.indexOf('rail') === 0 && !['railLumeva', 'railScar', 'mcr'].some(s => stop.id.indexOf(s) === 0)) {
                 mode = 'rail';
             }
-            if (stop.id.indexOf('railLumeva') === 0 || stop.id.indexOf('railScar') === 0) {
+            if (['railLumeva', 'railScar'].some(s => stop.id.indexOf(s) === 0)) {
                 mode = 'railLocal';
             }
             if (stop.id.indexOf('sail') === 0) {
                 mode = 'sail';
             }
-            if ((mode === 'air' && filters.useAir === false) || (mode === 'bahn' && filters.useBahn === false) || (mode === 'bus' && filters.useBus === false) || (mode === 'rail' && filters.useRail === false) || (mode === 'railLocal' && filters.useRailLocal === false) || (mode === 'sail' && filters.useSail === false)) {
+            if ((mode === 'air' && filters.useAir === false) ||
+                (mode === 'bahn' && filters.useBahn === false) ||
+                (mode === 'bus' && filters.useBus === false) ||
+                (mode === 'rail' && filters.useRail === false) ||
+                (mode === 'railLocal' && filters.useRailLocal === false) ||
+                (mode === 'sail' && filters.useSail === false)) {
                 allStops[i].adjacentStops = removeFromArray(allStops[i].adjacentStops, stop);
             }
         })
