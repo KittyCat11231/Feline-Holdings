@@ -246,7 +246,7 @@ function processPath(finalPath, processedPath, filters) {
             processedPath.push(new walk(path.routes[0]));
 
             let stop2 = stopsMap.get(path.stop2);
-            processedPath.push(new stopStandalone(stop2.mode, stop2.city, stop2.stopName, stop2.code));
+            processedPath.push(new stopStandalone(stop2.stopMode, stop2.city, stop2.stopName, stop2.code));
         }
     }
 }
