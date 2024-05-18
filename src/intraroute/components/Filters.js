@@ -11,7 +11,6 @@ import downArrow from '../assets/filters/down-arrow.svg';
 function Filters(props) {
     const [displayDropdown, setDisplayDropdown] = useState(false);
     const [arrowStyles, setArrowStyles] = useState(styles.arrowRight);
-    const [arrowDirection, setArrowDirection] = useState('right');
 
     function handleClick() {
         setDisplayDropdown(!displayDropdown);
@@ -21,12 +20,6 @@ function Filters(props) {
             setArrowStyles(styles.arrowDown);
         }
     }
-
-    useGSAP(
-        () => {
-            gsap.from('[class*="arrowDown"]', { rotation: -90, delay: 3 });
-        }
-    )
 
     let labelRef = useRef();
 

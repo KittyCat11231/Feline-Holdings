@@ -214,7 +214,7 @@ function processPath(finalPath, processedPath, filters) {
                 let stop1meta1 = 'null';
                 let stop1meta2 = 'null';
                 for (let stopRoute of stop1.routes) {
-                    if (stopRoute === route) {
+                    if (stopRoute.route === route.id) {
                         stop1meta1 = stopRoute.meta1;
                         stop1meta2 = stopRoute.meta2;
                         break;
@@ -224,7 +224,7 @@ function processPath(finalPath, processedPath, filters) {
                 let stop2meta1 = 'null';
                 let stop2meta2 = 'null';
                 for (let stopRoute of stop2.routes) {
-                    if (stopRoute === route) {
+                    if (stopRoute.route === route.id) {
                         stop2meta1 = stopRoute.meta1;
                         stop2meta2 = stopRoute.meta2;
                         break;
