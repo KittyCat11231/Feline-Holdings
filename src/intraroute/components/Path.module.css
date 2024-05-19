@@ -1,6 +1,6 @@
 .stop {
-    margin-left: 8%;
     width: fit-content;
+    max-width: 100%;
 }
 
 .firstStop {
@@ -13,4 +13,9 @@
 
 .segment {
     margin-top: -51px;
+}
+
+.container {
+    max-width: 84%;
+    margin-left: 8%;
 }

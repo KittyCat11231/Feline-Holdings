@@ -69,7 +69,7 @@ function Path(props) {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             {returnError ?
                 <PathError
                     start={props.start}

@@ -1,0 +1,7 @@
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+}

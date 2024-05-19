@@ -15,9 +15,20 @@
     width: 100%;
 }
 
-.icon {
-    height: 67px;
-    width: 67px;
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .icon {
+        height: 67px;
+        width: 67px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .icon {
+        height: 45px;
+        width: 45px;
+    }
 }
 
 .startContainer, .endContainer {

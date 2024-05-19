@@ -97,7 +97,6 @@ function SearchBar(props) {
                 }}
                 resultStringKeyName='title'
                 styling={{
-                    height: '67px',
                     backgroundColor: '#f2f2f2',
                     border: '0px solid black',
                     color: '#4d4d4d',

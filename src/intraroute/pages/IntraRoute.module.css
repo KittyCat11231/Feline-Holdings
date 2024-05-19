@@ -1,11 +1,31 @@
+@media (pointer: fine), (pointer: none) {
+    .test {
+        background-color: magenta;
+    }
+}
+
+@media (pointer: coarse) {
+    .test {
+        background-color: lime;
+    }
+}
+
 .logoBox {
     display: flex;
     justify-content: center;
     margin-top: 60px;
 }
 
-.topLogo {
-    height: 67px;
+@media (min-width: 500.5px) {
+    .topLogo {
+        height: 67px;
+    }
+}
+
+@media (max-width: 500.5px) {
+    .topLogo {
+        width: 84%;
+    }
 }
 
 .search {

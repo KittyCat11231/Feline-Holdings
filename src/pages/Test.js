@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
+import styles from './Test.module.css';
 
 function Test() {
     const [value, setValue] = useState('');
@@ -17,6 +18,7 @@ function Test() {
             <h1>Development test page</h1>
             <input onChange={(e) => debounced(e.target.value)} />
             <p>{value}</p>
+            <h2 className={styles.test}>Mobile: lime, desktop: magenta</h2>
         </div>
     )
 }

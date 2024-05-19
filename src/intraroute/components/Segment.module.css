@@ -1,6 +1,6 @@
 .segmentBox {
-    margin-left: 8%;
     width: fit-content;
+    max-width: 100%;
 }
 
 .yellowDots {

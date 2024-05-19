@@ -23,6 +23,7 @@
     width: fit-content;
     z-index: 1;
     position: relative;
+    max-width: 100%;
 }
 
 .bullet {

@@ -58,10 +58,14 @@ function parseFiles(mode) {
             if (id) {
                 preStops.push(new preStop(id, stopMode, city, stopName, code, route, meta1, meta2, keywords));
             }
+            if (id === 'sailZQW') {
+                console.log(route);
+            }
         }
 
         let stops = [];
-        stops.push(new stop(preStops[0].id, preStops[0].stopMode, preStops[0].city, preStops[0].stopName, preStops[0].code, preStops[0].keywords))
+        stops.push(new stop(preStops[0].id, preStops[0].stopMode, preStops[0].city, preStops[0].stopName, preStops[0].code, preStops[0].keywords));
+        stops[0].routes.push(new routeInfo(preStops[0].route, preStops[0].meta1, preStops[0].meta2));
         for (let i = 1; i < preStops.length; i++) {
             if (preStops[i].id !== preStops[i - 1].id) {
                 stops.push(new stop(preStops[i].id, preStops[i].stopMode, preStops[i].city, preStops[i].stopName, preStops[i].code, preStops[i].keywords))

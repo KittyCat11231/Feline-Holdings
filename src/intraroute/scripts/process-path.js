@@ -123,6 +123,8 @@ function processPath(finalPath, processedPath, filters) {
         }
     });
 
+    console.log(stopsMap.get('sailZQW'));
+
     class stopStandalone {
         element = 'stopStandalone';
         constructor (mode, city, stopName, code) {
@@ -213,6 +215,7 @@ function processPath(finalPath, processedPath, filters) {
                 let stop1 = stopsMap.get(path.stop1);
                 let stop1meta1 = 'null';
                 let stop1meta2 = 'null';
+                console.log(stop1.routes);
                 for (let stopRoute of stop1.routes) {
                     if (stopRoute.route === route.id) {
                         stop1meta1 = stopRoute.meta1;
