@@ -53,20 +53,20 @@ function IntraRoute() {
             <Helmet>
                 <title>IntraRoute | Feline Holdings</title>
                 <meta name="description" content="The official routefinder of Intra." />
-                <link rel="icon" href={process.env.VERCEL_URL + "intra-i.svg"} />
-                <link rel="apple-touch-icon" href={process.env.VERCEL_URL + "intra-i.svg"} />
+                <link rel="icon" href='https://svgshare.com/i/16Gj' />
+                <link rel="apple-touch-icon" href='https://svgshare.com/i/16Gj' />
 
                 <meta property="og:url" content="https://felineholdings.com/intraroute" />
                 <meta property="og:title" content="IntraRoute | Feline Holdings" />
                 <meta property="og:description" content="The official routefinder of Intra." />
-                <meta property="og:image" content={process.env.VERCEL_URL + "intraroute-link-preview.svg"} />
+                <meta property="og:image" content='https://svgshare.com/i/16G7' />
 S
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="felineholdings.com/intraroute" />
                 <meta property="twitter:url" content="https://felineholdings.com/intraroute" />
                 <meta name="twitter:title" content="IntraRoute | Feline Holdings" />
                 <meta name="twitter:description" content="The official routefinder of Intra." />
-                <meta name="twitter:image" content={process.env.VERCEL_URL + "intraroute-link-preview.svg"} />
+                <meta name="twitter:image" content='https://svgshare.com/i/16G7' />
             </Helmet>
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />

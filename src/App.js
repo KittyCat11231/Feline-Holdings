@@ -18,21 +18,21 @@ function App() {
       <Helmet>
         <title>Feline Holdings</title>
         <meta name="description" content="The official website of Feline Holdings." />
-        <link rel="icon" href={process.env.VERCEL_URL + "feline-holdings-small.svg"} />
-        <link rel="apple-touch-icon" href={process.env.VERCEL_URL + "feline-holdings-small.svg"} />
+        <link rel="icon" href='https://svgshare.com/i/16GU' />
+        <link rel="apple-touch-icon" href='https://svgshare.com/i/16GU' />
 
         <meta property="og:url" content="https://felineholdings.com/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Feline Holdings" />
         <meta property="og:description" content="The official website of Feline Holdings." />
-        <meta property="og:image" content={process.env.VERCEL_URL + "feline-holdings-link-preview.svg"} />
+        <meta property="og:image" content='https://svgshare.com/i/16FA.svg' />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="felineholdings.com" />
         <meta property="twitter:url" content="https://felineholdings.com/" />
         <meta name="twitter:title" content="Feline Holdings" />
         <meta name="twitter:description" content="The official website of Feline Holdings." />
-        <meta name="twitter:image" content={process.env.VERCEL_URL + "feline-holdings-link-preview.svg"} />
+        <meta name="twitter:image" content='https://svgshare.com/i/16FA.svg' />
       </Helmet>
       <div id='container-wrap'>
         <Header />
