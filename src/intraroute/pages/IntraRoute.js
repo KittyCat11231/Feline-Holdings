@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
 import styles from './IntraRoute.module.css';
 
 import SearchBarTest from '../components/SearchBarTest';
@@ -18,6 +17,10 @@ function IntraRoute() {
 
     document.getElementById('icon').href = 'intra-i.svg';
     document.getElementById('apple-icon').href = 'intra-i.svg';
+
+    document.getElementById('title').content = 'IntraRoute | Feline Holdings';
+    document.getElementById('description').content = 'The official routefinder of Intra.';
+    document.getElementById('url').content = 'https://felineholdings.com/intraroute';
 
     const currentYear = new Date().getFullYear();
     let currentYearEdit;
@@ -56,13 +59,6 @@ function IntraRoute() {
     
     return (
         <div>
-            <Helmet>
-                <meta property='og:title' content='IntraRoute' />
-                <meta property='og:image' content='intra-i.svg' />
-                <meta property='og:url' content='Canonical-url' />
-                <meta property='og:type' content='website' />
-                <meta property='og:description' content='The official routefinder of Intra.' />
-            </Helmet>
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>
