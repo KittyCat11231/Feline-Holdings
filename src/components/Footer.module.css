@@ -11,7 +11,8 @@
 }
 
 .bottomLogo {
-    width: 400px;
+    max-width: 400px;
+    width: 90%;
     margin-top: 3px;
 }
 
@@ -63,4 +64,12 @@
 
 .footerText2 {
     margin-top: -18px;
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .footerText1, .footerText2 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }

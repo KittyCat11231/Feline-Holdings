@@ -1,9 +1,29 @@
 .item {
-    margin-top: 25px;
     margin-bottom: 0px;
 }
 
 .firstItem {
-    margin-top: 15px;
     margin-bottom: 0px;
+}
+
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .item {
+        margin-top: 25px;
+    }
+    
+    .firstItem {
+        margin-top: 15px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .item {
+        margin-top: 15px;
+    }
+    
+    .firstItem {
+        margin-top: 15px;
+    }
 }

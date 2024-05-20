@@ -12,20 +12,38 @@
     width: fit-content;
 }
 
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .label {
+        font-size: 1.3rem;
+    }
+
+    .arrowRight, .arrowDown {
+        margin-left: 10px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .label {
+        font-size: 1.2rem;
+    }
+
+    .arrowRight, .arrowDown {
+        height: 14px;
+        margin-top: 7px;
+        margin-left: 7px;
+    }
+}
+
 .label {
     color: #4d4d4d;
     font-weight: 600;
-    font-size: 1.3rem;
     margin-top: 0px;
     margin-bottom: 0px;
     user-select: none;
 }
 
-.arrowDown {
-    margin-left: 10px;
-}
-
 .arrowRight {
-    margin-left: 10px;
     transform: rotate(-90deg)
 }

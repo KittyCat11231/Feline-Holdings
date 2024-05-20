@@ -1,19 +1,30 @@
 @media (pointer: fine), (pointer: none) {
-    .test {
-        background-color: magenta;
+    /* desktop */
+    .logoBox {
+        margin-top: 60px;
+    }
+
+    .search {
+        margin-top: 60px;
+        margin-bottom: 90px;
     }
 }
 
 @media (pointer: coarse) {
-    .test {
-        background-color: lime;
+    /* mobile */
+    .logoBox {
+        margin-top: 40px;
+    }
+
+    .search {
+        margin-top: 50px;
+        margin-bottom: 40px;
     }
 }
 
 .logoBox {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
 }
 
 @media (min-width: 500.5px) {
@@ -26,15 +37,6 @@
     .topLogo {
         width: 84%;
     }
-}
-
-.search {
-    margin-top: 60px;
-    margin-bottom: 90px;
-}
-
-.bottomLogo {
-    height: 67px;
 }
 
 .footer1 p, .footer2 p {
@@ -54,6 +56,29 @@
 
 .footer2 {
     margin-top: 50px;
+}
+
+.footer1, .footer2 {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .bottomLogo {
+        height: 67px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .footer1, .footer2 {
+        zoom: 90%;
+    }
+
+    .bottomLogo {
+        height: 50px;
+    }
 }
 
 .buffer {
