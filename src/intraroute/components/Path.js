@@ -80,7 +80,7 @@ function Path(props) {
                 pathElements
             }
         </div>
-        )
+    )
 }
 
 export default Path;
