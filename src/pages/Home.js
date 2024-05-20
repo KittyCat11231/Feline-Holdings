@@ -1,6 +1,8 @@
 import React from 'react';
 
 function Home() {
+    document.title = 'Home | Feline Holdings'
+    
     return (
         <div>
             <h1>Placeholder</h1>

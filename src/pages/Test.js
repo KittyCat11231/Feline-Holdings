@@ -4,6 +4,8 @@ import { useDebouncedCallback } from 'use-debounce';
 import styles from './Test.module.css';
 
 function Test() {
+    document.title = 'Development Test Page | Feline Holdings'
+    
     const [value, setValue] = useState('');
 
     const debounced = useDebouncedCallback(
