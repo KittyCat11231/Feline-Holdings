@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import styles from './IntraRoute.module.css';
 
-import SearchBarTest from '../components/SearchBarTest';
 import Path from '../components/Path';
 import Search from '../components/Search';
 import Filters from '../components/Filters';
@@ -13,15 +13,6 @@ import intraRouteLogoShort from '../logos/intraroute-short.svg';
 import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
 function IntraRoute() {
-    document.title = 'IntraRoute | Feline Holdings'
-
-    document.getElementById('icon').href = 'intra-i.svg';
-    document.getElementById('apple-icon').href = 'intra-i.svg';
-
-    document.getElementById('title').content = 'IntraRoute | Feline Holdings';
-    document.getElementById('description').content = 'The official routefinder of Intra.';
-    document.getElementById('url').content = 'https://felineholdings.com/intraroute';
-
     const currentYear = new Date().getFullYear();
     let currentYearEdit;
     if (currentYear === 2024) {
@@ -59,6 +50,24 @@ function IntraRoute() {
     
     return (
         <div>
+            <Helmet>
+                <title>IntraRoute | Feline Holdings</title>
+                <meta name="description" content="The official routefinder of Intra." />
+                <link rel="icon" href={process.env.PUBLIC_URL + "intra-i.svg"} />
+                <link rel="apple-touch-icon" href={process.env.PUBLIC_URL + "intra-i.svg"} />
+
+                <meta property="og:url" content="https://felineholdings.com/intraroute" />
+                <meta property="og:title" content="IntraRoute | Feline Holdings" />
+                <meta property="og:description" content="The official routefinder of Intra." />
+                <meta property="og:image" content={process.env.PUBLIC_URL + "intraroute-link-preview.svg"} />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta property="twitter:domain" content="felineholdings.com/intraroute" />
+                <meta property="twitter:url" content="https://felineholdings.com/intraroute" />
+                <meta name="twitter:title" content="IntraRoute | Feline Holdings" />
+                <meta name="twitter:description" content="The official routefinder of Intra." />
+                <meta name="twitter:image" content={process.env.PUBLIC_URL + "intraroute-link-preview.svg"} />
+            </Helmet>
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>
