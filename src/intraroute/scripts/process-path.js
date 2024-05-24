@@ -22,6 +22,8 @@ import railScarStops from '../data/ui/stops/railScar.json';
 import sailRoutes from '../data/ui/routes/sail.json';
 import sailStops from '../data/ui/stops/sail.json';
 
+import methods from '../../scripts/methods';
+
 function processPath(finalPath, processedPath, filters) {
 
     if (finalPath === 'error') {
@@ -32,17 +34,6 @@ function processPath(finalPath, processedPath, filters) {
     let allStops = [];
     let allRoutes = [];
 
-    function addToArray(originArray, targetArray) {
-        for (let i = 0; i < originArray.length; i++) {
-            targetArray.push(JSON.parse(JSON.stringify(originArray[i])));
-        }
-    }
-
-    function removeFromArray(array, removeMe) {
-        let newArray = array.filter((value) => value !== removeMe);
-        return newArray;
-    }
-
     if (filters.useAir === true) {
         for (let airStop of airStops) {
             for (let route of airStop.routes) {
@@ -50,32 +41,32 @@ function processPath(finalPath, processedPath, filters) {
                 route.route = routeSplit[0] + 'to';
             }
         }
-        addToArray(airStops, allStops);
-        addToArray(airRoutes, allRoutes);
+        methods.mergeArrayIntoArray(airStops, allStops);
+        methods.mergeArrayIntoArray(airRoutes, allRoutes);
     }
     if (filters.useBahn === true) {
-        addToArray(bahnStops, allStops);
-        addToArray(bahnRoutes, allRoutes);
+        methods.mergeArrayIntoArray(bahnStops, allStops);
+        methods.mergeArrayIntoArray(bahnRoutes, allRoutes);
     }
     if (filters.useBus === true) {
-        addToArray(busStops, allStops);
-        addToArray(busRoutes, allRoutes);
-        addToArray(omegaStops, allStops);
-        addToArray(omegaRoutes, allRoutes);
+        methods.mergeArrayIntoArray(busStops, allStops);
+        methods.mergeArrayIntoArray(busRoutes, allRoutes);
+        methods.mergeArrayIntoArray(omegaStops, allStops);
+        methods.mergeArrayIntoArray(omegaRoutes, allRoutes);
     }
     if (filters.useRail === true) {
-        addToArray(railStops, allStops);
-        addToArray(railRoutes, allRoutes);
+        methods.mergeArrayIntoArray(railStops, allStops);
+        methods.mergeArrayIntoArray(railRoutes, allRoutes);
     }
     if (filters.useRailLocal === true) {
-        addToArray(railLumevaStops, allStops);
-        addToArray(railLumevaRoutes, allRoutes);
-        addToArray(railScarStops, allStops);
-        addToArray(railScarRoutes, allRoutes);
+        methods.mergeArrayIntoArray(railLumevaStops, allStops);
+        methods.mergeArrayIntoArray(railLumevaRoutes, allRoutes);
+        methods.mergeArrayIntoArray(railScarStops, allStops);
+        methods.mergeArrayIntoArray(railScarRoutes, allRoutes);
     }
     if (filters.useSail === true) {
-        addToArray(sailStops, allStops);
-        addToArray(sailRoutes, allRoutes);
+        methods.mergeArrayIntoArray(sailStops, allStops);
+        methods.mergeArrayIntoArray(sailRoutes, allRoutes);
     }
 
     for (let i = 0; i < finalPath.length; i++) {

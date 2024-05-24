@@ -17,11 +17,6 @@ function createAllStopsForSearch(allStopsForSearch) {
         }
     }
     
-    function removeFromArray(array, removeMe) {
-        let newArray = array.filter((value) => value !== removeMe);
-        return newArray;
-    }
-    
     function processStops(modeStops, mode, modeDisplay) {
         for (let modeStop of modeStops) {
             modeStop.keywords = modeStop.keywords.filter(keyword => {

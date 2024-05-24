@@ -11,6 +11,7 @@ import SearchBar from './SearchBar';
 
 import createAllStopsForSearch from '../scripts/search-data';
 import usePrevious from '../../scripts/usePrevious';
+import methods from '../../scripts/methods';
 
 function Search(props) {
     let allStopsForSearch = [];
@@ -35,18 +36,14 @@ function Search(props) {
     const [maxResultsStart, setMaxResultsStart] = useState(10);
     const [maxResultsEnd, setMaxResultsEnd] = useState(10);
 
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
-
     function handleOnClickRandomizer(startOrEnd) {
         if (startOrEnd === 'start') {
-            let index = getRandomInt(allStopsForSearch.length - 1);
+            let index = methods.getRandomInteger(allStopsForSearch.length - 1);
             setStart(allStopsForSearch[index].id);
             setMaxResultsStart(0);
             setManualStart(allStopsForSearch[index].title);
         } else if (startOrEnd === 'end') {
-            let index = getRandomInt(allStopsForSearch.length - 1);
+            let index = methods.getRandomInteger(allStopsForSearch.length - 1);
             setEnd(allStopsForSearch[index].id);
             setMaxResultsEnd(0);
             setManualEnd(allStopsForSearch[index].title);
