@@ -60,7 +60,7 @@ function IntraRoute() {
                 <meta property="og:title" content="IntraRoute | Feline Holdings" />
                 <meta property="og:description" content="The official routefinder of Intra." />
                 <meta property="og:image" content='https://svgshare.com/i/16G7' />
-S
+
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta property="twitter:domain" content="felineholdings.com/intraroute" />
                 <meta property="twitter:url" content="https://felineholdings.com/intraroute" />

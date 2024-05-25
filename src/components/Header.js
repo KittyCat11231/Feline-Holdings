@@ -1,40 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
 import styles from './Header.module.css';
 import topLogo from '../logos/feline-holdings-large.svg';
 import NavDesktop from './NavDesktop';
 import NavMobile from './NavMobile';
 
 function Header() {
-    const [useMobileNav, setUseMobileNav] = useState();
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    let navToUse;
 
-    function onLoad() {
-        if (window.innerWidth > 1162.5) {
-            setUseMobileNav(false);
-        } else {
-            setUseMobileNav(true);
-        }
+    if (window.innerWidth > 1162.5) {
+        navToUse = <NavDesktop />
+    } else {
+        navToUse = <NavMobile />
     }
-
-    function onResize() {
-        setWindowWidth(window.innerWidth);
-        if (windowWidth > 1162.5) {
-            setUseMobileNav(false);
-        } else {
-            setUseMobileNav(true);
-        }
-    }
-
-    window.addEventListener('load', onLoad);
-    window.addEventListener('resize', onResize);
 
     return (
         <div>
             <a href="/">
                 <img className={styles.topLogo} src={topLogo} alt="Feline Holdings" />
             </a>
-            {useMobileNav ? <NavMobile /> : <NavDesktop />}
+            {navToUse}
             <div className={styles.yellowHeader}></div>
         </div>
     );
