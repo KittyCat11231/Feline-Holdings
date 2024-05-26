@@ -7,6 +7,8 @@ import railLumevaStops from '../data/ui/stops/railLumeva.json';
 import railScarStops from '../data/ui/stops/railScar.json';
 import sailStops from '../data/ui/stops/sail.json';
 
+import cleanJSON from './clean-json';
+
 function createAllStopsForSearch(allStopsForSearch) {
     class stop {
         constructor(id, title, mode, keywords) {
@@ -18,12 +20,8 @@ function createAllStopsForSearch(allStopsForSearch) {
     }
     
     function processStops(modeStops, mode, modeDisplay) {
+        cleanJSON('search-stops', modeStops);
         for (let modeStop of modeStops) {
-            modeStop.keywords = modeStop.keywords.filter(keyword => {
-                return keyword !== '\r';
-            }).map(keyword => {
-                return keyword.replace('\r', '')
-            });
             let title = modeStop.city;
             if (modeStop.stopName !== 'null') {
                 title = `${modeStop.city} ${modeStop.stopName}`;

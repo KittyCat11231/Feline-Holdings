@@ -23,6 +23,7 @@ import sailRoutes from '../data/ui/routes/sail.json';
 import sailStops from '../data/ui/stops/sail.json';
 
 import methods from '../../scripts/methods';
+import cleanJSON from './clean-json';
 
 function processPath(finalPath, processedPath, filters) {
 
@@ -81,40 +82,8 @@ function processPath(finalPath, processedPath, filters) {
     const stopsMap = new Map();
     const routesMap = new Map();
 
-    allStops = allStops.map(stop => {
-        stopsMap.set(stop.id, stop);
-        stop.keywords = stop.keywords.filter(keyword => {
-            return keyword !== '\r';
-        }).map(keyword => {
-            return keyword.replace('\r', '')
-        })
-        stop.routes = stop.routes.map(route => {
-            route.meta2 = route.meta2.replace('\r', '');
-            return route;
-        });
-        return stop;
-    });
-
-    allRoutes = allRoutes.map(route => {
-        routesMap.set(route.id, route);
-        route.destinationStopName = route.destinationStopName?.replace('\r', '');
-        if (Array.isArray(route.codeshares)) {
-            route.codeshares = route.codeshares.filter(codeshare => {
-                return codeshare !== '\r';
-            }).map(codeshare => {
-                return codeshare.replace('\r', '')
-            })
-        }
-        if (Array.isArray(route.useFullNameIn)) {
-            route.useFullNameIn = route.useFullNameIn.filter(useFullNameIn => {
-                return useFullNameIn !== '\r';
-            }).map(useFullNameIn => {
-                return useFullNameIn.replace('\r', '')
-            })
-        }
-    });
-
-    console.log(stopsMap.get('sailZQW'));
+    cleanJSON('ui-stops', allStops, stopsMap);
+    cleanJSON('ui-routes', allRoutes, routesMap);
 
     class stopStandalone {
         element = 'stopStandalone';

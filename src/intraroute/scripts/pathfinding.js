@@ -9,6 +9,7 @@ import sailStops from '../data/pathfinding/sail.json';
 
 import processPath from './process-path';
 import methods from '../../scripts/methods';
+import cleanJSON from './clean-json';
 
 function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
     console.log('start of pathfinding function');
@@ -99,23 +100,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
 
     const stopsMap = new Map();
 
-    for (let i = 0; i < allStops.length; i++) {
-        stopsMap.set(allStops[i].id, allStops[i]);
-        allStops[i].shortestTime = Infinity;
-        for (let j = 0; j < allStops[i].adjacentStops.length; j++) {
-            allStops[i].adjacentStops[j].weight = Number(allStops[i].adjacentStops[j].weight);
-
-            // removes \r from adjacent stop routes in JSON imported data:
-
-            for (let k = 0; k < allStops[i].adjacentStops[j].routes.length; k++) {
-                if (allStops[i].adjacentStops[j].routes[k] === '\r') {
-                    allStops[i].adjacentStops[j].routes = methods.removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
-                } else if (allStops[i].adjacentStops[j].routes[k].includes('\r')) {
-                    allStops[i].adjacentStops[j].routes[k] = allStops[i].adjacentStops[j].routes[k].replace('\r', '');
-                }
-            }
-        }
-    }
+    cleanJSON('pathfinding-stops', allStops, stopsMap);
 
     class pathSegment {
         constructor(stop1, stop2, routes, stopCount) {
