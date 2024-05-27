@@ -11,8 +11,6 @@ import processPath from './process-path';
 import methods from '../../scripts/methods';
 
 function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
-    console.log('start of pathfinding function');
-
     let allStops = [];
 
     function addToAllStops(modeStops) {
@@ -172,7 +170,6 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
         // Iterates through every adjacent stop.
 
         for (let i = 0; i < currentStop.adjacentStops.length; i++) {
-            console.log(currentStop.adjacentStops[i].id);
             let adjStop = stopsMap.get(currentStop.adjacentStops[i].id);
             let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
             let routesLastLeg = currentStop.adjacentStops[i].routes;

@@ -16,7 +16,6 @@ import methods from '../../scripts/methods';
 function Search(props) {
     let allStopsForSearch = [];
     createAllStopsForSearch(allStopsForSearch);
-    console.log(allStopsForSearch);
 
     let setStart = props.setStart;
     let setEnd = props.setEnd;

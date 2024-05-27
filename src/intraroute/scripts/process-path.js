@@ -114,8 +114,6 @@ function processPath(finalPath, processedPath, filters) {
         }
     });
 
-    console.log(stopsMap.get('sailZQW'));
-
     class stopStandalone {
         element = 'stopStandalone';
         constructor (mode, city, stopName, code) {
@@ -194,6 +192,7 @@ function processPath(finalPath, processedPath, filters) {
             let segmentRoutes = [];
             for (let routeID of path.routes) {
                 let route = routesMap.get(routeID);
+                console.log(route);
                 let codeshare1 = 'null';
                 let codeshare2 = 'null';
                 if (Array.isArray(route.codeshares)) {
@@ -206,7 +205,6 @@ function processPath(finalPath, processedPath, filters) {
                 let stop1 = stopsMap.get(path.stop1);
                 let stop1meta1 = 'null';
                 let stop1meta2 = 'null';
-                console.log(stop1.routes);
                 for (let stopRoute of stop1.routes) {
                     if (stopRoute.route === route.id) {
                         stop1meta1 = stopRoute.meta1;
@@ -227,7 +225,16 @@ function processPath(finalPath, processedPath, filters) {
                 let stop1InSegment = new stopInSegment(stop1.city, stop1.stopName, stop1.code, stop1meta1, stop1meta2);
                 let stop2InSegment = new stopInSegment(stop2.city, stop2.stopName, stop2.code, stop2meta1, stop2meta2);
                 let stopCount = path.stopCount;
-                segmentRoutes.push(new segmentRoute(route.mode, route.type, route, route.num, route.routeName, route.destinationCity, route.destinationStopName, codeshare1, codeshare2, stop1InSegment, stop2InSegment, stopCount))
+                let destinationStopName = 'null';
+                if (Array.isArray(route.useFullNameIn)) {
+                    route.useFullNameIn.forEach(stop => {
+                        console.log(stop);
+                        if (stop === path.stop1) {
+                            destinationStopName = route.destinationStopName;
+                        }
+                    })
+                }
+                segmentRoutes.push(new segmentRoute(route.mode, route.type, route, route.num, route.routeName, route.destinationCity, destinationStopName, codeshare1, codeshare2, stop1InSegment, stop2InSegment, stopCount))
             }
             let stop1 = stopsMap.get(path.stop1);
             let stop2 = stopsMap.get(path.stop2);
