@@ -1,18 +1,63 @@
 import React from 'react';
 import { useState } from 'react';
-import { useDebouncedCallback } from 'use-debounce';
 import { Helmet } from 'react-helmet';
-import styles from './Test.module.css';
+
+import airStops from '../intraroute/data/pathfinding/air.json';
+import bahnStops from '../intraroute/data/pathfinding/bahn.json';
+import busStops from '../intraroute/data/pathfinding/bus.json';
+import omegaStops from '../intraroute/data/pathfinding/omega.json';
+import railStops from '../intraroute/data/pathfinding/rail.json';
+import railLumevaStops from '../intraroute/data/pathfinding/railLumeva.json';
+import railScarStops from '../intraroute/data/pathfinding/railScar.json';
+import sailStops from '../intraroute/data/pathfinding/sail.json';
 
 function Test() {
-    const [value, setValue] = useState('');
+    let validIds = [];
+    
+    function addValidIds(modeStops) {
+        modeStops.forEach(stop => {
+            validIds.push(stop.id);
+        })
+    }
 
-    const debounced = useDebouncedCallback(
-        (value) => {
-            setValue(value);
-        },
-        1000
-    );
+    addValidIds(airStops);
+    addValidIds(bahnStops);
+    addValidIds(busStops);
+    addValidIds(omegaStops);
+    addValidIds(railStops);
+    addValidIds(railLumevaStops);
+    addValidIds(railScarStops);
+    addValidIds(sailStops);
+
+    const sanitizeUrl = require("@braintree/sanitize-url").sanitizeUrl;
+
+    const [inputValue, setInputValue] = useState('');
+
+    const baseUrl = sanitizeUrl(window.location.href);
+    let url = new URL(baseUrl);
+    if (!(validIds.includes(url.searchParams.get('start')))) {
+        let urlSplit = baseUrl.toString().split('?');
+        url = urlSplit[0];
+        url = new URL(url);
+    }
+    url.searchParams.forEach((value, key) => {
+        if (key !== 'start') {
+            url.searchParams.delete(key);
+        }
+    })
+
+    function handleChange(e) {
+        setInputValue(e.target.value);
+    }
+
+    function handleClick() {
+        if (validIds.includes(inputValue)) {
+            url.searchParams.delete('start');
+            url.searchParams.append('start', inputValue);
+            url = sanitizeUrl(url);
+            window.location.href = url;
+        }
+    }
 
     return (
         <div>
@@ -28,10 +73,10 @@ function Test() {
                 <meta name="twitter:title" content="Test Page | Feline Holdings" />
                 <meta name="twitter:description" content="Feline Holdings development test page" />
             </Helmet>
-            <h1>Development test page</h1>
-            <input onChange={(e) => debounced(e.target.value)} />
-            <p>{value}</p>
-            <h2 className={styles.test}>Mobile: lime, desktop: magenta</h2>
+            <h1 className='header'>Development test page</h1>
+            <button onClick={handleClick}>Test</button>
+            <input onChange={e => handleChange(e)} />
+            <h2>{url.toString()}</h2>
         </div>
     )
 }
