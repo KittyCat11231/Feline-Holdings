@@ -29,11 +29,9 @@ function Test() {
     addValidIds(railScarStops);
     addValidIds(sailStops);
 
-    const sanitizeUrl = require("@braintree/sanitize-url").sanitizeUrl;
-
     const [inputValue, setInputValue] = useState('');
 
-    const baseUrl = sanitizeUrl(window.location.href);
+    const baseUrl = window.location.href;
     let url = new URL(baseUrl);
     if (!(validIds.includes(url.searchParams.get('start')))) {
         let urlSplit = baseUrl.toString().split('?');
@@ -54,8 +52,7 @@ function Test() {
         if (validIds.includes(inputValue)) {
             url.searchParams.delete('start');
             url.searchParams.append('start', inputValue);
-            url = sanitizeUrl(url);
-            window.location.href = url;
+            window.location.replace(url);
         }
     }
 
