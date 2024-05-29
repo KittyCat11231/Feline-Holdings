@@ -7,10 +7,10 @@ import NavMobile from './NavMobile';
 function Header() {
     let navToUse;
 
-    if (window.innerWidth > 1162.5) {
-        navToUse = <NavDesktop />
-    } else {
+    if (matchMedia('(pointer:coarse)').matches) {
         navToUse = <NavMobile />
+    } else {
+        navToUse = <NavDesktop />
     }
 
     return (

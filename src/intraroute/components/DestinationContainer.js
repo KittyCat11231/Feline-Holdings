@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Line.module.css';
+import styles from './DestinationContainer.module.css';
 import colorStyles from './Colors.module.css';
 
 import colors from '../scripts/colors';

@@ -45,7 +45,7 @@ function Walk(props) {
                 {renderWalk ?
                     <div className={styles.walkContainer}>
                         <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
-                        <p className={styles.walkText}>Walk to...</p>
+                        <p className={`${styles.walkText} ${styles.walkTextMain}`}>Walk to...</p>
                     </div>
                     :
                     ''
@@ -53,7 +53,7 @@ function Walk(props) {
                 {renderWalkToBluemont ?
                     <div className={styles.walkContainer}>
                         <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
-                        <p className={styles.walkText}>Walk 300 blocks west to Bluemont.</p>
+                        <p className={`${styles.walkText} ${styles.walkTextLong}`}>Walk 300 blocks west to Bluemont.</p>
                     </div>
                     :
                     ''
@@ -61,7 +61,7 @@ function Walk(props) {
                 {renderWalkToMandela ?
                     <div className={styles.walkContainer}>
                         <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
-                        <p className={styles.walkText}>Walk 300 blocks east to New Kiwi City.</p>
+                        <p className={`${styles.walkText} ${styles.walkTextLong}`}>Walk 300 blocks east to New Kiwi City.</p>
                     </div>
                     :
                     ''

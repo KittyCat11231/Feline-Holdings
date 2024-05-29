@@ -1,0 +1,75 @@
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .logoBox {
+        margin-top: 60px;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .logoBox {
+        margin-top: 40px;
+    }
+}
+
+.logoBox {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 500.5px) {
+    .topLogo {
+        height: 67px;
+    }
+}
+
+@media (max-width: 500.5px) {
+    .topLogo {
+        width: 84%;
+    }
+}
+
+.grayText {
+    color: #4d4d4d;
+}
+
+.header {
+    text-align: center;
+    font-weight: 500;
+    margin-top: 60px;
+    font-size: 2rem;
+}
+
+.button {
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #4d4d4d;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.button:hover {
+    background-color: #4d4d4d;
+}
+
+.button:hover a {
+    color: white;
+}
+
+.buttonText {
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 40px;
+}

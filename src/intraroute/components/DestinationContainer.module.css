@@ -1,0 +1,31 @@
+.destinationContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+
+.towards {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    margin-right: 8px;
+}
+
+.destinationCity {
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    line-height: 30px;
+    margin-right: 8px;
+}
+
+.destinationStopName {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 7px;
+    margin-bottom: 0px;
+}

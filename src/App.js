@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import IntraRoute from './intraroute/pages/IntraRoute';
+import IntraRouteChangelog from './intraroute/pages/IntraRouteChangelog';
 import Test from './pages/Test';
 
 import Header from './components/Header';
@@ -42,6 +43,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/intraroute" element={<IntraRoute />} />
             <Route path="/IntraRoute" element={<IntraRoute />} />
+            <Route path="/intraroute-changelog" element={<IntraRouteChangelog />} />
+            <Route path="/IntraRoute-changelog" element={<IntraRouteChangelog />} />
             <Route path="/test" element={<Test />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>

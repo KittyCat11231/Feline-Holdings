@@ -1,112 +1,27 @@
 .line {
-    width: 50px;
-    margin-left: 28px;
+    width: 20px;
+    margin-left: 43px;
     margin-top: -3px;
 }
 
 .lineContainer {
     display: flex;
     flex-direction: row;
+    height: fit-content;
 }
 
 .nextToLine {
     width: fit-content;
     height: fit-content;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
-.destinationContainer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 6px;
-    margin-bottom: 0px;
-}
-
-.towards {
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-top: 7px;
-    margin-bottom: 0px;
-}
-
-.destinationCity {
-    font-weight: 600;
-    font-size: 1.7rem;
-    margin-left: 12px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.destinationStopName {
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-left: 8px;
-    margin-top: 7px;
-    margin-bottom: 0px;
-}
-
-.stop {
-    display: flex;
-    direction: row;
-    margin-top: 23px;
-    margin-bottom: 0px;
-}
-
-.city {
-    margin-top: 0px;
-    font-weight: 600;
-    font-size: 2.2rem;
-    margin-bottom: 0px;
-}
-
-.code {
-    margin-top: 14px;
-    margin-left: 9px;
-    font-weight: 400;
-    font-size: 1.3rem;
-    margin-bottom: 0px;
-}
-
-.stopName {
-    font-weight: 600;
-    margin-top: -3px;
-    font-size: 1.4rem;
-    margin-bottom: 0px;
-}
-
-.metaContainer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.meta1, .meta2 {
-    margin-top: 5px;
-    margin-bottom: 0px;
-    width: fit-content;
-    height: fit-content;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 30px;
-}
-
-.meta2 {
-    margin-left: 10px;
-}
-
-.meta {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-weight: 600;
-    font-size: 1.2rem;
+.stopInLine {
+    margin-bottom: 95px;
 }
 
 .stopCount {
-    margin-top: 95px;
-    margin-bottom: 0px;
+    margin-bottom: 110px;
     font-weight: 600;
     font-size: 1.5rem;
 }

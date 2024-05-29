@@ -1,0 +1,17 @@
+.stopDot {
+    height: 44px;
+    z-index: 3;
+    position: relative;
+}
+
+.circleWhite {
+    height: 40px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: 2;
+}
+
+.container {
+    position: relative;
+}

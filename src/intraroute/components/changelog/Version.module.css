@@ -1,0 +1,12 @@
+.grayText {
+    color: #4d4d4d;
+}
+
+.versionContainer {
+    margin-bottom: 60px;
+}
+
+.versionNumber {
+    font-weight: 400;
+    text-decoration: underline;
+}

@@ -5,10 +5,13 @@ import { useGSAP } from '@gsap/react';
 import styles from './Filters.module.css';
 
 import FiltersDropdown from './FiltersDropdown';
+import FiltersPlaceholder from './FiltersPlaceholder';
 
 import downArrow from '../assets/filters/down-arrow.svg';
 
 function Filters(props) {
+    let filtersEnabled = false;
+
     const [displayDropdown, setDisplayDropdown] = useState(false);
     const [arrowStyles, setArrowStyles] = useState(styles.arrowRight);
 
@@ -42,7 +45,11 @@ function Filters(props) {
             </div>
             {displayDropdown ? 
                 <div className={styles.dropdown}>
-                    <FiltersDropdown filters={props.filters} />
+                    {filtersEnabled ?
+                        <FiltersDropdown filters={props.filters} />
+                        :
+                        <FiltersPlaceholder />
+                    }
                 </div>
                 :
                 ''

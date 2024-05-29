@@ -41,13 +41,11 @@ function Stop(props) {
                 <div className={styles.stopInfo}>
                     {renderStopName ?
                         <div className={styles.cityCode}>
-                            <p className={`${styles.city} ${colorObj.textColor}`}>{props.city}</p>
-                            <p className={`${styles.code} ${colorObj.textColor}`}>({props.code})</p>
+                            <p className={`${styles.city} ${colorObj.textColor}`}>{props.city} <span className={styles.code}>({props.code})</span></p>
                         </div>
                         :
                         <div className={styles.cityCodeNoStopName}>
-                            <p className={`${styles.city} ${colorObj.textColor}`}>{props.city}</p>
-                            <p className={`${styles.code} ${colorObj.textColor}`}>({props.code})</p>
+                            <p className={`${styles.city} ${colorObj.textColor}`}>{props.city} <span className={styles.code}>({props.code})</span></p>
                         </div>
                     }
                     {renderStopName ? <p className={`${styles.stopName} ${colorObj.textColor}`}>{props.stopName}</p> : ''}

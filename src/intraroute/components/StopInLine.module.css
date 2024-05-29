@@ -1,0 +1,73 @@
+.container {
+    margin-top: 30px;
+}
+
+.stop {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+}
+
+.stopDot {
+    margin-left: -57px;
+}
+
+.cityCode {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+
+.city {
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 0px;
+    margin-left: 12px;
+}
+
+.code {
+    margin-left: 0px;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+}
+
+.stopName {
+    font-weight: 600;
+    margin-top: -15px;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
+}
+
+.metaContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.meta1, .meta2 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+}
+
+.meta2 {
+    margin-left: 10px;
+}
+
+.meta {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
