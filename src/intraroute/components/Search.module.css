@@ -21,6 +21,10 @@
         height: 67px;
         width: 67px;
     }
+
+    .random:hover, .swap:hover {
+        filter: drop-shadow(3px 3px 5px gray);
+    }
 }
 
 @media (pointer: coarse) {
@@ -53,10 +57,6 @@
 
 .random {
     margin-left: 10px;
-}
-
-.random:hover, .swap:hover {
-    filter: drop-shadow(3px 3px 5px gray);
 }
 
 .random:active, .swap:active {
