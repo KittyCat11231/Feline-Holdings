@@ -55,6 +55,14 @@
     margin-left: 10px;
 }
 
+.random:hover, .swap:hover {
+    filter: drop-shadow(3px 3px 5px gray);
+}
+
+.random:active, .swap:active {
+    transform: scale(90%);
+}
+
 .searchBarStart {
     position: relative;
     z-index: 5;
