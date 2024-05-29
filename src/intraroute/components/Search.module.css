@@ -25,6 +25,10 @@
     .random:hover, .swap:hover {
         filter: drop-shadow(3px 3px 5px gray);
     }
+
+    .random:active, .swap:active {
+        transform: scale(90%);
+    }
 }
 
 @media (pointer: coarse) {
@@ -57,10 +61,6 @@
 
 .random {
     margin-left: 10px;
-}
-
-.random:active, .swap:active {
-    transform: scale(90%);
 }
 
 .searchBarStart {
