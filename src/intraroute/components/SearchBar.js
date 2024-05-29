@@ -15,6 +15,7 @@ function SearchBar(props) {
         if (props.startOrEnd === 'end') {
             setEnd(item.id);
         }
+        navigator.virtualKeyboard.hide();
     }
 
     const formatResult = (item) => {

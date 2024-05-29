@@ -58,7 +58,15 @@ function IntraRouteChangelog() {
                         'There is now a button to flip the origin and destination.'
                     ]
                 ),
-                'Switched hosting provider from GitHub Pages to Vercel.'
+                'Switched hosting provider from GitHub Pages to Vercel.',
+                new subList(
+                    'Known issues:',
+                    [
+                        'Text for three letter codes doesn\'t look completely right, especially on mobile.',
+                        'Dropdown menu to filter between modes is disabled until a future update due to buggy behavior.',
+                        'Please report any issues to intra@felineholdings.com. 🙂'
+                    ]
+                )
             ]
         )
     )

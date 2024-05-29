@@ -8,7 +8,7 @@ function PathError(props) {
         <div className={styles.container}>
             <h1 className={styles.h1}>Something went wrong.</h1>
             <p className={styles.p}>IntraRoute encountered a problem processing this route, and was unable to continue.</p>
-            <p className={styles.p}>Please send the following to <span className={styles.bold}>bugs@felineholdings.com</span> or contact kyle11231 so we can identify and fix the issue:</p>
+            <p className={styles.p}>Please send the following to <span className={styles.bold}>intra@felineholdings.com</span> or contact kyle11231 so we can identify and fix the issue:</p>
             <br />
             <p className={styles.p}>start: <span className={styles.bold}>{props.start}</span></p>
             <p className={styles.p}>end: <span className={styles.bold}>{props.end}</span></p>

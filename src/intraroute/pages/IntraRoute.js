@@ -106,6 +106,10 @@ function IntraRoute() {
                 <p><a href='intraroute-changelog'>Version history & changelog</a></p>
             </div>
             <div className={styles.footer2}>
+                <p className={styles.pGray}>Find any problems? Let us know!</p>
+                <p className={styles.pGray}>Email us at <a href='mailto:intra@felineholdings.com'>intra@felineholdings.com</a>.</p>
+            </div>
+            <div className={styles.footer2}>
                 <p className={styles.pGray}>© {currentYearEdit} Intra. A Feline Holdings company.</p>
                 <p className={styles.pGray}>Helicopter icon from <a href="https://www.onlinewebfonts.com/icon">onlinewebfonts.com</a> is licensed by CC BY 4.0.</p>
                 <p className={styles.pGray}>Designed by Roy Disney Softworks. A Feline Holdings company.</p>
