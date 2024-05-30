@@ -66,10 +66,12 @@ function Search(props) {
     }
 
     function handleOnClickSwapper() {
-        setSwapperRotation(swapperRotation + 180);
-        setTimeout(() => {
-            swapperFunc();
-        }, 150);
+        if (start !== 'unselected' || end !== 'unselected') {
+            setSwapperRotation(swapperRotation + 180);
+            setTimeout(() => {
+                swapperFunc();
+            }, 150);
+        }
     }
 
     function handleOnClickRandomizer(startOrEnd) {
