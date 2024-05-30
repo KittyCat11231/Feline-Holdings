@@ -1,5 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import styles from './Search.module.css';
 
 import startIcon from '../assets/search/start.svg';
@@ -35,6 +37,41 @@ function Search(props) {
     const [maxResultsStart, setMaxResultsStart] = useState(10);
     const [maxResultsEnd, setMaxResultsEnd] = useState(10);
 
+    const [swapper, setSwapper] = useState(1);
+    const prevSwapper = usePrevious(swapper);
+
+    const swapperRef = useRef();
+    const [swapperRotation, setSwapperRotation] = useState(0);
+
+    useGSAP(
+        () => {
+            gsap.to(swapperRef.current, {
+                rotation: swapperRotation,
+                duration: 0.25,
+                ease: 'power4.out',
+            })
+        }, { dependencies: [swapperRotation] }
+    )
+
+    function swapperFunc() {
+        setSwapper(swapper + 1);
+        let oldStart = start;
+        let oldEnd = end;
+        setStart(oldEnd);
+        setEnd(oldStart);
+        setMaxResultsStart(0);
+        setMaxResultsEnd(0);
+        setManualStart(stopsMap.get(oldEnd).title);
+        setManualEnd(stopsMap.get(oldStart).title);
+    }
+
+    function handleOnClickSwapper() {
+        setSwapperRotation(swapperRotation + 180);
+        setTimeout(() => {
+            swapperFunc();
+        }, 150);
+    }
+
     function handleOnClickRandomizer(startOrEnd) {
         if (startOrEnd === 'start') {
             let index = methods.getRandomInteger(allStopsForSearch.length - 1);
@@ -47,23 +84,6 @@ function Search(props) {
             setMaxResultsEnd(0);
             setManualEnd(allStopsForSearch[index].title);
         }
-    }
-
-    const [swapper, setSwapper] = useState(1);
-    const prevSwapper = usePrevious(swapper);
-
-    function handleOnClickSwapper() {
-        setSwapper(swapper + 1);
-        console.log(start);
-        console.log(end);
-        let oldStart = start;
-        let oldEnd = end;
-        setStart(oldEnd);
-        setEnd(oldStart);
-        setMaxResultsStart(0);
-        setMaxResultsEnd(0);
-        setManualStart(stopsMap.get(oldEnd).title);
-        setManualEnd(stopsMap.get(oldStart).title);
     }
 
     return (
@@ -134,6 +154,7 @@ function Search(props) {
                 onClick={() => {handleOnClickSwapper()}}
                 src={swap}
                 alt='Change direction'
+                ref={swapperRef}
             />
         </div>
     )

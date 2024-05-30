@@ -199,7 +199,6 @@ function processPath(finalPath, processedPath, filters) {
                     codeshare1 = route.codeshares[0];
                     if (route.codeshares[1]) {
                         codeshare2 = route.codeshares[1];
-                        debugger;
                     }
                 }
                 let stop1 = stopsMap.get(path.stop1);
