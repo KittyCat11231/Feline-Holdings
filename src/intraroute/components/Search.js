@@ -47,7 +47,6 @@ function Search(props) {
             setMaxResultsEnd(0);
             setManualEnd(allStopsForSearch[index].title);
         }
-        navigator.virtualKeyboard.hide();
     }
 
     const [swapper, setSwapper] = useState(1);
@@ -65,7 +64,6 @@ function Search(props) {
         setMaxResultsEnd(0);
         setManualStart(stopsMap.get(oldEnd).title);
         setManualEnd(stopsMap.get(oldStart).title);
-        navigator.virtualKeyboard.hide();
     }
 
     return (

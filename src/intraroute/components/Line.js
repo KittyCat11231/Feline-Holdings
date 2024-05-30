@@ -68,7 +68,11 @@ function Line(props) {
                 <div className={styles.stopInLine}>
                     <StopInLine mode={props.mode} type={props.type} city={props.city} code={props.code} stopName={props.stopName} meta1={props.meta1} meta2={props.meta2} />
                 </div>
-                {renderStopCount ? <p className={`${styles.stopCount} ${colorObj.mainColor}`}>{stopCount}</p> : ''}
+                {renderStopCount ?
+                    <p className={`${styles.stopCount} ${colorObj.mainColor}`}>{stopCount}</p>
+                    :
+                    <p className={`${styles.stopCount} ${styles.hidden}`}>Placeholder</p>
+                }
             </div>
         </div>
     )
