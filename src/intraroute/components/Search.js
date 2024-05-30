@@ -61,8 +61,12 @@ function Search(props) {
         setEnd(oldStart);
         setMaxResultsStart(0);
         setMaxResultsEnd(0);
-        setManualStart(stopsMap.get(oldEnd).title);
-        setManualEnd(stopsMap.get(oldStart).title);
+        if (stopsMap.get(oldEnd)) {
+            setManualStart(stopsMap.get(oldEnd).title);
+        }
+        if (stopsMap.get(oldStart)) {
+            setManualEnd(stopsMap.get(oldStart).title);
+        }
     }
 
     function handleOnClickSwapper() {

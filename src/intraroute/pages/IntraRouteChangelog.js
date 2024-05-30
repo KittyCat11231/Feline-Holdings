@@ -55,7 +55,8 @@ function IntraRouteChangelog() {
                         'UI components are modular and dynamically rendered.',
                         'The search bars have been redesigned to allow the user to search for locations.',
                         'There are now buttons to randomize the origin and destination.',
-                        'There is now a button to flip the origin and destination.'
+                        'There is now a button to flip the origin and destination.',
+                        'Added a few UI animations (more coming soon).'
                     ]
                 ),
                 'Switched hosting provider from GitHub Pages to Vercel.',
