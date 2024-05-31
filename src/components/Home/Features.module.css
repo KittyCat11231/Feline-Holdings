@@ -25,7 +25,7 @@
 .buttonContainer {
     display: flex;
     flex-direction: row;
-    width: 300px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
@@ -42,4 +42,12 @@
 .activeButton {
     background-color: #7f7f7f;
     height: 15px;
+}
+
+.pausePlay {
+    height: 30px;
+    margin-top: -10px;
+    
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(55%) sepia(0%) saturate(37%) hue-rotate(161deg) brightness(91%) contrast(98%);
 }

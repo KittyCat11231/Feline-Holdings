@@ -9,7 +9,9 @@ import FeaturePost from './FeaturePost';
 
 import fhCenter from '../../images/fh-center-6.png';
 import intraRouteShort from '../../intraroute/logos/intraroute-short.svg';
-import mbsMls from '../../images/mbs-mls.svg';
+import mbsMls from '../../assets/mbs-mls.svg';
+import pause from '../../assets/pause.svg';
+import play from '../../assets/play.svg';
 
 function Features(props) {
     const post1 = useRef();
@@ -20,6 +22,14 @@ function Features(props) {
     const button1 = useRef();
     const button2 = useRef();
     const button3 = useRef();
+
+    const pauseButton = useRef();
+    const playButton = useRef();
+
+    const [isPaused, setIsPaused] = useState(false);
+    const [pausePlaySrc, setPausePlaySrc] = useState(pause);
+    const [pausePlayRef, setPausePlayRef] = useState(pauseButton);
+    const [pausePlayAlt, setPausePlayAlt] = useState('Pause');
 
     let [tl, setTl] = useState();
 
@@ -110,32 +120,47 @@ function Features(props) {
     }
 
     function buttonClick(buttonNum) {
+        manualPausePlay('play');
         if (buttonNum === 1) {
             if (currentActiveButton === 1) {
                 tl.seek(0);
+                manualPausePlay('pause');
             }
             if (currentActiveButton === 2) {
                 tl.seek(11);
                 setTimeout(() => {
                     tl.seek(17);
                 }, 1000);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 2000);
             }
             if (currentActiveButton === 3) {
                 tl.seek(17);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 1000);
             }
         }
         if (buttonNum === 2) {
             if (currentActiveButton === 1) {
                 tl.seek(5);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 1000);
             }
             if (currentActiveButton === 2) {
                 tl.seek(6);
+                manualPausePlay('pause');
             }
             if (currentActiveButton === 3) {
                 tl.seek(17);
                 setTimeout(() => {
                     tl.seek(5);
                 }, 1000);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 2000);
             }
         }
         if (buttonNum === 3) {
@@ -144,13 +169,46 @@ function Features(props) {
                 setTimeout(() => {
                     tl.seek(11);
                 }, 1000);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 2000);
             }
             if (currentActiveButton === 2) {
                 tl.seek(11);
+                setTimeout(() => {
+                    manualPausePlay('pause');
+                }, 1000);
             }
             if (currentActiveButton === 3) {
                 tl.seek(12);
+                manualPausePlay('pause');
             }
+        }
+    }
+
+    function manualPausePlay(pauseOrPlay) {
+        if (pauseOrPlay === 'pause') {
+            tl.pause();
+            setIsPaused(true);
+            setPausePlaySrc(play);
+            setPausePlayRef(playButton);
+            setPausePlayAlt('Play');
+        }
+        if (pauseOrPlay === 'play') {
+            tl.play();
+            setIsPaused(false);
+            setPausePlaySrc(pause);
+            setPausePlayRef(pauseButton);
+            setPausePlayAlt('Pause');
+        }
+    }
+
+    function pausePlayOnClick() {
+        if (isPaused === false) {
+            manualPausePlay('pause');
+        }
+        if (isPaused === true) {
+            manualPausePlay('play');
         }
     }
 
@@ -212,6 +270,13 @@ function Features(props) {
                 </div>
             </div>
             <div className={styles.buttonContainer}>
+                <img
+                    src={pausePlaySrc}
+                    ref={pausePlayRef}
+                    alt={pausePlayAlt}
+                    className={styles.pausePlay}
+                    onClick={() => pausePlayOnClick()}
+                />
                 <div className={button1styles} ref={button1} onClick={() => buttonClick(1)}></div>
                 <div className={button2styles} ref={button2} onClick={() => buttonClick(2)}></div>
                 <div className={button3styles} ref={button3} onClick={() => buttonClick(3)}></div>
