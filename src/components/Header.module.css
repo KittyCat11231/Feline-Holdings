@@ -1,3 +1,9 @@
+@media (height < 800px) {
+    .container {
+        zoom: 85%
+    }
+}
+
 .topLogo {
     max-width: 400px;
     width: 90%;

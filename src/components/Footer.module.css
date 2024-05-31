@@ -1,3 +1,9 @@
+@media (height < 800px) {
+    .container {
+        zoom: 85%
+    }
+}
+
 .yellowFooter {
     background-color: #ffc90e;
     width: 100%;

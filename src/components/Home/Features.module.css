@@ -4,8 +4,19 @@
     width: 100%;
 }
 
+@media (height < 1200px) {
+    .container {
+        zoom: 100%
+    }
+}
+
+@media (height < 800px) {
+    .container {
+        zoom: 75%
+    }
+}
+
 .post {
     position: absolute;
     width: 100%;
-    height: 500px;
 }

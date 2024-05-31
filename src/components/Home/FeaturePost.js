@@ -16,6 +16,7 @@ function FeaturePost(props) {
                         width: props.imgWidth,
                         maxWidth: props.imgMaxWidth,
                         height: props.imgHeight,
+                        maxHeight: props.imgMaxHeight,
                         transform: props.imgTransform,
                     }}
                 />

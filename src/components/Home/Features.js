@@ -77,6 +77,7 @@ function Features(props) {
                     imgSrc={intraRouteShort}
                     imgAlt='IntraRoute'
                     imgWidth='80%'
+                    imgMaxHeight='95%'
                     headerText='Get there with IntraRoute.'
                     descriptorText="Intra's official routefinder. Now in beta."
                     buttonText='Visit IntraRoute'

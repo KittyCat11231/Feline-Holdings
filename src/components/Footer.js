@@ -5,7 +5,7 @@ import bottomLogo from '../logos/feline-holdings-large.svg';
 function Footer() {
     let currentYear = new Date().getFullYear();
     return (
-        <footer>
+        <footer className={styles.container}>
             <div className={styles.yellowFooter}></div>
             <div className={styles.orangeFooter}></div>
             <div className={styles.footerContents}>

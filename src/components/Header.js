@@ -14,7 +14,7 @@ function Header() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <a href="/">
                 <img className={styles.topLogo} src={topLogo} alt="Feline Holdings" />
             </a>
