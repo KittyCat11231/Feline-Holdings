@@ -1,19 +1,15 @@
 import React from 'react';
 import { useState, useRef } from 'react';
-import usePrevious from '../../scripts/usePrevious';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import styles from './Features.module.css';
+import styles from './Carousel.module.css';
 
-import FeaturePost from './FeaturePost';
+import CarouselPost from './CarouselPost';
 
-import fhCenter from '../../images/fh-center-6.png';
-import intraRouteShort from '../../intraroute/logos/intraroute-short.svg';
-import mbsMls from '../../assets/mbs-mls.svg';
-import pause from '../../assets/pause.svg';
-import play from '../../assets/play.svg';
+import pause from '../assets/pause.svg';
+import play from '../assets/play.svg';
 
-function Features(props) {
+function Carousel(props) {
     const post1 = useRef();
     const post2 = useRef();
     const post3 = useRef();
@@ -216,56 +212,71 @@ function Features(props) {
         <>
             <div className={styles.container}>
                 <div className={styles.post} ref={post1}>
-                    <FeaturePost
-                        color='#ffc90e'
-                        imgSrc={fhCenter}
-                        imgAlt='Feline Holdings Center'
-                        imgWidth='100%'
-                        imgHeight='100%'
-                        headerText='Feline Holdings is everywhere.'
-                        descriptorText='Our brands bring the MRT to life.'
-                        buttonText='About Us'
-                        link='/'
+                    <CarouselPost
+                        color={props.propsObj.post1.color}
+                        imgBoxColor={props.propsObj.post1.imgBoxColor}
+                        imgSrc={props.propsObj.post1.imgSrc}
+                        imgAlt={props.propsObj.post1.imgAlt}
+                        imgWidth={props.propsObj.post1.imgWidth}
+                        imgMaxWidth={props.propsObj.post1.imgMaxWidth}
+                        imgHeight={props.propsObj.post1.imgHeight}
+                        imgMaxHeight={props.propsObj.post1.imgMaxHeight}
+                        imgTransform={props.propsObj.post1.imgTransform}
+                        headerText={props.propsObj.post1.headerText}
+                        descriptorText={props.propsObj.post1.descriptorText}
+                        buttonText={props.propsObj.post1.buttonText}
+                        link={props.propsObj.post1.link}
                     />
                 </div>
                 <div className={styles.post} ref={post2}>
-                    <FeaturePost
-                        color='#4d4d4d'
-                        imgSrc={intraRouteShort}
-                        imgAlt='IntraRoute'
-                        imgWidth='80%'
-                        imgMaxHeight='95%'
-                        headerText='Get there with IntraRoute.'
-                        descriptorText="Intra's official routefinder. Now in beta."
-                        buttonText='Visit IntraRoute'
-                        link='/intraroute'
+                    <CarouselPost
+                        color={props.propsObj.post2.color}
+                        imgBoxColor={props.propsObj.post2.imgBoxColor}
+                        imgSrc={props.propsObj.post2.imgSrc}
+                        imgAlt={props.propsObj.post2.imgAlt}
+                        imgWidth={props.propsObj.post2.imgWidth}
+                        imgMaxWidth={props.propsObj.post2.imgMaxWidth}
+                        imgHeight={props.propsObj.post2.imgHeight}
+                        imgMaxHeight={props.propsObj.post2.imgMaxHeight}
+                        imgTransform={props.propsObj.post2.imgTransform}
+                        headerText={props.propsObj.post2.headerText}
+                        descriptorText={props.propsObj.post2.descriptorText}
+                        buttonText={props.propsObj.post2.buttonText}
+                        link={props.propsObj.post2.link}
                     />
                 </div>
                 <div className={styles.post} ref={post3}>
-                    <FeaturePost
-                        color='#1a2859'
-                        imgBoxColor='#e22525'
-                        imgSrc={mbsMls}
-                        imgAlt='IntraRoute'
-                        imgMaxWidth='1000px'
-                        imgHeight='100%'
-                        headerText='Watch MLS Season 8 on MBS.'
-                        descriptorText="Major League Spleef is back."
-                        buttonText='Watch Now'
-                        link='https://felineholdings.com/MBS'
+                    <CarouselPost
+                        color={props.propsObj.post3.color}
+                        imgBoxColor={props.propsObj.post3.imgBoxColor}
+                        imgSrc={props.propsObj.post3.imgSrc}
+                        imgAlt={props.propsObj.post3.imgAlt}
+                        imgWidth={props.propsObj.post3.imgWidth}
+                        imgMaxWidth={props.propsObj.post3.imgMaxWidth}
+                        imgHeight={props.propsObj.post3.imgHeight}
+                        imgMaxHeight={props.propsObj.post3.imgMaxHeight}
+                        imgTransform={props.propsObj.post3.imgTransform}
+                        headerText={props.propsObj.post3.headerText}
+                        descriptorText={props.propsObj.post3.descriptorText}
+                        buttonText={props.propsObj.post3.buttonText}
+                        link={props.propsObj.post3.link}
                     />
                 </div>
                 <div className={styles.post} ref={post1atEnd}>
-                    <FeaturePost
-                        color='#ffc90e'
-                        imgSrc={fhCenter}
-                        imgAlt='Feline Holdings Center'
-                        imgWidth='100%'
-                        imgHeight='100%'
-                        headerText='Feline Holdings is everywhere.'
-                        descriptorText='Our brands bring the MRT to life.'
-                        buttonText='About Us'
-                        link='/'
+                    <CarouselPost
+                        color={props.propsObj.post1.color}
+                        imgBoxColor={props.propsObj.post1.imgBoxColor}
+                        imgSrc={props.propsObj.post1.imgSrc}
+                        imgAlt={props.propsObj.post1.imgAlt}
+                        imgWidth={props.propsObj.post1.imgWidth}
+                        imgMaxWidth={props.propsObj.post1.imgMaxWidth}
+                        imgHeight={props.propsObj.post1.imgHeight}
+                        imgMaxHeight={props.propsObj.post1.imgMaxHeight}
+                        imgTransform={props.propsObj.post1.imgTransform}
+                        headerText={props.propsObj.post1.headerText}
+                        descriptorText={props.propsObj.post1.descriptorText}
+                        buttonText={props.propsObj.post1.buttonText}
+                        link={props.propsObj.post1.link}
                     />
                 </div>
             </div>
@@ -294,4 +305,4 @@ function Features(props) {
     )
 }
 
-export default Features;
+export default Carousel;

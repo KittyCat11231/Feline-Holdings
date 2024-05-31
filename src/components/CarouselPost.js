@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import styles from './FeaturePost.module.css';
+import styles from './CarouselPost.module.css';
 
-function FeaturePost(props) {
+function CarouselPost(props) {
     const [buttonTextColor, setButtonTextColor] = useState('white');
 
     return (
@@ -50,4 +50,4 @@ function FeaturePost(props) {
     )
 }
 
-export default FeaturePost;
+export default CarouselPost;
