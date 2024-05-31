@@ -11,6 +11,8 @@
     position: relative;
     display: flex;
     justify-content: center;
+    background-color: white;
+    overflow: hidden;
 }
 
 .img {

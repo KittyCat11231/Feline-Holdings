@@ -7,14 +7,16 @@ function FeaturePost(props) {
 
     return (
         <div className={styles.container}>
-            <div className={styles.imgBox}>
+            <div className={styles.imgBox} style={{backgroundColor: props.imgBoxColor}}>
                 <img
                     className={styles.img}
                     src={props.imgSrc}
                     alt={props.imgAlt}
                     style={{
                         width: props.imgWidth,
-                        height: props.imgHeight
+                        maxWidth: props.imgMaxWidth,
+                        height: props.imgHeight,
+                        transform: props.imgTransform,
                     }}
                 />
             </div>
