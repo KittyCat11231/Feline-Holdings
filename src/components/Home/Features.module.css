@@ -29,11 +29,20 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: space-between;
+    align-items: center;
     margin-top: 35px;
 }
 
+.buttonHitBox {
+    width: 85px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
-    width: 75px;
+    width: 90%;
     height: 10px;
     border-radius: 10px;
     background-color: #e7e7e7;
@@ -46,7 +55,6 @@
 
 .pausePlay {
     height: 30px;
-    margin-top: -10px;
     
     /* https://codepen.io/sosuke/pen/Pjoqqp */
     filter: invert(55%) sepia(0%) saturate(37%) hue-rotate(161deg) brightness(91%) contrast(98%);

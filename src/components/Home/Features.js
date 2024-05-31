@@ -277,9 +277,17 @@ function Features(props) {
                     className={styles.pausePlay}
                     onClick={() => pausePlayOnClick()}
                 />
-                <div className={button1styles} ref={button1} onClick={() => buttonClick(1)}></div>
-                <div className={button2styles} ref={button2} onClick={() => buttonClick(2)}></div>
-                <div className={button3styles} ref={button3} onClick={() => buttonClick(3)}></div>
+                <div className={styles.buttonHitBox} ref={button1} onClick={() => buttonClick(1)}>
+                    <div className={button1styles}></div>
+                </div>
+                <div className={styles.buttonHitBox} ref={button2} onClick={() => buttonClick(2)}>
+                    <div className={button2styles}></div>
+                </div>
+                <div className={styles.buttonHitBox} ref={button3} onClick={() => buttonClick(3)}>
+                    <div className={button3styles}></div>
+                </div>
+                
+                
             </div>
         </>
         
