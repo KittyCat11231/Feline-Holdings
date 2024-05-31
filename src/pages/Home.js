@@ -1,5 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styles from './Home.module.css';
+
+import Features from '../components/Home/Features';
 
 function Home() {
     return (
@@ -9,9 +12,7 @@ function Home() {
                 <meta property="og:title" content="Home | Feline Holdings" />
                 <meta name="twitter:title" content="Home | Feline Holdings" />
             </Helmet>
-            <h1>Placeholder</h1>
-            <h2><a href='intraroute'>Click here for IntraRoute</a></h2>
-            <h2><a href='test'>Click here for test page</a></h2>
+            <Features />
         </div>
     );
 }

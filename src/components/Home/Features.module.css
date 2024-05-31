@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+    overflow-x: clip;
+}
+
+.post {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+}
+
+.post2 {
+    transform: translateX(100%)
+}

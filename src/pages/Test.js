@@ -1,6 +1,7 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet';
+import styles from './Test.module.css';
 
 import airStops from '../intraroute/data/pathfinding/air.json';
 import bahnStops from '../intraroute/data/pathfinding/bahn.json';
@@ -56,6 +57,9 @@ function Test() {
         }
     }
 
+    const [testColor, setTestColor] = useState('red');
+    const testDiv = useRef();
+
     return (
         <div>
             <Helmet>
@@ -70,10 +74,24 @@ function Test() {
                 <meta name="twitter:title" content="Test Page | Feline Holdings" />
                 <meta name="twitter:description" content="Feline Holdings development test page" />
             </Helmet>
-            <h1 className='header'>Development test page</h1>
+            <h1>Development test page</h1>
             <button onClick={handleClick}>Test</button>
             <input onChange={e => handleChange(e)} />
             <h2>{url.toString()}</h2>
+
+            <div
+                className={styles.testDiv}
+                ref={testDiv}
+                onClick={() => {
+                    if (testColor === 'red') {
+                        setTestColor('lime');
+                    } else if (testColor === 'lime') {
+                        setTestColor('red');
+                    }
+                    testDiv.current.style.setProperty('--background-color', testColor);
+                }}
+            >
+            </div>
         </div>
     )
 }
