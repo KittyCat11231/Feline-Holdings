@@ -18,28 +18,27 @@ function Features(props) {
 
     useGSAP(
         () => {
-            gsap.to(post1.current, {
-                xPercent: post1X,
+            let tl = gsap.timeline();
+
+            tl.to(post1.current, {
+                xPercent: -100,
+                delay: 7,
                 duration: 1,
                 ease: 'power4.inOut'
             })
-        }, { dependencies: [post1X] }
-    )
-
-    useGSAP(
-        () => {
-            gsap.to(post2.current, {
-                xPercent: post2X,
+            tl.from(post2.current, {
+                xPercent: 100,
+                duration: 1,
+                ease: 'power4.inOut',
+            }, '-=1')
+            tl.to(post2.current, {
+                xPercent: -100,
+                delay: 7,
                 duration: 1,
                 ease: 'power4.inOut'
             })
-        }, { dependencies: [post2X] }
+        }
     )
-
-    setTimeout(() => {
-        setPost1X(-100);
-        setPost2X(-100);
-    }, 7000);
 
     return (
         <div className={styles.container}>
@@ -61,8 +60,7 @@ function Features(props) {
                     color='#4d4d4d'
                     imgSrc={intraRouteShort}
                     imgAlt='IntraRoute'
-                    imgWidth='50%'
-                    imgHeight='50%'
+                    imgWidth='80%'
                     headerText='Get there with IntraRoute.'
                     descriptorText="Intra's official routefinder. Now in beta."
                     buttonText='Visit IntraRoute'
