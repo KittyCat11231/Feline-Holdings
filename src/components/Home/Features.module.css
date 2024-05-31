@@ -34,11 +34,12 @@
 
 .button {
     width: 75px;
-    height: 15px;
+    height: 10px;
     border-radius: 10px;
     background-color: #e7e7e7;
 }
 
 .activeButton {
     background-color: #7f7f7f;
+    height: 15px;
 }

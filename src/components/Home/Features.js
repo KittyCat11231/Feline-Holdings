@@ -21,25 +21,77 @@ function Features(props) {
     const button2 = useRef();
     const button3 = useRef();
 
+    let [tl, setTl] = useState();
+
+    useGSAP(
+        () => {
+            tl = gsap.timeline({ repeat: -1 });
+
+            tl.to(post1.current, {
+                xPercent: -100,
+                delay: 5,
+                duration: 1,
+                ease: 'power4.inOut'
+            })
+            tl.from(post2.current, {
+                xPercent: 100,
+                duration: 1,
+                ease: 'power4.inOut',
+                onStart: () => {setActiveButton(2)},
+            }, '-=1')
+            tl.to(post2.current, {
+                xPercent: -100,
+                delay: 5,
+                duration: 1,
+                ease: 'power4.inOut'
+            })
+            tl.from(post3.current, {
+                xPercent: 100,
+                duration: 1,
+                ease: 'power4.inOut',
+                onStart: () => {setActiveButton(3)},
+            }, '-=1')
+            tl.to(post3.current, {
+                xPercent: -100,
+                delay: 5,
+                duration: 1,
+                ease: 'power4.inOut'
+            })
+            tl.from(post1atEnd.current, {
+                xPercent: 100,
+                duration: 1,
+                ease: 'power4.inOut',
+                onStart: () => {setActiveButton(1)},
+            }, '-=1')
+
+            setTl(tl);
+        }
+    )
+
     const [isActiveButton1, setIsActiveButton1] = useState(true);
     const [isActiveButton2, setIsActiveButton2] = useState(false);
     const [isActiveButton3, setIsActiveButton3] = useState(false);
+
+    const [currentActiveButton, setCurrentActiveButton] = useState(1);
 
     function setActiveButton(buttonNum) {
         if (buttonNum === 1) {
             setIsActiveButton1(true);
             setIsActiveButton2(false);
             setIsActiveButton3(false);
+            setCurrentActiveButton(1);
         }
         if (buttonNum === 2) {
             setIsActiveButton1(false);
             setIsActiveButton2(true);
             setIsActiveButton3(false);
+            setCurrentActiveButton(2);
         }
         if (buttonNum === 3) {
             setIsActiveButton1(false);
             setIsActiveButton2(false);
             setIsActiveButton3(true);
+            setCurrentActiveButton(3);
         }
     }
 
@@ -57,45 +109,50 @@ function Features(props) {
         button3styles = `${styles.button} ${styles.activeButton}`
     }
 
-    useGSAP(
-        () => {
-            let tl = gsap.timeline({ repeat: -1 });
-
-            tl.to(post1.current, {
-                xPercent: -100,
-                delay: 7,
-                duration: 1,
-                ease: 'power4.inOut'
-            })
-            tl.from(post2.current, {
-                xPercent: 100,
-                duration: 1,
-                ease: 'power4.inOut',
-            }, '-=1')
-            tl.to(post2.current, {
-                xPercent: -100,
-                delay: 7,
-                duration: 1,
-                ease: 'power4.inOut'
-            })
-            tl.from(post3.current, {
-                xPercent: 100,
-                duration: 1,
-                ease: 'power4.inOut',
-            }, '-=1')
-            tl.to(post3.current, {
-                xPercent: -100,
-                delay: 7,
-                duration: 1,
-                ease: 'power4.inOut'
-            })
-            tl.from(post1atEnd.current, {
-                xPercent: 100,
-                duration: 1,
-                ease: 'power4.inOut',
-            }, '-=1')
+    function buttonClick(buttonNum) {
+        if (buttonNum === 1) {
+            if (currentActiveButton === 1) {
+                tl.seek(0);
+            }
+            if (currentActiveButton === 2) {
+                tl.seek(11);
+                setTimeout(() => {
+                    tl.seek(17);
+                }, 1000);
+            }
+            if (currentActiveButton === 3) {
+                tl.seek(17);
+            }
         }
-    )
+        if (buttonNum === 2) {
+            if (currentActiveButton === 1) {
+                tl.seek(5);
+            }
+            if (currentActiveButton === 2) {
+                tl.seek(6);
+            }
+            if (currentActiveButton === 3) {
+                tl.seek(17);
+                setTimeout(() => {
+                    tl.seek(5);
+                }, 1000);
+            }
+        }
+        if (buttonNum === 3) {
+            if (currentActiveButton === 1) {
+                tl.seek(5);
+                setTimeout(() => {
+                    tl.seek(11);
+                }, 1000);
+            }
+            if (currentActiveButton === 2) {
+                tl.seek(11);
+            }
+            if (currentActiveButton === 3) {
+                tl.seek(12);
+            }
+        }
+    }
 
     return (
         <>
@@ -155,9 +212,9 @@ function Features(props) {
                 </div>
             </div>
             <div className={styles.buttonContainer}>
-                <div className={button1styles} ref={button1} onClick={() => {setActiveButton(1)}}></div>
-                <div className={button2styles} ref={button2} onClick={() => {setActiveButton(2)}}></div>
-                <div className={button3styles} ref={button3} onClick={() => {setActiveButton(3)}}></div>
+                <div className={button1styles} ref={button1} onClick={() => buttonClick(1)}></div>
+                <div className={button2styles} ref={button2} onClick={() => buttonClick(2)}></div>
+                <div className={button3styles} ref={button3} onClick={() => buttonClick(3)}></div>
             </div>
         </>
         
