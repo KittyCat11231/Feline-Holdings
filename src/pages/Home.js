@@ -38,7 +38,7 @@ function Home() {
             imgTransform: undefined,
             headerText: 'Get there with IntraRoute.',
             descriptorText: "Intra's official routefinder. Now in beta.",
-            buttonText: 'Visit IntraRoute',
+            buttonText: 'Find Your Way',
             link: '/intraroute', 
         },
         post3: {
