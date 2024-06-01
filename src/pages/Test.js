@@ -77,7 +77,7 @@ function Test() {
             <h1>Development test page</h1>
             <button onClick={handleClick}>Test</button>
             <input onChange={e => handleChange(e)} />
-            <h2>{url.toString()}</h2>
+            <p>{url.toString()} text after url</p>
 
             <div
                 className={styles.testDiv}
