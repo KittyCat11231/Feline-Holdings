@@ -1,12 +1,47 @@
 .container {
     display: flex;
-    flex-direction: row;
     width: 100%;
 }
 
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .container {
+        flex-direction: row;
+    }
+
+    .imgBox {
+        width: 40%;
+        height: 40vh;
+    }
+
+    .contentBox {
+        width: 60%;
+        height: 40vh;
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .container {
+        flex-direction: column;
+    }
+
+    .imgBox, .contentBox {
+        width: 100%;
+        zoom: 75%;
+    }
+
+    .imgBox {
+        height: 300px;
+    }
+
+    .contentBox {
+        height: 400px;
+        padding-bottom: 15px;
+    }
+}
+
 .imgBox {
-    width: 40%;
-    height: 40vh;
     max-height: 500px;
     position: relative;
     display: flex;
@@ -22,11 +57,11 @@
 }
 
 .contentBox {
-    width: 60%;
-    height: 40vh;
     max-height: 500px;
     display: flex;
     align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .textContainer {
