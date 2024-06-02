@@ -1,9 +1,49 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+    row-gap: 50px;
+    place-items: center;
+    column-gap: 50px;
+}
+
+.gridPost {
+    height: fit-content;
+    width: fit-content;
+}
+
+@media (width < 2000px) {
+    .outerContainer {
+        zoom: 75%;
+    }
+}
+
+@media (width < 1500px) {
+    .outerContainer {
+        zoom: 55%;
+    }
+}
+
+.headerContainer {
+    margin-left: 10%;
+    width: fit-content;
+    background-color: #ffc90e;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 20px solid #ff7f27;
+}
+
+.header {
+    font-weight: 600;
+    color: white;
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.outerContainer {
+    margin-top: 30px;
 }
