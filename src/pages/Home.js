@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import styles from './Home.module.css';
 
 import Carousel from '../components/Carousel';
+import Grid from '../components/Grid';
 
 import fhCenter from '../images/fh-center-6.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
@@ -66,6 +67,7 @@ function Home() {
                 <meta name="twitter:title" content="Home | Feline Holdings" />
             </Helmet>
             <Carousel propsObj={carouselProps} />
+            <Grid />
         </div>
     );
 }
