@@ -35,7 +35,7 @@ import bulletRail6 from '../assets/intrarail/bullets/6-white.png';
 import bulletRail7 from '../assets/intrarail/bullets/7.png';
 import bulletRail11 from '../assets/intrarail/bullets/11.png';
 import bulletRail12 from '../assets/intrarail/bullets/12.png';
-import bulletRail13 from '../assets/intrarail/bullets/14.png';
+import bulletRail13 from '../assets/intrarail/bullets/13.png';
 import bulletRail14 from '../assets/intrarail/bullets/14.png';
 import bulletRail15 from '../assets/intrarail/bullets/15-white.png';
 import bulletRail16 from '../assets/intrarail/bullets/16.png';
