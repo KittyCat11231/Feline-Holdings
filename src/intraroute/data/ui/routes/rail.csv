@@ -63,7 +63,7 @@ rail43east,blue,bulletRail43,IntraRail 43,Grand Northern,railRVU,Ravenna,Union S
 rail46west,black,bulletRail46,IntraRail 46,Chalxian,railCWD,Chalxior,Western Docks,railCFA,,,,,,,,,
 rail46east,black,bulletRail46,IntraRail 46,Chalxian,railCFA,Chalxior,Femtoprism Airfield,railCWD,,,,,,,,,
 rail48west,tan,bulletRail48,IntraRail 48,Maggieliner,railBVC,BirchView,Central,,,,,,,,,,
-rail48east,tan,bulletRail48,IntraRail 48,Maggieliner,railMAS,Mason City,King Redtie III Station,,,,,,,,,,
+rail48east,tan,bulletRail48,IntraRail 48,Maggieliner,railDSL,Achowalogen Takachsin,Downtown Solarion,,,,,,,,,,
 rail49north,purple,bulletRail49,IntraRail 49,Tundrean Bear,railSLZ,Siletz,Salvador Station,,,,,,,,,,
 rail49south,purple,bulletRail49,IntraRail 49,Tundrean Bear,railDND,Dand,Grand Central,,,,,,,,,,
 rail50north,black,bulletRail50,IntraRail 50,Sunshine Limited,railSLZ,Siletz,Salvador Station,,,,,,,,,,
