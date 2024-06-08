@@ -1,0 +1,16 @@
+.container {
+    margin-left: 10%;
+    width: fit-content;
+    background-color: #ffc90e;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 10px solid #ff7f27;
+}
+
+.text {
+    font-weight: 600;
+    color: white;
+    font-size: 2.3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}

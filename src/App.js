@@ -43,8 +43,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/intraroute" element={<IntraRoute />} />
             <Route path="/IntraRoute" element={<IntraRoute />} />
-            <Route path="/intraroute-changelog" element={<IntraRouteChangelog />} />
-            <Route path="/IntraRoute-changelog" element={<IntraRouteChangelog />} />
+            <Route path="/intra/intraroute" element={<IntraRoute />} />
+            <Route path="/intra/IntraRoute" element={<IntraRoute />} />
+            <Route path="/intraroute/changelog" element={<IntraRouteChangelog />} />
+            <Route path="/IntraRoute/changelog" element={<IntraRouteChangelog />} />
+            <Route path="/intra/intraroute/changelog" element={<IntraRouteChangelog />} />
+            <Route path="/intra/IntraRoute/changelog" element={<IntraRouteChangelog />} />
             <Route path="/test" element={<Test />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>

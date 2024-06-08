@@ -16,34 +16,13 @@
 }
 
 @media (width < 2000px) {
-    .outerContainer {
+    .container {
         zoom: 75%;
     }
 }
 
 @media (width < 1500px) {
-    .outerContainer {
+    .container {
         zoom: 55%;
     }
-}
-
-.headerContainer {
-    margin-left: 10%;
-    width: fit-content;
-    background-color: #ffc90e;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-bottom: 20px solid #ff7f27;
-}
-
-.header {
-    font-weight: 600;
-    color: white;
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.outerContainer {
-    margin-top: 30px;
 }

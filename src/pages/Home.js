@@ -4,6 +4,7 @@ import styles from './Home.module.css';
 
 import Carousel from '../components/Carousel';
 import Grid from '../components/Grid';
+import SectionHeader from '../components/SectionHeader';
 
 import fhCenter from '../images/fh-center-6.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
@@ -67,7 +68,13 @@ function Home() {
                 <meta name="twitter:title" content="Home | Feline Holdings" />
             </Helmet>
             <Carousel propsObj={carouselProps} />
-            <Grid />
+            <div className={styles.topSection}>
+                <SectionHeader text='Latest News' />
+                <Grid />
+            </div>
+            <div className={styles.section}>
+                <SectionHeader text='Our Brands' />
+            </div>
         </div>
     );
 }
