@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import styles from './GridPost.module.css';
@@ -10,42 +10,18 @@ function GridPost(props) {
     const contentBox = useRef();
     const imgBox = useRef();
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
- 
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
- 
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
-    let contentBoxToHeight;
-    let imgBoxToHeight;
-
-    if (windowWidth > 2000) {
-        contentBoxToHeight = '300px';
-        imgBoxToHeight = '100px';
-    } else {
-        contentBoxToHeight = '15vw';
-        imgBoxToHeight = '5vw';
-    }
-
     let tl;
 
     useGSAP(
         () => {
             tl = gsap.timeline({paused: true})
             tl.to(contentBox.current, {
-                height: contentBoxToHeight,
+                height: '275px',
                 duration: 0.5,
                 ease: 'power2.inOut',
             })
             tl.to(imgBox.current, {
-                height: imgBoxToHeight,
+                height: '75px',
                 duration: 0.5,
                 ease: 'power2.inOut',
             }, '-=0.5')
