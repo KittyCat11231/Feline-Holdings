@@ -14,3 +14,15 @@
     height: fit-content;
     width: fit-content;
 }
+
+@media (width < 2000px) {
+    .container {
+        zoom: 75%;
+    }
+}
+
+@media (width < 1500px) {
+    .container {
+        zoom: 55%;
+    }
+}
