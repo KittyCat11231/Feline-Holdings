@@ -30,11 +30,25 @@ function GridPost(props) {
         },
     )
 
+    function playTimeline() {
+        if (!(matchMedia('(pointer:coarse)') && window.innerWidth < 1000)) {
+            console.log(true);
+            tl.play();
+        }
+    }
+
+    function reverseTimeline() {
+        if (!(matchMedia('(pointer:coarse)') && window.innerWidth < 1000)) {
+            console.log(true);
+            tl.reverse();
+        }
+    }
+
     return (
         <a
             className={styles.container}
-            onMouseEnter={() => tl.play()}
-            onMouseLeave={() => tl.reverse()}
+            onMouseEnter={() => playTimeline()}
+            onMouseLeave={() => reverseTimeline()}
             href='/'
         >
             <div className={styles.imgBox} ref={imgBox}>

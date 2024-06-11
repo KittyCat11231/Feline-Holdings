@@ -1,8 +1,6 @@
 .container {
-    max-width: 350px;
-    max-height: 350px;
-    width: 30vh;
-    height: 30vh;
+    width: 100%;
+    height: fit-content;
     position: relative;
     text-decoration: none;
 }
@@ -57,7 +55,7 @@
 
 .subHeader {
     font-size: 25px;
-    margin-top: 0;
+    margin-top: -4px;
     margin-bottom: 0;
 }
 
@@ -65,4 +63,30 @@
     font-size: 20px;
     margin-top: 50px;
     margin-bottom: 0;
+}
+
+@media (pointer: coarse) and (width < 1000px) {
+    .contentBox {
+        height: fit-content;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 45px;
+        padding-top: 15px;
+    }
+
+    .header {
+        font-size: 60px;
+    }
+
+    .subHeader {
+        font-size: 35px;
+    }
+
+    .descriptor {
+        font-size: 25px;
+    }
+
+    .img {
+        width: 500px;
+    }
 }

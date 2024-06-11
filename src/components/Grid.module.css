@@ -26,3 +26,13 @@
         zoom: 55%;
     }
 }
+
+@media (pointer: coarse) and (width < 1000px) {
+    .container {
+        width: 100%;
+    }
+
+    .gridPost {
+        width: 100%;
+    }
+}

@@ -69,7 +69,7 @@ function Home() {
             </Helmet>
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
-                <SectionHeader text='Latest News' />
+                <SectionHeader text='Our Brands' />
                 <Grid />
             </div>
             <div className={styles.section}>
