@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(23vw, 1fr));
     width: 80%;
     margin-left: auto;
     margin-right: auto;

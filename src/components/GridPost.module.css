@@ -1,16 +1,17 @@
 .container {
-    max-width: 350px;
-    max-height: 350px;
-    width: 30vh;
-    height: 30vh;
+    width: fit-content;
+    height: 20vh;
+    max-height: 400px;
     position: relative;
     text-decoration: none;
 }
 
 .imgBox {
     background-color: white;
-    width: 100%;
-    height: 225px;
+    width: 20vw;
+    height: 15vw;
+    max-width: 400px;
+    max-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +19,14 @@
 }
 
 .img {
-    width: 350px;
+    width: 90%;
 }
 
 .contentBox {
-    width: 100%;
-    height: 125px;
+    width: 20vw;
+    height: 5vw;
+    max-width: 400px;
+    max-height: 100px;
     bottom: 0;
     background-color: #4d4d4d;
     overflow: hidden;
@@ -50,19 +53,19 @@
 }
 
 .header {
-    font-size: 2.3rem;
+    font-size: 1vw;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .subHeader {
-    font-size: 1.5rem;
+    font-size: 1vw;
     margin-top: 0;
     margin-bottom: 0;
 }
 
 .descriptor {
-    font-size: 1.1rem;
+    font-size: 1vw;
     margin-top: 50px;
     margin-bottom: 0;
 }
