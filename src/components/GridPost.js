@@ -10,7 +10,7 @@ function GridPost(props) {
     const contentBox = useRef();
     const imgBox = useRef();
 
-    let tl;
+    let [tl, setTl] = useState();
 
     useGSAP(
         () => {
@@ -25,6 +25,8 @@ function GridPost(props) {
                 duration: 0.5,
                 ease: 'power2.inOut',
             }, '-=0.5')
+
+            setTl(tl);
         },
     )
 
