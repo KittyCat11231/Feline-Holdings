@@ -4,8 +4,6 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import styles from './GridPost.module.css';
 
-import intraLogo from '../logos/intra-wordmark.svg';
-
 function GridPost(props) {
     const contentBox = useRef();
     const imgBox = useRef();
@@ -51,14 +49,29 @@ function GridPost(props) {
             onMouseLeave={() => reverseTimeline()}
             href='/'
         >
-            <div className={styles.imgBox} ref={imgBox}>
-                <img className={styles.img} src={intraLogo} alt='Intra' />
+            <div className={styles.imgBox} style={{backgroundColor: props.imgBoxColor}} ref={imgBox}>
+                <img className={styles.img} src={props.imgSrc} alt='Intra' />
             </div>
-            <div className={styles.contentBox} ref={contentBox}>
+            <div className={styles.contentBox} style={{backgroundColor: props.boxColor}} ref={contentBox}>
                 <div className={styles.textContainer}>
-                    <h2 className={`${styles.header} ${styles.text}`}>Go everywhere</h2>
-                    <p className={`${styles.subHeader} ${styles.text}`}>with Intra.</p>
-                    <p className={`${styles.descriptor} ${styles.text}`}>The MRT's biggest transportation conglomerate.</p>
+                    <h2
+                        className={`${styles.header} ${styles.text}`}
+                        style={{color: props.textColor}}
+                    >
+                        {props.headerText}
+                    </h2>
+                    <p
+                        className={`${styles.subHeader} ${styles.text}`}
+                        style={{color: props.textColor}}
+                    >
+                        {props.subHeaderText}
+                    </p>
+                    <p
+                        className={`${styles.descriptor} ${styles.text}`}
+                        style={{color: props.textColor}}
+                    >
+                        {props.descriptorText}
+                    </p>
                 </div>
             </div>
         </a>

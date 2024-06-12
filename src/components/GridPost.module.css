@@ -6,7 +6,6 @@
 }
 
 .imgBox {
-    background-color: white;
     width: 100%;
     height: 225px;
     display: flex;
@@ -23,7 +22,6 @@
     width: 100%;
     height: 125px;
     bottom: 0;
-    background-color: #4d4d4d;
     overflow: hidden;
     padding-left: 5%;
     padding-right: 5%;
@@ -43,13 +41,12 @@
 
 .text {
     font-weight: 600;
-    color: white;
     text-align: center;
 }
 
 .header {
-    font-size: 40px;
-    margin-top: 0;
+    font-size: 38px;
+    margin-top: 2px;
     margin-bottom: 0;
 }
 

@@ -10,6 +10,12 @@ import fhCenter from '../images/fh-center-6.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import mbsMls from '../assets/mbs-mls.svg';
 
+import intraLogo from '../logos/intra-wordmark.svg';
+import royDisneyLogo from '../logos/roy-disney.svg';
+import mbsLogo from '../logos/mbs-main.svg';
+import bartLogo from '../logos/bart.svg';
+import fossackLogo from '../logos/fossack-notseca.svg';
+
 function Home() {
 
     let carouselProps = {
@@ -60,6 +66,54 @@ function Home() {
         },
     }
 
+    let gridProps = [
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraLogo,
+            headerText: 'Go everywhere',
+            subHeaderText: 'with Intra.',
+            descriptorText: "The MRT's largest transportation conglomerate."
+        },
+        {
+            boxColor: '#5a86a8',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: royDisneyLogo,
+            headerText: 'Make moments',
+            subHeaderText: 'with Roy Disney.',
+            descriptorText: "The MRT's biggest media company."
+        },
+        {
+            boxColor: 'blue',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: mbsLogo,
+            headerText: 'On the air',
+            subHeaderText: 'with MBS.',
+            descriptorText: "The MRT's most watched broadcaster."
+        },
+        {
+            boxColor: '#30acdf',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: bartLogo,
+            headerText: 'Keep on moving',
+            subHeaderText: 'with BART.',
+            descriptorText: "Bringing you to the world."
+        },
+        {
+            boxColor: '#003875',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: fossackLogo,
+            headerText: 'Redacted',
+            subHeaderText: 'with Fossack Notseca.',
+            descriptorText: "Redacted."
+        },
+    ]
+
     return (
         <div>
             <Helmet>
@@ -70,10 +124,7 @@ function Home() {
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
                 <SectionHeader text='Our Brands' />
-                <Grid />
-            </div>
-            <div className={styles.section}>
-                <SectionHeader text='Our Brands' />
+                <Grid propsArray={gridProps} />
             </div>
         </div>
     );
