@@ -30,14 +30,12 @@ function GridPost(props) {
 
     function playTimeline() {
         if (!(matchMedia('(pointer:coarse)') && window.innerWidth < 1000)) {
-            console.log(true);
             tl.play();
         }
     }
 
     function reverseTimeline() {
         if (!(matchMedia('(pointer:coarse)') && window.innerWidth < 1000)) {
-            console.log(true);
             tl.reverse();
         }
     }
