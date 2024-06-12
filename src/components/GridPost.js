@@ -8,6 +8,11 @@ function GridPost(props) {
     const contentBox = useRef();
     const imgBox = useRef();
 
+    let renderMobileButton = false;
+    if (matchMedia('(pointer:coarse)') && window.innerWidth < 1000) {
+        renderMobileButton = true;
+    }
+
     let [tl, setTl] = useState();
 
     useGSAP(
@@ -40,6 +45,9 @@ function GridPost(props) {
         }
     }
 
+    const [buttonColor, setButtonColor] = useState(props.boxColor);
+    const [buttonTextColor, setButtonTextColor] = useState(props.textColor);
+
     return (
         <a
             className={styles.container}
@@ -71,6 +79,25 @@ function GridPost(props) {
                         {props.descriptorText}
                     </p>
                 </div>
+                {renderMobileButton ?
+                    <div
+                        className={styles.button}
+                        style={{border: `7px solid ${props.textColor}`, backgroundColor: buttonColor}}
+                        onClick={() => {
+                            setButtonColor(props.textColor);
+                            setButtonTextColor(props.boxColor);
+                        }}
+                    >
+                        <p
+                            className={`${styles.buttonText} ${styles.text}`}
+                            style={{color: buttonTextColor}}
+                        >
+                            Learn More
+                        </p>
+                    </div>
+                    :
+                    ''
+                }
             </div>
         </a>
     )

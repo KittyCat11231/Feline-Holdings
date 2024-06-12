@@ -15,6 +15,7 @@ import royDisneyLogo from '../logos/roy-disney.svg';
 import mbsLogo from '../logos/mbs-main.svg';
 import bartLogo from '../logos/bart.svg';
 import fossackLogo from '../logos/fossack-notseca.svg';
+import fhLogoSmall from '../logos/feline-holdings-small.svg';
 
 function Home() {
 
@@ -111,7 +112,7 @@ function Home() {
             headerText: 'Redacted',
             subHeaderText: 'with Fossack Notseca.',
             descriptorText: "Redacted."
-        },
+        }
     ]
 
     return (

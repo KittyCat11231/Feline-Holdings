@@ -91,3 +91,22 @@
         height: 300px;
     }
 }
+
+.button {
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 50px;
+}
+
+.buttonText {
+    font-size: 40px;
+    margin: 0;
+}
