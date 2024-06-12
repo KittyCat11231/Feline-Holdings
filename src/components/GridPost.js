@@ -53,7 +53,7 @@ function GridPost(props) {
             className={styles.container}
             onMouseEnter={() => playTimeline()}
             onMouseLeave={() => reverseTimeline()}
-            href='/'
+            href={props.link}
         >
             <div className={styles.imgBox} style={{backgroundColor: props.imgBoxColor}} ref={imgBox}>
                 <img className={styles.img} src={props.imgSrc} alt='Intra' />

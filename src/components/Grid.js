@@ -17,10 +17,12 @@ function Grid(props) {
                     headerText={post.headerText}
                     subHeaderText={post.subHeaderText}
                     descriptorText={post.descriptorText}
+                    link={post.link}
                 />
             </div>
         )
     })
+    
     return (
         <div className={styles.container}>
             {gridPostElements}

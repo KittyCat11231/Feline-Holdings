@@ -75,7 +75,8 @@ function Home() {
             imgSrc: intraLogo,
             headerText: 'Go everywhere',
             subHeaderText: 'with Intra.',
-            descriptorText: "The MRT's largest transportation conglomerate."
+            descriptorText: "The MRT's largest transportation conglomerate.",
+            link: '/'
         },
         {
             boxColor: '#5a86a8',
@@ -84,7 +85,8 @@ function Home() {
             imgSrc: royDisneyLogo,
             headerText: 'Make moments',
             subHeaderText: 'with Roy Disney.',
-            descriptorText: "The MRT's biggest media company."
+            descriptorText: "The MRT's biggest media company.",
+            link: '/'
         },
         {
             boxColor: 'blue',
@@ -93,7 +95,8 @@ function Home() {
             imgSrc: mbsLogo,
             headerText: 'On the air',
             subHeaderText: 'with MBS.',
-            descriptorText: "The MRT's most watched broadcaster."
+            descriptorText: "The MRT's most watched broadcaster.",
+            link: '/'
         },
         {
             boxColor: '#30acdf',
@@ -102,7 +105,8 @@ function Home() {
             imgSrc: bartLogo,
             headerText: 'Keep on moving',
             subHeaderText: 'with BART.',
-            descriptorText: "Bringing you to the world."
+            descriptorText: "Bringing you to the world.",
+            link: '/'
         },
         {
             boxColor: '#003875',
@@ -111,7 +115,8 @@ function Home() {
             imgSrc: fossackLogo,
             headerText: 'Redacted',
             subHeaderText: 'with Fossack Notseca.',
-            descriptorText: "Redacted."
+            descriptorText: "Redacted.",
+            link: '/'
         }
     ]
 
