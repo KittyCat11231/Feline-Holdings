@@ -48,6 +48,17 @@ function GridPost(props) {
     const [buttonColor, setButtonColor] = useState(props.boxColor);
     const [buttonTextColor, setButtonTextColor] = useState(props.textColor);
 
+    let imgWidth;
+    let imgTranslateY;
+
+    if (matchMedia('(pointer:coarse)') && window.innerWidth < 1000) {
+        imgWidth = props.imgWidthMobile;
+        imgTranslateY = props.imgTranslateYMobile
+    } else {
+        imgWidth = props.imgWidthDesktop;
+        imgTranslateY = props.imgTranslateYDesktop
+    }
+
     return (
         <a
             className={styles.container}
@@ -56,7 +67,12 @@ function GridPost(props) {
             href={props.link}
         >
             <div className={styles.imgBox} style={{backgroundColor: props.imgBoxColor}} ref={imgBox}>
-                <img className={styles.img} src={props.imgSrc} alt='Intra' />
+                <img
+                    className={styles.img}
+                    src={props.imgSrc}
+                    alt={props.imgAlt}
+                    style={{width: imgWidth, transform: `translate(0, ${imgTranslateY})`}}
+                />
             </div>
             <div className={styles.contentBox} style={{backgroundColor: props.boxColor}} ref={contentBox}>
                 <div className={styles.textContainer}>

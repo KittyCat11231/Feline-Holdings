@@ -14,6 +14,11 @@ function Grid(props) {
                     textColor={post.textColor}
                     imgBoxColor={post.imgBoxColor}
                     imgSrc={post.imgSrc}
+                    imgWidthDesktop={post.imgWidthDesktop}
+                    imgWidthMobile={post.imgWidthMobile}
+                    imgTranslateYDesktop={post.imgTranslateYDesktop}
+                    imgTranslateYMobile={post.imgTranslateYMobile}
+                    imgAlt={post.imgAlt}
                     headerText={post.headerText}
                     subHeaderText={post.subHeaderText}
                     descriptorText={post.descriptorText}
