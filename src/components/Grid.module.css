@@ -12,7 +12,7 @@
 
 .gridPost {
     height: fit-content;
-    width: fit-content;
+    width: 350px;
 }
 
 @media (width < 2000px) {
