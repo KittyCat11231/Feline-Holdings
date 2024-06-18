@@ -5,3 +5,12 @@
 @media (pointer: coarse) {
     /* mobile */
 }
+
+.testDiv {
+    --background-color: red;
+
+    background-color: var(--background-color);
+    width: 500px;
+    height: 500px;
+    margin-left: 50px;
+}
