@@ -20,6 +20,12 @@
     margin-bottom: 0;
 }
 
+@media (width < 1000px) {
+    .container {
+        zoom: 90%;
+    }
+}
+
 @media (pointer: coarse) and (width < 1000px) {
     .container {
         width: 100%;

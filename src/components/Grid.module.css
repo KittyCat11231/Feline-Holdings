@@ -30,6 +30,8 @@
 @media (pointer: coarse) and (width < 1000px) {
     .container {
         width: 100%;
+        margin-top: 0;
+        row-gap: 0;
     }
 
     .gridPost {
