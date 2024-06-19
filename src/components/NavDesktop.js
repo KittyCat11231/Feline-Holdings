@@ -5,7 +5,7 @@ function NavDesktop() {
     return (
         <nav>
             <div className={`${styles.button} ${styles.intra}`}>
-                <a href="/">Intra</a>
+                <a href="/intra">Intra</a>
             </div>
             <div className={`${styles.button} ${styles.roy}`}>
                 <a href="/">Roy Disney</a>

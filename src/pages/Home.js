@@ -79,7 +79,7 @@ function Home() {
             headerText: 'Go everywhere',
             subHeaderText: 'with Intra.',
             descriptorText: "The MRT's largest transportation conglomerate.",
-            link: '/'
+            link: '/intra'
         },
         {
             boxColor: '#5a86a8',
@@ -159,7 +159,7 @@ function Home() {
             </Helmet>
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
-                <SectionHeader text='Our Brands' />
+                <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
             </div>
         </div>

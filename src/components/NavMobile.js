@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 function DropdownContent() {
     return (
         <div className={styles.dropdownContent}>
-            <a className={styles.intra} href="/">Intra</a>
+            <a className={styles.intra} href="/intra">Intra</a>
             <a className={styles.roy} href="/">Roy Disney</a>
             <a className={styles.mbs} href="/">MBS</a>
             <a className={styles.bart} href="/">BART</a>
