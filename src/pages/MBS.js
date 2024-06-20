@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import styles from './MBS.module.css';
 
 function LiveFrame() {
@@ -10,11 +11,11 @@ function LiveFrame() {
 function MBS() {
     const channelid = "UCdqFWzZ2sTEM3svKajyk9Lg";
 
-    let isLive = false;
+    const [isLive, setIsLive] = useState(false);
 
     function onlive() {
         console.log('This channel is live!');
-        isLive = true;
+        setIsLive(true);
     }
 
     fetch('https://feline-holdings-cors.kittycat61500.workers.dev/?https://www.youtube.com/channel/' + channelid)
