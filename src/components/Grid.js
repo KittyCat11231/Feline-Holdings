@@ -16,6 +16,8 @@ function Grid(props) {
                     imgSrc={post.imgSrc}
                     imgWidthDesktop={post.imgWidthDesktop}
                     imgWidthMobile={post.imgWidthMobile}
+                    imgHeightDesktop={post.imgHeightDesktop}
+                    imgHeightMobile={post.imgHeightMobile}
                     imgTranslateYDesktop={post.imgTranslateYDesktop}
                     imgTranslateYMobile={post.imgTranslateYMobile}
                     imgAlt={post.imgAlt}

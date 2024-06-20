@@ -50,12 +50,15 @@ function GridPost(props) {
 
     let imgWidth;
     let imgTranslateY;
+    let imgHeight;
 
     if (matchMedia('(pointer:coarse)') && window.innerWidth < 1000) {
         imgWidth = props.imgWidthMobile;
+        imgHeight = props.imgHeightMobile;
         imgTranslateY = props.imgTranslateYMobile
     } else {
         imgWidth = props.imgWidthDesktop;
+        imgHeight = props.imgHeightDesktop;
         imgTranslateY = props.imgTranslateYDesktop
     }
 
@@ -71,7 +74,10 @@ function GridPost(props) {
                     className={styles.img}
                     src={props.imgSrc}
                     alt={props.imgAlt}
-                    style={{width: imgWidth, transform: `translate(0, ${imgTranslateY})`}}
+                    style={{width: imgWidth,
+                        height: imgHeight,
+                        transform: `translate(0, ${imgTranslateY})`
+                    }}
                 />
             </div>
             <div className={styles.contentBox} style={{backgroundColor: props.boxColor}} ref={contentBox}>

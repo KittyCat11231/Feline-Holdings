@@ -5,6 +5,7 @@ import styles from './Intra.module.css';
 import Carousel from '../components/Carousel';
 import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
+import ImageScroller from '../components/ImageScroller';
 
 import intraAirPhoto from '../images/intraair-1.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
@@ -14,6 +15,21 @@ import intraRailLogo from '../intraroute/logos/intrarail.svg';
 import intraBusLogo from '../intraroute/logos/intrabus.svg';
 import intraSailLogo from '../intraroute/logos/intrasail.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn.svg';
+
+import easternHeliLogo from '../intraroute/logos/eastern-airways-heli-lines.svg';
+import heampsteadCharterLogo from '../intraroute/logos/heampstead-charter.svg';
+import intraHeliLogo from '../intraroute/logos/intraair-heli-lines.svg';
+import intraPoseidonLogo from '../intraroute/logos/intraair-poseidon.svg';
+import volantiLogo from '../intraroute/logos/italiani-volanti.svg';
+import mcrLogo from '../intraroute/logos/mcr.svg';
+import mcrLumevaLogo from '../intraroute/logos/mcr-urban-lumeva.svg';
+import mcrScarLogo from '../intraroute/logos/mcr-urban-scarborough.svg';
+import omegaLogo from '../intraroute/logos/omegabus.svg';
+import segvilleAirLogo from '../intraroute/logos/segville-air.svg';
+import segvilleHeliLogo from '../intraroute/logos/segville-air-heli-lines.svg';
+import skyWestLogo from '../intraroute/logos/skywest-airlines.svg';
+import waypointLogo from '../intraroute/logos/waypoint.svg';
+import gemsLogo from '../intraroute/logos/gems-airline.png';
 
 function Intra() {
 
@@ -74,8 +90,8 @@ function Intra() {
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraAirLogo,
-            imgWidthDesktop: '350px',
-            imgWidthMobile: '500px',
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
             imgAlt: 'IntraAir',
             headerText: 'IntraAir',
             subHeaderText: 'We are the MRT\'s airline.',
@@ -87,8 +103,8 @@ function Intra() {
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraRailLogo,
-            imgWidthDesktop: '350px',
-            imgWidthMobile: '500px',
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
             imgAlt: 'IntraRail',
             headerText: 'IntraRail',
             subHeaderText: 'The way to ride.',
@@ -100,8 +116,8 @@ function Intra() {
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraBusLogo,
-            imgWidthDesktop: '350px',
-            imgWidthMobile: '500px',
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
             imgAlt: 'IntraBus',
             headerText: 'IntraBus',
             subHeaderText: 'Even more connections.',
@@ -113,8 +129,8 @@ function Intra() {
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraSailLogo,
-            imgWidthDesktop: '350px',
-            imgWidthMobile: '500px',
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
             imgAlt: 'IntraSail',
             headerText: 'IntraSail',
             subHeaderText: 'Set sail with us.',
@@ -126,13 +142,84 @@ function Intra() {
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraBahnLogo,
-            imgWidthDesktop: '350px',
-            imgWidthMobile: '500px',
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
             imgAlt: 'IntraBahn',
             headerText: 'IntraBahn',
             subHeaderText: 'Ride the open rails.',
             descriptorText: "Intra's traincart rail service.",
             link: '/'
+        },
+    ]
+
+    let imageScrollerProps = [
+        {
+            src: intraAirLogo,
+            alt: 'IntraAir'
+        },
+        {
+            src: segvilleAirLogo,
+            alt: 'Segville Air'
+        },
+        {
+            src: waypointLogo,
+            alt: 'Waypoint'
+        },
+        {
+            src: volantiLogo,
+            alt: 'Italiani Volanti'
+        },
+        {
+            src: skyWestLogo,
+            alt: 'SkyWest Airlines'
+        },
+        {
+            src: gemsLogo,
+            alt: 'GEMS Airline'
+        },
+        {
+            src: intraHeliLogo,
+            alt: 'IntraAir Heli Lines'
+        },
+        {
+            src: segvilleHeliLogo,
+            alt: 'Segville Air Heli Lines'
+        },
+        {
+            src: heampsteadCharterLogo,
+            alt: 'Heampstead Charter'
+        },
+        {
+            src: easternHeliLogo,
+            alt: 'Eastern Airways Heli Lines'
+        },
+        {
+            src: intraPoseidonLogo,
+            alt: 'IntraAir Poseidon'
+        },
+        {
+            src: intraRailLogo,
+            alt: 'IntraRail'
+        },
+        {
+            src: mcrLogo,
+            alt: 'MCR'
+        },
+        {
+            src: intraBusLogo,
+            alt: 'IntraBus'
+        },
+        {
+            src: omegaLogo,
+            alt: 'OMEGAbus!'
+        },
+        {
+            src: intraSailLogo,
+            alt: 'IntraSail'
+        },
+        {
+            src: intraBahnLogo,
+            alt: 'IntraBahn'
         },
     ]
 
@@ -150,6 +237,9 @@ function Intra() {
             <div className={styles.topSection}>
                 <SectionHeader text='Our Core Brands' color='#4d4d4d' border={false} />
                 <Grid propsArray={gridProps} />
+            </div>
+            <div className={styles.scroller}>
+                <ImageScroller propsArray={imageScrollerProps} />
             </div>
         </>
     )
