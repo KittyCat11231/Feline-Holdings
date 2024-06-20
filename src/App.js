@@ -7,6 +7,7 @@ import IntraRoute from './intraroute/pages/IntraRoute';
 import IntraRouteChangelog from './intraroute/pages/IntraRouteChangelog';
 import Test from './pages/Test';
 import Intra from './pages/Intra';
+import MBS from './pages/MBS';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -51,6 +52,8 @@ function App() {
             <Route path="/intra/intraroute/changelog" element={<IntraRouteChangelog />} />
             <Route path="/intra/IntraRoute/changelog" element={<IntraRouteChangelog />} />
             <Route path="/intra" element={<Intra />} />
+            <Route path="/mbs" element={<MBS />} />
+            <Route path="/MBS" element={<MBS />} />
             <Route path="/test" element={<Test />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>

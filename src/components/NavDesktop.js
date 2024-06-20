@@ -11,7 +11,7 @@ function NavDesktop() {
                 <a href="/">Roy Disney</a>
             </div>
             <div className={`${styles.button} ${styles.mbs}`}>
-                <a href="/">MBS</a>
+                <a href="/mbs">MBS</a>
             </div>
             <div className={`${styles.button} ${styles.bart}`}>
                 <a href="/">BART</a>

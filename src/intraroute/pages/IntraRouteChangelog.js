@@ -10,6 +10,7 @@ import intraRouteLogoShort from '../logos/intraroute-short.svg';
 import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
 function IntraRouteChangelog() {
+    
     let renderVersions = [];
 
     class subList {

@@ -13,6 +13,7 @@ import intraRouteLogoShort from '../logos/intraroute-short.svg';
 import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
 function IntraRoute() {
+
     const currentYear = new Date().getFullYear();
     let currentYearEdit;
     if (currentYear === 2024) {

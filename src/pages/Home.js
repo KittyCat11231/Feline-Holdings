@@ -108,7 +108,7 @@ function Home() {
             headerText: 'On the air',
             subHeaderText: 'with MBS.',
             descriptorText: "The MRT's most watched broadcaster.",
-            link: '/'
+            link: '/mbs'
         },
         {
             boxColor: '#30acdf',

@@ -1,6 +1,7 @@
 import React from 'react';
 
 function NoPage() {
+
     document.title = 'Page Not Found | Feline Holdings'
     
     return (
