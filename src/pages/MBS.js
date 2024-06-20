@@ -18,7 +18,7 @@ function MBS() {
         setIsLive(true);
     }
 
-    fetch('https://feline-holdings-cors.kittycat61500.workers.dev/?https://www.youtube.com/channel/' + channelid)
+    fetch('https://cors.felineholdings.com/?https://www.youtube.com/channel/' + channelid)
     .then(function (response) {
         console.log(response);
         return response.text();
