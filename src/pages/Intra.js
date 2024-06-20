@@ -78,8 +78,8 @@ function Intra() {
             imgWidthMobile: '500px',
             imgAlt: 'IntraAir',
             headerText: 'IntraAir',
-            subHeaderText: 'Text',
-            descriptorText: "The MRT's biggest airline.",
+            subHeaderText: 'We are the MRT\'s airline.',
+            descriptorText: "Hundreds of flights to over 100 airports.",
             link: '/'
         },
         {
@@ -91,7 +91,7 @@ function Intra() {
             imgWidthMobile: '500px',
             imgAlt: 'IntraRail',
             headerText: 'IntraRail',
-            subHeaderText: 'Text',
+            subHeaderText: 'The way to ride.',
             descriptorText: "The MRT's biggest warp rail company.",
             link: '/'
         },
@@ -104,8 +104,8 @@ function Intra() {
             imgWidthMobile: '500px',
             imgAlt: 'IntraBus',
             headerText: 'IntraBus',
-            subHeaderText: 'Text',
-            descriptorText: "Connecting you to even more places.",
+            subHeaderText: 'Even more connections.',
+            descriptorText: "Bringing Intra to even more places.",
             link: '/'
         },
         {
@@ -117,8 +117,8 @@ function Intra() {
             imgWidthMobile: '500px',
             imgAlt: 'IntraSail',
             headerText: 'IntraSail',
-            subHeaderText: 'Text',
-            descriptorText: "Set forth on the high seas.",
+            subHeaderText: 'Set sail with us.',
+            descriptorText: "Intra's passenger ferry service.",
             link: '/'
         },
         {
@@ -130,8 +130,8 @@ function Intra() {
             imgWidthMobile: '500px',
             imgAlt: 'IntraBahn',
             headerText: 'IntraBahn',
-            subHeaderText: 'Text',
-            descriptorText: "Enjoy the journey.",
+            subHeaderText: 'Ride the open rails.',
+            descriptorText: "Intra's traincart rail service.",
             link: '/'
         },
     ]
