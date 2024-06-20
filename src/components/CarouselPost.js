@@ -2,9 +2,29 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './CarouselPost.module.css';
 
-function CarouselPost(props) {
+function Button(props) {
     const [buttonTextColor, setButtonTextColor] = useState('white');
 
+    return (
+        <div
+            className={styles.button}
+            onMouseEnter={() => setButtonTextColor(props.color)}
+            onMouseLeave={() => setButtonTextColor('white')}
+        >
+            <a
+                href={props.link}
+                className={`${styles.buttonText} ${styles.text}`}
+                style={{
+                    color: buttonTextColor,
+                }}
+            >
+                {props.buttonText}
+            </a>
+        </div>
+    )
+}
+
+function CarouselPost(props) {
     return (
         <div className={styles.container}>
             <div className={styles.imgBox} style={{backgroundColor: props.imgBoxColor}}>
@@ -29,21 +49,15 @@ function CarouselPost(props) {
                     <h2 className={`${styles.descriptor} ${styles.text}`}>
                         {props.descriptorText}
                     </h2>
-                    <div
-                        className={styles.button}
-                        onMouseEnter={() => setButtonTextColor(props.color)}
-                        onMouseLeave={() => setButtonTextColor('white')}
-                    >
-                        <a
-                            href={props.link}
-                            className={`${styles.buttonText} ${styles.text}`}
-                            style={{
-                                color: buttonTextColor,
-                            }}
-                        >
-                            {props.buttonText}
-                        </a>
-                    </div>
+                    {props.renderButton ?
+                        <Button
+                            color={props.color}
+                            link={props.link}
+                            buttonText={props.buttonText}
+                        />
+                        :
+                        ''
+                    }
                 </div>
             </div>
         </div>

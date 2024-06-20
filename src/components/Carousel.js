@@ -224,6 +224,7 @@ function Carousel(props) {
                         imgTransform={props.propsObj.post1.imgTransform}
                         headerText={props.propsObj.post1.headerText}
                         descriptorText={props.propsObj.post1.descriptorText}
+                        renderButton={props.propsObj.post1.renderButton}
                         buttonText={props.propsObj.post1.buttonText}
                         link={props.propsObj.post1.link}
                     />
@@ -241,6 +242,7 @@ function Carousel(props) {
                         imgTransform={props.propsObj.post2.imgTransform}
                         headerText={props.propsObj.post2.headerText}
                         descriptorText={props.propsObj.post2.descriptorText}
+                        renderButton={props.propsObj.post2.renderButton}
                         buttonText={props.propsObj.post2.buttonText}
                         link={props.propsObj.post2.link}
                     />
@@ -258,6 +260,7 @@ function Carousel(props) {
                         imgTransform={props.propsObj.post3.imgTransform}
                         headerText={props.propsObj.post3.headerText}
                         descriptorText={props.propsObj.post3.descriptorText}
+                        renderButton={props.propsObj.post3.renderButton}
                         buttonText={props.propsObj.post3.buttonText}
                         link={props.propsObj.post3.link}
                     />

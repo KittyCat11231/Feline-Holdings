@@ -9,6 +9,12 @@ import SectionHeader from '../components/SectionHeader';
 import intraAirPhoto from '../images/intraair-1.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 
+import intraAirLogo from '../intraroute/logos/intraair.svg';
+import intraRailLogo from '../intraroute/logos/intrarail.svg';
+import intraBusLogo from '../intraroute/logos/intrabus.svg';
+import intraSailLogo from '../intraroute/logos/intrasail.svg';
+import intraBahnLogo from '../intraroute/logos/intrabahn.svg';
+
 function Intra() {
 
     let carouselProps = {
@@ -24,6 +30,7 @@ function Intra() {
             imgTransform: undefined,
             headerText: 'Go everywhere.',
             descriptorText: 'Intra is the MRT\'s largest transportation company.',
+            renderButton: false,
             buttonText: 'About Us',
             link: '/', 
         },
@@ -39,6 +46,7 @@ function Intra() {
             imgTransform: undefined,
             headerText: 'Get there with IntraRoute.',
             descriptorText: "Intra's official routefinder. Now in beta.",
+            renderButton: true,
             buttonText: 'Find Your Way',
             link: '/intraroute', 
         },
@@ -54,6 +62,7 @@ function Intra() {
             imgTransform: undefined,
             headerText: 'Go everywhere.',
             descriptorText: 'Intra is the MRT\'s largest transportation company.',
+            renderButton: false,
             buttonText: 'About Us',
             link: '/', 
         },
@@ -64,7 +73,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
+            imgSrc: intraAirLogo,
             imgWidthDesktop: '350px',
             imgWidthMobile: '500px',
             imgAlt: 'IntraAir',
@@ -77,9 +86,9 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
-            imgWidthDesktop: '400px',
-            imgWidthMobile: '600px',
+            imgSrc: intraRailLogo,
+            imgWidthDesktop: '350px',
+            imgWidthMobile: '500px',
             imgAlt: 'IntraRail',
             headerText: 'IntraRail',
             subHeaderText: 'Text',
@@ -90,9 +99,9 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
-            imgWidthDesktop: '300px',
-            imgWidthMobile: '450px',
+            imgSrc: intraBusLogo,
+            imgWidthDesktop: '350px',
+            imgWidthMobile: '500px',
             imgAlt: 'IntraBus',
             headerText: 'IntraBus',
             subHeaderText: 'Text',
@@ -103,9 +112,9 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
-            imgWidthDesktop: '270px',
-            imgWidthMobile: '350px',
+            imgSrc: intraSailLogo,
+            imgWidthDesktop: '350px',
+            imgWidthMobile: '500px',
             imgAlt: 'IntraSail',
             headerText: 'IntraSail',
             subHeaderText: 'Text',
@@ -116,8 +125,8 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
-            imgWidthDesktop: '330px',
+            imgSrc: intraBahnLogo,
+            imgWidthDesktop: '350px',
             imgWidthMobile: '500px',
             imgAlt: 'IntraBahn',
             headerText: 'IntraBahn',
