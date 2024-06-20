@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import styles from './MBS.module.css';
 
+import YouTubeEmbed from '../components/YouTubeEmbed';
+
 function LiveFrame() {
     return (
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/live_stream?channel=UCdqFWzZ2sTEM3svKajyk9Lg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <YouTubeEmbed link='https://www.youtube.com/embed/live_stream?channel=UCdqFWzZ2sTEM3svKajyk9Lg' />
     )
 }
 
