@@ -278,6 +278,7 @@ function Carousel(props) {
                         imgTransform={props.propsObj.post1.imgTransform}
                         headerText={props.propsObj.post1.headerText}
                         descriptorText={props.propsObj.post1.descriptorText}
+                        renderButton={props.propsObj.post1.renderButton}
                         buttonText={props.propsObj.post1.buttonText}
                         link={props.propsObj.post1.link}
                     />

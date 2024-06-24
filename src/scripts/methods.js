@@ -15,7 +15,7 @@ const methods = {
         return JSON.parse(JSON.stringify(target));
     },
     getRandomInteger: max => {
-        return Math.floor(Math.random() * max);
+        return Math.floor(Math.random() * max) + 1;
     }
 }
 

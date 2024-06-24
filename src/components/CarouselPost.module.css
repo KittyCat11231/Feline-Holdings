@@ -67,6 +67,8 @@
 .textContainer {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .text {
@@ -77,13 +79,12 @@
 }
 
 .header {
-    text-align: center;
-    font-size: 3.3rem;
+    font-size: 60px;
     margin: 0;
 }
 
 .descriptor {
-    font-size: 1.9rem;
+    font-size: 35px;
     margin-top: 15px;
 }
 
@@ -107,4 +108,12 @@
 .buttonText {
     text-decoration: none;
     font-size: 2.2rem;
+}
+
+@media (width < 1000px) {
+
+    .textContainer {
+        zoom: 85%;
+    }
+
 }
