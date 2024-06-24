@@ -8,6 +8,9 @@ import YouTubeEmbed from '../components/YouTubeEmbed';
 
 import methods from '../scripts/methods';
 
+import mbsLogoWhite from '../logos/mbs-icon-white.svg';
+import mbsLogoBlack from '../logos/mbs-icon-black.svg';
+
 function LiveFrame() {
     return (
         <YouTubeEmbed link='https://www.youtube.com/embed/live_stream?channel=UCdqFWzZ2sTEM3svKajyk9Lg' />
@@ -18,6 +21,7 @@ function LiveMBSWhenLive() {
     let boxColor;
     let textColor = 'white';
     let circleColor = 'red';
+    let mbsLogo = mbsLogoWhite;
 
     let randomInt = methods.getRandomInteger(4);
 
@@ -29,9 +33,11 @@ function LiveMBSWhenLive() {
     } else if (randomInt === 3) {
         boxColor = 'yellow';
         textColor = 'black';
+        mbsLogo = mbsLogoBlack;
     } else if (randomInt === 4) {
         boxColor = '#00ff00';
         textColor = 'black';
+        mbsLogo = mbsLogoBlack;
     }
     console.log(randomInt);
     console.log(boxColor);
@@ -75,6 +81,7 @@ function LiveMBSWhenLive() {
                         >
                         </div>
                     </div>
+                    <img className={styles.logo} src={mbsLogo} alt='MBS' />
                     <p
                         className={`${styles.text} ${styles.header}`}
                         style={{color: textColor}}
