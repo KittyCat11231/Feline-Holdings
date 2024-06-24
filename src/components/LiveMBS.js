@@ -14,7 +14,7 @@ function LiveFrame() {
     )
 }
 
-function LiveMBS() {
+function LiveMBSWhenLive() {
     let boxColor;
     let textColor = 'white';
     let circleColor = 'red';
@@ -38,32 +38,6 @@ function LiveMBS() {
 
     const circleAnimated = useRef();
 
-    const channelId = "UCdqFWzZ2sTEM3svKajyk9Lg";
-    let subDomain = 'www';
-
-    if (matchMedia('(pointer:coarse)').matches) {
-        subDomain = 'm';
-    }
-
-    const [isLive, setIsLive] = useState(false);
-
-    function onlive() {
-        console.log('This channel is live!');
-        setIsLive(true);
-    }
-
-    fetch(`https://cors.felineholdings.com/?https://${subDomain}.youtube.com/channel/${channelId}`)
-    .then(function (response) {
-        console.log(response);
-        return response.text();
-    }).then(function (html) {
-        if (html.includes("hqdefault_live.jpg")) {
-            onlive();
-        }
-    }).catch(function (err) {
-        console.warn('Failed to fetch.', err);
-    });
-
     let [tl, setTl] = useState();
 
     useGSAP(
@@ -84,7 +58,7 @@ function LiveMBS() {
     return (
         <div className={styles.container} style={{backgroundColor: boxColor}}>
             <div className={styles.liveFrame}>
-                {isLive ? <LiveFrame /> : ''}
+                <LiveFrame />
             </div>
             <div className={styles.textBox}>
                 <div className={styles.topLine}>
@@ -114,6 +88,34 @@ function LiveMBS() {
                 >Watch live right now.</p>
             </div>
         </div>
+    )
+}
+
+function LiveMBS() {
+    const channelId = "UCdqFWzZ2sTEM3svKajyk9Lg";
+    let subDomain = 'www';
+
+    if (matchMedia('(pointer:coarse)').matches) {
+        subDomain = 'm';
+    }
+
+    const [isLive, setIsLive] = useState(false);
+
+    fetch(`https://cors.felineholdings.com/?https://${subDomain}.youtube.com/channel/${channelId}`)
+    .then(function (response) {
+        console.log(response);
+        return response.text();
+    }).then(function (html) {
+        if (html.includes("hqdefault_live.jpg")) {
+            setIsLive(true);
+        } else {
+            setIsLive(false);
+        }
+    }).catch(function (err) {
+        console.warn('Failed to fetch.', err);
+    });
+    return (
+        <>{isLive ? <LiveMBSWhenLive /> : ''}</>
     )
 }
 
