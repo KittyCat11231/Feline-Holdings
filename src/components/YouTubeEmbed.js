@@ -4,7 +4,7 @@ import styles from './YouTubeEmbed.module.css';
 function YouTubeEmbed(props) {
     return (
         <iframe
-            className={styles.video}
+            className={`${styles.video} ${props.iframeStyles}`}
             src={props.link}
             title="YouTube video player"
             frameborder="0"

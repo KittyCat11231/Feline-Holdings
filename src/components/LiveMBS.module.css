@@ -74,12 +74,44 @@
 }
 
 .video {
-    height: fit-content;
+    height: 315px;
     aspect-ratio: 16 / 9;
-    max-width: 100vw;
 }
 
 .topLine {
     display: flex;
     flex-direction: row;
+}
+
+@media (pointer: coarse) and (width < 1000px) {
+    .container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .video {
+        height: unset;
+        width: 100vw;
+    }
+
+    .textBox {
+        zoom: 65%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .liveFrame {
+        padding-left: 0;
+    }
+}
+
+@media (pointer: coarse) and (width > 1000px) and (width < 1500px) {
+    .container {
+        zoom: 75%;
+    }
 }

@@ -13,7 +13,10 @@ import mbsLogoBlack from '../logos/mbs-icon-black.svg';
 
 function LiveFrame() {
     return (
-        <YouTubeEmbed link='https://www.youtube.com/embed/live_stream?channel=UCdqFWzZ2sTEM3svKajyk9Lg' />
+        <YouTubeEmbed
+            link='https://www.youtube.com/embed/live_stream?channel=UCdqFWzZ2sTEM3svKajyk9Lg'
+            iframeStyles={styles.video}
+        />
     )
 }
 
@@ -120,6 +123,26 @@ function LiveMBS() {
         }
     }).catch(function (err) {
         console.warn('Failed to fetch.', err);
+        let otherSubDomain;
+        if (subDomain === 'www') {
+            otherSubDomain = 'm';
+        }
+        if (subDomain === 'm') {
+            otherSubDomain = 'www';
+        }
+        fetch(`https://cors.felineholdings.com/?https://${otherSubDomain}.youtube.com/channel/${channelId}`)
+        .then(function (response) {
+            console.log(response);
+            return response.text();
+        }).then(function (html) {
+            if (html.includes("hqdefault_live.jpg")) {
+                setIsLive(true);
+            } else {
+                setIsLive(false);
+            }
+        }).catch(function (err) {
+            console.warn('Failed to fetch.', err);
+        });
     });
     return (
         <>{isLive ? <LiveMBSWhenLive /> : ''}</>
