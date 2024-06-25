@@ -32,7 +32,8 @@ function RecentMBSVideos() {
         }
     }
 
-    getRecentVideos();
+    // commented out to avoid api rate limit for now
+    // getRecentVideos();
     
     return (
         <div className={styles.container}>
