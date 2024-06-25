@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    row-gap: 50px;
+    place-items: center;
+    column-gap: 50px;
+}
+
+.gridPost {
+    height: fit-content;
+    width: fit-content;
+}
+
+@media (width < 2000px) {
+    .container {
+        zoom: 75%;
+    }
+}
+
+@media (width < 1500px) {
+    .container {
+        zoom: 55%;
+    }
+}
+
+@media (pointer: coarse) and (width < 1000px) {
+    .container {
+        width: 100%;
+        margin-top: 0;
+        row-gap: 0;
+    }
+
+    .gridPost {
+        width: 100%;
+    }
+}
