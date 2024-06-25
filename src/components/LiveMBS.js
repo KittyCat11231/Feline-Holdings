@@ -102,48 +102,20 @@ function LiveMBSWhenLive() {
 }
 
 function LiveMBS() {
-    const channelId = "UCdqFWzZ2sTEM3svKajyk9Lg";
-    let subDomain = 'www';
-
-    if (matchMedia('(pointer:coarse)').matches) {
-        subDomain = 'm';
-    }
-
     const [isLive, setIsLive] = useState(false);
 
-    fetch(`https://cors.felineholdings.com/?https://${subDomain}.youtube.com/channel/${channelId}`)
-    .then(function (response) {
-        console.log(response);
-        return response.text();
-    }).then(function (html) {
-        if (html.includes("hqdefault_live.jpg")) {
+    async function isMBSLive() {
+        const response = await fetch('https://cors.felineholdings.com/?https://feline-holdings-backend.vercel.app/mbs/live-now')
+        const responseJson = await response.json();
+        if (responseJson.isLive === true) {
             setIsLive(true);
         } else {
             setIsLive(false);
         }
-    }).catch(function (err) {
-        console.warn('Failed to fetch.', err);
-        let otherSubDomain;
-        if (subDomain === 'www') {
-            otherSubDomain = 'm';
-        }
-        if (subDomain === 'm') {
-            otherSubDomain = 'www';
-        }
-        fetch(`https://cors.felineholdings.com/?https://${otherSubDomain}.youtube.com/channel/${channelId}`)
-        .then(function (response) {
-            console.log(response);
-            return response.text();
-        }).then(function (html) {
-            if (html.includes("hqdefault_live.jpg")) {
-                setIsLive(true);
-            } else {
-                setIsLive(false);
-            }
-        }).catch(function (err) {
-            console.warn('Failed to fetch.', err);
-        });
-    });
+    }
+
+    isMBSLive();
+
     return (
         <>{isLive ? <LiveMBSWhenLive /> : ''}</>
     )

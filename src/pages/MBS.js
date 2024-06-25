@@ -4,7 +4,7 @@ import styles from './MBS.module.css';
 
 import LiveMBS from '../components/LiveMBS';
 import Carousel from '../components/Carousel';
-import CarouselPost from '../components/CarouselPost';
+import RecentMBSVideos from '../components/RecentMBSVideos';
 
 import mbsLogoMain from '../logos/mbs-main.svg';
 import mbsLogoWhite from '../logos/mbs-main-white.svg';
@@ -81,6 +81,7 @@ function MBS() {
                 <div className={styles.topPost}>
                     <Carousel propsObj={carouselProps} />
                 </div>
+                <RecentMBSVideos />
             </div>
         </>
     )

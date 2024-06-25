@@ -12,7 +12,7 @@ import railLumevaStops from '../intraroute/data/pathfinding/railLumeva.json';
 import railScarStops from '../intraroute/data/pathfinding/railScar.json';
 import sailStops from '../intraroute/data/pathfinding/sail.json';
 
-function Test() {
+function Test1() {
 
     let validIds = [];
     
@@ -94,6 +94,49 @@ function Test() {
             >
             </div>
         </div>
+    )
+}
+
+function Test() {
+    function handleOnClick() {
+        console.log('Click!');
+
+        async function fetchRequest() {
+            try {
+                const response = await fetch('https://cors.felineholdings.com/?https://feline-holdings-backend.vercel.app/echoback', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        firstValue: 'foo',
+                        secondValue: 'bar'
+                    })
+                });
+                const json = await response.json();
+                console.log(json);
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchRequest();
+    }
+
+    return (
+        <>
+            <Helmet>
+                <title>Test Page | Feline Holdings</title>
+        
+                <meta property="og:url" content="https://felineholdings.com/test" />
+                <meta property="og:title" content="Test Page | Feline Holdings" />
+                <meta property="og:description" content="Feline Holdings development test page" />
+
+                <meta property="twitter:domain" content="felineholdings.com/test" />
+                <meta property="twitter:url" content="https://felineholdings.com/test" />
+                <meta name="twitter:title" content="Test Page | Feline Holdings" />
+                <meta name="twitter:description" content="Feline Holdings development test page" />
+            </Helmet>
+            <h1>Development Test Page</h1>
+            <button onClick={handleOnClick}>Fetch Request</button>
+        </>
     )
 }
 
