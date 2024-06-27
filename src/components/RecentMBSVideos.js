@@ -16,8 +16,8 @@ function RecentMBSVideos() {
         try {
             const response = await fetch('https://cors.felineholdings.com/?https://api.felineholdings.com/mbs/recent-videos');
             const videos = await response.json();
-            for (let i = 0; i < 5; i++) {
-                let video = await videos[i];
+            for (let i = 0; i < await videos.length; i++) {
+                let video = videos[i];
                 let year = video.date.split('-')[0];
                 let monthNum = Number(video.date.split('-')[1]);
                 let month = methods.getMonthNameFromNumber(monthNum, false);
@@ -38,6 +38,12 @@ function RecentMBSVideos() {
                         />
                     </div>
                 )
+                if (i >= 5) {
+                    break;
+                    // the loop should only run 5 times,
+                    // or for the number of videos.length,
+                    // whichever is lower
+                }
             }
             setIsLoaded(true);
             setRenderVideosArray(videosArray);
