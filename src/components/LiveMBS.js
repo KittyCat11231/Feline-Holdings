@@ -105,7 +105,7 @@ function LiveMBS() {
     const [isLive, setIsLive] = useState(false);
 
     async function isMBSLive() {
-        const response = await fetch('https://cors.felineholdings.com/?https://feline-holdings-backend.vercel.app/mbs/live-now')
+        const response = await fetch('https://cors.felineholdings.com/?https://api.felineholdings.com/mbs/live-now')
         const responseJson = await response.json();
         if (responseJson.isLive === true) {
             setIsLive(true);

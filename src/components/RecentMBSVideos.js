@@ -8,7 +8,7 @@ function RecentMBSVideos() {
 
     async function getRecentVideos() {
         try {
-            const response = await fetch('https://cors.felineholdings.com/?https://feline-holdings-backend.vercel.app/mbs/recent-videos');
+            const response = await fetch('https://cors.felineholdings.com/?https://api.felineholdings.com/mbs/recent-videos');
             console.log('response', response);
             const videos = await response.json();
             console.log('videos', videos);
