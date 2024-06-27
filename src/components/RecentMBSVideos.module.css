@@ -6,7 +6,7 @@
     margin-right: auto;
     margin-top: 30px;
     row-gap: 50px;
-    place-items: center;
+    place-items: left;
     column-gap: 50px;
 }
 
@@ -31,7 +31,6 @@
     .container {
         width: 100%;
         margin-top: 0;
-        row-gap: 0;
     }
 
     .gridPost {

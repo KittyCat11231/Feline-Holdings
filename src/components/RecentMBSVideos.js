@@ -1,52 +1,67 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import styles from './RecentMBSVideos.module.css';
 
 import MBSVideo from './MBSVideo';
 
 function RecentMBSVideos() {
     let videosArray = [];
+    const [renderVideosArray, setRenderVideosArray] = useState();
+
+    const [isLoaded, setIsLoaded] = useState(false);
 
     async function getRecentVideos() {
         try {
             const response = await fetch('https://cors.felineholdings.com/?https://api.felineholdings.com/mbs/recent-videos');
-            console.log('response', response);
             const videos = await response.json();
-            console.log('videos', videos);
-            videos.forEach(video => {
-                const title = video.snippet.title.split('] ')[1];
-                console.log(title);
+            await videos.forEach(video => {
+                let monthNum = video.date.split('/')[0];
+                let day = video.date.split('/')[1];
+                let year = video.date.split('/')[2];
+                let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                let monthName = months[monthNum - 1];
+                let date = `${monthName} ${day}, ${year}`
                 videosArray.push(
                     <div className={styles.gridPost}>
                         <MBSVideo
-                            link='https://www.youtube.com/embed/vTlR8EbFBtk'
-                            division='sports'
-                            title='Placeholder Video Title That Is Too Long To Fit On One Line'
-                            date='6/32/2024'
+                            link={`https://www.youtube.com/embed/${video.videoId}`}
+                            division={video.division}
+                            title={video.title}
+                            date={date}
+                            color='#e6e6e6'
+                            textColor='black'
+                            logoColor='main'
+                            dateColor='white'
+                            wasLive={video.wasLive}
                         />
                     </div>
                 )
             })
+            setIsLoaded(true);
+            setRenderVideosArray(videosArray);
         }
         catch(error) {
             console.log(error);
+            setIsLoaded(true);
+            setRenderVideosArray(<h1>Failed to load</h1>);
         }
     }
 
-    // commented out to avoid api rate limit for now
-    // getRecentVideos();
+    useEffect(() => {
+        getRecentVideos();
+    }, []);
     
-    return (
-        <div className={styles.container}>
-            <div className={styles.gridPost}>
-                <MBSVideo
-                    link='https://www.youtube.com/embed/vTlR8EbFBtk'
-                    division='sports'
-                    title='Placeholder Video Title That Is Too Long To Fit On One Line'
-                    date='6/32/2024'
-                />
+    if (isLoaded === true) {
+        return (
+            <div className={styles.container}>
+                {renderVideosArray}
             </div>
-        </div>
-    )
+        )
+    } else {
+        return(
+            <p></p>
+        )
+    }
 }
 
 export default RecentMBSVideos;

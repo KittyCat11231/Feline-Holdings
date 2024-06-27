@@ -54,6 +54,10 @@ function App() {
             <Route path="/intra" element={<Intra />} />
             <Route path="/mbs" element={<MBS />} />
             <Route path="/MBS" element={<MBS />} />
+            <Route path="/roy-disney/mbs" element={<MBS />} />
+            <Route path="/roy-disney/MBS" element={<MBS />} />
+            <Route path="/Roy-Disney/mbs" element={<MBS />} />
+            <Route path="/Roy-Disney/MBS" element={<MBS />} />
             <Route path="/test" element={<Test />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>

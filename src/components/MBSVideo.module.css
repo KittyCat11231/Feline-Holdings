@@ -4,18 +4,16 @@
 }
 
 .contentBox {
-    background-color: blue;
     width: 400px;
     margin: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .text {
     font-weight: 600;
-    color: white;
     margin: 0;
 }
 
@@ -25,11 +23,24 @@
 }
 
 .title {
-    font-size: 25px;
+    font-size: 30px;
     line-height: 1.2;
-    margin-bottom: 20px;
 }
 
 .date {
     font-size: 25px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+@media (pointer: coarse) and (width < 1000px) {
+    .video {
+        height: unset;
+        width: 100%;
+    }
+
+    .contentBox {
+        width: 100%;
+        zoom: 140%;
+    }
 }
