@@ -17,6 +17,14 @@
     margin: 0;
 }
 
+.a {
+    text-decoration: none;
+}
+
+.a:hover {
+    text-decoration: underline;
+}
+
 .logo {
     height: 30px;
     margin-bottom: 20px;

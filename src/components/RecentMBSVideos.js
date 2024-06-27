@@ -26,7 +26,7 @@ function RecentMBSVideos() {
                 videosArray.push(
                     <div className={styles.gridPost}>
                         <MBSVideo
-                            link={`https://www.youtube.com/embed/${video.videoId}`}
+                            id={video.videoId}
                             division={video.division}
                             title={video.title}
                             date={date}

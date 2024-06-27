@@ -72,17 +72,22 @@ function MBSVideo(props) {
         }
     }
 
+    let embedLink = `https://www.youtube.com/embed/${props.id}`;
+    let normalLink = `https://www.youtube.com/watch?v=${props.id}`;
+
     return (
         <div className={styles.container}>  
             <YouTubeEmbed
-                link={props.link}
+                link={embedLink}
                 iframeStyles={styles.video}
             />
-            <div className={styles.contentBox} style={{backgroundColor: props.color}}>
-                <img src={logoSrc} alt={logoAlt} className={styles.logo} />
-                <h1 className={`${styles.title} ${styles.text}`} style={{color: props.textColor}}>{props.title}</h1>
-                <h2 className={`${styles.date} ${styles.text}`} style={{color: props.textColor}}>{props.date}</h2>
-            </div>
+            <a className={styles.a} href={normalLink} target='_blank' rel='noreferrer noopener'>
+                <div className={styles.contentBox} style={{backgroundColor: props.color}}>
+                    <img src={logoSrc} alt={logoAlt} className={styles.logo} />
+                    <h1 className={`${styles.title} ${styles.text}`} style={{color: props.textColor}}>{props.title}</h1>
+                    <h2 className={`${styles.date} ${styles.text}`} style={{color: props.textColor}}>{props.date}</h2>
+                </div>
+            </a>
         </div>
     )
 }
