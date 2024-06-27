@@ -4,6 +4,8 @@ import styles from './RecentMBSVideos.module.css';
 
 import MBSVideo from './MBSVideo';
 
+import methods from '../scripts/methods';
+
 function RecentMBSVideos() {
     let videosArray = [];
     const [renderVideosArray, setRenderVideosArray] = useState();
@@ -14,13 +16,13 @@ function RecentMBSVideos() {
         try {
             const response = await fetch('https://cors.felineholdings.com/?https://api.felineholdings.com/mbs/recent-videos');
             const videos = await response.json();
-            await videos.forEach(video => {
-                let monthNum = video.date.split('/')[0];
-                let day = video.date.split('/')[1];
-                let year = video.date.split('/')[2];
-                let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                let monthName = months[monthNum - 1];
-                let date = `${monthName} ${day}, ${year}`
+            for (let i = 0; i < 5; i++) {
+                let video = await videos[i];
+                let year = video.date.split('-')[0];
+                let monthNum = Number(video.date.split('-')[1]);
+                let month = methods.getMonthNameFromNumber(monthNum, false);
+                let day = video.date.split('-')[2];
+                let date = `${month} ${day}, ${year}`;
                 videosArray.push(
                     <div className={styles.gridPost}>
                         <MBSVideo
@@ -36,7 +38,7 @@ function RecentMBSVideos() {
                         />
                     </div>
                 )
-            })
+            }
             setIsLoaded(true);
             setRenderVideosArray(videosArray);
         }

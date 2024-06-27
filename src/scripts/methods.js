@@ -16,6 +16,16 @@ const methods = {
     },
     getRandomInteger: max => {
         return Math.floor(Math.random() * max) + 1;
+    },
+    getMonthNameFromNumber: (num, useFullName) => {
+        let months;
+        if (useFullName === true) {
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        }
+        if (useFullName === false) {
+            months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        }
+        return months[num - 1];
     }
 }
 
