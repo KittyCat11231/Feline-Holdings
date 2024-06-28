@@ -79,9 +79,7 @@ function MBS() {
             </Helmet>
             <div className={styles.container}>
                 <LiveMBS />
-                <div className={styles.topPost}>
-                    <Carousel propsObj={carouselProps} />
-                </div>
+                <Carousel propsObj={carouselProps} />
                 <div className={styles.section}>
                     <SectionHeader text='Recent Broadcasts' color='blue' border={false} borderColor='' />
                     <RecentMBSVideos />
