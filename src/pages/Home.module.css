@@ -6,6 +6,10 @@
     margin-top: 50px;
 }
 
+.sectionNoHeader {
+    margin-top: 150px;
+}
+
 @media (pointer: coarse) and (width < 1100px) {
     .topSection {
         margin-top: 30px;

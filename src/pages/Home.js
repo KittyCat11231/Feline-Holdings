@@ -6,11 +6,14 @@ import Carousel from '../components/Carousel';
 import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
 import ItemSmall from '../components/ItemSmall';
+import ItemLarge from '../components/ItemLarge';
+import LargeHeaderAndBody from '../components/LargeHeaderAndBody';
 
 import fhCenter from '../images/fh-center-6.png';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import mbsMls from '../assets/mbs-mls.svg';
+import demoImg from '../images/intrarail-siletz-2.png';
 
 import intraLogo from '../logos/intra-wordmark.svg';
 import royDisneyLogo from '../logos/roy-disney.svg';
@@ -183,6 +186,42 @@ function Home() {
             <div className={styles.section}>
                 <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
+            </div>
+            <div className={styles.sectionNoHeader}>
+                <ItemLarge
+                    imgLeftSide={true}
+                    imgSrc={demoImg}
+                    imgAlt='IntraRoute'
+                    imgWidthDesktop=''
+                    imgWidthMobile=''
+                    imgHeightDesktop='150%'
+                    imgHeightMobile='150%'
+                    boxColor='#4d4d4d'
+                    textColor='white'
+                    headerText='Placeholder text.'
+                    descriptorText='Lorem ipsum dolor sit amet.'
+                    renderButton={false}
+                    buttonText=''
+                    link='/'
+                    includeBody={false}
+                />
+            </div>
+            <div className={styles.sectionNoHeader}>
+                <LargeHeaderAndBody
+                    imgLeftSide={true}
+                    imgSrc={demoImg}
+                    imgAlt='IntraRoute'
+                    imgWidthDesktop=''
+                    imgWidthMobile=''
+                    imgHeightDesktop='150%'
+                    imgHeightMobile='150%'
+                    boxColor='#4d4d4d'
+                    headerTextColor='white'
+                    headerText='About Us'
+                    renderButton={false}
+                    buttonText=''
+                    link='/'
+                />
             </div>
         </div>
     );
