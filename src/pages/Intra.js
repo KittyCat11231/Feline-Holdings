@@ -31,6 +31,8 @@ import skyWestLogo from '../intraroute/logos/skywest-airlines.svg';
 import waypointLogo from '../intraroute/logos/waypoint.svg';
 import gemsLogo from '../intraroute/logos/gems-airline.png';
 import puntaLogo from '../logos/punta-airport-company.png';
+import intraTrainsLogo from '../logos/intratrains.svg';
+import intraJetEamLogoSmall from '../logos/intrajet-eam-small.svg';
 
 function Intra() {
 
@@ -97,7 +99,7 @@ function Intra() {
             headerText: 'IntraAir',
             subHeaderText: 'We are the MRT\'s airline.',
             descriptorText: "Hundreds of flights to over 100 airports.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraAir'
         },
         {
             boxColor: '#4d4d4d',
@@ -110,7 +112,7 @@ function Intra() {
             headerText: 'IntraRail',
             subHeaderText: 'The way to ride.',
             descriptorText: "The MRT's biggest warp rail company.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraRail'
         },
         {
             boxColor: '#4d4d4d',
@@ -123,7 +125,7 @@ function Intra() {
             headerText: 'IntraBus',
             subHeaderText: 'Even more connections.',
             descriptorText: "Bringing Intra to even more places.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraBus'
         },
         {
             boxColor: '#4d4d4d',
@@ -136,7 +138,7 @@ function Intra() {
             headerText: 'IntraSail',
             subHeaderText: 'Set sail with us.',
             descriptorText: "Intra's passenger ferry service.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraSail'
         },
         {
             boxColor: '#4d4d4d',
@@ -149,7 +151,7 @@ function Intra() {
             headerText: 'IntraBahn',
             subHeaderText: 'Ride the open rails.',
             descriptorText: "Intra's traincart rail service.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraBahn'
         },
     ]
 
@@ -158,55 +160,42 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraAirLogo,
-            imgHeightDesktop: '65px',
-            imgHeightMobile: '100px',
+            imgSrc: intraJetEamLogoSmall,
+            imgHeightDesktop: '95px',
+            imgHeightMobile: '150px',
             imgAlt: 'IntraJet-EAM',
             headerText: 'IntraJet-EAM',
             subHeaderText: 'Designing your journey.',
             descriptorText: "One of the MRT's biggest aircraft manufacturers.",
-            link: '/'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraJet-EAM'
         },
         {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRailLogo,
-            imgHeightDesktop: '65px',
+            imgSrc: intraTrainsLogo,
+            imgHeightDesktop: '55px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraTrains',
             headerText: 'IntraTrains',
             subHeaderText: 'Getting you on track.',
-            descriptorText: "Managing airports across the MRT.",
-            link: '/'
+            descriptorText: "We build the trains that move the world.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraTrains'
         },
         {
-            boxColor: '#4d4d4d',
+            boxColor: '#1c7ec2',
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: puntaLogo,
             imgHeightDesktop: '140px',
             imgHeightMobile: '200px',
             imgAlt: 'Punta Airport Company',
-            headerText: 'Punta Airport Company',
+            headerText: 'Punta Airport Co.',
             subHeaderText: 'The world\'s gateway.',
             descriptorText: "Managing airports across the MRT.",
-            link: '/',
-            headerFontSize: 'foobar'
-        },
-        {
-            boxColor: '#4d4d4d',
-            textColor: 'white',
-            imgBoxColor: 'white',
-            imgSrc: intraBusLogo,
-            imgHeightDesktop: '65px',
-            imgHeightMobile: '100px',
-            imgAlt: 'RacCorp Roadworks',
-            headerText: 'RacCorp Roadworks',
-            subHeaderText: 'Hit the roads.',
-            descriptorText: "Connecting more places.",
-            link: '/',
-            headerFontSize: 'foobar'
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Punta_Airport_Company',
+            headerFontSize: '36px',
+            subHeaderTopMargin: '-2px'
         },
     ]
 
@@ -296,12 +285,12 @@ function Intra() {
                 <SectionHeader text='Our Core Brands' color='#4d4d4d' border={false} />
                 <Grid propsArray={gridProps1} />
             </div>
-            <div className={styles.scroller}>
-                <ImageScroller propsArray={imageScrollerProps} />
-            </div>
-            <div className={styles.topSection}>
+            <div className={styles.section}>
                 <SectionHeader text='Other Intra Companies' color='#4d4d4d' border={false} />
                 <Grid propsArray={gridProps2} />
+            </div>
+            <div className={styles.scroller}>
+                <ImageScroller propsArray={imageScrollerProps} />
             </div>
         </>
     )

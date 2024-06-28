@@ -25,6 +25,9 @@ function Grid(props) {
                     subHeaderText={post.subHeaderText}
                     descriptorText={post.descriptorText}
                     link={post.link}
+                    headerFontSize={post.headerFontSize}
+                    headerTopMargin={post.headerTopMargin}
+                    subHeaderTopMargin={post.subHeaderTopMargin}
                 />
             </div>
         )

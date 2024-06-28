@@ -51,6 +51,7 @@ function GridPost(props) {
     let imgWidth;
     let imgTranslateY;
     let imgHeight;
+    let headerFontSize;
 
     if (matchMedia('(pointer:coarse)') && window.innerWidth < 1000) {
         imgWidth = props.imgWidthMobile;
@@ -59,7 +60,8 @@ function GridPost(props) {
     } else {
         imgWidth = props.imgWidthDesktop;
         imgHeight = props.imgHeightDesktop;
-        imgTranslateY = props.imgTranslateYDesktop
+        imgTranslateY = props.imgTranslateYDesktop;
+        headerFontSize = props.headerFontSize;
     }
 
     return (
@@ -84,13 +86,13 @@ function GridPost(props) {
                 <div className={styles.textContainer}>
                     <h2
                         className={`${styles.header} ${styles.text}`}
-                        style={{color: props.textColor}}
+                        style={{color: props.textColor, fontSize: headerFontSize, marginTop: props.headerTopMargin}}
                     >
                         {props.headerText}
                     </h2>
                     <p
                         className={`${styles.subHeader} ${styles.text}`}
-                        style={{color: props.textColor}}
+                        style={{color: props.textColor, marginTop: props.subHeaderTopMargin}}
                     >
                         {props.subHeaderText}
                     </p>
