@@ -1,0 +1,134 @@
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.lineContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.line + .line {
+    margin-top: 75px;
+}
+
+.modeBox {
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.logo {
+    height: 30px;
+}
+
+.text {
+    margin: 0;
+    font-weight: 600;
+}
+
+.routeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.routeSymbol {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.route {
+    font-size: 23px;
+}
+
+.statusBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.status {
+    font-size: 23px;
+}
+
+.descriptionBox {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: fit-content;
+}
+
+.description {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.moreInfoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #e6e6e6;
+    text-decoration: none;
+}
+
+.moreInfo {
+    font-size: 23px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: blue;
+}
+
+.moreInfoBox:hover {
+    background-color: blue;
+}
+
+.moreInfoBox:hover .moreInfo {
+    color: white
+}
+
+@media (width < 1600px) {
+    .container {
+        zoom: 90%;
+    }
+}
+
+@media (width < 1300px) {
+    .container {
+        zoom: 80%;
+    }
+}
+
+@media (pointer: coarse) and (width < 1000px) {
+    .container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .lineContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .routeBox, .statusBox, .moreInfoBox {
+        height: 45px;
+        justify-content: left;
+    }
+}

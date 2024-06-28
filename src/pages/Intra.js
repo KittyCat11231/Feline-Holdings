@@ -7,6 +7,7 @@ import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
 import ImageScroller from '../components/ImageScroller';
 import ItemSmall from '../components/ItemSmall';
+import IntraStatus from '../components/IntraStatus';
 
 import intraAirPhoto from '../images/intraair-1.png';
 import siletzPhoto from '../images/intrarail-siletz-4.png';
@@ -87,7 +88,7 @@ function Intra() {
             descriptorText: 'Your home for service status across all of Intra.',
             renderButton: true,
             buttonText: 'Check Service Status',
-            link: '/', 
+            link: '#status', 
         },
     }
 
@@ -312,6 +313,10 @@ function Intra() {
             </div>
             <div className={styles.scroller}>
                 <ImageScroller propsArray={imageScrollerProps} />
+            </div>
+            <div className={styles.section} id='status'>
+                <SectionHeader text='Service Status' color='#4d4d4d' border={false} />
+                <IntraStatus />
             </div>
         </>
     )
