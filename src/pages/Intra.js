@@ -30,6 +30,7 @@ import segvilleHeliLogo from '../intraroute/logos/segville-air-heli-lines.svg';
 import skyWestLogo from '../intraroute/logos/skywest-airlines.svg';
 import waypointLogo from '../intraroute/logos/waypoint.svg';
 import gemsLogo from '../intraroute/logos/gems-airline.png';
+import puntaLogo from '../logos/punta-airport-company.png';
 
 function Intra() {
 
@@ -84,7 +85,7 @@ function Intra() {
         },
     }
 
-    let gridProps = [
+    let gridProps1 = [
         {
             boxColor: '#4d4d4d',
             textColor: 'white',
@@ -149,6 +150,63 @@ function Intra() {
             subHeaderText: 'Ride the open rails.',
             descriptorText: "Intra's traincart rail service.",
             link: '/'
+        },
+    ]
+
+    let gridProps2 = [
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraAirLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'IntraJet-EAM',
+            headerText: 'IntraJet-EAM',
+            subHeaderText: 'Designing your journey.',
+            descriptorText: "One of the MRT's biggest aircraft manufacturers.",
+            link: '/'
+        },
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraRailLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'IntraTrains',
+            headerText: 'IntraTrains',
+            subHeaderText: 'Getting you on track.',
+            descriptorText: "Managing airports across the MRT.",
+            link: '/'
+        },
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: puntaLogo,
+            imgHeightDesktop: '140px',
+            imgHeightMobile: '200px',
+            imgAlt: 'Punta Airport Company',
+            headerText: 'Punta Airport Company',
+            subHeaderText: 'The world\'s gateway.',
+            descriptorText: "Managing airports across the MRT.",
+            link: '/',
+            headerFontSize: 'foobar'
+        },
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraBusLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'RacCorp Roadworks',
+            headerText: 'RacCorp Roadworks',
+            subHeaderText: 'Hit the roads.',
+            descriptorText: "Connecting more places.",
+            link: '/',
+            headerFontSize: 'foobar'
         },
     ]
 
@@ -236,10 +294,14 @@ function Intra() {
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
                 <SectionHeader text='Our Core Brands' color='#4d4d4d' border={false} />
-                <Grid propsArray={gridProps} />
+                <Grid propsArray={gridProps1} />
             </div>
             <div className={styles.scroller}>
                 <ImageScroller propsArray={imageScrollerProps} />
+            </div>
+            <div className={styles.topSection}>
+                <SectionHeader text='Other Intra Companies' color='#4d4d4d' border={false} />
+                <Grid propsArray={gridProps2} />
             </div>
         </>
     )
