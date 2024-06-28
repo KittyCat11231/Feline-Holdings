@@ -49,7 +49,7 @@ function RecentMBSVideos() {
             setRenderVideosArray(videosArray);
         }
         catch(error) {
-            console.log(error);
+            console.error(error);
             setIsLoaded(true);
             setRenderVideosArray(<h1>Failed to load</h1>);
         }
@@ -67,7 +67,7 @@ function RecentMBSVideos() {
         )
     } else {
         return(
-            <p></p>
+            <h1>Loading...</h1>
         )
     }
 }
