@@ -7,7 +7,7 @@ import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
 
 import fhCenter from '../images/fh-center-6.png';
-import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
+import intraRouteLogo from '../intraroute/logos/intraroute.svg';
 import mbsMls from '../assets/mbs-mls.svg';
 
 import intraLogo from '../logos/intra-wordmark.svg';
@@ -39,7 +39,7 @@ function Home() {
         post2: {
             color: '#4d4d4d',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
+            imgSrc: intraRouteLogo,
             imgAlt: 'IntraRoute',
             imgWidth: '80%',
             imgMaxWidth: '95%',

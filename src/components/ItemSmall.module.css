@@ -1,0 +1,51 @@
+.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgBox {
+    height: 275px;
+    width: 500px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentBox {
+    height: 275px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    font-weight: 600;
+    margin: 0;
+}
+
+.header {
+    font-size: 45px;
+}
+
+.descriptor {
+    font-size: 27px;
+}
+
+.button {
+    height: fit-content;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 20px;
+}

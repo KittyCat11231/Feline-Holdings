@@ -6,9 +6,11 @@ import Carousel from '../components/Carousel';
 import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
 import ImageScroller from '../components/ImageScroller';
+import ItemSmall from '../components/ItemSmall';
 
 import intraAirPhoto from '../images/intraair-1.png';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
+import intraRouteLogo from '../intraroute/logos/intraroute.svg';
 
 import intraAirLogo from '../intraroute/logos/intraair.svg';
 import intraRailLogo from '../intraroute/logos/intrarail.svg';
@@ -56,7 +58,7 @@ function Intra() {
         post2: {
             color: '#4d4d4d',
             imgBoxColor: 'white',
-            imgSrc: intraRouteShort,
+            imgSrc: intraRouteLogo,
             imgAlt: 'IntraRoute',
             imgWidth: '80%',
             imgMaxWidth: '95%',
@@ -157,7 +159,7 @@ function Intra() {
 
     let gridProps2 = [
         {
-            boxColor: '#4d4d4d',
+            boxColor: '#cca77f',
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: intraJetEamLogoSmall,
@@ -282,6 +284,23 @@ function Intra() {
             </Helmet>
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
+                <ItemSmall
+                    imgSrc={intraRouteShort}
+                    imgAlt='IntraRoute'
+                    imgWidthDesktop='400px'
+                    imgWidthMobile=''
+                    imgHeightDesktop=''
+                    imgHeightMobile=''
+                    boxColor='#4d4d4d'
+                    textColor='white'
+                    headerText='IntraRoute is now in beta.'
+                    descriptorText='Going everywhere has never been easier.'
+                    renderButton={true}
+                    buttonText='Find Your Way'
+                    link='/intraroute'
+                />
+            </div>
+            <div className={styles.section}>
                 <SectionHeader text='Our Core Brands' color='#4d4d4d' border={false} />
                 <Grid propsArray={gridProps1} />
             </div>

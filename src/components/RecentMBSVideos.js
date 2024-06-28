@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './RecentMBSVideos.module.css';
 
 import MBSVideo from './MBSVideo';
+import SectionHeader from './SectionHeader';
 
 import methods from '../scripts/methods';
 
@@ -51,7 +52,7 @@ function RecentMBSVideos() {
         catch(error) {
             console.error(error);
             setIsLoaded(true);
-            setRenderVideosArray(<h1>Failed to load</h1>);
+            setRenderVideosArray(<SectionHeader text='Failed to load.' color='red' border={false} borderColor='' />);
         }
     }
 
@@ -67,7 +68,7 @@ function RecentMBSVideos() {
         )
     } else {
         return(
-            <h1>Loading...</h1>
+            <SectionHeader text='Loading...' color='red' border={false} borderColor='' />
         )
     }
 }
