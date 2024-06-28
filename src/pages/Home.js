@@ -5,9 +5,11 @@ import styles from './Home.module.css';
 import Carousel from '../components/Carousel';
 import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
+import ItemSmall from '../components/ItemSmall';
 
 import fhCenter from '../images/fh-center-6.png';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
+import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import mbsMls from '../assets/mbs-mls.svg';
 
 import intraLogo from '../logos/intra-wordmark.svg';
@@ -162,6 +164,23 @@ function Home() {
             </Helmet>
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
+                <ItemSmall
+                    imgSrc={intraRouteShort}
+                    imgAlt='IntraRoute'
+                    imgWidthDesktop='400px'
+                    imgWidthMobile=''
+                    imgHeightDesktop=''
+                    imgHeightMobile='100px'
+                    boxColor='#4d4d4d'
+                    textColor='white'
+                    headerText='IntraRoute is now in beta.'
+                    descriptorText='Going everywhere has never been easier.'
+                    renderButton={true}
+                    buttonText='Find Your Way'
+                    link='/intraroute'
+                />
+            </div>
+            <div className={styles.section}>
                 <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
             </div>

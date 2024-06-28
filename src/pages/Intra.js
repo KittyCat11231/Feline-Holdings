@@ -287,7 +287,7 @@ function Intra() {
                 <ItemSmall
                     imgSrc={intraRouteShort}
                     imgAlt='IntraRoute'
-                    imgWidthDesktop='400px'
+                    imgWidthDesktop='85%'
                     imgWidthMobile=''
                     imgHeightDesktop=''
                     imgHeightMobile=''

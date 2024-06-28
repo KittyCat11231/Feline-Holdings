@@ -7,5 +7,11 @@
 }
 
 .topSection {
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+@media (pointer: coarse) and (width < 1100px) {
+    .topSection {
+        margin-top: 30px;
+    }
 }

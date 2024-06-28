@@ -6,6 +6,17 @@ function ItemSmall(props) {
     const [buttonBackgroundColor, setButtonBackgroundColor] = useState('');
     const [buttonTextColor, setButtonTextColor] = useState(props.textColor);
 
+    let imgWidth;
+    let imgHeight;
+    
+    if (window.innerWidth < 1250) {
+        imgWidth = props.imgWidthMobile;
+        imgHeight = props.imgHeightMobile;
+    } else {
+        imgWidth = props.imgWidthDesktop;
+        imgHeight = props.imgHeightDesktop;
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.imgBox}>
@@ -13,8 +24,8 @@ function ItemSmall(props) {
                     src={props.imgSrc}
                     alt={props.imgAlt}
                     style={{
-                        width: props.imgWidthDesktop,
-                        height: props.imgHeightDesktop,
+                        width: imgWidth,
+                        height: imgHeight,
                     }}
                 />
             </div>
