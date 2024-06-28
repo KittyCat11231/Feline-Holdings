@@ -290,7 +290,7 @@ function Intra() {
                     imgWidthDesktop='85%'
                     imgWidthMobile=''
                     imgHeightDesktop=''
-                    imgHeightMobile=''
+                    imgHeightMobile='100px'
                     boxColor='#4d4d4d'
                     textColor='white'
                     headerText='IntraRoute is now in beta.'

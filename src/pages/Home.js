@@ -167,7 +167,7 @@ function Home() {
                 <ItemSmall
                     imgSrc={intraRouteShort}
                     imgAlt='IntraRoute'
-                    imgWidthDesktop='400px'
+                    imgWidthDesktop='85%'
                     imgWidthMobile=''
                     imgHeightDesktop=''
                     imgHeightMobile='100px'
