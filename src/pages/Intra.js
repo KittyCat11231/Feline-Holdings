@@ -9,6 +9,8 @@ import ImageScroller from '../components/ImageScroller';
 import ItemSmall from '../components/ItemSmall';
 
 import intraAirPhoto from '../images/intraair-1.png';
+import siletzPhoto from '../images/intrarail-siletz-4.png';
+
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
 
@@ -74,7 +76,7 @@ function Intra() {
         post3: {
             color: '#4d4d4d',
             imgBoxColor: undefined,
-            imgSrc: intraAirPhoto,
+            imgSrc: siletzPhoto,
             imgAlt: 'IntraAir plane',
             imgWidth: '100%',
             imgMaxWidth: undefined,
