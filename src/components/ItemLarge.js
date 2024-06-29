@@ -20,12 +20,6 @@ function ItemLarge(props) {
     let imgLeftSide = props.imgLeftSide;
     let imgRightSide = !(props.imgLeftSide);
 
-    let contentBoxHeight;
-
-    if (props.includeBody) {
-        contentBoxHeight = '250px'
-    }
-
     return (
         <div className={styles.container}>
             {imgLeftSide ?
@@ -45,8 +39,7 @@ function ItemLarge(props) {
             <div
                 className={styles.contentBox}
                 style={{
-                    backgroundColor: props.boxColor,
-                    height: contentBoxHeight,
+                    backgroundColor: props.boxColor
                 }}
             >
                 <h2

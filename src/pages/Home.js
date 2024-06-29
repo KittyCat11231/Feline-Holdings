@@ -7,7 +7,6 @@ import Grid from '../components/Grid';
 import SectionHeader from '../components/SectionHeader';
 import ItemSmall from '../components/ItemSmall';
 import ItemLarge from '../components/ItemLarge';
-import LargeHeaderAndBody from '../components/LargeHeaderAndBody';
 
 import fhCenter from '../images/fh-center-6.png';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
@@ -200,24 +199,6 @@ function Home() {
                     textColor='white'
                     headerText='Placeholder text.'
                     descriptorText='Lorem ipsum dolor sit amet.'
-                    renderButton={false}
-                    buttonText=''
-                    link='/'
-                    includeBody={false}
-                />
-            </div>
-            <div className={styles.sectionNoHeader}>
-                <LargeHeaderAndBody
-                    imgLeftSide={true}
-                    imgSrc={demoImg}
-                    imgAlt='IntraRoute'
-                    imgWidthDesktop=''
-                    imgWidthMobile=''
-                    imgHeightDesktop='150%'
-                    imgHeightMobile='150%'
-                    boxColor='#4d4d4d'
-                    headerTextColor='white'
-                    headerText='About Us'
                     renderButton={false}
                     buttonText=''
                     link='/'
