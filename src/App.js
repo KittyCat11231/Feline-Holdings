@@ -8,6 +8,7 @@ import IntraRouteChangelog from './intraroute/pages/IntraRouteChangelog';
 import Test from './pages/Test';
 import Intra from './pages/Intra';
 import MBS from './pages/MBS';
+import Console from './pages/Console';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -59,6 +60,7 @@ function App() {
             <Route path="/Roy-Disney/mbs" element={<MBS />} />
             <Route path="/Roy-Disney/MBS" element={<MBS />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/console" element={<Console />} />
             <Route path="*" element ={<NoPage />} />
           </Routes>
         </BrowserRouter>

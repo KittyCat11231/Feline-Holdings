@@ -1,0 +1,15 @@
+.container {
+    margin-left: 10%;
+    margin-top: 70px;
+    zoom: 125%;
+}
+
+.text {
+    margin-bottom: 0px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.submit {
+    margin-top: 50px;
+}
