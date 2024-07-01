@@ -76,6 +76,7 @@ Nippia-Liten,Metropolitan Airport,busNIL,busLIT,1,bus114west
 Nippia-Liten,Metropolitan Airport,busNIL,airNIL,15,walk
 ,,,,,
 Nippia,IntraRail Station,busNIP,busNIL,1,bus113east
+Nippia,IntraRail Station,busNIP,busGAY,1,bus129east
 Nippia,IntraRail Station,busNIP,railNIP,15,walk
 ,,,,,
 Liten,RaiLinQ Station,busLIT,busNIL,1,bus114east
@@ -182,3 +183,5 @@ Belvadere,,busBLV,railBLV,15,walk
 ,,,,,
 Benion,Bus Exchange,busBEN,busCCU,1,bus402south
 Benion,Bus Exchange,busBEN,railBEN,15,walk
+,,,,,
+Nippia,Pride Wall,busGAY,busNIP,1,bus129west
