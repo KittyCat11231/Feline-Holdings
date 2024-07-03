@@ -263,9 +263,9 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
         
         */
 
-        /* if (currentStop === end) {
+        if (currentStop === end) {
             break;
-        }*/
+        }
 
         if (currentStop.id === currentStopAtStartOfLoop.id) {
             console.log('ERROR: New current stop assignment failed.');
