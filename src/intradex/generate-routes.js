@@ -52,3 +52,5 @@ function generateRoutes(myStopId) {
   })
   return routesFromThisStop;
 }
+
+export default generateRoutes;
