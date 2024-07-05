@@ -101,7 +101,7 @@ function IntraRoute() {
             </div>
             <div className={styles.footer1}>
                 <p className={styles.pGray}>IntraRoute Beta 1.0.0</p>
-                <p className={styles.pGray}>5/32/2024</p>
+                <p className={styles.pGray}>7/13/2024</p>
                 <p className={styles.pGray}>Created by kyle11231 with help from DNAmaster10 & scarycrumb.</p>
                 <p className={styles.pGray}>Additional help provided by megascatterbomb & _Kastle.</p>
                 <p><a href='intraroute/changelog'>Version history & changelog</a></p>

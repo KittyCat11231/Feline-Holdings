@@ -34,7 +34,7 @@ function IntraRouteChangelog() {
     versions.push(
         new versionObj(
             'Beta 1.0.0',
-            '5/32/2024',
+            '7/13/2024',
             [
                 'IntraRoute is now in beta!',
                 'IntraRoute (and the rest of felineholdings.com) has been completely rebuilt in React.',
