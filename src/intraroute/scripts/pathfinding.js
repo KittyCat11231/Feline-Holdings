@@ -8,25 +8,25 @@ import railScarStops from '../data/pathfinding/railScar.json';
 import sailStops from '../data/pathfinding/sail.json';
 
 import processPath from './process-path';
-import methods from '../../scripts/methods';
+import helpers from '@kyle11231/helper-functions';
 
 function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
     let allStops = [];
 
     function addToAllStops(modeStops) {
-        methods.mergeArrayIntoArray(modeStops, allStops);
+        helpers.mergeArrayIntoArray(modeStops, allStops);
     }
 
     function filterRoutes(pathArray) {
 
-        let commonRoutesForFilter = methods.findCommonElements(pathArray[pathArray.length - 1].routes, pathArray[pathArray.length - 2].routes);
+        let commonRoutesForFilter = helpers.findCommonElements(pathArray[pathArray.length - 1].routes, pathArray[pathArray.length - 2].routes);
 
         if (!(commonRoutesForFilter)) {
             return;
         }
 
         for (let i = (pathArray.length - 1); i >= 0; i--) {
-            let commonRoutes3 = methods.findCommonElements(commonRoutesForFilter, pathArray[i].routes);
+            let commonRoutes3 = helpers.findCommonElements(commonRoutesForFilter, pathArray[i].routes);
 
             if (commonRoutes3.length > 0) {
                 pathArray[i].routes = commonRoutesForFilter
@@ -90,7 +90,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
             };
             
             if (modes[mode] && filters[modes[mode]] === false) {
-                allStops[i].adjacentStops = methods.removeFromArray(allStops[i].adjacentStops, stop);
+                allStops[i].adjacentStops = helpers.removeFromArray(allStops[i].adjacentStops, stop);
             }
         })
     }
@@ -107,7 +107,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
 
             for (let k = 0; k < allStops[i].adjacentStops[j].routes.length; k++) {
                 if (allStops[i].adjacentStops[j].routes[k] === '\r') {
-                    allStops[i].adjacentStops[j].routes = methods.removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
+                    allStops[i].adjacentStops[j].routes = helpers.removeFromArray(allStops[i].adjacentStops[j].routes, allStops[i].adjacentStops[j].routes[k]);
                 } else if (allStops[i].adjacentStops[j].routes[k].includes('\r')) {
                     allStops[i].adjacentStops[j].routes[k] = allStops[i].adjacentStops[j].routes[k].replace('\r', '');
                 }
@@ -185,7 +185,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
                     adjStopPath.unshift(pathToCurrentStop[i]);
                 }
             
-                let commonRoutes = methods.findCommonElements(adjStopPath[adjStopPath.length - 1].routes, adjStopPath[adjStopPath.length - 2].routes);
+                let commonRoutes = helpers.findCommonElements(adjStopPath[adjStopPath.length - 1].routes, adjStopPath[adjStopPath.length - 2].routes);
             
                 if (commonRoutes.length > 0) {
                     filterRoutes(adjStopPath);
@@ -252,7 +252,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
         currentStop.explored = true;
         exploredStops.push(currentStop);
 
-        unexploredStops = methods.removeFromArray(unexploredStops, currentStop);
+        unexploredStops = helpers.removeFromArray(unexploredStops, currentStop);
 
         /*
         
@@ -284,10 +284,10 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
         // Iterates through every pathSegment.
         for (let i = 0; i < (finalPath.length - 1);) {
             // If the current pathSegment has the same routes as the next pathSegment, combines them together.
-            if (methods.deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
+            if (helpers.deepEqual(finalPath[i].routes, finalPath[i + 1].routes)) {
                 finalPath[i].stop2 = finalPath[i + 1].stop2;
                 finalPath[i].stopCount += 1;
-                finalPath = methods.removeFromArray(finalPath, finalPath[i + 1])
+                finalPath = helpers.removeFromArray(finalPath, finalPath[i + 1])
             } else {
                 i += 1;
                 // i only increases if the if statement is false, so the loop will always double check its work.
