@@ -1,11 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import helpers from '@kyle11231/helper-functions';
 import styles from './RecentMBSVideos.module.css';
 
 import MBSVideo from './MBSVideo';
 import SectionHeader from './SectionHeader';
-
-import methods from '../scripts/methods';
 
 function RecentMBSVideos() {
     let videosArray = [];
@@ -21,7 +20,7 @@ function RecentMBSVideos() {
                 let video = videos[i];
                 let year = video.date.split('-')[0];
                 let monthNum = Number(video.date.split('-')[1]);
-                let month = methods.getMonthNameFromNumber(monthNum, false);
+                let month = helpers.getMonthNameFromNumber(monthNum, false);
                 let day = video.date.split('-')[2];
                 let date = `${month} ${day}, ${year}`;
                 videosArray.push(
