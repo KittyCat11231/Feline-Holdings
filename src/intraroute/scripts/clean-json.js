@@ -1,4 +1,4 @@
-import methods from '../../scripts/methods';
+import helpers from '@kyle11231/helper-functions';
 
 function cleanJSON(dataType, array, map) {
     if (dataType === 'pathfinding') {
@@ -9,7 +9,7 @@ function cleanJSON(dataType, array, map) {
                 adjStop.weight = Number(adjStop.weight);
                 adjStop.routes.forEach(route => {
                     if (route === '\r') {
-                        adjStop.routes = methods.removeFromArray(adjStop.routes, route);
+                        adjStop.routes = helpers.removeFromArray(adjStop.routes, route);
                     } else if (route.includes('\r')) {
                         route = route.replace('\r', '');
                     }
