@@ -2,11 +2,10 @@ import React from 'react';
 import { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import helpers from '@kyle11231/helper-functions';
 import styles from './LiveMBS.module.css';
 
 import YouTubeEmbed from '../components/YouTubeEmbed';
-
-import methods from '../scripts/methods';
 
 import mbsLogoWhite from '../logos/mbs-icon-white.svg';
 import mbsLogoBlack from '../logos/mbs-icon-black.svg';
@@ -26,7 +25,7 @@ function LiveMBSWhenLive() {
     let circleColor = 'red';
     let mbsLogo = mbsLogoWhite;
 
-    let randomInt = methods.getRandomInteger(4);
+    let randomInt = helpers.getRandomInteger(4);
 
     if (randomInt === 1) {
         boxColor = 'blue';
