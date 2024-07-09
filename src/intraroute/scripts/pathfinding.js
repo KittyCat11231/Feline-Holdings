@@ -1,3 +1,5 @@
+import helpers from '@kyle11231/helper-functions';
+
 import airStops from '../data/pathfinding/air.json';
 import bahnStops from '../data/pathfinding/bahn.json';
 import busStops from '../data/pathfinding/bus.json';
@@ -8,7 +10,6 @@ import railScarStops from '../data/pathfinding/railScar.json';
 import sailStops from '../data/pathfinding/sail.json';
 
 import processPath from './process-path';
-import helpers from '@kyle11231/helper-functions';
 
 function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
     let allStops = [];
