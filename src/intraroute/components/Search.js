@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import helpers from '@kyle11231/helper-functions';
 import styles from './Search.module.css';
 
 import startIcon from '../assets/search/start.svg';
@@ -13,7 +14,6 @@ import SearchBar from './SearchBar';
 
 import createAllStopsForSearch from '../scripts/search-data';
 import usePrevious from '../../scripts/usePrevious';
-import methods from '../../scripts/methods';
 
 function Search(props) {
     let allStopsForSearch = [];
@@ -78,12 +78,12 @@ function Search(props) {
 
     function handleOnClickRandomizer(startOrEnd) {
         if (startOrEnd === 'start') {
-            let index = methods.getRandomInteger(allStopsForSearch.length - 1);
+            let index = helpers.getRandomInteger(allStopsForSearch.length - 1);
             setStart(allStopsForSearch[index].id);
             setMaxResultsStart(0);
             setManualStart(allStopsForSearch[index].title);
         } else if (startOrEnd === 'end') {
-            let index = methods.getRandomInteger(allStopsForSearch.length - 1);
+            let index = helpers.getRandomInteger(allStopsForSearch.length - 1);
             setEnd(allStopsForSearch[index].id);
             setMaxResultsEnd(0);
             setManualEnd(allStopsForSearch[index].title);
