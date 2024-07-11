@@ -8,7 +8,7 @@ function Dropdown(props) {
   return (
     <div className={styles.dropdownContainer}>
       {props.filteredItems.map(item => {
-        return <p className={styles.searchItem}></div>
+        return <p className={styles.searchItem}>{item.title}</p>
       })}
     </div>
   )
@@ -34,9 +34,9 @@ function SearchBarTest() {
       }
     }
 
-    return(
+    return (
         <div>
-            <input value={query} type='search' onChange={handleChange(e
+            <input value={query} type='search' onChange={handleChange(e)} />
             {showDropdown ? <Dropdown filteredItems={filteredItems} /> : ''}
             <h3>Results:</h3>
             {filteredItems.map(item => (
