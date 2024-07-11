@@ -9,6 +9,7 @@ import Test from './pages/Test';
 import Intra from './pages/Intra';
 import MBS from './pages/MBS';
 import Console from './pages/Console';
+import Construction from './pages/Construction';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -40,10 +41,10 @@ function App() {
         <Header />
         <BrowserRouter>
           <Routes>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/index" element={<Home />} />
-            <Route path="/" element={<Home />} />
+            <Route index element={<Construction />} />
+            <Route path="/home" element={<Construction />} />
+            <Route path="/index" element={<Construction />} />
+            <Route path="/" element={<Construction />} />
             <Route path="/intraroute" element={<IntraRoute />} />
             <Route path="/IntraRoute" element={<IntraRoute />} />
             <Route path="/intra/intraroute" element={<IntraRoute />} />

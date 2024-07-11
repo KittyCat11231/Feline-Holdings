@@ -1,0 +1,40 @@
+.container {
+    background-color: #7f7f7f;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.text {
+    color: white;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.header {
+    font-size: 40px;
+}
+
+@media (width <= 1000px) {
+    .container {
+        border-radius: unset;
+        margin-top: 75px;
+    }
+
+    .text {
+        zoom: 90%;
+    }
+}
