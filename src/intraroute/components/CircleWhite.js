@@ -5,7 +5,7 @@ import circle from '../assets/circle-white.svg';
 
 function CircleWhite() {
     return (
-        <img className={styles.circle} src={circle} alt='circle' />
+        <img className={styles.circle} src={circle.src} alt='circle' />
     )
 }
 

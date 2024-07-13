@@ -18,18 +18,18 @@ function StopDot(props) {
 
     colors(colorStyles, colorObj, props.mode, props.type);
 
-    let stopDotSrc = stopDotColor;
+    let stopDotSrc = stopDotColor.src;
     if (props.mode === 'air' && ['origin', 'mainline', 'heli', 'poseidon'].includes(props.type)) {
-        stopDotSrc = stopDotGray;
+        stopDotSrc = stopDotGray.src;
     }
     if (props.mode === 'bus') {
-        stopDotSrc = stopDotGray;
+        stopDotSrc = stopDotGray.src;
     }
 
     return (
         <div className={styles.container}>
             <img src={stopDotSrc} className={`${styles.stopDot} ${colorObj.filterColor}`} />
-            <img src={circleWhite} className={styles.circleWhite} />
+            <img src={circleWhite.src} className={styles.circleWhite} />
         </div>
     )
 }

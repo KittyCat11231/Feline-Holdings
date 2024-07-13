@@ -16,49 +16,49 @@ function FilterItem(props) {
     let setUse;
     
     if (props.mode === 'air') {
-        boxSrc = planeBox;
+        boxSrc = planeBox.src;
         title = 'IntraAir';
         setUse = props.filters.setUseAir;
     }
     if (props.mode === 'rail') {
-        boxSrc = trainBox;
+        boxSrc = trainBox.src;
         title = 'IntraRail';
         setUse = props.filters.setUseRail;
     }
     if (props.mode === 'sail') {
-        boxSrc = sailBox;
+        boxSrc = sailBox.src;
         title = 'IntraSail';
         setUse = props.filters.setUseSail;
     }
     if (props.mode === 'bahn') {
-        boxSrc = trainBox;
+        boxSrc = trainBox.src;
         title = 'IntraBahn';
         setUse = props.filters.setUseBahn;
     }
     if (props.mode === 'bus') {
-        boxSrc = busBox;
+        boxSrc = busBox.src;
         title = 'IntraBus';
         setUse = props.filters.setUseBus;
     }
     if (props.mode === 'railLocal') {
-        boxSrc = metroBox;
+        boxSrc = metroBox.src;
         title = 'IntraRail Local Systems';
         setUse = props.filters.setUseRailLocal;
     }
 
     const [checked, setChecked] = useState(true);
-    const [checkBoxSrc, setCheckBoxSrc] = useState(checkBox);
+    const [checkBoxSrc, setCheckBoxSrc] = useState(checkBox.src);
     const [checkBoxAlt, setCheckBoxAlt] = useState('Selected');
 
     function handleClick() {
         if (checked === true) {
             setChecked(false);
-            setCheckBoxSrc(uncheckedBox);
+            setCheckBoxSrc(uncheckedBox.src);
             setCheckBoxAlt('Not selected');
             setUse(false);
         } else {
             setChecked(true);
-            setCheckBoxSrc(checkBox);
+            setCheckBoxSrc(checkBox.src);
             setCheckBoxAlt('Selected');
             setUse(true);
         }

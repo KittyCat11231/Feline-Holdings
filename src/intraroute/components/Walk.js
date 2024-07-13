@@ -40,11 +40,11 @@ function Walk(props) {
         return(
             <div className={styles.container}>
                 <div className={styles.dotsContainer}>
-                    <img src={dots} className={styles.dots} alt='dotted line' />
+                    <img src={dots.src} className={styles.dots} alt='dotted line' />
                 </div>
                 {renderWalk ?
                     <div className={styles.walkContainer}>
-                        <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
+                        <img src={walk.src} className={styles.walkIcon} alt='icon of person walking' />
                         <p className={`${styles.walkText} ${styles.walkTextMain}`}>Walk to...</p>
                     </div>
                     :
@@ -52,7 +52,7 @@ function Walk(props) {
                 }
                 {renderWalkToBluemont ?
                     <div className={styles.walkContainer}>
-                        <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
+                        <img src={walk.src} className={styles.walkIcon} alt='icon of person walking' />
                         <p className={`${styles.walkText} ${styles.walkTextLong}`}>Walk 300 blocks west to Bluemont.</p>
                     </div>
                     :
@@ -60,7 +60,7 @@ function Walk(props) {
                 }
                 {renderWalkToMandela ?
                     <div className={styles.walkContainer}>
-                        <img src={walk} className={styles.walkIcon} alt='icon of person walking' />
+                        <img src={walk.src} className={styles.walkIcon} alt='icon of person walking' />
                         <p className={`${styles.walkText} ${styles.walkTextLong}`}>Walk 300 blocks east to New Kiwi City.</p>
                     </div>
                     :
@@ -68,7 +68,7 @@ function Walk(props) {
                 }
                 {renderMarinaShuttleNorth ?
                     <div className={styles.walkContainer}>
-                        <img src={cart} className={styles.cartIcon} alt='shuttle cart' />
+                        <img src={cart.src} className={styles.cartIcon} alt='shuttle cart' />
                         <p className={styles.cartText}>Walk, then take the MRT Marina shuttle cart to...</p>
                     </div>
                     :
@@ -76,7 +76,7 @@ function Walk(props) {
                 }
                 {renderMarinaShuttleSouth ?
                     <div className={styles.walkContainer}>
-                        <img src={cart} className={styles.cartIcon} alt='shuttle cart' />
+                        <img src={cart.src} className={styles.cartIcon} alt='shuttle cart' />
                         <p className={styles.cartText}>Take the MRT Marina shuttle cart, then walk to...</p>
                     </div>
                     :

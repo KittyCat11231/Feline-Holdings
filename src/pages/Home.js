@@ -27,7 +27,7 @@ function Home() {
         post1: {
             color: '#ffc90e',
             imgBoxColor: undefined,
-            imgSrc: fhCenter,
+            imgSrc: fhCenter.src,
             imgAlt: 'Feline Holdings Center',
             imgWidth: '100%',
             imgMaxWidth: undefined,
@@ -43,7 +43,7 @@ function Home() {
         post2: {
             color: '#4d4d4d',
             imgBoxColor: 'white',
-            imgSrc: intraRouteLogo,
+            imgSrc: intraRouteLogo.src,
             imgAlt: 'IntraRoute',
             imgWidth: '80%',
             imgMaxWidth: '95%',
@@ -59,7 +59,7 @@ function Home() {
         post3: {
             color: '#1a2859',
             imgBoxColor: '#e22525',
-            imgSrc: mbsMls,
+            imgSrc: mbsMls.src,
             imgAlt: 'MLS on MBS',
             imgWidth: undefined,
             imgMaxWidth: '1000px',
@@ -79,7 +79,7 @@ function Home() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraLogo,
+            imgSrc: intraLogo.src,
             imgWidthDesktop: '350px',
             imgWidthMobile: '500px',
             imgAlt: 'Intra',
@@ -92,7 +92,7 @@ function Home() {
             boxColor: '#5a86a8',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: royDisneyLogo,
+            imgSrc: royDisneyLogo.src,
             imgWidthDesktop: '400px',
             imgWidthMobile: '600px',
             imgAlt: 'Roy Disney',
@@ -105,7 +105,7 @@ function Home() {
             boxColor: 'blue',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: mbsLogo,
+            imgSrc: mbsLogo.src,
             imgWidthDesktop: '300px',
             imgWidthMobile: '450px',
             imgAlt: 'MBS',
@@ -118,7 +118,7 @@ function Home() {
             boxColor: '#30acdf',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: bartLogo,
+            imgSrc: bartLogo.src,
             imgWidthDesktop: '270px',
             imgWidthMobile: '350px',
             imgAlt: 'BART',
@@ -131,7 +131,7 @@ function Home() {
             boxColor: '#003875',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: fossackLogo,
+            imgSrc: fossackLogo.src,
             imgWidthDesktop: '330px',
             imgWidthMobile: '500px',
             imgAlt: 'Fossack Notseca',
@@ -144,7 +144,7 @@ function Home() {
             boxColor: '#ffc90e',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: fhLogoSmall,
+            imgSrc: fhLogoSmall.src,
             imgWidthDesktop: '240px',
             imgWidthMobile: '310px',
             imgTranslateYDesktop: '40px',
@@ -167,7 +167,7 @@ function Home() {
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
                 <ItemSmall
-                    imgSrc={intraRouteShort}
+                    imgSrc={intraRouteShort.src}
                     imgAlt='IntraRoute'
                     imgWidthDesktop='350px'
                     imgWidthMobile=''
@@ -189,7 +189,7 @@ function Home() {
             <div className={styles.sectionNoHeader}>
                 <ItemLarge
                     imgLeftSide={true}
-                    imgSrc={demoImg}
+                    imgSrc={demoImg.src}
                     imgAlt='IntraRoute'
                     imgWidthDesktop=''
                     imgWidthMobile=''

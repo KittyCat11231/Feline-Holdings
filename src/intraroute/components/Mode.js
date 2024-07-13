@@ -27,102 +27,102 @@ function Mode(props) {
     let boxStyles;
     let logoStyles;
     if (props.mode === 'bahn') {
-        srcToUse = bahnLogo;
+        srcToUse = bahnLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'air' && props.type === 'mainline') {
-        srcToUse = airLogo;
+        srcToUse = airLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'air' && props.type === 'heli') {
-        srcToUse = heliLogo;
+        srcToUse = heliLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'air' && props.type === 'poseidon') {
-        srcToUse = poseidonLogo;
+        srcToUse = poseidonLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'air' && props.type === 'segville') {
-        srcToUse = segAirLogo;
+        srcToUse = segAirLogo.src;
         boxStyles = styles.segvilleBox;
         logoStyles = styles.segvilleLogos;
     }
     if (props.mode === 'air' && props.type === 'segHeli') {
-        srcToUse = segHeliLogo;
+        srcToUse = segHeliLogo.src;
         boxStyles = styles.segvilleBox;
         logoStyles = styles.segvilleLogos;
     }
     if (props.mode === 'air' && props.type === 'waypoint') {
-        srcToUse = waypointLogo;
+        srcToUse = waypointLogo.src;
         boxStyles = styles.waypointBox;
         logoStyles = styles.waypointLogo;
     }
     if (props.mode === 'air' && props.type === 'waypointHopper') {
-        srcToUse = waypointHopperLogo;
+        srcToUse = waypointHopperLogo.src;
         boxStyles = styles.waypointHopperBox;
         logoStyles = styles.waypointLogo;
     }
     if (props.mode === 'air' && props.type === 'volanti') {
-        srcToUse = volantiLogo;
+        srcToUse = volantiLogo.src;
         boxStyles = styles.volantiBox;
         logoStyles = styles.volantiLogo;
     }
     if (props.mode === 'air' && props.type === 'skywest') {
-        srcToUse = skywestLogo;
+        srcToUse = skywestLogo.src;
         boxStyles = styles.skywestBox;
         logoStyles = styles.skywestLogo;
     }
     if (props.mode === 'air' && (props.type === 'gemsEmerald' || props.type === 'gemsGold' || props.type === 'gemsDiamond' || props.type === 'gemsLapis')) {
-        srcToUse = gemsLogo;
+        srcToUse = gemsLogo.src;
         boxStyles = styles.gemsBox;
         logoStyles = styles.gemsLogo;
     }
     if (props.mode === 'air' && props.type === 'heampstead') {
-        srcToUse = heampsteadLogo;
+        srcToUse = heampsteadLogo.src;
         boxStyles = styles.heampsteadBox;
         logoStyles = styles.heampsteadLogo;
     }
     if (props.mode === 'air' && props.type === 'eastern') {
-        srcToUse = easternLogo;
+        srcToUse = easternLogo.src;
         boxStyles = styles.easternBox;
         logoStyles = styles.easternLogo;
     }
     if (props.mode === 'bus') {
-        srcToUse = busLogo;
+        srcToUse = busLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'omega') {
-        srcToUse = omegaLogo;
+        srcToUse = omegaLogo.src;
         boxStyles = styles.omegaBox;
         logoStyles = styles.omegaLogo;
     }
     if (props.mode === 'rail' && props.type !== 'mcr') {
-        srcToUse = railLogo;
+        srcToUse = railLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'rail' && props.type === 'mcr') {
-        srcToUse = mcrLogo;
+        srcToUse = mcrLogo.src;
         boxStyles = styles.mcrBox;
         logoStyles = styles.mcrLogo;
     }
     if (props.mode === 'sail') {
-        srcToUse = sailLogo;
+        srcToUse = sailLogo.src;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
     if (props.mode === 'railScar') {
-        srcToUse = railScarLogo;
+        srcToUse = railScarLogo.src;
         boxStyles = styles.mcrBox;
         logoStyles = styles.railScarLogo;
     }
     if (props.mode === 'railLumeva') {
-        srcToUse = railLumevaLogo;
+        srcToUse = railLumevaLogo.src;
         boxStyles = styles.mcrBox;
         logoStyles = styles.railLumevaLogo;
     }

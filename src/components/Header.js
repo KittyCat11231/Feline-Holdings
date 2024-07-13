@@ -16,7 +16,7 @@ function Header() {
     return (
         <div className={styles.container}>
             <a href="/">
-                <img className={styles.topLogo} src={topLogo} alt="Feline Holdings" />
+                <img className={styles.topLogo} src={topLogo.src} alt="Feline Holdings" />
             </a>
             {navToUse}
             <div className={styles.yellowHeader}></div>

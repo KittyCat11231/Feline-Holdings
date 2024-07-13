@@ -45,7 +45,7 @@ function Intra() {
         post1: {
             color: '#4d4d4d',
             imgBoxColor: undefined,
-            imgSrc: intraAirPhoto,
+            imgSrc: intraAirPhoto.src,
             imgAlt: 'IntraAir plane',
             imgWidth: '100%',
             imgMaxWidth: undefined,
@@ -61,7 +61,7 @@ function Intra() {
         post2: {
             color: '#4d4d4d',
             imgBoxColor: 'white',
-            imgSrc: intraRouteLogo,
+            imgSrc: intraRouteLogo.src,
             imgAlt: 'IntraRoute',
             imgWidth: '80%',
             imgMaxWidth: '95%',
@@ -77,7 +77,7 @@ function Intra() {
         post3: {
             color: '#4d4d4d',
             imgBoxColor: undefined,
-            imgSrc: siletzPhoto,
+            imgSrc: siletzPhoto.src,
             imgAlt: 'IntraAir plane',
             imgWidth: '100%',
             imgMaxWidth: undefined,
@@ -97,7 +97,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraAirLogo,
+            imgSrc: intraAirLogo.src,
             imgHeightDesktop: '65px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraAir',
@@ -110,7 +110,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraRailLogo,
+            imgSrc: intraRailLogo.src,
             imgHeightDesktop: '65px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraRail',
@@ -123,7 +123,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraBusLogo,
+            imgSrc: intraBusLogo.src,
             imgHeightDesktop: '65px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraBus',
@@ -136,7 +136,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraSailLogo,
+            imgSrc: intraSailLogo.src,
             imgHeightDesktop: '65px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraSail',
@@ -149,7 +149,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraBahnLogo,
+            imgSrc: intraBahnLogo.src,
             imgHeightDesktop: '65px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraBahn',
@@ -165,7 +165,7 @@ function Intra() {
             boxColor: '#cca77f',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraJetEamLogoSmall,
+            imgSrc: intraJetEamLogoSmall.src,
             imgHeightDesktop: '95px',
             imgHeightMobile: '150px',
             imgAlt: 'IntraJet-EAM',
@@ -178,7 +178,7 @@ function Intra() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraTrainsLogo,
+            imgSrc: intraTrainsLogo.src,
             imgHeightDesktop: '55px',
             imgHeightMobile: '100px',
             imgAlt: 'IntraTrains',
@@ -191,7 +191,7 @@ function Intra() {
             boxColor: '#1c7ec2',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: puntaLogo,
+            imgSrc: puntaLogo.src,
             imgHeightDesktop: '140px',
             imgHeightMobile: '200px',
             imgAlt: 'Punta Airport Company',
@@ -206,71 +206,71 @@ function Intra() {
 
     let imageScrollerProps = [
         {
-            src: intraAirLogo,
+            src: intraAirLogo.src,
             alt: 'IntraAir'
         },
         {
-            src: segvilleAirLogo,
+            src: segvilleAirLogo.src,
             alt: 'Segville Air'
         },
         {
-            src: waypointLogo,
+            src: waypointLogo.src,
             alt: 'Waypoint'
         },
         {
-            src: volantiLogo,
+            src: volantiLogo.src,
             alt: 'Italiani Volanti'
         },
         {
-            src: skyWestLogo,
+            src: skyWestLogo.src,
             alt: 'SkyWest Airlines'
         },
         {
-            src: gemsLogo,
+            src: gemsLogo.src,
             alt: 'GEMS Airline'
         },
         {
-            src: intraHeliLogo,
+            src: intraHeliLogo.src,
             alt: 'IntraAir Heli Lines'
         },
         {
-            src: segvilleHeliLogo,
+            src: segvilleHeliLogo.src,
             alt: 'Segville Air Heli Lines'
         },
         {
-            src: heampsteadCharterLogo,
+            src: heampsteadCharterLogo.src,
             alt: 'Heampstead Charter'
         },
         {
-            src: easternHeliLogo,
+            src: easternHeliLogo.src,
             alt: 'Eastern Airways Heli Lines'
         },
         {
-            src: intraPoseidonLogo,
+            src: intraPoseidonLogo.src,
             alt: 'IntraAir Poseidon'
         },
         {
-            src: intraRailLogo,
+            src: intraRailLogo.src,
             alt: 'IntraRail'
         },
         {
-            src: mcrLogo,
+            src: mcrLogo.src,
             alt: 'MCR'
         },
         {
-            src: intraBusLogo,
+            src: intraBusLogo.src,
             alt: 'IntraBus'
         },
         {
-            src: omegaLogo,
+            src: omegaLogo.src,
             alt: 'OMEGAbus!'
         },
         {
-            src: intraSailLogo,
+            src: intraSailLogo.src,
             alt: 'IntraSail'
         },
         {
-            src: intraBahnLogo,
+            src: intraBahnLogo.src,
             alt: 'IntraBahn'
         },
     ]
@@ -288,7 +288,7 @@ function Intra() {
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
                 <ItemSmall
-                    imgSrc={intraRouteShort}
+                    imgSrc={intraRouteShort.src}
                     imgAlt='IntraRoute'
                     imgWidthDesktop='350px'
                     imgWidthMobile=''

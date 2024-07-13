@@ -23,7 +23,7 @@ function LiveMBSWhenLive() {
     let boxColor;
     let textColor = 'white';
     let circleColor = 'red';
-    let mbsLogo = mbsLogoWhite;
+    let mbsLogo = mbsLogoWhite.src;
 
     let randomInt = helpers.getRandomInteger(4);
 
@@ -35,11 +35,11 @@ function LiveMBSWhenLive() {
     } else if (randomInt === 3) {
         boxColor = 'yellow';
         textColor = 'black';
-        mbsLogo = mbsLogoBlack;
+        mbsLogo = mbsLogoBlack.src;
     } else if (randomInt === 4) {
         boxColor = '#00ff00';
         textColor = 'black';
-        mbsLogo = mbsLogoBlack;
+        mbsLogo = mbsLogoBlack.src;
     }
     console.log(randomInt);
     console.log(boxColor);

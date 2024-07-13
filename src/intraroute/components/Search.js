@@ -94,7 +94,7 @@ function Search(props) {
         <div className={styles.container}>
             <div className={styles.innerContainer}>
                 <div className={styles.startContainer}>
-                    <img className={styles.icon} src={startIcon} alt='Start' />
+                    <img className={styles.icon} src={startIcon.src} alt='Start' />
                     <div className={`${styles.searchBar} ${styles.searchBarStart}`}>
                         <SearchBar
                             startOrEnd='start'
@@ -118,12 +118,12 @@ function Search(props) {
                         className={`${styles.icon}
                         ${styles.random}`}
                         onClick={() => {handleOnClickRandomizer('start')}}
-                        src={random}
+                        src={random.src}
                         alt='Randomize'
                     />
                 </div>
                 <div className={styles.endContainer}>
-                    <img className={styles.icon} src={endIcon} alt='Destination' />
+                    <img className={styles.icon} src={endIcon.src} alt='Destination' />
                     <div className={`${styles.searchBar} ${styles.searchBarEnd}`}>
                         <SearchBar
                             startOrEnd='end'
@@ -148,7 +148,7 @@ function Search(props) {
                         className={`${styles.icon}
                         ${styles.random}`}
                         onClick={() => {handleOnClickRandomizer('end')}}
-                        src={random}
+                        src={random.src}
                         alt='Randomize'
                     />
                 </div>
@@ -156,7 +156,7 @@ function Search(props) {
             <img
                 className={`${styles.icon} ${styles.swap}`}
                 onClick={() => {handleOnClickSwapper()}}
-                src={swap}
+                src={swap.src}
                 alt='Change direction'
                 ref={swapperRef}
             />

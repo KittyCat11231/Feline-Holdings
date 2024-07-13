@@ -46,133 +46,133 @@ import mrtLogo from '../assets/mrt-logo.svg';
 function Circle(props) {
     let srcToUse;
     if (props.mode === 'bus') {
-        srcToUse = busGray;
+        srcToUse = busGray.src;
     }
     if (props.mode === 'omega' && props.type === 'origin') {
-        srcToUse = busGray;
+        srcToUse = busGray.src;
     }
     if (props.mode === 'omega' && props.type !== 'origin') {
-        srcToUse = busOmega;
+        srcToUse = busOmega.src;
     }
     if (props.mode === 'sail' && props.type === 'origin') {
-        srcToUse = ferryGray;
+        srcToUse = ferryGray.src;
     }
     if (props.mode === 'sail' && props.type === 'mainline') {
-        srcToUse = ferrySailMainline;
+        srcToUse = ferrySailMainline.src;
     }
     if (props.mode === 'sail' && props.type === 'express') {
-        srcToUse = ferrySailExpress;
+        srcToUse = ferrySailExpress.src;
     }
     if (props.mode === 'sail' && props.type === 'branch') {
-        srcToUse = ferrySailBranch;
+        srcToUse = ferrySailBranch.src;
     }
     if (props.mode === 'air' && props.type === 'heli') {
-        srcToUse = heliGray;
+        srcToUse = heliGray.src;
     }
     if (props.mode === 'air' && props.type === 'eastern') {
-        srcToUse = heliEastern;
+        srcToUse = heliEastern.src;
     }
     if (props.mode === 'air' && props.type === 'heampstead') {
-        srcToUse = heliHeampstead;
+        srcToUse = heliHeampstead.src;
     }
     if (props.mode === 'air' && props.type === 'segHeli') {
-        srcToUse = heliSegville;
+        srcToUse = heliSegville.src;
     }
     if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type === 'origin') {
-        srcToUse = metroGray;
+        srcToUse = metroGray.src;
     }
     if ((props.mode === 'railScar' || props.mode === 'railLumeva') && props.type !== 'origin') {
-        srcToUse = metroMCR;
+        srcToUse = metroMCR.src;
     }
     if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'origin')) {
-        srcToUse = planeGray;
+        srcToUse = planeGray.src;
     }
     if (props.mode === 'air' && props.type === 'gemsDiamond') {
-        srcToUse = planeGemsDiamond;
+        srcToUse = planeGemsDiamond.src;
     }
     if (props.mode === 'air' && props.type === 'gemsEmerald') {
-        srcToUse = planeGemsEmerald;
+        srcToUse = planeGemsEmerald.src;
     }
     if (props.mode === 'air' && props.type === 'gemsGold') {
-        srcToUse = planeGemsGold;
+        srcToUse = planeGemsGold.src;
     }
     if (props.mode === 'air' && props.type === 'gemsLapis') {
-        srcToUse = planeGemsLapis;
+        srcToUse = planeGemsLapis.src;
     }
     if (props.mode === 'air' && props.type === 'segville') {
-        srcToUse = planeSegville;
+        srcToUse = planeSegville.src;
     }
     if (props.mode === 'air' && props.type === 'skywest') {
-        srcToUse = planeSkywest;
+        srcToUse = planeSkywest.src;
     }
     if (props.mode === 'air' && props.type === 'volanti') {
-        srcToUse = planeVolanti;
+        srcToUse = planeVolanti.src;
     }
     if (props.mode === 'air' && (props.type === 'waypoint' || props.type === 'waypointHopper')) {
-        srcToUse = planeWaypoint;
+        srcToUse = planeWaypoint.src;
     }
     if (props.mode === 'air' && props.type === 'poseidon') {
-        srcToUse = seaplaneGray;
+        srcToUse = seaplaneGray.src;
     }
     if (props.mode === 'bahn' && props.type === 'origin') {
-        srcToUse = trainGray;
+        srcToUse = trainGray.src;
     }
     if (props.mode === 'bahn' && props.type === 'branch') {
-        srcToUse = trainBahnBranch;
+        srcToUse = trainBahnBranch.src;
     }
     if (props.mode === 'bahn' && props.type === 'express') {
-        srcToUse = trainBahnExpress;
+        srcToUse = trainBahnExpress.src;
     }
     if (props.mode === 'bahn' && props.type === 'mainline') {
-        srcToUse = trainBahnMainline;
+        srcToUse = trainBahnMainline.src;
     }
     if (props.mode === 'bahn' && props.type === 'shuttle') {
-        srcToUse = trainBahnShuttle;
+        srcToUse = trainBahnShuttle.src;
     }
     if (props.mode === 'rail' && props.type === 'origin') {
-        srcToUse = trainGray;
+        srcToUse = trainGray.src;
     }
     if (props.mode === 'rail' && props.type === 'mcr') {
-        srcToUse = trainMCR;
+        srcToUse = trainMCR.src;
     }
     if (props.mode === 'rail' && props.type === 'black') {
-        srcToUse = trainRailBlack;
+        srcToUse = trainRailBlack.src;
     }
     if (props.mode === 'rail' && props.type === 'blue') {
-        srcToUse = trainRailBlue;
+        srcToUse = trainRailBlue.src;
     }
     if (props.mode === 'rail' && props.type === 'brown') {
-        srcToUse = trainRailBrown;
+        srcToUse = trainRailBrown.src;
     }
     if (props.mode === 'rail' && props.type === 'cyan') {
-        srcToUse = trainRailCyan;
+        srcToUse = trainRailCyan.src;
     }
     if (props.mode === 'rail' && props.type === 'dark-red') {
-        srcToUse = trainRailDarkRed;
+        srcToUse = trainRailDarkRed.src;
     }
     if (props.mode === 'rail' && props.type === 'lime') {
-        srcToUse = trainRailLime;
+        srcToUse = trainRailLime.src;
     }
     if (props.mode === 'rail' && props.type === 'orange') {
-        srcToUse = trainRailOrange;
+        srcToUse = trainRailOrange.src;
     }
     if (props.mode === 'rail' && props.type === 'pink') {
-        srcToUse = trainRailPink;
+        srcToUse = trainRailPink.src;
     }
     if (props.mode === 'rail' && props.type === 'purple') {
-        srcToUse = trainRailPurple;
+        srcToUse = trainRailPurple.src;
     }
     if (props.mode === 'rail' && props.type === 'red') {
-        srcToUse = trainRailRed;
+        srcToUse = trainRailRed.src;
     }
     if (props.mode === 'rail' && props.type === 'tan') {
-        srcToUse = trainRailTan;
+        srcToUse = trainRailTan.src;
     }
     if (props.mode === 'rail' && props.type === 'yellow') {
-        srcToUse = trainRailBlack;
+        srcToUse = trainRailBlack.src;
     }
     if (props.mode === 'mrtYellowLine') {
-        srcToUse = mrtLogo;
+        srcToUse = mrtLogo.src;
     }
     return (
         <img className={styles.circle} src={srcToUse} alt='icon' />

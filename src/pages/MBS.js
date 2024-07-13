@@ -20,7 +20,7 @@ function MBS() {
         post1: {
             color: 'blue',
             imgBoxColor: 'white',
-            imgSrc: mbsLogoMain,
+            imgSrc: mbsLogoMain.src,
             imgAlt: 'MBS',
             imgWidth: '60%',
             imgMaxWidth: undefined,
@@ -36,7 +36,7 @@ function MBS() {
         post2: {
             color: '#1a2859',
             imgBoxColor: '#e22525',
-            imgSrc: mbsMls,
+            imgSrc: mbsMls.src,
             imgAlt: 'MLS on MBS',
             imgWidth: undefined,
             imgMaxWidth: '1000px',
@@ -52,7 +52,7 @@ function MBS() {
         post3: {
             color: 'red',
             imgBoxColor: '#333333',
-            imgSrc: adTeaser,
+            imgSrc: adTeaser.src,
             imgAlt: 'MLS on MBS',
             imgWidth: '90%',
             imgMaxWidth: undefined,

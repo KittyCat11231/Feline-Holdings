@@ -96,7 +96,7 @@ function IntraStatus() {
         <div className={styles.container}>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraAirLogo}
+                    logoSrc={intraAirLogo.src}
                     logoAlt='IntraAir'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -116,7 +116,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraAirLogo}
+                    logoSrc={intraAirLogo.src}
                     logoAlt='IntraAir'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -136,7 +136,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraAirLogo}
+                    logoSrc={intraAirLogo.src}
                     logoAlt='IntraAir'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -156,7 +156,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraAirLogo}
+                    logoSrc={intraAirLogo.src}
                     logoAlt='IntraAir'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -176,7 +176,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraAirLogo}
+                    logoSrc={intraAirLogo.src}
                     logoAlt='IntraAir'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -196,7 +196,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraRailLogo}
+                    logoSrc={intraRailLogo.src}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='black'
@@ -216,7 +216,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraBusLogo}
+                    logoSrc={intraBusLogo.src}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'
@@ -236,7 +236,7 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraBusLogo}
+                    logoSrc={intraBusLogo.src}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
                     routeColor='#e6e6e6'

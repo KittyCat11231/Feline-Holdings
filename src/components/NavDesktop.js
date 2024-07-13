@@ -3,7 +3,7 @@ import styles from './NavDesktop.module.css';
 
 function NavDesktop() {
     return (
-        <nav>
+        <nav className={styles.nav}>
             <div className={`${styles.button} ${styles.intra}`}>
                 <a href="/">Intra</a>
             </div>

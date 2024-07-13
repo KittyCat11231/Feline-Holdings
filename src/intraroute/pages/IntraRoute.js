@@ -70,7 +70,7 @@ function IntraRoute() {
                 <meta name="twitter:image" content='https://svgshare.com/i/16G7' />
             </Helmet>
             <div className={styles.logoBox}>
-                <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
+                <img className={styles.topLogo} src={intraRouteLogo.src} alt='IntraRoute' />
             </div>
             <div className={styles.search}>
                 <Search
@@ -97,7 +97,7 @@ function IntraRoute() {
                 </div>
             }
             <div className={styles.logoBox}>
-                <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
+                <img className={styles.bottomLogo} src={intraRouteLogoShort.src} alt='IntraRoute' />
             </div>
             <div className={styles.footer1}>
                 <p className={styles.pGray}>IntraRoute Beta 1.0.0</p>

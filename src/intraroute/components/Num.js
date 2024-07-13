@@ -31,7 +31,7 @@ function Num(props) {
 
     return (
         <div className={styles.container}>
-            <img className={styles.circle} src={circle} alt='circle' />
+            <img className={styles.circle} src={circle.src} alt='circle' />
             {renderNumSail ? <p className={`${styles.numSail} ${colorObj.mainColor}`}>[ {props.num} ]</p> : ''}
             {renderNumRailScar ? <p className={`${styles.numRailScar} ${colorObj.mainColor}`}>{props.num}</p> : ''}
             {renderNumRailLumeva ? <p className={`${styles.numRailLumeva} ${colorObj.mainColor}`}>{props.num}</p> : ''}

@@ -26,49 +26,49 @@ function MBSVideo(props) {
     let logoAlt;
 
     if (props.division === 'news') {
-        logoSrc = mbsNewsWhite;
+        logoSrc = mbsNewsWhite.src;
         logoAlt = 'MBS News';
         if (props.logoColor === 'black') {
-            logoSrc = mbsNewsBlack;
+            logoSrc = mbsNewsBlack.src;
         }
         if (props.logoColor === 'main') {
-            logoSrc = mbsNews;
+            logoSrc = mbsNews.src;
         }
     } else if (props.division === 'sports') {
-        logoSrc = mbsSportsWhite;
+        logoSrc = mbsSportsWhite.src;
         logoAlt = 'MBS Sports';
         if (props.logoColor === 'black') {
-            logoSrc = mbsSportsBlack;
+            logoSrc = mbsSportsBlack.src;
         }
         if (props.logoColor === 'main') {
-            logoSrc = mbsSports;
+            logoSrc = mbsSports.src;
         }
     } else if (props.division === 'events') {
-        logoSrc = mbsEventsWhite;
+        logoSrc = mbsEventsWhite.src;
         logoAlt = 'MBS Events';
         if (props.logoColor === 'black') {
-            logoSrc = mbsEventsBlack;
+            logoSrc = mbsEventsBlack.src;
         }
         if (props.logoColor === 'main') {
-            logoSrc = mbsEvents;
+            logoSrc = mbsEvents.src;
         }
     } else if (props.division === 'studios') {
-        logoSrc = mbsStudiosWhite;
+        logoSrc = mbsStudiosWhite.src;
         logoAlt = 'MBS Studios';
         if (props.logoColor === 'black') {
-            logoSrc = mbsStudiosBlack;
+            logoSrc = mbsStudiosBlack.src;
         }
         if (props.logoColor === 'main') {
-            logoSrc = mbsStudios;
+            logoSrc = mbsStudios.src;
         }
     } else if (props.division === 'releasing') {
-        logoSrc = mbsReleasingWhite;
+        logoSrc = mbsReleasingWhite.src;
         logoAlt = 'MBS Releasing';
         if (props.logoColor === 'black') {
-            logoSrc = mbsReleasingBlack;
+            logoSrc = mbsReleasingBlack.src;
         }
         if (props.logoColor === 'main') {
-            logoSrc = mbsReleasing;
+            logoSrc = mbsReleasing.src;
         }
     }
 

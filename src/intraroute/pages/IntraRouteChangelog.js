@@ -153,7 +153,7 @@ function IntraRouteChangelog() {
                 <meta name="twitter:image" content='https://svgshare.com/i/16G7' />
             </Helmet>
             <div className={styles.logoBox}>
-                <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
+                <img className={styles.topLogo} src={intraRouteLogo.src} alt='IntraRoute' />
             </div>
             <h1 className={`${styles.header} ${styles.grayText}`}>Version History & Changelog</h1>
             <div className={styles.button}>

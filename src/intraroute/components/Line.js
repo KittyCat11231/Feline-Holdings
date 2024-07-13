@@ -4,8 +4,6 @@ import colorStyles from './Colors.module.css';
 
 import colors from '../scripts/colors';
 
-import lineGray from '../assets/segment-gray.svg';
-import lineColor from '../assets/segment-color.svg';
 import DestinationContainer from './DestinationContainer';
 import LineBuffer from './LineBuffer';
 import Codeshares from './Codeshares';

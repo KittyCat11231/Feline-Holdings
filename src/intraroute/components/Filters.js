@@ -41,7 +41,7 @@ function Filters(props) {
         <div className={styles.container}>
             <div className={styles.labelContainer} ref={labelRef} onClick={handleClick}>
                 <p className={styles.label}>Filters</p>
-                <img className={arrowStyles} src={downArrow} alt='Arrow' />
+                <img className={arrowStyles} src={downArrow.src} alt='Arrow' />
             </div>
             {displayDropdown ? 
                 <div className={styles.dropdown}>

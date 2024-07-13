@@ -4,9 +4,6 @@ import colorStyles from './Colors.module.css';
 
 import colors from '../scripts/colors';
 
-import StopBuffer from './StopBuffer';
-
-import circleWhite from '../assets/circle-white.svg';
 import Circle from './Circle';
 
 function Stop(props) {

@@ -17,14 +17,14 @@ function Dots(props) {
 
     colors(colorStyles, colorObj, props.mode, props.type);
 
-    let src = dotsColor;
+    let src = dotsColor.src;
     if (props.mode === 'air') {
         if (['origin', 'mainline', 'heli', 'poseidon'].includes(props.type)) {
-            src = dotsGray;
+            src = dotsGray.src;
         }
     }
     if (props.mode === 'bus') {
-        src = dotsGray;
+        src = dotsGray.src;
     }
     
     return (
