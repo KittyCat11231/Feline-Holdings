@@ -38,7 +38,7 @@ function Home() {
             descriptorText: 'Our brands bring the MRT to life.',
             renderButton: true,
             buttonText: 'About Us',
-            link: '/', 
+            link: '/about', 
         },
         post2: {
             color: '#4d4d4d',
@@ -70,7 +70,7 @@ function Home() {
             descriptorText: "Major League Spleef is back.",
             renderButton: true,
             buttonText: 'Watch Now',
-            link: 'https://felineholdings.com/MBS', 
+            link: 'https://www.youtube.com/@MBS_MRT', 
         },
     }
 
@@ -99,7 +99,7 @@ function Home() {
             headerText: 'Make moments',
             subHeaderText: 'with Roy Disney.',
             descriptorText: "The MRT's biggest media company.",
-            link: '/'
+            link: '/roy-disney'
         },
         {
             boxColor: 'blue',
@@ -125,7 +125,7 @@ function Home() {
             headerText: 'Keep on moving',
             subHeaderText: 'with BART.',
             descriptorText: "Bringing you to the world.",
-            link: '/'
+            link: '/bart'
         },
         {
             boxColor: '#003875',
@@ -138,7 +138,7 @@ function Home() {
             headerText: 'Redacted',
             subHeaderText: 'with Fossack Notseca.',
             descriptorText: "Redacted.",
-            link: '/'
+            link: '/fossack-notseca'
         },
         {
             boxColor: '#ffc90e',
@@ -153,7 +153,7 @@ function Home() {
             headerText: 'Learn more',
             subHeaderText: 'about our other brands.',
             descriptorText: "The Feline Holdings family of companies.",
-            link: '/'
+            link: '/other-companies'
         }
     ]
 
@@ -185,24 +185,6 @@ function Home() {
             <div className={styles.section}>
                 <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
-            </div>
-            <div className={styles.sectionNoHeader}>
-                <ItemLarge
-                    imgLeftSide={true}
-                    imgSrc={demoImg}
-                    imgAlt='IntraRoute'
-                    imgWidthDesktop=''
-                    imgWidthMobile=''
-                    imgHeightDesktop='150%'
-                    imgHeightMobile='150%'
-                    boxColor='#4d4d4d'
-                    textColor='white'
-                    headerText='Placeholder text.'
-                    descriptorText='Lorem ipsum dolor sit amet.'
-                    renderButton={false}
-                    buttonText=''
-                    link='/'
-                />
             </div>
         </div>
     );

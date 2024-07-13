@@ -311,9 +311,6 @@ function Intra() {
                 <SectionHeader text='Other Intra Companies' color='#4d4d4d' border={false} />
                 <Grid propsArray={gridProps2} />
             </div>
-            <div className={styles.scroller}>
-                <ImageScroller propsArray={imageScrollerProps} />
-            </div>
             <div className={styles.section} id='status'>
                 <SectionHeader text='Service Status' color='#4d4d4d' border={false} />
                 <IntraStatus />

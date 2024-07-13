@@ -5,28 +5,28 @@ function NavDesktop() {
     return (
         <nav>
             <div className={`${styles.button} ${styles.intra}`}>
-                <a href="/">Intra</a>
+                <a href="/intra">Intra</a>
             </div>
             <div className={`${styles.button} ${styles.roy}`}>
-                <a href="/">Roy Disney</a>
+                <a href="/roy-disney">Roy Disney</a>
             </div>
             <div className={`${styles.button} ${styles.mbs}`}>
-                <a href="/">MBS</a>
+                <a href="/mbs">MBS</a>
             </div>
             <div className={`${styles.button} ${styles.bart}`}>
-                <a href="/">BART</a>
+                <a href="/bart">BART</a>
             </div>
             <div className={`${styles.button} ${styles.fossack}`}>
-                <a href="/">Fossack Notseca</a>
+                <a href="/fossack-notseca">Fossack Notseca</a>
             </div>
             <div className={`${styles.button} ${styles.other}`}>
-                <a href="/">Other Companies</a>
+                <a href="/other-companies">Other Companies</a>
             </div>
             <div className={`${styles.button} ${styles.news}`}>
-                <a href="/">News</a>
+                <a href="/news">News</a>
             </div>
             <div className={`${styles.button} ${styles.about}`}>
-                <a href="/">About Us</a>
+                <a href="/about">About Us</a>
             </div>
         </nav>
     )
