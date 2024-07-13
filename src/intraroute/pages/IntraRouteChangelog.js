@@ -155,7 +155,7 @@ function IntraRouteChangelog() {
             </div>
             <h1 className={`${styles.header} ${styles.grayText}`}>Version History & Changelog</h1>
             <div className={styles.button}>
-                <a className={`${styles.buttonText} ${styles.grayText}`} href='/'>Back to IntraRoute</a>
+                <a className={`${styles.buttonText} ${styles.grayText}`} href='https://felineholdings.com/intraroute'>Back to IntraRoute</a>
             </div>
             <div className={styles.container}>
                 {renderVersions}
