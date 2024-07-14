@@ -1,13 +1,11 @@
 import React from 'react';
+import styles from './NoPage.module.css';
 
 function NoPage() {
-
-    document.title = 'Page Not Found | Feline Holdings'
-    
     return (
-        <div>
-            <h1>Page not found!</h1>
-            <h2>Double check that you entered the URL correctly.</h2>
+        <div className={styles.container}>
+            <h1 className={`${styles.header} ${styles.text}`}>Page not found.</h1>
+            <h2 className={`${styles.descriptor} ${styles.text}`}>Make sure you typed the correct URL.</h2>
         </div>
     )
 }

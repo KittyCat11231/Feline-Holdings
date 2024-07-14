@@ -5,14 +5,14 @@ import { useState, useEffect, useRef } from 'react';
 function DropdownContent() {
     return (
         <div className={styles.dropdownContent}>
-            <a className={styles.intra} href="/">Intra</a>
-            <a className={styles.roy} href="/">Roy Disney</a>
-            <a className={styles.mbs} href="/">MBS</a>
-            <a className={styles.bart} href="/">BART</a>
-            <a className={styles.fossack} href="/">Fossack Notseca</a>
-            <a className={styles.other} href="/">Other Companies</a>
-            <a className={styles.news} href="/">News</a>
-            <a className={styles.about} href="/">About Us</a>
+            <a className={styles.intra} href="/intra">Intra</a>
+            <a className={styles.roy} href="/roy-disney">Roy Disney</a>
+            <a className={styles.mbs} href="/mbs">MBS</a>
+            <a className={styles.bart} href="/bart">BART</a>
+            <a className={styles.fossack} href="/fossack-notseca">Fossack Notseca</a>
+            <a className={styles.other} href="/other-companies">Other Companies</a>
+            <a className={styles.news} href="/news">News</a>
+            <a className={styles.about} href="/about">About Us</a>
         </div>
     )
 }

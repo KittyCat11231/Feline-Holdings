@@ -7,16 +7,6 @@ Zaquar,Ménage et Trois Regional Airport,busZAQ,bahnZQA,15,walk
 Segville,Grand Central,busSGC,busZAQ,1,bus101south
 Segville,Grand Central,busSGC,railSGC,15,walk
 ,,,,,
-Sealane,Central,busSEA,busCWI,1,bus102west
-Sealane,Central,busSEA,railSEA,15,walk
-,,,,,
-Formosa-Sealane-Danielston,UCWT International Airport,busCWI,busSEA,1,bus102east
-Formosa-Sealane-Danielston,UCWT International Airport,busCWI,busFMN,1,bus103west
-Formosa-Sealane-Danielston,UCWT International Airport,busCWI,airCWI,15,walk
-,,,,,
-Formosa,Northern,busFMN,busCWI,1,bus103east
-Formosa,Northern,busFMN,railFMN,15,walk
-,,,,,
 Whiteley,College Park,busWCP,busWSU,1,bus105south
 ,,,,,
 Whiteley,Southwold University,busWSU,busWCP,1,bus105north

@@ -27,7 +27,7 @@ function Home() {
         post1: {
             color: '#ffc90e',
             imgBoxColor: undefined,
-            imgSrc: fhCenter.src,
+            imgSrc: fhCenter,
             imgAlt: 'Feline Holdings Center',
             imgWidth: '100%',
             imgMaxWidth: undefined,
@@ -38,12 +38,12 @@ function Home() {
             descriptorText: 'Our brands bring the MRT to life.',
             renderButton: true,
             buttonText: 'About Us',
-            link: '/', 
+            link: '/about', 
         },
         post2: {
             color: '#4d4d4d',
             imgBoxColor: 'white',
-            imgSrc: intraRouteLogo.src,
+            imgSrc: intraRouteLogo,
             imgAlt: 'IntraRoute',
             imgWidth: '80%',
             imgMaxWidth: '95%',
@@ -59,7 +59,7 @@ function Home() {
         post3: {
             color: '#1a2859',
             imgBoxColor: '#e22525',
-            imgSrc: mbsMls.src,
+            imgSrc: mbsMls,
             imgAlt: 'MLS on MBS',
             imgWidth: undefined,
             imgMaxWidth: '1000px',
@@ -70,7 +70,7 @@ function Home() {
             descriptorText: "Major League Spleef is back.",
             renderButton: true,
             buttonText: 'Watch Now',
-            link: 'https://felineholdings.com/MBS', 
+            link: 'https://www.youtube.com/@MBS_MRT', 
         },
     }
 
@@ -79,7 +79,7 @@ function Home() {
             boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: intraLogo.src,
+            imgSrc: intraLogo,
             imgWidthDesktop: '350px',
             imgWidthMobile: '500px',
             imgAlt: 'Intra',
@@ -92,20 +92,20 @@ function Home() {
             boxColor: '#5a86a8',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: royDisneyLogo.src,
+            imgSrc: royDisneyLogo,
             imgWidthDesktop: '400px',
             imgWidthMobile: '600px',
             imgAlt: 'Roy Disney',
             headerText: 'Make moments',
             subHeaderText: 'with Roy Disney.',
             descriptorText: "The MRT's biggest media company.",
-            link: '/'
+            link: '/roy-disney'
         },
         {
             boxColor: 'blue',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: mbsLogo.src,
+            imgSrc: mbsLogo,
             imgWidthDesktop: '300px',
             imgWidthMobile: '450px',
             imgAlt: 'MBS',
@@ -118,33 +118,33 @@ function Home() {
             boxColor: '#30acdf',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: bartLogo.src,
+            imgSrc: bartLogo,
             imgWidthDesktop: '270px',
             imgWidthMobile: '350px',
             imgAlt: 'BART',
             headerText: 'Keep on moving',
             subHeaderText: 'with BART.',
             descriptorText: "Bringing you to the world.",
-            link: '/'
+            link: '/bart'
         },
         {
             boxColor: '#003875',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: fossackLogo.src,
+            imgSrc: fossackLogo,
             imgWidthDesktop: '330px',
             imgWidthMobile: '500px',
             imgAlt: 'Fossack Notseca',
             headerText: 'Redacted',
             subHeaderText: 'with Fossack Notseca.',
             descriptorText: "Redacted.",
-            link: '/'
+            link: '/fossack-notseca'
         },
         {
             boxColor: '#ffc90e',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: fhLogoSmall.src,
+            imgSrc: fhLogoSmall,
             imgWidthDesktop: '240px',
             imgWidthMobile: '310px',
             imgTranslateYDesktop: '40px',
@@ -153,7 +153,7 @@ function Home() {
             headerText: 'Learn more',
             subHeaderText: 'about our other brands.',
             descriptorText: "The Feline Holdings family of companies.",
-            link: '/'
+            link: '/other-companies'
         }
     ]
 
@@ -167,7 +167,7 @@ function Home() {
             <Carousel propsObj={carouselProps} />
             <div className={styles.topSection}>
                 <ItemSmall
-                    imgSrc={intraRouteShort.src}
+                    imgSrc={intraRouteShort}
                     imgAlt='IntraRoute'
                     imgWidthDesktop='350px'
                     imgWidthMobile=''
@@ -185,24 +185,6 @@ function Home() {
             <div className={styles.section}>
                 <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
-            </div>
-            <div className={styles.sectionNoHeader}>
-                <ItemLarge
-                    imgLeftSide={true}
-                    imgSrc={demoImg.src}
-                    imgAlt='IntraRoute'
-                    imgWidthDesktop=''
-                    imgWidthMobile=''
-                    imgHeightDesktop='150%'
-                    imgHeightMobile='150%'
-                    boxColor='#4d4d4d'
-                    textColor='white'
-                    headerText='Placeholder text.'
-                    descriptorText='Lorem ipsum dolor sit amet.'
-                    renderButton={false}
-                    buttonText=''
-                    link='/'
-                />
             </div>
         </div>
     );
