@@ -1,3 +1,5 @@
+'use client'
+ 
 import React from 'react';
 import styles from './DestinationContainer.module.css';
 import colorStyles from './Colors.module.css';

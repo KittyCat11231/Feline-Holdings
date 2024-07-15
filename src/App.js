@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
@@ -39,44 +38,6 @@ function App() {
       </Helmet>
       <div id='container-wrap'>
         <Header />
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/index" element={<Home />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/intraroute" element={<IntraRoute />} />
-            <Route path="/IntraRoute" element={<IntraRoute />} />
-            <Route path="/intra/intraroute" element={<IntraRoute />} />
-            <Route path="/intra/IntraRoute" element={<IntraRoute />} />
-            <Route path="/intraroute/changelog" element={<IntraRouteChangelog />} />
-            <Route path="/IntraRoute/changelog" element={<IntraRouteChangelog />} />
-            <Route path="/intra/intraroute/changelog" element={<IntraRouteChangelog />} />
-            <Route path="/intra/IntraRoute/changelog" element={<IntraRouteChangelog />} />
-            <Route path="/intra" element={<Intra />} />
-            <Route path="/mbs" element={<MBS />} />
-            <Route path="/MBS" element={<MBS />} />
-            <Route path="/roy-disney/mbs" element={<MBS />} />
-            <Route path="/roy-disney/MBS" element={<MBS />} />
-            <Route path="/Roy-Disney/mbs" element={<MBS />} />
-            <Route path="/Roy-Disney/MBS" element={<MBS />} />
-            <Route path="/roy-disney" element={<Construction />} />
-            <Route path="/Roy-Disney" element={<Construction />} />
-            <Route path="/bart" element={<Construction />} />
-            <Route path="/BART" element={<Construction />} />
-            <Route path="/fossack-notseca" element={<Construction />} />
-            <Route path="/Fossack-Notseca" element={<Construction />} />
-            <Route path="/other-companies" element={<Construction />} />
-            <Route path="/Other-Companies" element={<Construction />} />
-            <Route path="/news" element={<Construction />} />
-            <Route path="/News" element={<Construction />} />
-            <Route path="/about" element={<Construction />} />
-            <Route path="/About" element={<Construction />} />
-            <Route path="/test" element={<Test />} />
-            <Route path="/console" element={<Console />} />
-            <Route path="*" element ={<NoPage />} />
-          </Routes>
-        </BrowserRouter>
         <Buffer />
       </div>
       <Footer />

@@ -1,3 +1,5 @@
+'use client'
+ 
 import React from 'react';
 import styles from './Segment.module.css';
 import Route from './Route';

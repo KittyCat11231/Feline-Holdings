@@ -1,3 +1,5 @@
+'use client'
+ 
 import React from 'react';
 import { useEffect, useState } from 'react';
 import helpers from '@kyle11231/helper-functions';

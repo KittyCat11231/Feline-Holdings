@@ -1,3 +1,5 @@
+'use client'
+ 
 import React from 'react';
 import styles from './NavMobile.module.css';
 import { useState, useEffect, useRef } from 'react';
