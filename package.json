@@ -2,6 +2,7 @@
   "name": "feline-holdings",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@kyle11231/helper-functions": "^1.0.1",
