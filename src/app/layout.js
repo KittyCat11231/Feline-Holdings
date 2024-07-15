@@ -1,4 +1,5 @@
 import '../index.css';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
             <body>
                 <div id='page-container'>
                     <div id='container-wrap'>
+                        <Header />
                         <div id="root">{children}</div>
                     </div>
                     <Footer />
