@@ -16,6 +16,13 @@ import Footer from './components/Footer';
 import Buffer from './components/Buffer';
 
 function App() {
+  async function pingAPI() {
+    const response = await fetch('https://api.felineholdings.com/');
+    console.log(response);
+  }
+  
+  pingAPI();
+  
   return (
     <div id='page-container'>
       <Helmet>
