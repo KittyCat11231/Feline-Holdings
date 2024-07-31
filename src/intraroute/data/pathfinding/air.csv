@@ -149,6 +149,7 @@ Deadbush,West Mesa International Airport,airWMI,airPRA,1,air253toPRA,
 Deadbush,West Mesa International Airport,airWMI,airFSI,1,wp144toFSI,
 Deadbush,West Mesa International Airport,airWMI,airTPA,1,wp160toTPA,
 Deadbush,West Mesa International Airport,airWMI,airTCB,1,wp179toTCB,
+Deadbush,West Mesa International Airport,airWMI,railDBB,30,walk,
 ,,,,,,
 Elecna Bay,International Airport,airEBI,airSEG,1,air2toSEG,
 Elecna Bay,International Airport,airEBI,airWMI,1,air4toWMI,wp167toWMI
