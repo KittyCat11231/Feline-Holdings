@@ -2,7 +2,7 @@ Zaquar,Ménage et Trois Regional Airport,busZAQ,busSGC,1,bus101north
 Zaquar,Ménage et Trois Regional Airport,busZAQ,airZAQ,15,walk
 Zaquar,Ménage et Trois Regional Airport,busZAQ,railZAQ,15,walk
 Zaquar,Ménage et Trois Regional Airport,busZAQ,sailZQW,15,walk
-Zaquar,Ménage et Trois Regional Airport,busZAQ,bahnZQA,15,walk
+Zaquar,Ménage et Trois Regional Airport,busZAQ,bahnZQA,100,walk
 ,,,,,
 Segville,Grand Central,busSGC,busZAQ,1,bus101south
 Segville,Grand Central,busSGC,railSGC,15,walk
@@ -17,7 +17,7 @@ Whiteley,Airport Parkway,busWAP,busWHO,1,bus105south
 ,,,,,
 Whiteley,Olympia-Cacturne Boulevards,busWHO,busWAP,1,bus105north
 Whiteley,Olympia-Cacturne Boulevards,busWHO,railWHO,15,walk
-Whiteley,Olympia-Cacturne Boulevards,busWHO,bahnWHO,15,walk
+Whiteley,Olympia-Cacturne Boulevards,busWHO,bahnWHO,100,walk
 ,,,,,
 Konawa,,busKON,busHZN,1,bus107south
 ,,,,,
@@ -175,3 +175,19 @@ Benion,Bus Exchange,busBEN,busCCU,1,bus402south
 Benion,Bus Exchange,busBEN,railBEN,15,walk
 ,,,,,
 Nippia,Pride Wall,busGAY,busNIP,1,bus129west
+,,,,,
+Pixl,Island International Airport,busPXA,busPXL,1,bus130west
+Pixl,Island International Airport,busPXA,airPXA,15,walk
+,,,,,
+Pixl,Vinakaya City Airfield,busPXL,busPIX,1,bus130west
+Pixl,Vinakaya City Airfield,busPXL,busPXA,1,bus130east
+Pixl,Vinakaya City Airfield,busPXL,airPXL,15,walk
+,,,,,
+Pixl,Bay Terminal,busPIX,busPXL,1,bus130east
+Pixl,Bay Terminal,busPIX,sailPIX,15,walk
+,,,,,
+Deadbush,Euphorial MCR Station,busDBE,busDJE,1,bus132south
+Deadbush,Euphorial MCR Station,busDBE,railDBE,15,walk
+,,,,,
+Deadbush,Johnston-Euphorial Airport,busDJE,busDBE,1,bus132north
+Deadbush,Johnston-Euphorial Airport,busDJE,airDJE,15,walk
