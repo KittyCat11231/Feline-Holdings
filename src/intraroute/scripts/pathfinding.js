@@ -298,11 +298,7 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
         finalPath = 'error';
     }
 
-    console.log(finalPath);
-
     processPath(finalPath, processedPath, filters);
-
-    console.log(processedPath);
 }
 
 export default pathfinding;
