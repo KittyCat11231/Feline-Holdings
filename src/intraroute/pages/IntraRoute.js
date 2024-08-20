@@ -12,6 +12,8 @@ import intraRouteLogoWhite from '../logos/intraroute-white.svg';
 import intraRouteLogoShort from '../logos/intraroute-short.svg';
 import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
+import ErrorNotice from '../../components/ErrorNotice';
+
 function IntraRoute() {
 
     const currentYear = new Date().getFullYear();
@@ -69,6 +71,7 @@ function IntraRoute() {
                 <meta name="twitter:description" content="The official routefinder of Intra." />
                 <meta name="twitter:image" content='https://svgshare.com/i/16G7' />
             </Helmet>
+            <ErrorNotice />
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>

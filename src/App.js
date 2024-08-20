@@ -17,8 +17,12 @@ import Buffer from './components/Buffer';
 
 function App() {
   async function pingAPI() {
-    const response = await fetch('https://api.felineholdings.com/');
-    console.log(response);
+    try {
+      const response = await fetch('https://api.felineholdings.com/');
+      console.log(response);
+    } catch (error) {
+      console.warn(error);
+    }
   }
   
   pingAPI();
