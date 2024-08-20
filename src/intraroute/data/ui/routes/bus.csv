@@ -75,6 +75,10 @@ bus334north,334,busDND,Dand,Grand Central,busDSP,,,,,
 bus334south,334,busDSP,Dand,Seaport,busDND,,,,,
 bus335north,335,busMWX,Miu Wan,Expo,busTLA,busMWG,busMWF,busMWS,busMWP,busMWK
 bus335south,335,busMWK,Miu Wan,Kau Heung Airport,busMWP,busMWS,busMWF,busMWG,busTLA,busMWX
+bus336north,336,busBVC,BirchView,Central,busBVL,,,,,
+bus336south,336,busBVL,BirchView,Leydon International Airport,busBVC,,,,,
+bus337north,337,busLUM,Lumia,National Park,,,,,,
+bus337south,337,busBWK,Bawktown,Brick Street,busBKM,busBKN,,,,
 bus401north,401,busGAY,Nippia,Pride Wall,,,,,,
 bus401south,401,busCBT,Central City,Beltway Terminal,,,,,,
 bus402north,402,busMWX,Miu Wan,Expo,,,,,,
