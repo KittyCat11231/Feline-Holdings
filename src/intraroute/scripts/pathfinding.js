@@ -12,6 +12,9 @@ import sailStops from '../data/pathfinding/sail.json';
 import processPath from './process-path';
 
 function pathfinding(start, end, finalPath, processedPath, filters, returnError, setReturnError) {
+    console.log('start', start);
+    console.log('end', end);
+    
     let allStops = [];
 
     function addToAllStops(modeStops) {
@@ -174,6 +177,9 @@ function pathfinding(start, end, finalPath, processedPath, filters, returnError,
             let adjStop = stopsMap.get(currentStop.adjacentStops[i].id);
             let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
             let routesLastLeg = currentStop.adjacentStops[i].routes;
+            if (!currentStop || !adjStop) {
+                debugger;
+            }
             let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
             let adjStopPath = [pathLastLeg];
 
