@@ -26,3 +26,7 @@ sail4Bwest,branch,4b,Rattler Line,sailSON,Port Sonder,null
 sail4Beast,branch,4b,Rattler Line,sailPDB,Port Diamondback,null
 sail4Cwest,branch,4c,Coaster,sailOCS,Oceanside,null
 sail4Ceast,branch,4c,Coaster,sailCAM,Cape Cambridge,International Seaport
+sail5north,mainline,5,Coral Line,sailZAQ,Zaquar,Winfrey Waterport
+sail5south,mainline,5,Coral Line,sailPCH,Peach Bay,Regional Seaport
+sail5Anorth,branch,5a,Thanos Regional,sailTOR,Torres River,null
+sail5Asouth,branch,5a,Thanos Regional,sailMJB,Mojangsburg,null
