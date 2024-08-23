@@ -927,6 +927,7 @@ Mountbatten,International Airport,airMBI,airERZ1,1,air669toERZ,
 MRT Marina,,airMMN,airZAQ,1,poseidon5toZAQ,
 MRT Marina,,airMMN,airDSP,1,poseidon16toDSP,
 MRT Marina,,airMMN,airERZ2,1,poseidon19toERZ,
+MRT Marina,,airMMN,busMNS,15,walk,
 ,,,,,,
 Murrville-Arcadia,International Airport,airMAX,airSEG,1,air161toSEG,wp124toSEG
 Murrville-Arcadia,International Airport,airMAX,airWMI,1,air223toWMI,
