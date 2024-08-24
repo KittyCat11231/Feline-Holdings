@@ -363,7 +363,7 @@ Murrville-Arcadia,International Airport,busMAX,airMAX,15,walk,
 Murrville-Arcadia,International Airport,busMAX,railMAX,15,walk,
 ,,,,,,
 MRT Marina,Ferry Docks,busMNF,busMNR,1,bus339east,bus340east
-MRT Marina,Ferry Docks,busMNF,sailMMN,30,marinaShuttleNorth,
+MRT Marina,Ferry Docks,busMNF,sailMMN,15,marinaShuttleNorth,
 ,,,,,,
 MRT Marina,MRT & IntraRail Stations,busMNR,busMNQ,1,bus339east,bus340east
 MRT Marina,MRT & IntraRail Stations,busMNR,busMNF,1,bus339west,bus340west
