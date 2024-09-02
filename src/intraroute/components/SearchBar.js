@@ -1,20 +1,36 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import styles from './SearchBar.module.css';
 
 function SearchBar(props) {
-    const setStart = props.setStart;
-    const setEnd = props.setEnd;
+    const queryString = window.location.search;
+    const queryParams = new URLSearchParams(queryString);
 
-    const handleOnSelect = (item) => {
-        console.log(item);
-        if (props.startOrEnd === 'start') {
-            setStart(item.id);
+    const [start, setStart] = useState('unselected');
+    const [end, setEnd] = useState('unselected');
+
+    useEffect(() => {
+        if (queryParams.get('start')) {
+            setStart(queryParams.get('start'));
         }
-        if (props.startOrEnd === 'end') {
-            setEnd(item.id);
+        if (queryParams.get('end')) {
+            setEnd(queryParams.get('end'));
         }
+    }, [])
+
+    let startEnd;
+
+    if (props.startOrEnd === 'start') {
+        startEnd = start;
+    } else if (props.startOrEnd === 'end') {
+        startEnd = end;
+    }
+
+    const [manualStop, setManualStop] = useState('');
+
+    if (startEnd !== 'unselected') {
+        setManualStop(startEnd.title);
     }
 
     const formatResult = (item) => {
@@ -24,64 +40,24 @@ function SearchBar(props) {
                     display: 'block',
                     textAlign: 'left',
                     textWrap: 'wrap',
-                }}>{item.title}</div>
+                }}>{item.name}</div>
             </>
         )
     }
 
-    let setMaxResults = props.setMaxResults;
+    const handleOnSelect = (item) => {
+        let url = new URL(window.location.href);
 
-    let manualStop = props.manualStop;
-
-    const setReturnError = props.setReturnError;
-
-    if (props.stopsMap.get(props.start)) {
-        if (props.filters.useAir === false && props.stopsMap.get(props.start).mode === 'air') {
-            setReturnError(true);
-        }
-        if (props.filters.useRail === false && props.stopsMap.get(props.start).mode === 'rail') {
-            setReturnError(true);
-        }
-        if (props.filters.useSail === false && props.stopsMap.get(props.start).mode === 'sail') {
-            setReturnError(true);
-        }
-        if (props.filters.useBahn === false && props.stopsMap.get(props.start).mode === 'bahn') {
-            setReturnError(true);
-        }
-        if (props.filters.useBus === false && (props.stopsMap.get(props.start).mode === 'bus' || props.stopsMap.get(props.start).mode === 'omega')) {
-            setReturnError(true);
-        }
-        if (props.filters.useRailLocal === false && (props.stopsMap.get(props.start).mode === 'railLumeva' || props.stopsMap.get(props.start).mode === 'railScar')) {
-            setReturnError(true);
-        }
-    }
-    if (props.stopsMap.get(props.end)) {
-        if (props.filters.useAir === false && props.stopsMap.get(props.end).mode === 'air') {
-            setReturnError(true);
-        }
-        if (props.filters.useRail === false && props.stopsMap.get(props.end).mode === 'rail') {
-            setReturnError(true);
-        }
-        if (props.filters.useSail === false && props.stopsMap.get(props.end).mode === 'sail') {
-            setReturnError(true);
-        }
-        if (props.filters.useBahn === false && props.stopsMap.get(props.end).mode === 'bahn') {
-            setReturnError(true);
-        }
-        if (props.filters.useBus === false && (props.stopsMap.get(props.end).mode === 'bus' || props.stopsMap.get(props.end).mode === 'omega')) {
-            setReturnError(true);
-        }
-        if (props.filters.useRailLocal === false && (props.stopsMap.get(props.end).mode === 'railLumeva' || props.stopsMap.get(props.end).mode === 'railScar')) {
-            setReturnError(true);
-        }
+        url.searchParams.delete(props.startOrEnd);
+        url.searchParams.append(props.startOrEnd, item.id);
     }
 
-    return (
+    return(
         <div className={styles.container}>
             <ReactSearchAutocomplete
-                items={props.allStopsForSearch}
+                items={props.stopsList}
                 onSelect={handleOnSelect}
-                onSearch={() => {setMaxResults(10)}}
+                onSearch={() => {}}
                 autoFocus
                 formatResult={formatResult}
                 maxResults={props.maxResults}
@@ -92,10 +68,10 @@ function SearchBar(props) {
                 inputSearchString={manualStop}
                 fuseOptions={{
                     keys: [
-                        'keywords', 'mode', 'title'
+                        'keywords', 'mode', 'name'
                     ]
                 }}
-                resultStringKeyName='title'
+                resultStringKeyName='name'
                 styling={{
                     backgroundColor: '#f2f2f2',
                     border: '0px solid black',

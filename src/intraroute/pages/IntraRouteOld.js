@@ -1,18 +1,16 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import intraRoute from '@kyle11231/intraroute';
 import styles from './IntraRoute.module.css';
-import axios from 'axios';
 
 import Path from '../components/Path';
 import Search from '../components/Search';
 import Filters from '../components/Filters';
 
-import excludeModes from '../scripts/exclude-modes';
-
 import intraRouteLogo from '../logos/intraroute.svg';
+import intraRouteLogoWhite from '../logos/intraroute-white.svg';
 import intraRouteLogoShort from '../logos/intraroute-short.svg';
+import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
 function IntraRoute() {
 
@@ -26,10 +24,10 @@ function IntraRoute() {
 
     const queryString = window.location.search;
     const queryParams = new URLSearchParams(queryString);
-    
+
     const [start, setStart] = useState('unselected');
     const [end, setEnd] = useState('unselected');
-    
+
     useEffect(() => {
         if (queryParams.get('start')) {
             setStart(queryParams.get('start'));
@@ -61,31 +59,8 @@ function IntraRoute() {
         setUseSail: setUseSail
     }
 
-    const [stopsList, setStopsList] = useState([]);
+    const [returnError, setReturnError] = useState(false);
     
-    useEffect(() => {
-        let excludeModeList = excludeModes(filters);
-
-        intraRoute.getStopsList({
-            excludeModes: excludeModeList
-        }).then(response => setStopsList(response));
-
-    }, [filters]);
-
-    const [path, setPath] = useState([]);
-
-    useEffect(() => {
-        let excludeModeList = excludeModes(filters);
-
-        intraRoute.findRoute(start, end, {
-            excludeModes: excludeModeList
-        }).then(response => {
-            console.log(response);
-            setPath(response);
-        });
-
-    }, [start, end]);
-
     return (
         <div>
             <Helmet>
@@ -110,8 +85,30 @@ function IntraRoute() {
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>
             <div className={styles.search}>
-                <Search stopsList={stopsList} />
+                <Search
+                    start={start}
+                    setStart={setStart}
+                    end={end}
+                    setEnd={setEnd}
+                    filters={filters}
+                    returnError={returnError}
+                    setReturnError={setReturnError}
+                />
+                <Filters filters={filters} />
             </div>
+            {(start === 'unselected' || end === 'unselected') ?
+                <div className={styles.buffer}></div>
+                :
+                <div className={styles.path}>
+                    <Path
+                        start={start}
+                        end={end}
+                        filters={filters}
+                        returnError={returnError}
+                        setReturnError={setReturnError}
+                    />
+                </div>
+            }
             <div className={styles.logoBox}>
                 <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
             </div>
