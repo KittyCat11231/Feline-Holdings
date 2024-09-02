@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import styles from './IntraRoute.module.css';
 
@@ -22,8 +22,20 @@ function IntraRoute() {
         currentYearEdit = `2024 - ${currentYear}`
     }
 
+    const queryString = window.location.search;
+    const queryParams = new URLSearchParams(queryString);
+
     const [start, setStart] = useState('unselected');
     const [end, setEnd] = useState('unselected');
+
+    useEffect(() => {
+        if (queryParams.get('start')) {
+            setStart(queryParams.get('start'));
+        }
+        if (queryParams.get('end')) {
+            setEnd(queryParams.get('end'));
+        }
+    }, [])
 
     const [useAir, setUseAir] = useState(true);
     const [useBahn, setUseBahn] = useState(true);
@@ -76,7 +88,8 @@ function IntraRoute() {
                 <Search
                     start={start}
                     setStart={setStart}
-                    end={end} setEnd={setEnd}
+                    end={end}
+                    setEnd={setEnd}
                     filters={filters}
                     returnError={returnError}
                     setReturnError={setReturnError}
