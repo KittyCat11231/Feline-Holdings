@@ -10,6 +10,7 @@ function DropdownItem(props) {
             let url = new URL(window.location.href);
             url.searchParams.delete(props.startOrEnd);
             url.searchParams.append(props.startOrEnd, props.id);
+            props.setInputValue(props.name);
             window.history.pushState({}, '', url);
         }}>
             <p className={styles.dropdownText}>{props.name}</p>
@@ -35,6 +36,7 @@ function Dropdown(props) {
                                 name={stop.name}
                                 id={stop.id}
                                 startOrEnd={props.startOrEnd}
+                                setInputValue={props.setInputValue}
                             />
                         )
                     }
@@ -117,6 +119,7 @@ function SearchBar(props) {
                         query={query}
                         startOrEnd={props.startOrEnd}
                         setRenderDropdown={setRenderDropdown}
+                        setInputValue={setInputValue}
                     />
                 </div>
             :
