@@ -11,6 +11,8 @@ import MBS from './pages/MBS';
 import Console from './pages/Console';
 import Construction from './pages/Construction';
 
+import IntraRouteDraft from './intraroute/pages/IntraRouteDraft';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Buffer from './components/Buffer';
@@ -85,6 +87,9 @@ function App() {
             <Route path="/About" element={<Construction />} />
             <Route path="/test" element={<Test />} />
             <Route path="/console" element={<Console />} />
+
+            <Route path="/draft" element={<IntraRouteDraft />} />
+
             <Route path="*" element ={<NoPage />} />
           </Routes>
         </BrowserRouter>

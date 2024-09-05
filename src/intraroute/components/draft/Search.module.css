@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 83%;
+    max-width: 800px;
+    justify-content: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+}
+
+@media (pointer: fine), (pointer: none) {
+    /* desktop */
+    .icon {
+        height: 67px;
+        width: 67px;
+    }
+
+    .random:hover, .swap:hover {
+        filter: drop-shadow(3px 3px 5px gray);
+    }
+
+    .random:active, .swap:active {
+        transform: scale(90%);
+    }
+}
+
+@media (pointer: coarse) {
+    /* mobile */
+    .icon {
+        height: 45px;
+        width: 45px;
+    }
+}
+
+.startContainer, .endContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.endContainer {
+    margin-top: 10px;
+}
+
+.searchBar {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.swap {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.random {
+    margin-left: 10px;
+}
+
+.searchBarStart {
+    position: relative;
+    z-index: 5;
+}
+
+.searchBarEnd {
+    position: relative;
+    z-index: 3;
+}

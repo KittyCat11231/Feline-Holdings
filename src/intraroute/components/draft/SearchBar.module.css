@@ -1,0 +1,39 @@
+.container {
+    height: 67px;
+}
+
+.bar {
+    background-color: #f2f2f2;
+    border: 0px solid black;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    color: #4d4d4d;
+    font-family: 'Poppins';
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.dropdown {
+    background: #dadada;
+    border-radius: 15px;
+    width: 100%;
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.dropdownItem {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.dropdownItem:hover {
+    cursor: pointer;
+}
+
+.dropdownText {
+    margin: 0;
+    color: #4d4d4d;
+    user-select: none;
+}
