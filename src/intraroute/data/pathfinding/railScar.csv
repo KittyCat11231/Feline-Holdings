@@ -16,21 +16,21 @@ Scarborough,MCR HQ,railScarMCR,railScarSUB,1,railScar2north
 Scarborough,MCR HQ,railScarMCR,railScarVET,1,railScar2south
 Scarborough,MCR HQ,railScarMCR,railScarSTD,1,railScar3west
 Scarborough,MCR HQ,railScarMCR,railMCR,30,walk
-Scarborough,MCR HQ,railScarMCR,busSBT,15,walk
+Scarborough,MCR HQ,railScarMCR,busSBT,10,walk
 ,,,,,
 Scarborough,Veterans' Memorial,railScarVET,railScarMCR,1,railScar2north
 Scarborough,Veterans' Memorial,railScarVET,railScarCTY,1,railScar2south
 ,,,,,
 Scarborough,City Plaza,railScarCTY,railScarVET,1,railScar2north
 Scarborough,City Plaza,railScarCTY,railScarFAI,1,railScar2south
-Scarborough,City Plaza,railScarCTY,busSVC,15,walk
+Scarborough,City Plaza,railScarCTY,busSVC,10,walk
 ,,,,,
 Scarborough,Fairstone Heights,railScarFAI,railScarCTY,1,railScar2north
 ,,,,,
 Scarborough,Stadium,railScarSTD,railScarNRH,1,railScar3west
 Scarborough,Stadium,railScarSTD,railScarSTD,1,railScar3east
 Scarborough,Stadium,railScarSTD,railSCR,30,walk
-Scarborough,Stadium,railScarSTD,busSCR,15,walk
+Scarborough,Stadium,railScarSTD,busSCR,10,walk
 ,,,,,
 Scarborough,North Rockham,railScarNRH,railScarORH,1,railScar3west
 Scarborough,North Rockham,railScarNRH,railScarSTD,1,railScar3east
