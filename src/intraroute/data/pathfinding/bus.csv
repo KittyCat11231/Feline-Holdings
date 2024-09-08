@@ -432,9 +432,6 @@ Dekuville,Harbor Airfield,busDHA,busDEK,1,bus344south,
 Dekuville,Harbor Airfield,busDHA,airDHA,10,walk,
 ,,,,,,
 Dekuville,IntraSail Dock,busDEK,busDHA,1,bus344north,
-<<<<<<< Updated upstream
-Dekuville,IntraSail Dock,busDEK,sailDEK,10,walk,
-=======
 Dekuville,IntraSail Dock,busDEK,sailDEK,10,walk,
 ,,,,,,
 Gillmont,Heliport,busGLH,busGLM,1,bus345south,
@@ -477,4 +474,3 @@ Fort Yaxier,International Airport Terminal 4,busFYF,airFYI4,10,walk,
 ,,,,,,
 Fort Yaxier,International Airport Terminal 2,busFYT,busFYF,1,bus205north,
 Fort Yaxier,International Airport Terminal 2,busFYT,airFYI2,10,walk,
->>>>>>> Stashed changes

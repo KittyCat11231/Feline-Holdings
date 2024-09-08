@@ -95,13 +95,10 @@ bus343west,343,busWVP,Waverly,Marina,busWAV,,,,,
 bus343east,343,busWAV,Waverly,Edinburgh Station,busWVP,,,,,
 bus344north,344,busDHA,Dekuville,Harbor Airfield,busDEK,,,,,
 bus344south,344,busDEK,Dekuville,IntraSail Dock,busDHA,,,,,
-<<<<<<< Updated upstream
-=======
 bus345north,345,busGLH,Gillmont,Heliport,busGLM,,,,,
 bus345south,345,busGLM,Gillmont,Marina,busGLH,,,,,
 bus346north,346,busRSZ,Villanueva,Rick Sanchez Airfield,busVLC,busVNU,,,,
 bus346south,346,busVNU,Villanueva,Port,busVLC,busRSZ,,,,
->>>>>>> Stashed changes
 bus401north,401,busGAY,Nippia,Pride Wall,,,,,,
 bus401south,401,busCBT,Central City,Beltway Terminal,,,,,,
 bus402north,402,busMWX,Miu Wan,Expo,,,,,,

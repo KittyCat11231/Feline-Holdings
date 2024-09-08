@@ -885,11 +885,7 @@ Marblegate,Marblelake Heathrow International Airport,airMLH,airMRI,1,air711toMRI
 Marblegate,Marblelake Heathrow International Airport,airMLH,airSEG,1,seg5toSEG,
 Marblegate,Marblelake Heathrow International Airport,airMLH,airEIA,1,wp2toEIA,
 Marblegate,Marblelake Heathrow International Airport,airMLH,airMAX,1,wp5toMAX,
-<<<<<<< Updated upstream
-Marblegate,Marblelake Heathrow International Airport,airMLH,airFYI,1,wp122toFYI,
-=======
 Marblegate,Marblelake Heathrow International Airport,airMLH,airFYI4,1,wp122toFYI,
->>>>>>> Stashed changes
 Marblegate,Marblelake Heathrow International Airport,airMLH,busMLH,10,walk,
 ,,,,,,
 Marisol,Regional Airfield,airMRS,airEIA,1,wp147toEIA,
