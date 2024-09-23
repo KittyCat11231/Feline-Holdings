@@ -1164,7 +1164,7 @@ Verdantium,Fenwick Square,railVFS,railCNW,1,rail17west,rail38south,rail40south,r
 Vermilion,Victory Square,railVVS,railITC,1,rail15north,rail32north,,,
 Vermilion,Victory Square,railVVS,railKNX,1,rail15south,,,,
 Vermilion,Victory Square,railVVS,railEZO,1,rail32south,,,,
-Vermilion,Victory Square,railVVS,sailVVW,30,walk,,,,
+Vermilion,Victory Square,railVVS,busVVS,10,walk,,,,
 ,,,,,,,,,
 Victoria,Coastal Point,railVCP,railSBC,1,rail50north,,,,
 Victoria,Coastal Point,railVCP,railVIC,1,rail50south,,,,
