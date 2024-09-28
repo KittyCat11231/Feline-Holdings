@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.1',
+            '9/28/2024',
+            [
+                'The page will no longer go blank when an error occurs during pathfinding.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.0',
             '7/13/2024',
             [
