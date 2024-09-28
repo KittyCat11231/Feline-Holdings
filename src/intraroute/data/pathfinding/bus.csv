@@ -658,6 +658,8 @@ Weston,Harbour,busWEH,busWHV,1,bus103east,bus104north,bus356east
 Weston,Harbour,busWEH,busWEM,1,bus356west,,
 Weston,Harbour,busWEH,sailWES,10,walk,,
 ,,,,,,,
+Weston,Main Station,busWEM,busWEH,1,bus356east,,
+,,,,,,,
 Lanatam,River Park,busLRV,busLSY,1,bus357south,,
 ,,,,,,,
 Lanatam,Sylla Street,busLSY,busLRV,1,bus357north,,
