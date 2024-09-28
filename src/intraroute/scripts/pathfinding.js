@@ -178,7 +178,8 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 let adjStop = stopsMap.get(currentStop.adjacentStops[i].id);
                 let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
                 let routesLastLeg = currentStop.adjacentStops[i].routes;
-                debugger;
+                console.log(currentStop);
+                console.log(adjStop);
                 let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
                 let adjStopPath = [pathLastLeg];
     
