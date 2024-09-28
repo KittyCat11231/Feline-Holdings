@@ -181,6 +181,9 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 if (!currentStop || !adjStop) {
                     debugger;
                 }
+                if (!currentStop || !adjStop) {
+                    debugger;
+                }
                 let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
                 let adjStopPath = [pathLastLeg];
     
