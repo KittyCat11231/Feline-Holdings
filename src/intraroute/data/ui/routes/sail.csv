@@ -30,3 +30,5 @@ sail5north,mainline,5,Coral Line,sailZAQ,Zaquar,Winfrey Waterport
 sail5south,mainline,5,Coral Line,sailPCH,Peach Bay,Regional Seaport
 sail5Anorth,branch,5a,Thanos Regional,sailTOR,Torres River,null
 sail5Asouth,branch,5a,Thanos Regional,sailMJB,Mojangsburg,null
+sail5Bwest,branch,5b,Manhattan Line,sailZQW,Zaquar,Winfrey Waterport
+sail5Beast,branch,5b,Manhattan Line,sailRVL,Richville,Lakeside Boulevard
