@@ -51,7 +51,7 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = true;
+    const showErrorNotice = false;
     const errorNoticeDate = '10/7/2024';
     
     return (
