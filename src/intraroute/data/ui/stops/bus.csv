@@ -276,8 +276,8 @@ Lakeview,University Transit Centre,busLKE,LKE,bus1east,null,null,,
 Lakeview,University Transit Centre,busLKE,LKE,bus203north,null,null,,
 Lakeview,University Transit Centre,busLKE,LKE,bus203south,null,null,,
 ,,,,,,,,
-Lanark,Boulevard,busLAN,LAN,bus102north,null,null,,
-Lanark,Boulevard,busLAN,LAN,bus102south,null,null,,
+Lanark,Boulevard,busLNK,LNK,bus102north,null,null,,
+Lanark,Boulevard,busLNK,LNK,bus102south,null,null,,
 ,,,,,,,,
 Lanark-Konawa,Horizon National Airport,busHZN,HZN,bus102north,null,null,Lanark,Konawa
 Lanark-Konawa,Horizon National Airport,busHZN,HZN,bus102south,null,null,Lanark,Konawa
