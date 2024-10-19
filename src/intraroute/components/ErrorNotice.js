@@ -9,7 +9,7 @@ function ErrorNotice(props) {
   } else {
     text1 = props.text1;
   }
-  if (props.text2 = 'default') {
+  if (props.text2 === 'default') {
     text2 = 'We appreciate your patience while we work to resolve the issue.'
   } else {
     text2 = props.text2;
@@ -17,8 +17,8 @@ function ErrorNotice(props) {
     return (
         <div className={styles.container}>
             <h1 className={`${styles.text} ${styles.text1}`}>{props.date}</h1>
-            <h1 className={`${styles.text} ${styles.text2}`}>{props.text1}</h1>
-            <h1 className={`${styles.text} ${styles.text3}`}>{props.text2}</h1>
+            <h1 className={`${styles.text} ${styles.text2}`}>{text1}</h1>
+            <h1 className={`${styles.text} ${styles.text3}`}>{text2}</h1>
         </div>
     )
 }
