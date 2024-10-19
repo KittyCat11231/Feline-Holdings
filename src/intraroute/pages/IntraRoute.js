@@ -51,8 +51,10 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = false;
-    const errorNoticeDate = '10/7/2024';
+    const showErrorNotice = true;
+    const errorNoticeDate = '10/19/2024';
+    const errorText1 = 'Route queries including IntraBus 311 between Nippia Pride Wall and Nippia IntraRail Station are not working due to a error in our data.'
+    const errorText2 = 'default';
     
     return (
         <div>
@@ -77,7 +79,7 @@ function IntraRoute() {
             <div className={styles.logoBox}>
                 <img className={styles.topLogo} src={intraRouteLogo} alt='IntraRoute' />
             </div>
-            {showErrorNotice ? <ErrorNotice date={errorNoticeDate} /> : ''}
+            {showErrorNotice ? <ErrorNotice date={errorNoticeDate} text1={errorText1} text2={errorText2} /> : ''}
             <div className={styles.search}>
                 <Search
                     start={start}
