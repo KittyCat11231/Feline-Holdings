@@ -39,7 +39,7 @@ rail24south,black,bulletRail24,IntraRail 24,Rooster Shuttle,railHSK,Haskaa,null,
 rail26north,black,bulletRail26,IntraRail 26,Upwester,railSKO,Skogheim,Central,,,,,,,,,,
 rail26south,black,bulletRail26,IntraRail 26,Upwester,railHZN,Lanark-Konawa,Horizon National Airport,railWTU,railWTD,railAMD,railLUC,railSNW,railLRK,railLAR,railBOR,railICL,railSKO
 rail29north,black,bulletRail29,IntraRail 29,Imperial Service,railOPD,Oparia,Downtown,railOPA,,,,,,,,,
-rail29south,black,bulletRail29,IntraRail 29,Imperial Service,railZQT,Zaquar,Tanzanite Station,,,,,,,,,,
+rail29south,black,bulletRail29,IntraRail 29,Imperial Service,railZQT,Zaquar,Tanzanite Station,railZQN,,,,,,,,,
 rail32north,yellow,bulletRail32,IntraRail 32,Centralen,railWHB,Whitechapel,Border,,,,,,,,,,
 rail32south,yellow,bulletRail32,IntraRail 32,Centralen,railSLZ,Siletz,Salvador Station,,,,,,,,,,
 rail33north,black,bulletRail33,IntraRail 33,Merchanter,railBVC,BirchView,Central,,,,,,,,,,
