@@ -152,6 +152,36 @@ function colors(colorStyles, colorObj, mode, type) {
             colorObj.mainColor = colorStyles.railMCRColor;
             colorObj.filterColor = colorStyles.railMCRFilter;
         }
+        if (type === 'interCityNew') {
+            colorObj.containerColor = colorStyles.railNewInterCityBackground;
+            colorObj.mainColor = colorStyles.railNewInterCityColor;
+            colorObj.filterColor = colorStyles.railNewInterCityFilter;
+        }
+        if (type === 'expressNew') {
+            colorObj.containerColor = colorStyles.railNewExpressBackground;
+            colorObj.mainColor = colorStyles.railNewExpressColor;
+            colorObj.filterColor = colorStyles.railNewExpressFilter;
+        }
+        if (type === 'regionalNew') {
+            colorObj.containerColor = colorStyles.railNewRegionalBackground;
+            colorObj.mainColor = colorStyles.railNewRegionalColor;
+            colorObj.filterColor = colorStyles.railNewRegionalFilter;
+        }
+        if (type === 'urbanNew') {
+            colorObj.containerColor = colorStyles.railNewUrbanBackground;
+            colorObj.mainColor = colorStyles.railNewUrbanColor;
+            colorObj.filterColor = colorStyles.railNewUrbanFilter;
+        }
+        if (type === 'specialNew') {
+            colorObj.containerColor = colorStyles.railNewSpecialBackground;
+            colorObj.mainColor = colorStyles.railNewSpecialColor;
+            colorObj.filterColor = colorStyles.railNewSpecialFilter;
+        }
+        if (type === 'mcrNew') {
+            colorObj.containerColor = colorStyles.railNewMCRBackground;
+            colorObj.mainColor = colorStyles.railNewMCRColor;
+            colorObj.filterColor = colorStyles.railNewMCRFilter;
+        }
     }
     if (mode === 'bus') {
         colorObj.containerColor = colorStyles.grayBackground;

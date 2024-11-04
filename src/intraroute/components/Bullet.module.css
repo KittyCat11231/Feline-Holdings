@@ -2,23 +2,26 @@
     height: 66px;
     margin-top: auto;
     margin-bottom: auto;
+    position: relative;
 }
 
 .railNewBullet {
-    margin-top: -54px;
-    margin-bottom: 0;
-    margin-left: 0px;
-    margin-right: 0;
     text-align: center;
+    width: 50px;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 8px;
 }
 
 .container {
     height: 66px;
-    width: fit-content;
+    width: 66px;
+    position: relative;
 }
 
 .circle {
     height: 66px;
     margin-top: auto;
     margin-bottom: auto;
+    position: absolute;
 }

@@ -110,8 +110,8 @@ function IntraRoute() {
                 <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
             </div>
             <div className={styles.footer1}>
-                <p className={styles.pGray}>IntraRoute Beta 1.0.1</p>
-                <p className={styles.pGray}>9/28/2024</p>
+                <p className={styles.pGray}>IntraRoute Beta 1.0.2</p>
+                <p className={styles.pGray}>11/4/2024</p>
                 <p className={styles.pGray}>Created by kyrie11231 with help from DNAmaster10 & scarycrumb.</p>
                 <p className={styles.pGray}>Additional help provided by megascatterbomb & _Kastle.</p>
                 <p><a href='intraroute/changelog'>Version history & changelog</a></p>
