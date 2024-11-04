@@ -25,7 +25,7 @@ function App() {
     }
   }
   
-  // pingAPI();
+  pingAPI();
   
   return (
     <div id='page-container'>
