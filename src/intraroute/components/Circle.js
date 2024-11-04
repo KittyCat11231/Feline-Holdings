@@ -41,6 +41,12 @@ import trainRailPurple from '../assets/circle-icons/train-rail-purple.svg';
 import trainRailRed from '../assets/circle-icons/train-rail-red.svg';
 import trainRailTan from '../assets/circle-icons/train-rail-tan.svg';
 import trainRailYellow from '../assets/circle-icons/train-rail-yellow.svg';
+import trainRailInterCity from '../assets/circle-icons/train-rail-intercity.svg';
+import trainRailExpress from '../assets/circle-icons/train-rail-express.svg';
+import trainRailRegional from '../assets/circle-icons/train-rail-regional.svg';
+import trainRailUrban from '../assets/circle-icons/train-rail-urban.svg';
+import trainRailSpecial from '../assets/circle-icons/train-rail-special.svg';
+import trainRailMCR from '../assets/circle-icons/train-rail-mcr.svg';
 import mrtLogo from '../assets/mrt-logo.svg';
 
 function Circle(props) {
@@ -170,6 +176,24 @@ function Circle(props) {
     }
     if (props.mode === 'rail' && props.type === 'yellow') {
         srcToUse = trainRailBlack;
+    }
+    if (props.mode === 'rail' && props.type === 'interCityNew') {
+        srcToUse = trainRailInterCity;
+    }
+    if (props.mode === 'rail' && props.type === 'expressNew') {
+        srcToUse = trainRailExpress;
+    }
+    if (props.mode === 'rail' && props.type === 'regionalNew') {
+        srcToUse = trainRailRegional;
+    }
+    if (props.mode === 'rail' && props.type === 'urbanNew') {
+        srcToUse = trainRailUrban;
+    }
+    if (props.mode === 'rail' && props.type === 'specialNew') {
+        srcToUse = trainRailSpecial;
+    }
+    if (props.mode === 'rail' && props.type === 'mcrNew') {
+        srcToUse = trainRailMCR;
     }
     if (props.mode === 'mrtYellowLine') {
         srcToUse = mrtLogo;

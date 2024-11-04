@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.2',
+            '11/4/2024',
+            [
+                'Added assets for new IntraRail line colors and route numbers.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.1',
             '9/28/2024',
             [

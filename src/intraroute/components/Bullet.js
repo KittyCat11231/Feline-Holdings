@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Bullet.module.css';
 
+import circle from '../assets/circle-white.svg';
+
 import bulletBahn1 from '../assets/intrabahn/bullets/1-white.png';
 import bulletBahn1X from '../assets/intrabahn/bullets/1X-white.png';
 import bulletBahn1A from '../assets/intrabahn/bullets/1a-white.png';
@@ -87,6 +89,69 @@ import bulletMCR6 from '../assets/intrarail/bullets/mcr-6-white.png';
 import bulletMCR7 from '../assets/intrarail/bullets/mcr-7-white.png';
 import bulletMCR8 from '../assets/intrarail/bullets/mcr-8-white.png';
 import bulletMCR9 from '../assets/intrarail/bullets/mcr-9-white.png';
+
+import bulletRailNew1 from '../assets/intrarail/bullets new/1.png';
+import bulletRailNew2 from '../assets/intrarail/bullets new/2.png';
+import bulletRailNew3 from '../assets/intrarail/bullets new/3.png';
+import bulletRailNew4 from '../assets/intrarail/bullets new/4.png';
+import bulletRailNew5 from '../assets/intrarail/bullets new/5.png';
+import bulletRailNew6 from '../assets/intrarail/bullets new/6.png';
+import bulletRailNew7 from '../assets/intrarail/bullets new/7.png';
+import bulletRailNew8 from '../assets/intrarail/bullets new/8.png';
+import bulletRailNew9 from '../assets/intrarail/bullets new/9.png';
+import bulletRailNew1X from '../assets/intrarail/bullets new/1X.png';
+import bulletRailNew2X from '../assets/intrarail/bullets new/2X.png';
+import bulletRailNew3X from '../assets/intrarail/bullets new/3X.png';
+import bulletRailNew4X from '../assets/intrarail/bullets new/4X.png';
+import bulletRailNew5X from '../assets/intrarail/bullets new/5X.png';
+import bulletRailNew7X from '../assets/intrarail/bullets new/7X.png';
+import bulletRailNew9X from '../assets/intrarail/bullets new/9X.png';
+import bulletRailNew101 from '../assets/intrarail/bullets new/101.png';
+import bulletRailNew102 from '../assets/intrarail/bullets new/102.png';
+import bulletRailNew103 from '../assets/intrarail/bullets new/103.png';
+import bulletRailNew104 from '../assets/intrarail/bullets new/104.png';
+import bulletRailNew105 from '../assets/intrarail/bullets new/105.png';
+import bulletRailNew106 from '../assets/intrarail/bullets new/106.png';
+import bulletRailNew107 from '../assets/intrarail/bullets new/107.png';
+import bulletRailNew107X from '../assets/intrarail/bullets new/107X.png';
+import bulletRailNew201 from '../assets/intrarail/bullets new/201.png';
+import bulletRailNew202 from '../assets/intrarail/bullets new/202.png';
+import bulletRailNew203 from '../assets/intrarail/bullets new/203.png';
+import bulletRailNew204 from '../assets/intrarail/bullets new/204.png';
+import bulletRailNew205 from '../assets/intrarail/bullets new/205.png';
+import bulletRailNew206 from '../assets/intrarail/bullets new/206.png';
+import bulletRailNew207 from '../assets/intrarail/bullets new/207.png';
+import bulletRailNew208 from '../assets/intrarail/bullets new/208.png';
+import bulletRailNew209 from '../assets/intrarail/bullets new/209.png';
+import bulletRailNew210W from '../assets/intrarail/bullets new/210W.png';
+import bulletRailNew210E from '../assets/intrarail/bullets new/210E.png';
+import bulletRailNew211 from '../assets/intrarail/bullets new/211.png';
+import bulletRailNew212 from '../assets/intrarail/bullets new/212.png';
+import bulletRailNew213 from '../assets/intrarail/bullets new/213.png';
+import bulletRailNew214 from '../assets/intrarail/bullets new/214.png';
+import bulletRailNew215 from '../assets/intrarail/bullets new/215.png';
+import bulletRailNew216 from '../assets/intrarail/bullets new/216.png';
+import bulletRailNew301 from '../assets/intrarail/bullets new/301.png';
+import bulletRailNew302 from '../assets/intrarail/bullets new/302.png';
+import bulletRailNew303 from '../assets/intrarail/bullets new/303.png';
+import bulletRailNew304 from '../assets/intrarail/bullets new/304.png';
+import bulletRailNew305 from '../assets/intrarail/bullets new/305.png';
+import bulletRailNew306 from '../assets/intrarail/bullets new/306.png';
+import bulletRailNew307 from '../assets/intrarail/bullets new/307.png';
+import bulletRailNew308 from '../assets/intrarail/bullets new/308.png';
+import bulletRailNew309 from '../assets/intrarail/bullets new/309.png';
+import bulletRailNew310 from '../assets/intrarail/bullets new/310.png';
+import bulletRailNew401 from '../assets/intrarail/bullets new/401.png';
+import bulletRailNew501 from '../assets/intrarail/bullets new/501.png';
+import bulletRailNew501A from '../assets/intrarail/bullets new/501A.png';
+import bulletRailNew502 from '../assets/intrarail/bullets new/502.png';
+import bulletRailNew503 from '../assets/intrarail/bullets new/503.png';
+import bulletRailNew504 from '../assets/intrarail/bullets new/504.png';
+import bulletRailNew505 from '../assets/intrarail/bullets new/505.png';
+import bulletRailNew506 from '../assets/intrarail/bullets new/506.png';
+import bulletRailNew507 from '../assets/intrarail/bullets new/507.png';
+import bulletRailNew508 from '../assets/intrarail/bullets new/508.png';
+import bulletRailNew509 from '../assets/intrarail/bullets new/509.png';
 
 import bahnData from '../data/ui/routes/bahn.json';
 import railData from '../data/ui/routes/rail.json';
@@ -182,6 +247,77 @@ function Bullet(props) {
     bulletMap.set('bulletMCR8', bulletMCR8);
     bulletMap.set('bulletMCR9', bulletMCR9);
 
+    const railNewTypes = ['interCityNew', 'expressNew', 'regionalNew', 'urbanNew', 'specialNew', 'mcrNew'];
+
+    let useRailNew = false;
+
+    if (props.mode === 'rail' && railNewTypes.includes(props.type)) {
+        useRailNew = true;
+    }
+
+    bulletMap.set('bulletRailNew1', bulletRailNew1);
+    bulletMap.set('bulletRailNew2', bulletRailNew2);
+    bulletMap.set('bulletRailNew3', bulletRailNew3);
+    bulletMap.set('bulletRailNew4', bulletRailNew4);
+    bulletMap.set('bulletRailNew5', bulletRailNew5);
+    bulletMap.set('bulletRailNew6', bulletRailNew6);
+    bulletMap.set('bulletRailNew7', bulletRailNew7);
+    bulletMap.set('bulletRailNew8', bulletRailNew8);
+    bulletMap.set('bulletRailNew9', bulletRailNew9);
+    bulletMap.set('bulletRailNew1X', bulletRailNew1X);
+    bulletMap.set('bulletRailNew2X', bulletRailNew2X);
+    bulletMap.set('bulletRailNew3X', bulletRailNew3X);
+    bulletMap.set('bulletRailNew4X', bulletRailNew4X);
+    bulletMap.set('bulletRailNew5X', bulletRailNew5X);
+    bulletMap.set('bulletRailNew7X', bulletRailNew7X);
+    bulletMap.set('bulletRailNew9X', bulletRailNew9X);
+    bulletMap.set('bulletRailNew101', bulletRailNew101);
+    bulletMap.set('bulletRailNew102', bulletRailNew102);
+    bulletMap.set('bulletRailNew103', bulletRailNew103);
+    bulletMap.set('bulletRailNew104', bulletRailNew104);
+    bulletMap.set('bulletRailNew105', bulletRailNew105);
+    bulletMap.set('bulletRailNew106', bulletRailNew106);
+    bulletMap.set('bulletRailNew107', bulletRailNew107);
+    bulletMap.set('bulletRailNew107X', bulletRailNew107X);
+    bulletMap.set('bulletRailNew201', bulletRailNew201);
+    bulletMap.set('bulletRailNew202', bulletRailNew202);
+    bulletMap.set('bulletRailNew203', bulletRailNew203);
+    bulletMap.set('bulletRailNew204', bulletRailNew204);
+    bulletMap.set('bulletRailNew205', bulletRailNew205);
+    bulletMap.set('bulletRailNew206', bulletRailNew206);
+    bulletMap.set('bulletRailNew207', bulletRailNew207);
+    bulletMap.set('bulletRailNew208', bulletRailNew208);
+    bulletMap.set('bulletRailNew209', bulletRailNew209);
+    bulletMap.set('bulletRailNew210W', bulletRailNew210W);
+    bulletMap.set('bulletRailNew210E', bulletRailNew210E);
+    bulletMap.set('bulletRailNew211', bulletRailNew211);
+    bulletMap.set('bulletRailNew212', bulletRailNew212);
+    bulletMap.set('bulletRailNew213', bulletRailNew213);
+    bulletMap.set('bulletRailNew214', bulletRailNew214);
+    bulletMap.set('bulletRailNew215', bulletRailNew215);
+    bulletMap.set('bulletRailNew216', bulletRailNew216);
+    bulletMap.set('bulletRailNew301', bulletRailNew301);
+    bulletMap.set('bulletRailNew302', bulletRailNew302);
+    bulletMap.set('bulletRailNew303', bulletRailNew303);
+    bulletMap.set('bulletRailNew304', bulletRailNew304);
+    bulletMap.set('bulletRailNew305', bulletRailNew305);
+    bulletMap.set('bulletRailNew306', bulletRailNew306);
+    bulletMap.set('bulletRailNew307', bulletRailNew307);
+    bulletMap.set('bulletRailNew308', bulletRailNew308);
+    bulletMap.set('bulletRailNew309', bulletRailNew309);
+    bulletMap.set('bulletRailNew310', bulletRailNew310);
+    bulletMap.set('bulletRailNew401', bulletRailNew401);
+    bulletMap.set('bulletRailNew501', bulletRailNew501);
+    bulletMap.set('bulletRailNew501A', bulletRailNew501A);
+    bulletMap.set('bulletRailNew502', bulletRailNew502);
+    bulletMap.set('bulletRailNew503', bulletRailNew503);
+    bulletMap.set('bulletRailNew504', bulletRailNew504);
+    bulletMap.set('bulletRailNew505', bulletRailNew505);
+    bulletMap.set('bulletRailNew506', bulletRailNew506);
+    bulletMap.set('bulletRailNew507', bulletRailNew507);
+    bulletMap.set('bulletRailNew508', bulletRailNew508);
+    bulletMap.set('bulletRailNew509', bulletRailNew509);
+
     let routes;
     if (props.mode === 'bahn') {
         routes = bahnData;
@@ -199,9 +335,19 @@ function Bullet(props) {
         }
     }
 
-    return (
-        <img className={styles.bullet} src={bullet} alt={altText} />
-    )
+    if (!useRailNew) {
+        return (
+            <img className={styles.bullet} src={bullet} alt={altText} />
+        )
+    } else {
+        return (
+            <div className={styles.container}>
+                <img className={styles.circle} src={circle} alt='circle' />
+                <img className={styles.railNewBullet} src={bullet} alt={altText} />
+            </div>
+        )
+    }
+
 }
 
 export default Bullet;
