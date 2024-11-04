@@ -14,6 +14,8 @@ import intraRouteLogoShortWhite from '../logos/intraroute-short-white.svg';
 
 import ErrorNotice from '../components/ErrorNotice';
 
+import Route from '../components/Route';
+
 function IntraRoute() {
 
     const currentYear = new Date().getFullYear();

@@ -361,6 +361,54 @@
     filter: invert(37%) sepia(86%) saturate(3183%) hue-rotate(212deg) brightness(94%) contrast(82%);
 }
 
+.railNewInterCityBackground {
+    background-color: #63dbd6;
+}
+
+.railNewInterCityColor {
+    color: #63dbd6;
+}
+
+.railNewExpressBackground {
+    background-color: #f082a5;
+}
+
+.railNewExpressColor {
+    color: #f082a5;
+}
+
+.railNewRegionalBackground {
+    background-color: #da1714;
+}
+
+.railNewRegionalColor {
+    color: #da1714;
+}
+
+.railNewUrbanBackground {
+    background-color: #27d950;
+}
+
+.railNewUrbanColor {
+    color: #27d950;
+}
+
+.railNewSpecialBackground {
+    background-color: #f4bd21;
+}
+
+.railNewSpecialColor {
+    color: #f4bd21;
+}
+
+.railNewMCRBackground {
+    background-color: #0000ff;
+}
+
+.railNewMCRColor {
+    color: #0000ff;
+}
+
 .busOmegaBackground {
     background-color: #ff0000;
 }
