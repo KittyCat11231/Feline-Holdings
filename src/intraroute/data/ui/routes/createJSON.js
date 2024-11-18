@@ -27,9 +27,15 @@ function parseFiles(mode) {
                 let id = row[0];
                 let routeMode = mode;
                 let type = row[1];
-                let bullet = row[2];
+                let bullet = null;
+                let altText = null;
                 let num = null;
-                let altText = row[3];
+                if (['interCityNew', 'expressNew', 'regionalNew', 'urbanNew', 'specialNew', 'mcrNew'].includes(type)) {
+                    num = row[2];
+                } else {
+                    bullet = row[2];
+                    altText = row[3];
+                }
                 let routeName = row[4];
                 let destination = row[5];
                 let destinationCity = row[6];

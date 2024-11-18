@@ -17,10 +17,15 @@ function Num(props) {
     colors(colorStyles, colorObj, props.mode, props.type);
 
     let renderNumSail = false;
+    let renderNumRail = false;
     let renderNumRailScar = false;
     let renderNumRailLumeva = false;
+
     if (props.mode === 'sail') {
         renderNumSail = true;
+    }
+    if (props.mode === 'rail') {
+        renderNumRail = true;
     }
     if (props.mode === 'railLumeva') {
         renderNumRailLumeva = true;
@@ -33,6 +38,7 @@ function Num(props) {
         <div className={styles.container}>
             <img className={styles.circle} src={circle} alt='circle' />
             {renderNumSail ? <p className={`${styles.numSail} ${colorObj.mainColor}`}>[ {props.num} ]</p> : ''}
+            {renderNumRail ? <p className={`${styles.numRail} ${colorObj.mainColor}`}>{props.num}</p> : ''}
             {renderNumRailScar ? <p className={`${styles.numRailScar} ${colorObj.mainColor}`}>{props.num}</p> : ''}
             {renderNumRailLumeva ? <p className={`${styles.numRailLumeva} ${colorObj.mainColor}`}>{props.num}</p> : ''}
         </div>

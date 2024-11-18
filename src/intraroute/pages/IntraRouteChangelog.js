@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.3',
+            '11/18/2024',
+            [
+                'Changed how new IntraRail route numbers are displayed.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.2',
             '11/4/2024',
             [

@@ -8,6 +8,16 @@
     text-align: center;
 }
 
+.numRail {
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-top: -58px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 0;
+    text-align: center;
+}
+
 .numRailLumeva {
     font-weight: 700;
     font-size: 1.7rem;
