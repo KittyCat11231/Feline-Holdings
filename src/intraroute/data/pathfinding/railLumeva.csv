@@ -1,4 +1,5 @@
 Peacopolis,West,railLumevaPCW,railLumevaCBD,1,railLumeva1south
+Peacopolis,West,railLumevaPCW,airPCE,30,walk
 ,,,,,
 Peacopolis,CBD,railLumevaCBD,railLumevaPCW,1,railLumeva1north
 Peacopolis,CBD,railLumevaCBD,railLumevaMAY,1,railLumeva1south
@@ -11,7 +12,6 @@ Foresne,Highlands,railLumevaHGH,railLumevaFLV,1,railLumeva1south
 ,,,,,
 Foresne,Liveray,railLumevaFLV,railLumevaHGH,1,railLumeva1north
 Foresne,Liveray,railLumevaFLV,railLumevaBLM,1,railLumeva1south
-Foresne,Liveray,railLumevaFLV,railFLV,30,walk
 ,,,,,
 Foresne,Blomrand,railLumevaBLM,railLumevaFLV,1,railLumeva1north
 Foresne,Blomrand,railLumevaBLM,railLumevaFSN,1,railLumeva1south

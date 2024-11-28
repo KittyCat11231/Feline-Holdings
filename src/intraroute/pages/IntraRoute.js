@@ -53,10 +53,10 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = false;
-    const errorNoticeDate = '10/27/2024';
-    const errorText1 = 'default'
-    const errorText2 = 'default';
+    const showErrorNotice = true;
+    const errorNoticeDate = 'Until Further Notice';
+    const errorText1 = 'All IntraRail lines are subject to intermittent suspensions due to ongoing network redesign work. Some IntraRail lines recommended by IntraRoute may not currently be in service.'
+    const errorText2 = 'Please check the IntraRail wiki page at felineholdings.com/IntraRail for up to date service status. We apologize for any inconvenience.';
     
     return (
         <div>
