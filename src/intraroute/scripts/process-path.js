@@ -227,7 +227,7 @@ function processPath(finalPath, processedPath, filters) {
                 let destinationStopName = 'null';
                 if (Array.isArray(route.useFullNameIn)) {
                     route.useFullNameIn.forEach(stop => {
-                        if (stop === path.stop1) {
+                        if (stop === path.stop1 || stop === 'any') {
                             destinationStopName = route.destinationStopName;
                         }
                     })
