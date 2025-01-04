@@ -606,24 +606,24 @@ Firewood City,Airport,airFWC,FWC,air685toFCE,Gate A1,null,,,
 Firewood City,Airport,airFWC,FWC,wp193toEIA,Gate A2,null,,,
 Firewood City,Airport,airFWC,FWC,heli21toNIL,Helipad A4,null,,,
 ,,,,,,,,,
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air201toCWI,Ground Gates,Gate 21,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air306toEBI,Concourse B,Gate 1,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air410toWOI,Concourse B,Gate 1,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air531toNIL,Ground Gates,Gate 21,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air561toFYI,Concourse E,Gate 1,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air581toZAQ,Ground Gates,Gate 22,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air593toBVL,Concourse B,Gate 3,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air594toKTI,Concourse E,Gate 1,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air595toEEA,Concourse B,Gate 3,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air596toDBC,Ground Gates,Gate 22,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air597toIXM,Ground Gates,Gate 23,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air598toDHA,Ground Gates,Gate 23,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air649toEIA,Concourse B,Gate 4,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,air724toOSI,Concourse B,Gate 3,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,wp133toMAX,Concourse E,null,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,wp134toBVL,Concourse E,null,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,wp189toOPA,Ground Gates,Gate 32,Formosa,Sealane,Danielston
-Formosa-Sealane-Danielston,UCWT International Airport,airCWI,CWI,heamp9toHMH,Heli Gates,Gate 11,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air201toCWI,Ground Gates,Gate 21,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air306toEBI,Concourse B,Gate 1,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air410toWOI,Concourse B,Gate 1,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air531toNIL,Ground Gates,Gate 21,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air561toFYI,Concourse E,Gate 1,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air581toZAQ,Ground Gates,Gate 22,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air593toBVL,Concourse B,Gate 3,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air594toKTI,Concourse E,Gate 1,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air595toEEA,Concourse B,Gate 3,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air596toDBC,Ground Gates,Gate 22,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air597toIXM,Ground Gates,Gate 23,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air598toDHA,Ground Gates,Gate 23,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air649toEIA,Concourse B,Gate 4,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,air724toOSI,Concourse B,Gate 3,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,wp133toMAX,Concourse E,null,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,wp134toBVL,Concourse E,null,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,wp189toOPA,Ground Gates,Gate 32,Formosa,Sealane,Danielston
+UCWT International Airport,null,airCWI,CWI,heamp9toHMH,Heli Gates,Gate 11,Formosa,Sealane,Danielston
 ,,,,,,,,,
 Fort Yaxier,Airfield,airFYA,FYA,air153toSEG,Gate 7,null,,,
 Fort Yaxier,Airfield,airFYA,FYA,air202toWMI,Gate 7,null,,,
@@ -863,21 +863,21 @@ Macapa,IntraAir Poseidon Slip,airMIP,MIP,poseidon9toZAQ,null,null,,,
 Macapa,IntraAir Poseidon Slip,airMIP,MIP,poseidon10toVIP,null,null,,,
 Macapa,IntraAir Poseidon Slip,airMIP,MIP,poseidon12toAPR,null,null,,,
 ,,,,,,,,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air214toWMI,Gate C2,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air304toEBI,Gate B3,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air402toWOI,Gate B5,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air517toCBI,Gate B3,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air545toATC,Gate B5,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air567toLAR,Gate B3,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air568toIXM,Gate B4,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air569toKNT,Gate B4,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air570toKPC,Gate C2,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air571toCIA,Gate C2,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,air711toMRI,Gate B5,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,seg5toSEG,Gate C9,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,wp2toEIA,Gate B8,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,wp5toMAX,Gate E3,null,Lakeview,,
-Marblegate,Marblelake Heathrow International Airport,airMLH,MLH,wp122toFYI,Gate B6,null,Lakeview,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air214toWMI,Gate C2,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air304toEBI,Gate B3,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air402toWOI,Gate B5,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air517toCBI,Gate B3,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air545toATC,Gate B5,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air567toLAR,Gate B3,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air568toIXM,Gate B4,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air569toKNT,Gate B4,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air570toKPC,Gate C2,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air571toCIA,Gate C2,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,air711toMRI,Gate B5,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,seg5toSEG,Gate C9,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,wp2toEIA,Gate B8,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,wp5toMAX,Gate E3,null,,,
+Marblegate-Lakeview,Marblelake Heathrow International Airport,airMLH,MLH,wp122toFYI,Gate B6,null,,,
 ,,,,,,,,,
 Marisol,Regional Airfield,airMRS,MRS,wp147toEIA,null,null,,,
 ,,,,,,,,,

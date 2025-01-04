@@ -5,7 +5,9 @@ sail1Asouth,branch,1a,Estival Zephyr,sailTUN,Tung Wan,Queen Elizabeth II Seaport
 sail1Bnorth,branch,1b,Weezer Line,sailWEZ,Deadbush,Port of Weezerville
 sail1Bsouth,branch,1b,Weezer Line,sailNWB,Newbourne,null
 sail1Cnorth,branch,1c,Nansei Regional,sailSHN,Shenghua,International Ferry Terminal
-sail1Csouth,branch,1c,Nansei Regional,sailSHA,Shahai,null
+sail1Csouth,branch,1c,Nansei Regional,sailSHA,Shahai,Ferry Terminal
+sail1Dwest,branch,1d,Shui Sprinter,sailSHC,Shui Chau,Ferry Pier
+sail1Deast,branch,1d,Shui Sprinter,sailKAZ,Kazeshima,Ferry Terminal
 sail2north,mainline,2,Seneca Service,sailMMN,MRT Marina,null
 sail2south,mainline,2,Seneca Service,sailZQW,Zaquar,Winfrey Waterport
 sail2Xnorth,express,2X,Intra Express,sailMMN,MRT Marina,null
