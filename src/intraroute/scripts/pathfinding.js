@@ -5,8 +5,6 @@ import bahnStops from '../data/pathfinding/bahn.json';
 import busStops from '../data/pathfinding/bus.json';
 import omegaStops from '../data/pathfinding/omega.json';
 import railStops from '../data/pathfinding/rail.json';
-import railLumevaStops from '../data/pathfinding/railLumeva.json';
-import railScarStops from '../data/pathfinding/railScar.json';
 import sailStops from '../data/pathfinding/sail.json';
 
 import processPath from './process-path';
@@ -53,10 +51,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
         if (filters.useRail === true) {
             addToAllStops(railStops);
         }
-        if (filters.useRailLocal === true) {
-            addToAllStops(railLumevaStops);
-            addToAllStops(railScarStops);
-        }
         if (filters.useSail === true) {
             addToAllStops(sailStops);
         }
@@ -78,9 +72,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 if (stop.id.indexOf('rail') === 0 && !['railLumeva', 'railScar', 'mcr'].some(s => stop.id.indexOf(s) === 0)) {
                     mode = 'rail';
                 }
-                if (['railLumeva', 'railScar'].some(s => stop.id.indexOf(s) === 0)) {
-                    mode = 'railLocal';
-                }
                 if (stop.id.indexOf('sail') === 0) {
                     mode = 'sail';
                 }
@@ -89,7 +80,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                     bahn: 'useBahn',
                     bus: 'useBus',
                     rail: 'useRail',
-                    railLocal: 'useRailLocal',
                     sail: 'useSail'
                 };
                 

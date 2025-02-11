@@ -8,8 +8,6 @@ import bahnStops from '../intraroute/data/pathfinding/bahn.json';
 import busStops from '../intraroute/data/pathfinding/bus.json';
 import omegaStops from '../intraroute/data/pathfinding/omega.json';
 import railStops from '../intraroute/data/pathfinding/rail.json';
-import railLumevaStops from '../intraroute/data/pathfinding/railLumeva.json';
-import railScarStops from '../intraroute/data/pathfinding/railScar.json';
 import sailStops from '../intraroute/data/pathfinding/sail.json';
 
 function Test1() {
@@ -27,8 +25,6 @@ function Test1() {
     addValidIds(busStops);
     addValidIds(omegaStops);
     addValidIds(railStops);
-    addValidIds(railLumevaStops);
-    addValidIds(railScarStops);
     addValidIds(sailStops);
 
     const [inputValue, setInputValue] = useState('');

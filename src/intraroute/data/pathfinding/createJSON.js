@@ -79,5 +79,3 @@ parseFiles('rail');
 parseFiles('sail');
 parseFiles('bus');
 parseFiles('omega');
-parseFiles('railScar');
-parseFiles('railLumeva');

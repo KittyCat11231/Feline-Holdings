@@ -28,7 +28,7 @@ function Route(props) {
     let useNum = false;
     let useCircle = false;
 
-    if (['bahn', 'rail'].includes(props.mode) && !(['interCityNew', 'expressNew', 'regionalNew', 'urbanNew', 'specialNew'].includes(props.type))) {
+    if (['bahn', 'rail'].includes(props.mode) && !(['interCityNew', 'expressNew', 'regionalNew', 'urbanNew', 'specialNew', 'mcrNew'].includes(props.type))) {
         useBullet = true;
     }
     if (['sail', 'railScar', 'railLumeva'].includes(props.mode)) {

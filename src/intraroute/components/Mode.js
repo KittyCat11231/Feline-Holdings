@@ -101,12 +101,12 @@ function Mode(props) {
         boxStyles = styles.omegaBox;
         logoStyles = styles.omegaLogo;
     }
-    if (props.mode === 'rail' && props.type !== 'mcr') {
+    if (props.mode === 'rail' && props.type !== 'mcr' && props.type !== 'mcrNew') {
         srcToUse = railLogo;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
     }
-    if (props.mode === 'rail' && props.type === 'mcr') {
+    if (props.mode === 'rail' && (props.type === 'mcr' || props.type === 'mcrNew')) {
         srcToUse = mcrLogo;
         boxStyles = styles.mcrBox;
         logoStyles = styles.mcrLogo;

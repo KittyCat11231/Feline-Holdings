@@ -3,8 +3,6 @@ import bahnStops from '../data/ui/stops/bahn.json';
 import busStops from '../data/ui/stops/bus.json';
 import omegaStops from '../data/ui/stops/omega.json';
 import railStops from '../data/ui/stops/rail.json';
-import railLumevaStops from '../data/ui/stops/railLumeva.json';
-import railScarStops from '../data/ui/stops/railScar.json';
 import sailStops from '../data/ui/stops/sail.json';
 
 function createAllStopsForSearch(allStopsForSearch) {
@@ -39,8 +37,6 @@ function createAllStopsForSearch(allStopsForSearch) {
     processStops(busStops, 'bus', 'IntraBus');
     processStops(omegaStops, 'omega', 'OMEGAbus!');
     processStops(railStops, 'rail', 'IntraRail');
-    processStops(railLumevaStops, 'railLumeva', 'MCR Urban Lumeva');
-    processStops(railScarStops, 'railScar', 'MCR Urban Scarborough');
     processStops(sailStops, 'sail', 'IntraSail');
 }
 

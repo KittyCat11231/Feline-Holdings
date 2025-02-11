@@ -20,14 +20,16 @@ sail3west,mainline,3,Autumnal Line,sailAUT,Autunno Highlands,Ankomsthavn Ferry T
 sail3east,mainline,3,Autumnal Line,sailMMN,MRT Marina,null
 sail3Awest,branch,3a,Sea Beast,sailCBK,Chan Bay,Keppel Terminal
 sail3Aeast,branch,3a,Sea Beast,sailVIN,San Vincenzo,Rivers Cuomo Ferry Terminal
+sail3Bwest,branch,3b,Uwu Line,sailUWU,Uwu Town,Ferry Terminal
+sail3Beast,branch,3b,Uwu Line,sailWES,Weston,Harbour
 sail4north,mainline,4,Meridian,sailZQW,Zaquar,Winfrey Waterport
 sail4south,mainline,4,Meridian,sailCAM,Cape Cambridge,International Seaport
 sail4Awest,branch,4a,Delmarva Line,sailZQW,Zaquar,Winfrey Waterport
 sail4Aeast,branch,4a,Delmarva Line,sailBCH,Beach City,null
 sail4Bwest,branch,4b,Rattler Line,sailSON,Port Sonder,null
 sail4Beast,branch,4b,Rattler Line,sailPDB,Port Diamondback,null
-sail4Cwest,branch,4c,Coaster,sailOCS,Oceanside,null
-sail4Ceast,branch,4c,Coaster,sailCAM,Cape Cambridge,International Seaport
+sail4Cnorth,branch,4c,Coaster,sailOCS,Oceanside,null
+sail4Csouth,branch,4c,Coaster,sailGWF,Greenwolf,Ferry Terminal
 sail5north,mainline,5,Coral Line,sailZAQ,Zaquar,Winfrey Waterport
 sail5south,mainline,5,Coral Line,sailPCH,Peach Bay,Regional Seaport
 sail5Anorth,branch,5a,Thanos Regional,sailTOR,Torres River,null

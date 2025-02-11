@@ -15,12 +15,6 @@ import omegaStops from '../data/ui/stops/omega.json';
 import railRoutes from '../data/ui/routes/rail.json';
 import railStops from '../data/ui/stops/rail.json';
 
-import railLumevaRoutes from '../data/ui/routes/railLumeva.json';
-import railLumevaStops from '../data/ui/stops/railLumeva.json';
-
-import railScarRoutes from '../data/ui/routes/railScar.json';
-import railScarStops from '../data/ui/stops/railScar.json';
-
 import sailRoutes from '../data/ui/routes/sail.json';
 import sailStops from '../data/ui/stops/sail.json';
 
@@ -57,12 +51,6 @@ function processPath(finalPath, processedPath, filters) {
     if (filters.useRail === true) {
         helpers.mergeArrayIntoArray(railStops, allStops);
         helpers.mergeArrayIntoArray(railRoutes, allRoutes);
-    }
-    if (filters.useRailLocal === true) {
-        helpers.mergeArrayIntoArray(railLumevaStops, allStops);
-        helpers.mergeArrayIntoArray(railLumevaRoutes, allRoutes);
-        helpers.mergeArrayIntoArray(railScarStops, allStops);
-        helpers.mergeArrayIntoArray(railScarRoutes, allRoutes);
     }
     if (filters.useSail === true) {
         helpers.mergeArrayIntoArray(sailStops, allStops);
@@ -227,7 +215,7 @@ function processPath(finalPath, processedPath, filters) {
                 let destinationStopName = 'null';
                 if (Array.isArray(route.useFullNameIn)) {
                     route.useFullNameIn.forEach(stop => {
-                        if (stop === path.stop1 || stop === 'any') {
+                        if (stop === path.stop1 || stop === 'all') {
                             destinationStopName = route.destinationStopName;
                         }
                     })

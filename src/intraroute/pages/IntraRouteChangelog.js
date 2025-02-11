@@ -33,6 +33,18 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.4',
+            '2/10/2025',
+            [
+                'Fixed a visual bug with the display of MCR lines.',
+                'Fixed a bug with destination name displays on some lines.',
+                'Removed old Intra Rapid Transit systems which are no longer a part of Intra.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.3',
             '11/18/2024',
             [

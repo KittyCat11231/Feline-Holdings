@@ -53,7 +53,7 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = true;
+    const showErrorNotice = false;
     const errorNoticeDate = 'Until Further Notice';
     const errorText1 = 'All IntraRail lines are subject to intermittent suspensions due to ongoing network redesign work. Some IntraRail lines recommended by IntraRoute may not currently be in service.'
     const errorText2 = 'Please check the IntraRail wiki page at felineholdings.com/IntraRail for up to date service status. We apologize for any inconvenience.';
@@ -110,8 +110,8 @@ function IntraRoute() {
                 <img className={styles.bottomLogo} src={intraRouteLogoShort} alt='IntraRoute' />
             </div>
             <div className={styles.footer1}>
-                <p className={styles.pGray}>IntraRoute Beta 1.0.3</p>
-                <p className={styles.pGray}>11/18/2024</p>
+                <p className={styles.pGray}>IntraRoute Beta 1.0.4</p>
+                <p className={styles.pGray}>2/10/2025</p>
                 <p className={styles.pGray}>Created by kyrie11231 with help from DNAmaster10 & scarycrumb.</p>
                 <p className={styles.pGray}>Additional help provided by megascatterbomb & _Kastle.</p>
                 <p><a href='intraroute/changelog'>Version history & changelog</a></p>
