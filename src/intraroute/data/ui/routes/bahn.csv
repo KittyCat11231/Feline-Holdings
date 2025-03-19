@@ -1,9 +1,11 @@
-bahn1north,mainline,bulletBahn1,IntraBahn 1,Intrepid,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1north,mainline,bulletBahn1,IntraBahn 1,Intrepid,bahnSVT,Venceslo,Stadium-Village Terminal,bahnVBP
 bahn1south,mainline,bulletBahn1,IntraBahn 1,Intrepid,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
-bahn1Xnorth,express,bulletBahn1X,IntraBahn 1X,Intrepid Express,bahnWHQ,Whiteley,Quins Junction,bahnWHO
+bahn1Xnorth,express,bulletBahn1X,IntraBahn 1X,Intrepid Express,bahnSVT,Venceslo,Stadium-Village Terminal,
 bahn1Xsouth,express,bulletBahn1X,IntraBahn 1X,Intrepid Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
-bahn1Inorth,branch,bulletBahn1I,IntraBahn 1i,Schillerton Branch North,bahnWHQ,Whiteley,Quins Junction,
+bahn1Inorth,branch,bulletBahn1I,IntraBahn 1i,Schillerton Branch North,bahnSVT,Venceslo,Stadium-Village Terminal,bahnVBP
 bahn1Isouth,branch,bulletBahn1I,IntraBahn 1i,Schillerton Branch North,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
+bahn1IXnorth,branch,bulletBahn1IX,IntraBahn 1iX,Schillerton Branch North Express,bahnSVT,Venceslo,Stadium-Village Terminal,
+bahn1IXsouth,branch,bulletBahn1IX,IntraBahn 1iX,Schillerton Branch North Express,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
 bahn1Jnorth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
 bahn1Jsouth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
 bahn1JXnorth,branch,bulletBahn1JX,IntraBahn 1jX,Schillerton Branch South Express,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
