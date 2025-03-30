@@ -53,7 +53,7 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = true;
+    const showErrorNotice = false;
     const errorNoticeDate = '3/30/2025';
     const errorText1 = 'IntraRoute is currently experiencing errors following a recent data update.'
     const errorText2 = 'We are currently working to identify and resolve the problem.';
