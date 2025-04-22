@@ -183,6 +183,10 @@ function processPath(finalPath, processedPath, filters) {
                 console.log(route);
                 let codeshare1 = 'null';
                 let codeshare2 = 'null';
+                if (!route) {
+                    console.log(routeID);
+                    console.warn(`Failed to find the following route: ${routeID}. Please report this issue to katiee11231.`)
+                }
                 if (Array.isArray(route.codeshares)) {
                     codeshare1 = route.codeshares[0];
                     if (route.codeshares[1]) {

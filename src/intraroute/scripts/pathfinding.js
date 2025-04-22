@@ -169,6 +169,9 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 // console.log(currentStop.adjacentStops[i].id);
                 let adjStopNewTime = currentStop.shortestTime + currentStop.adjacentStops[i].weight;
                 let routesLastLeg = currentStop.adjacentStops[i].routes;
+                if (!adjStop) {
+                    console.warn(`Could not a stop with the following id: ${currentStop.adjacentStops[i].id}. Please report this issue to katiee11231.`);
+                }
                 let pathLastLeg = new pathSegment(currentStop.id, adjStop.id, routesLastLeg, 1);
                 let adjStopPath = [pathLastLeg];
     
