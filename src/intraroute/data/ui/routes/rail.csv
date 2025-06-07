@@ -198,6 +198,8 @@ rail_215north,regionalNew,215,,Anbury Branch,railMMA,Moramoa,Mixed Martial Arts 
 rail_215south,regionalNew,215,,Anbury Branch,railRVU,Ravenna,Union Station,,,,,,,,,,
 rail_216west,regionalNew,216,,Storalian,railSVF,Spring Valley,Fifth Street,,,,,,,,,,
 rail_216east,regionalNew,216,,Storalian,railWHB,Whitechapel,Border,,,,,,,,,,
+rail_217west,regionalNew,217,,Refuge Line,railRFG,Refuge,Central Station,,,,,,,,,,
+rail_217east,regionalNew,217,,Refuge Line,railKCC,Kaloro City,Central,,,,,,,,,,
 rail_301north,urbanNew,301,,Zaquar Zephyr,railZQS,Zaquar,Shores,railZQN,railZQH,railZQD,railZQW,railZAQ,railZQT,,,,
 rail_301south,urbanNew,301,,Zaquar Zephyr,railZQT,Zaquar,Tanzanite Station,railZAQ,railZQW,railZQD,railZQH,railZQN,railZQS,,,,
 rail_302west,urbanNew,302,,Grand Central Shuttle,railSEG,Segville,International Airport,railSGC,,,,,,,,,
