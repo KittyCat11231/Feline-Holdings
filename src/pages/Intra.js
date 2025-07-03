@@ -10,7 +10,7 @@ import ItemSmall from '../components/ItemSmall';
 import IntraStatus from '../components/IntraStatus';
 
 import intraAirPhoto from '../images/intraair-1.png';
-import siletzPhoto from '../images/intrarail-siletz-4.png';
+import siletzPhoto from '../images/intrarail-siletz-5.png';
 
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
@@ -21,23 +21,25 @@ import intraBusLogo from '../intraroute/logos/intrabus.svg';
 import intraSailLogo from '../intraroute/logos/intrasail.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn.svg';
 
-import easternHeliLogo from '../intraroute/logos/eastern-airways-heli-lines.svg';
-import heampsteadCharterLogo from '../intraroute/logos/heampstead-charter.svg';
-import intraHeliLogo from '../intraroute/logos/intraair-heli-lines.svg';
-import intraPoseidonLogo from '../intraroute/logos/intraair-poseidon.svg';
+import easternHeliLogo from '../intraroute/logos/eastern-airways-heli-lines-condensed.svg';
+import heampsteadCharterLogo from '../intraroute/logos/heampstead-charter-condensed.png';
+import intraHeliLogo from '../intraroute/logos/intraair-heli-lines-condensed.svg';
+import intraPoseidonLogo from '../intraroute/logos/intraair-poseidon-condensed.svg';
 import volantiLogo from '../intraroute/logos/italiani-volanti.svg';
 import mcrLogo from '../intraroute/logos/mcr.svg';
 import mcrLumevaLogo from '../intraroute/logos/mcr-urban-lumeva.svg';
 import mcrScarLogo from '../intraroute/logos/mcr-urban-scarborough.svg';
 import omegaLogo from '../intraroute/logos/omegabus.svg';
 import segvilleAirLogo from '../intraroute/logos/segville-air.svg';
-import segvilleHeliLogo from '../intraroute/logos/segville-air-heli-lines.svg';
+import segvilleHeliLogo from '../intraroute/logos/segville-air-heli-lines-condensed.svg';
 import skyWestLogo from '../intraroute/logos/skywest-airlines.svg';
 import waypointLogo from '../intraroute/logos/waypoint.svg';
-import gemsLogo from '../intraroute/logos/gems-airline.png';
+import gemsLogo from '../intraroute/logos/gems-airline.svg';
+import acaciaLogo from '../intraroute/logos/acaciaair.svg';
 import puntaLogo from '../logos/punta-airport-company.png';
-import intraTrainsLogo from '../logos/intratrains.svg';
 import intraJetEamLogoSmall from '../logos/intrajet-eam-small.svg';
+import intraTrainsLogo from '../logos/intratrains.svg';
+import intraFleetLogo from '../logos/intrafleet.svg';
 
 function Intra() {
 
@@ -78,7 +80,7 @@ function Intra() {
             color: '#4d4d4d',
             imgBoxColor: undefined,
             imgSrc: siletzPhoto,
-            imgAlt: 'IntraAir plane',
+            imgAlt: 'IntraRail train',
             imgWidth: '100%',
             imgMaxWidth: undefined,
             imgHeight: '100%',
@@ -88,11 +90,11 @@ function Intra() {
             descriptorText: 'Your home for service status across all of Intra.',
             renderButton: true,
             buttonText: 'Check Service Status',
-            link: '#status', 
+            link: '#alerts', 
         },
     }
 
-    let gridProps1 = [
+    let gridPropsMain = [
         {
             boxColor: '#4d4d4d',
             textColor: 'white',
@@ -160,7 +162,230 @@ function Intra() {
         },
     ]
 
-    let gridProps2 = [
+    let gridPropsAir = [
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraAirLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'IntraAir',
+            headerText: 'IntraAir',
+            subHeaderText: 'We are the MRT\'s airline.',
+            descriptorText: "The core of our airline brand.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraAir'
+        },
+        {
+            boxColor: '#faa918',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: waypointLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'Waypoint',
+            headerText: 'Waypoint',
+            subHeaderText: 'It\'s a big world out there.',
+            descriptorText: "From Airchester to the world.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Waypoint'
+        },
+        {
+            boxColor: '#c1272d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: segvilleAirLogo,
+            imgHeightDesktop: '55px',
+            imgHeightMobile: '100px',
+            imgAlt: 'Segville Air',
+            headerText: 'Segville Air',
+            subHeaderText: 'Segville\'s airline.',
+            descriptorText: "Fly with Segville's hometown airline.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Segville_Air'
+        },
+        {
+            boxColor: '#f9801d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: acaciaLogo,
+            imgHeightDesktop: '95px',
+            imgHeightMobile: '170px',
+            imgAlt: 'AcaciaAir',
+            headerText: 'AcaciaAir',
+            subHeaderText: 'Coming soon!',
+            descriptorText: "Coming soon to an NPR near you.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/AcaciaAir'
+        },
+        {
+            boxColor: '#157d9e',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: skyWestLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'SkyWest Airlines',
+            headerText: 'SkyWest Airlines',
+            headerFontSize: '37px',
+            subHeaderText: 'Off to Whitechapel.',
+            descriptorText: "Whitechapel's hometown airline.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/SkyWest_Airlines'
+        },
+        {
+            boxColor: '#00663f',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: volantiLogo,
+            imgHeightDesktop: '40px',
+            imgHeightMobile: '80px',
+            imgAlt: 'Italiani Volanti',
+            headerText: 'Italiani Volanti',
+            subHeaderText: 'Ciao MineCity.',
+            descriptorText: "Flying across the Old World.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Italiani_Volanti'
+        },
+        {
+            boxColor: '#9dced1',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: gemsLogo,
+            imgHeightDesktop: '80px',
+            imgHeightMobile: '160px',
+            imgAlt: 'GEMS Airline',
+            headerText: 'GEMS Airline',
+            subHeaderText: 'Be the sparkle in the sky.',
+            descriptorText: "Shine bright like a diamond.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/GEMS_Airline'
+        },
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraPoseidonLogo,
+            imgHeightDesktop: '90px',
+            imgHeightMobile: '160px',
+            imgAlt: 'IntraAir Poseidon',
+            headerText: 'IntraAir Poseidon',
+            headerFontSize: '36px',
+            subHeaderText: 'From air to sea.',
+            descriptorText: "IntraAir's seaplane airline.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraAir_Poseidon'
+        },
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraHeliLogo,
+            imgHeightDesktop: '90px',
+            imgHeightMobile: '160px',
+            imgAlt: 'IntraAir Heli Lines',
+            headerText: 'IntraAir Heli Lines',
+            headerFontSize: '36px',
+            subHeaderText: 'To even more places.',
+            descriptorText: "Reach more places with IntraAir's helicopters.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraAir_Heli_Lines'
+        },
+        {
+            boxColor: '#c1272d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: segvilleHeliLogo,
+            imgHeightDesktop: '100px',
+            imgHeightMobile: '180px',
+            imgAlt: 'Segville Air Heli Lines',
+            headerText: 'Segville Air Heli Lines',
+            headerFontSize: '35px',
+            subHeaderText: '',
+            descriptorText: "Segville's hometown helicopters.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Segville_Air_Heli_Lines'
+        },
+        {
+            boxColor: '#ff8c0f',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: heampsteadCharterLogo,
+            imgHeightDesktop: '90px',
+            imgHeightMobile: '160px',
+            imgAlt: 'Heampstead Charter',
+            headerText: 'Heampstead Charter',
+            headerFontSize: '35px',
+            subHeaderText: '',
+            descriptorText: "Heampstead's hometown helicopters.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Heampstead_Charter'
+        },
+        {
+            boxColor: '#faa61a',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: easternHeliLogo,
+            imgHeightDesktop: '100px',
+            imgHeightMobile: '180px',
+            imgAlt: 'Eastern Airways Heli Lines',
+            headerText: 'Eastern Airways Heli Lines',
+            headerFontSize: '35px',
+            subHeaderText: '',
+            descriptorText: "Simply fly.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/Eastern_Airways_Heli_Lines'
+        },
+    ]
+
+    let gridPropsRail = [
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraRailLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'IntraRail',
+            headerText: 'IntraRail',
+            subHeaderText: 'The way to ride.',
+            descriptorText: "The MRT's biggest warp rail company.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraRail'
+        },
+        {
+            boxColor: '#1300fe',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: mcrLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'MCR',
+            headerText: 'MCR',
+            subHeaderText: 'On the line, on the go.',
+            descriptorText: "Bring IntraRail's network even further.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/MCR'
+        },
+    ]
+
+    let gridPropsBus = [
+        {
+            boxColor: '#4d4d4d',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: intraBusLogo,
+            imgHeightDesktop: '65px',
+            imgHeightMobile: '100px',
+            imgAlt: 'IntraBus',
+            headerText: 'IntraBus',
+            subHeaderText: 'Even more connections.',
+            descriptorText: "Bringing Intra to even more places.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraBus'
+        },
+        {
+            boxColor: '#ff0000',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: omegaLogo,
+            imgHeightDesktop: '50px',
+            imgHeightMobile: '100px',
+            imgAlt: 'OMEGAbus!',
+            headerText: 'OMEGAbus!',
+            subHeaderText: 'Connect the Old World.',
+            descriptorText: "Ride on the classic IntraBus network.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/OMEGAbus!'
+        },
+    ]
+
+    let gridPropsManufacturing = [
         {
             boxColor: '#cca77f',
             textColor: 'white',
@@ -188,19 +413,17 @@ function Intra() {
             link: 'https://wiki.minecartrapidtransit.net/index.php/IntraTrains'
         },
         {
-            boxColor: '#1c7ec2',
+            boxColor: '#4d4d4d',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: puntaLogo,
-            imgHeightDesktop: '140px',
-            imgHeightMobile: '200px',
-            imgAlt: 'Punta Airport Company',
-            headerText: 'Punta Airport Co.',
-            subHeaderText: 'The world\'s gateway.',
-            descriptorText: "Managing airports across the MRT.",
-            link: 'https://wiki.minecartrapidtransit.net/index.php/Punta_Airport_Company',
-            headerFontSize: '36px',
-            subHeaderTopMargin: '-2px'
+            imgSrc: intraFleetLogo,
+            imgHeightDesktop: '90px',
+            imgHeightMobile: '170px',
+            imgAlt: 'IntraFleet',
+            headerText: 'IntraFleet',
+            subHeaderText: 'The engine of the world.',
+            descriptorText: "We build the buses that move the world.",
+            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraFleet'
         },
     ]
 
@@ -305,14 +528,26 @@ function Intra() {
             </div>
             <div className={styles.section}>
                 <SectionHeader text='Our Core Brands' color='#4d4d4d' border={false} />
-                <Grid propsArray={gridProps1} />
+                <Grid propsArray={gridPropsMain} />
             </div>
             <div className={styles.section}>
-                <SectionHeader text='Other Intra Companies' color='#4d4d4d' border={false} />
-                <Grid propsArray={gridProps2} />
+                <SectionHeader text='The IntraAir Family' color='#4d4d4d' border={false} />
+                <Grid propsArray={gridPropsAir} />
             </div>
-            <div className={styles.section} id='status'>
-                <SectionHeader text='Service Status' color='#4d4d4d' border={false} />
+            <div className={styles.section}>
+                <SectionHeader text='The IntraRail Family' color='#4d4d4d' border={false} />
+                <Grid propsArray={gridPropsRail} />
+            </div>
+            <div className={styles.section}>
+                <SectionHeader text='The IntraBus Family' color='#4d4d4d' border={false} />
+                <Grid propsArray={gridPropsBus} />
+            </div>
+            <div className={styles.section}>
+                <SectionHeader text='Intra Manufacturing' color='#4d4d4d' border={false} />
+                <Grid propsArray={gridPropsManufacturing} />
+            </div>
+            <div className={styles.section} id='alerts'>
+                <SectionHeader text='Service Alerts' color='#4d4d4d' border={false} />
                 <IntraStatus />
             </div>
         </>

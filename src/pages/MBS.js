@@ -13,6 +13,7 @@ import mbsLogoBlack from '../logos/mbs-main-black.svg';
 
 import mbsMls from '../assets/mbs-mls.svg';
 import adTeaser from '../assets/mbs-advertising-teaser.svg';
+import tar from '../images/tar-14.png';
 
 function MBS() {
 
@@ -34,6 +35,22 @@ function MBS() {
             link: 'https://www.youtube.com/@mbs_mrt', 
         },
         post2: {
+            color: '#ff0000',
+            imgBoxColor: 'white',
+            imgSrc: tar,
+            imgAlt: 'The Amazing Race 14',
+            imgWidth: undefined,
+            imgMaxWidth: '1000px',
+            imgHeight: '100%',
+            imgMaxHeight: undefined,
+            imgTransform: undefined,
+            headerText: 'Watch The Amazing Race 14.',
+            descriptorText: "Watch the entire season from start to finish.",
+            renderButton: true,
+            buttonText: 'Watch Now',
+            link: 'https://www.youtube.com/playlist?list=PLpJqrCslu9hE4aUf7wArB4OpSLqYEgk7T', 
+        },
+        post3: {
             color: '#1a2859',
             imgBoxColor: '#e22525',
             imgSrc: mbsMls,
@@ -43,27 +60,11 @@ function MBS() {
             imgHeight: '100%',
             imgMaxHeight: undefined,
             imgTransform: undefined,
-            headerText: 'Watch MLS Season 8 on MBS.',
-            descriptorText: "Major League Spleef is back.",
+            headerText: 'Watch MLS Season 9 on MBS.',
+            descriptorText: "Major League Spleef is here.",
             renderButton: true,
             buttonText: 'Watch Now',
-            link: 'https://felineholdings.com/MBS', 
-        },
-        post3: {
-            color: 'red',
-            imgBoxColor: '#333333',
-            imgSrc: adTeaser,
-            imgAlt: 'MLS on MBS',
-            imgWidth: '90%',
-            imgMaxWidth: undefined,
-            imgHeight: undefined,
-            imgMaxHeight: undefined,
-            imgTransform: undefined,
-            headerText: 'Advertise with us.',
-            descriptorText: "Broadcast your ads on MBS. For free.",
-            renderButton: true,
-            buttonText: 'Get Started',
-            link: '/', 
+            link: 'https://www.youtube.com/@mbs_mrt', 
         },
     }
 

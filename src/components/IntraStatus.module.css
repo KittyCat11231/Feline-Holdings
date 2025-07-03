@@ -131,4 +131,8 @@
         height: 45px;
         justify-content: left;
     }
+
+    .descriptionBox {
+        width: 100%;
+    }
 }

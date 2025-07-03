@@ -6,10 +6,11 @@ function DropdownContent() {
     return (
         <div className={styles.dropdownContent}>
             <a className={styles.intra} href="/intra">Intra</a>
-            <a className={styles.roy} href="/roy-disney">Roy Disney</a>
             <a className={styles.mbs} href="/mbs">MBS</a>
+            <a className={styles.roy} href="/roy-disney-mbs">Roy Disney MBS</a>
+            <a className={styles.katiesoft} href="/katiesoft">Katiesoft</a>
+            <a className={styles.retail} href="/retail">Feline Retail Group</a>
             <a className={styles.bart} href="/bart">BART</a>
-            <a className={styles.fossack} href="/fossack-notseca">Fossack Notseca</a>
             <a className={styles.other} href="/other-companies">Other Companies</a>
             <a className={styles.news} href="/news">News</a>
             <a className={styles.about} href="/about">About Us</a>

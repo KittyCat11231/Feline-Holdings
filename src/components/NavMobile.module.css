@@ -58,7 +58,7 @@
     background-color: #003875;
 }
 
-.other {
+.other, .about, .retail {
     color: #7f7f7f;
     background-color: #ffc90e;
 }
@@ -68,9 +68,9 @@
     background-color: #ff7f27;
 }
 
-.about {
-    color: #7f7f7f;
-    background-color: #ffc90e;
+.katiesoft {
+    color: white;
+    background-color: #ff7bac;
 }
 
 .display-none {

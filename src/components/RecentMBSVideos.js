@@ -38,9 +38,9 @@ function RecentMBSVideos() {
                         />
                     </div>
                 )
-                if (i >= 4) {
+                if (i >= 5) {
                     break;
-                    // the loop should only run 5 times,
+                    // the loop should only run 6 times,
                     // or for the number of videos.length,
                     // whichever is lower
                 }

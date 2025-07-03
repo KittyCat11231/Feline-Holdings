@@ -7,17 +7,20 @@ function NavDesktop() {
             <div className={`${styles.button} ${styles.intra}`}>
                 <a href="/intra">Intra</a>
             </div>
-            <div className={`${styles.button} ${styles.roy}`}>
-                <a href="/roy-disney">Roy Disney</a>
-            </div>
             <div className={`${styles.button} ${styles.mbs}`}>
                 <a href="/mbs">MBS</a>
             </div>
+            <div className={`${styles.button} ${styles.roy}`}>
+                <a href="/roy-disney-mbs">Roy Disney MBS</a>
+            </div>
+            <div className={`${styles.button} ${styles.katiesoft}`}>
+                <a href="/katiesoft">Katiesoft</a>
+            </div>
+            <div className={`${styles.button} ${styles.retail}`}>
+                <a href="/retail">Feline Retail Group</a>
+            </div>
             <div className={`${styles.button} ${styles.bart}`}>
                 <a href="/bart">BART</a>
-            </div>
-            <div className={`${styles.button} ${styles.fossack}`}>
-                <a href="/fossack-notseca">Fossack Notseca</a>
             </div>
             <div className={`${styles.button} ${styles.other}`}>
                 <a href="/other-companies">Other Companies</a>

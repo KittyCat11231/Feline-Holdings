@@ -12,13 +12,17 @@ import fhCenter from '../images/fh-center-6.png';
 import intraRouteLogo from '../intraroute/logos/intraroute.svg';
 import intraRouteShort from '../intraroute/logos/intraroute-short.svg';
 import mbsMls from '../assets/mbs-mls.svg';
+import katiesoftStore from '../images/katiesoft-2.png';
+import katiesoftLogoSmall from '../logos/katiesoft-small.svg';
 import demoImg from '../images/intrarail-siletz-2.png';
 
 import intraLogo from '../logos/intra-wordmark.svg';
-import royDisneyLogo from '../logos/roy-disney.svg';
+import royDisneyLogo from '../logos/roy-disney-mbs.svg';
 import mbsLogo from '../logos/mbs-main.svg';
+import katiesoftLogo from '../logos/katiesoft.svg'
+import felineRetailLogo from '../logos/feline-retail-group-short.svg';
 import bartLogo from '../logos/bart.svg';
-import fossackLogo from '../logos/fossack-notseca.svg';
+import mossackLogo from '../logos/mossack-fonseca.svg';
 import fhLogoSmall from '../logos/feline-holdings-small.svg';
 
 function Home() {
@@ -51,26 +55,26 @@ function Home() {
             imgMaxHeight: '95%',
             imgTransform: undefined,
             headerText: 'Get there with IntraRoute.',
-            descriptorText: "Intra's official routefinder. Now in beta.",
+            descriptorText: "Intra's official routefinder.",
             renderButton: true,
             buttonText: 'Find Your Way',
             link: '/intraroute', 
         },
         post3: {
-            color: '#1a2859',
-            imgBoxColor: '#e22525',
-            imgSrc: mbsMls,
-            imgAlt: 'MLS on MBS',
+            color: '#ff7bac',
+            imgBoxColor: 'white',
+            imgSrc: katiesoftLogoSmall,
+            imgAlt: 'Katiesoft',
             imgWidth: undefined,
             imgMaxWidth: '1000px',
             imgHeight: '100%',
             imgMaxHeight: undefined,
             imgTransform: undefined,
-            headerText: 'Watch MLS Season 8 on MBS.',
-            descriptorText: "Major League Spleef is back.",
+            headerText: 'Introducing Katiesoft.',
+            descriptorText: "Tech should be fun.",
             renderButton: true,
-            buttonText: 'Watch Now',
-            link: 'https://www.youtube.com/@MBS_MRT', 
+            buttonText: 'Learn More',
+            link: '/katiesoft', 
         },
     }
 
@@ -89,19 +93,6 @@ function Home() {
             link: '/intra'
         },
         {
-            boxColor: '#5a86a8',
-            textColor: 'white',
-            imgBoxColor: 'white',
-            imgSrc: royDisneyLogo,
-            imgWidthDesktop: '400px',
-            imgWidthMobile: '600px',
-            imgAlt: 'Roy Disney',
-            headerText: 'Make moments',
-            subHeaderText: 'with Roy Disney.',
-            descriptorText: "The MRT's biggest media company.",
-            link: '/roy-disney'
-        },
-        {
             boxColor: 'blue',
             textColor: 'white',
             imgBoxColor: 'white',
@@ -115,11 +106,50 @@ function Home() {
             link: '/mbs'
         },
         {
+            boxColor: '#5a86a8',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: royDisneyLogo,
+            imgWidthDesktop: '350px',
+            imgWidthMobile: '650px',
+            imgAlt: 'Roy Disney MBS',
+            headerText: 'Make moments',
+            subHeaderText: 'with Roy Disney MBS.',
+            descriptorText: "The MRT's biggest media company.",
+            link: '/roy-disney-mbs'
+        },
+        {
+            boxColor: '#ff7bac',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: katiesoftLogo,
+            imgWidthDesktop: '350px',
+            imgWidthMobile: '550px',
+            imgAlt: 'Katiesoft',
+            headerText: 'Bring on the fun',
+            subHeaderText: 'with Katiesoft.',
+            descriptorText: "Tech should be fun.",
+            link: '/retail'
+        },
+        {
+            boxColor: '#ffc90e',
+            textColor: 'white',
+            imgBoxColor: 'white',
+            imgSrc: felineRetailLogo,
+            imgWidthDesktop: '400px',
+            imgWidthMobile: '450px',
+            imgAlt: 'Feline Retail Group',
+            headerText: 'Shop away',
+            subHeaderText: 'with Feline Retail Group.',
+            descriptorText: "The retail brands of Feline Holdings.",
+            link: '/retail'
+        },
+        {
             boxColor: '#30acdf',
             textColor: 'white',
             imgBoxColor: 'white',
             imgSrc: bartLogo,
-            imgWidthDesktop: '270px',
+            imgWidthDesktop: '200px',
             imgWidthMobile: '350px',
             imgAlt: 'BART',
             headerText: 'Keep on moving',
@@ -131,14 +161,14 @@ function Home() {
             boxColor: '#003875',
             textColor: 'white',
             imgBoxColor: 'white',
-            imgSrc: fossackLogo,
+            imgSrc: mossackLogo,
             imgWidthDesktop: '330px',
             imgWidthMobile: '500px',
             imgAlt: 'Fossack Notseca',
             headerText: 'Redacted',
-            subHeaderText: 'with Fossack Notseca.',
+            subHeaderText: 'with Mossack Fonseca.',
             descriptorText: "Redacted.",
-            link: '/fossack-notseca'
+            link: '/mossack-fonseca'
         },
         {
             boxColor: '#ffc90e',
@@ -175,15 +205,15 @@ function Home() {
                     imgHeightMobile='100px'
                     boxColor='#4d4d4d'
                     textColor='white'
-                    headerText='IntraRoute is now in beta.'
-                    descriptorText='Going everywhere has never been easier.'
+                    headerText='Get there with IntraRoute.'
+                    descriptorText='Intra gets you there. IntraRoute makes it easy.'
                     renderButton={true}
                     buttonText='Find Your Way'
                     link='/intraroute'
                 />
             </div>
             <div className={styles.section}>
-                <SectionHeader text='Our Brands' color='#ffc90e' border={true} borderColor='#ff7f27' />
+                <SectionHeader text='Our Companies' color='#ffc90e' border={true} borderColor='#ff7f27' />
                 <Grid propsArray={gridProps} />
             </div>
         </div>

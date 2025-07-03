@@ -38,10 +38,14 @@ nav {
     background-color: #003875;
 }
 
-.other:has(a:hover), .news:has(a:hover), .about:has(a:hover) {
+.katiesoft:has(a:hover) {
+    background-color: #ffb8d5
+}
+
+.other:has(a:hover), .news:has(a:hover), .about:has(a:hover), .retail:has(a:hover) {
     background-color: #ffc90e;
 }
 
-.other a:hover, .news a:hover, .about a:hover {
+.other a:hover, .news a:hover, .about a:hover, .retail a:hover {
     color: #7f7f7f;
 }
