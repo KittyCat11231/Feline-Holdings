@@ -7,6 +7,8 @@ import intraBusLogo from '../intraroute/logos/intrabus-white.svg';
 import intraSailLogo from '../intraroute/logos/intrasail-white.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn-white.svg';
 
+import intraBusLogoGray from '../intraroute/logos/intrabus.svg';
+
 import intraRail51 from '../intraroute/assets/intrarail/bullets/51-white.png';
 import intraRail54 from '../intraroute/assets/intrarail/bullets/54.png';
 
@@ -97,6 +99,46 @@ function IntraStatus() {
         <div className={styles.container}>
             <div className={styles.line}>
                 <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#4d4d4d'
+                    routeName='106'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Stop Skipped'
+                    statusColor='olive'
+                    statusTextColor='white'
+                    description='Buses bypass Ilirea Port of Ilirea.'
+                    descriptionBoxColor='#4d4d4d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='372'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='gold'
+                    statusTextColor='black'
+                    description='No service between Ilirea Port of Ilirea and Ilirea Center & Stadium.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
@@ -105,7 +147,7 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Station Closure'
+                    status='Stop Skipped'
                     statusColor='olive'
                     statusTextColor='white'
                     description='Trains bypass Plage Rouge-Seki City.'
@@ -125,7 +167,7 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Station Closure'
+                    status='Stop Skipped'
                     statusColor='olive'
                     statusTextColor='white'
                     description='Trains bypass Titsensaki Sealerwhale International Airport.'
