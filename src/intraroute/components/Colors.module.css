@@ -74,6 +74,19 @@
     filter: invert(62%) sepia(67%) saturate(2778%) hue-rotate(91deg) brightness(100%) contrast(104%);
 }
 
+.airAcaciaBackground {
+    background-color: #f9801d;
+}
+
+.airAcaciaColor {
+    color: #f9801d;
+}
+
+.airAcaciaFilter {
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(71%) sepia(93%) saturate(3665%) hue-rotate(347deg) brightness(99%) contrast(97%);
+}
+
 .airSegvilleBackground {
     background-color: #c1272d;
 }

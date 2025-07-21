@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    height: fit-content;
+    height: 40px;
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 17px;
@@ -16,6 +16,10 @@
 
 .omegaBox {
     background-color: #7f0000;
+}
+
+.acaciaBox {
+    background-color: #a84400;
 }
 
 .segvilleBox {
@@ -60,6 +64,10 @@
 
 .omegaLogo {
     height: 23px;
+}
+
+.acaciaLogo {
+    height: 35px;
 }
 
 .segvilleLogos {

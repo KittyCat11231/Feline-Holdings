@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.5',
+            '7/21/2025',
+            [
+                'Added UI assets for AcaciaAir.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.4',
             '2/10/2025',
             [

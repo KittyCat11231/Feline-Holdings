@@ -30,6 +30,11 @@ function colors(colorStyles, colorObj, mode, type) {
             colorObj.containerColor = colorStyles.grayBackground;
             colorObj.mainColor = colorStyles.grayColor;
         }
+        if (type === 'acacia') {
+            colorObj.containerColor = colorStyles.airAcaciaBackground;
+            colorObj.mainColor = colorStyles.airAcaciaColor;
+            colorObj.filterColor = colorStyles.airAcaciaFilter;
+        }
         if (['segville', 'segHeli'].includes(type)) {
             colorObj.containerColor = colorStyles.airSegvilleBackground;
             colorObj.mainColor = colorStyles.airSegvilleColor;

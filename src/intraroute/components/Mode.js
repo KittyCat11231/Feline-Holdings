@@ -5,6 +5,7 @@ import bahnLogo from '../logos/intrabahn-white.svg';
 import airLogo from '../logos/intraair-white.svg';
 import heliLogo from '../logos/intraair-heli-lines-white.svg';
 import poseidonLogo from '../logos/intraair-poseidon-white.svg';
+import acaciaAirLogo from '../logos/acaciaair-white.svg';
 import segAirLogo from '../logos/segville-air-white.svg';
 import segHeliLogo from '../logos/segville-air-heli-lines-white.svg';
 import waypointLogo from '../logos/waypoint-white.svg';
@@ -45,6 +46,11 @@ function Mode(props) {
         srcToUse = poseidonLogo;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
+    }
+    if (props.mode === 'air' && props.type === 'acacia') {
+        srcToUse = acaciaAirLogo;
+        boxStyles = styles.acaciaBox;
+        logoStyles = styles.acaciaLogo;
     }
     if (props.mode === 'air' && props.type === 'segville') {
         srcToUse = segAirLogo;

@@ -22,6 +22,7 @@ import planeSegville from '../assets/circle-icons/plane-segville.svg';
 import planeSkywest from '../assets/circle-icons/plane-skywest.svg';
 import planeVolanti from '../assets/circle-icons/plane-volanti.svg';
 import planeWaypoint from '../assets/circle-icons/plane-waypoint.svg';
+import planeAcacia from '../assets/circle-icons/plane-acacia.svg';
 import seaplaneGray from '../assets/circle-icons/seaplane-gray.svg';
 import trainGray from '../assets/circle-icons/train-gray.svg';
 import trainBahnBranch from '../assets/circle-icons/train-bahn-branch.svg';
@@ -116,6 +117,9 @@ function Circle(props) {
     }
     if (props.mode === 'air' && (props.type === 'waypoint' || props.type === 'waypointHopper')) {
         srcToUse = planeWaypoint;
+    }
+    if (props.mode === 'air' && props.type === 'acacia') {
+        srcToUse = planeAcacia;
     }
     if (props.mode === 'air' && props.type === 'poseidon') {
         srcToUse = seaplaneGray;
