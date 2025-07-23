@@ -102,6 +102,46 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
+                    routeColor='#da1714'
+                    routeName='201 Utopiary'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='gold'
+                    statusTextColor='black'
+                    description='No service between Espil Sanders Station and Aprix.'
+                    descriptionBoxColor='#da1714'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='white'
+                    routeName='901'
+                    routeNameColor='#4d4d4d'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Rail replacement service between Espil and Aprix for the IntraRail 201.'
+                    descriptionBoxColor='#4d4d4d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
                     routeColor='#f082a5'
                     routeName='10X East Mesan'
                     routeNameColor='white'
