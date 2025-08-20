@@ -1,14 +1,4 @@
-.numSail {
-    font-weight: 700;
-    font-size: 1.3rem;
-    margin-top: -54px;
-    margin-bottom: 0;
-    margin-left: 0px;
-    margin-right: 0;
-    text-align: center;
-}
-
-.numRail {
+.numRail, .numSail {
     font-weight: 700;
     font-size: 1.7rem;
     margin-top: -58px;

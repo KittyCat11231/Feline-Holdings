@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.6',
+            '8/20/2025',
+            [
+                'Changed how numbers for IntraSail lines are displayed.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.5',
             '7/21/2025',
             [
@@ -207,7 +217,7 @@ function IntraRouteChangelog() {
             </div>
             <h1 className={`${styles.header} ${styles.grayText}`}>Version History & Changelog</h1>
             <div className={styles.button}>
-                <a className={`${styles.buttonText} ${styles.grayText}`} href='https://felineholdings.com/intraroute'>Back to IntraRoute</a>
+                <a className={`${styles.buttonText} ${styles.grayText}`} href='/intraroute'>Back to IntraRoute</a>
             </div>
             <div className={styles.container}>
                 {renderVersions}
