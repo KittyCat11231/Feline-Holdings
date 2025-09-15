@@ -10,5 +10,5 @@ bahn1Jnorth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnSHD,Sc
 bahn1Jsouth,branch,bulletBahn1J,IntraBahn 1j,Schillerton Branch South,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
 bahn1JXnorth,branch,bulletBahn1JX,IntraBahn 1jX,Schillerton Branch South Express,bahnSHD,Schillerton,Division Street Terminal,bahnSHC
 bahn1JXsouth,branch,bulletBahn1JX,IntraBahn 1jX,Schillerton Branch South Express,bahnZQA,Zaquar,Air & Sea Ports,bahnZQL
-bahnZQcw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,null,null,
-bahnZQccw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,null,null,
+bahnZQcw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,clockwise,null,
+bahnZQccw,shuttle,bulletBahnZQ,IntraBahn ZQ,Zaquar Shuttle,null,counter-clockwise,null,
