@@ -55,8 +55,8 @@ function IntraRoute() {
 
     const showErrorNotice = true;
     const errorNoticeDate = 'Service Alert';
-    const errorText1 = 'Waypoint Hopper has ceased operations. Most flights will be reinstated as IntraAir flights, some as SkyWest Airlines flights, and some are permanently discontinued.'
-    const errorText2 = 'Some airports are not available until service is restored.';
+    const errorText1 = 'IntraAir is rolling out its 2025 network changes.'
+    const errorText2 = 'Expect service disruptions and some duplicate flight numbers as we transition to our new network.';
     
     return (
         <div>
