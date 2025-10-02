@@ -42,6 +42,10 @@
     background-color: #414141;
 }
 
+.portonBox {
+    background-color: #724728;
+}
+
 .gemsBox {
     background-color: #ffffff;
 }
@@ -83,6 +87,10 @@
 }
 
 .skywestLogo {
+    height: 23px;
+}
+
+.portonLogo {
     height: 23px;
 }
 

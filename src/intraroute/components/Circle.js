@@ -19,6 +19,7 @@ import planeGemsEmerald from '../assets/circle-icons/plane-gems-emerald.svg';
 import planeGemsGold from '../assets/circle-icons/plane-gems-gold.svg';
 import planeGemsLapis from '../assets/circle-icons/plane-gems-lapis.svg';
 import planeSegville from '../assets/circle-icons/plane-segville.svg';
+import planePorton from '../assets/circle-icons/plane-porton.svg';
 import planeSkywest from '../assets/circle-icons/plane-skywest.svg';
 import planeVolanti from '../assets/circle-icons/plane-volanti.svg';
 import planeWaypoint from '../assets/circle-icons/plane-waypoint.svg';
@@ -111,6 +112,9 @@ function Circle(props) {
     }
     if (props.mode === 'air' && props.type === 'skywest') {
         srcToUse = planeSkywest;
+    }
+    if (props.mode === 'air' && props.type === 'porton') {
+        srcToUse = planePorton;
     }
     if (props.mode === 'air' && props.type === 'volanti') {
         srcToUse = planeVolanti;

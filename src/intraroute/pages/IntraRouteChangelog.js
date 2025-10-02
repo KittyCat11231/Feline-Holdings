@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.7',
+            '10/2/2025',
+            [
+                'Added UI assets for Porton Global.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.6',
             '8/20/2025',
             [

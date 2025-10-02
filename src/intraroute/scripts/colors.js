@@ -76,6 +76,11 @@ function colors(colorStyles, colorObj, mode, type) {
             colorObj.mainColor = colorStyles.airSkywestColor;
             colorObj.filterColor = colorStyles.airSkywestFilter;
         }
+        if (type === 'porton') {
+            colorObj.containerColor = colorStyles.airPortonBackground;
+            colorObj.mainColor = colorStyles.airPortonColor;
+            colorObj.filterColor = colorStyles.airPortonFilter;
+        }
         if (type === 'heampstead') {
             colorObj.containerColor = colorStyles.airHeampsteadBackground;
             colorObj.mainColor = colorStyles.airHeampsteadColor;

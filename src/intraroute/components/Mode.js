@@ -12,6 +12,7 @@ import waypointLogo from '../logos/waypoint-white.svg';
 import waypointHopperLogo from '../logos/waypoint-hopper-white.svg';
 import volantiLogo from '../logos/italiani-volanti-white.svg';
 import skywestLogo from '../logos/skywest-airlines-white.svg';
+import portonLogo from '../logos/porton-global-white.svg';
 import gemsLogo from '../logos/gems-airline.png';
 import heampsteadLogo from '../logos/heampstead-charter-white.svg';
 import easternLogo from '../logos/eastern-airways-heli-lines-white.svg';
@@ -81,6 +82,11 @@ function Mode(props) {
         srcToUse = skywestLogo;
         boxStyles = styles.skywestBox;
         logoStyles = styles.skywestLogo;
+    }
+    if (props.mode === 'air' && props.type === 'porton') {
+        srcToUse = portonLogo;
+        boxStyles = styles.portonBox;
+        logoStyles = styles.portonLogo;
     }
     if (props.mode === 'air' && (props.type === 'gemsEmerald' || props.type === 'gemsGold' || props.type === 'gemsDiamond' || props.type === 'gemsLapis')) {
         srcToUse = gemsLogo;
