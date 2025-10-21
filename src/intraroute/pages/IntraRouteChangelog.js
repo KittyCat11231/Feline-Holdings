@@ -33,6 +33,16 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.8',
+            '10/27/2025',
+            [
+                'Removed code relying on data for IntraBahn, which is no longer part of Intra.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.7',
             '10/2/2025',
             [

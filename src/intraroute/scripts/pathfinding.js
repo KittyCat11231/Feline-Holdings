@@ -1,7 +1,6 @@
 import helpers from '@kyle11231/helper-functions';
 
 import airStops from '../data/pathfinding/air.json';
-import bahnStops from '../data/pathfinding/bahn.json';
 import busStops from '../data/pathfinding/bus.json';
 import omegaStops from '../data/pathfinding/omega.json';
 import railStops from '../data/pathfinding/rail.json';
@@ -41,9 +40,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
         if (filters.useAir === true) {
             addToAllStops(airStops);
         }
-        if (filters.useBahn === true) {
-            addToAllStops(bahnStops);
-        }
         if (filters.useBus === true) {
             addToAllStops(busStops);
             addToAllStops(omegaStops);
@@ -63,9 +59,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 if (['air', 'seg', 'wp', 'volanti', 'skywest', 'gems', 'heli', 'segHeli', 'heamp', 'eastern', 'poseidon'].some(s => stop.id.indexOf(s) === 0)) {
                     mode = 'air';
                 }
-                if (stop.id.indexOf('bahn') === 0) {
-                    mode = 'bahn';
-                }
                 if (['bus', 'omega'].some(s => stop.id.indexOf(s) === 0)) {
                     mode = 'bus';
                 }
@@ -77,7 +70,6 @@ async function pathfinding(start, end, finalPath, processedPath, filters, return
                 }
                 const modes = {
                     air: 'useAir',
-                    bahn: 'useBahn',
                     bus: 'useBus',
                     rail: 'useRail',
                     sail: 'useSail'

@@ -1,5 +1,4 @@
 import airStops from '../data/ui/stops/air.json';
-import bahnStops from '../data/ui/stops/bahn.json';
 import busStops from '../data/ui/stops/bus.json';
 import omegaStops from '../data/ui/stops/omega.json';
 import railStops from '../data/ui/stops/rail.json';
@@ -33,7 +32,6 @@ function createAllStopsForSearch(allStopsForSearch) {
     }
     
     processStops(airStops, 'air', 'IntraAir');
-    processStops(bahnStops, 'bahn', 'IntraBahn');
     processStops(busStops, 'bus', 'IntraBus');
     processStops(omegaStops, 'omega', 'OMEGAbus!');
     processStops(railStops, 'rail', 'IntraRail');

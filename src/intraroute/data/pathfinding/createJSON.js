@@ -73,7 +73,6 @@ function parseFiles(mode) {
     });
 }
 
-parseFiles('bahn');
 parseFiles('air');
 parseFiles('rail');
 parseFiles('sail');

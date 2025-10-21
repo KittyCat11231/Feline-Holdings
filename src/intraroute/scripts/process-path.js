@@ -3,9 +3,6 @@ import helpers from '@kyle11231/helper-functions';
 import airRoutes from '../data/ui/routes/air.json';
 import airStops from '../data/ui/stops/air.json';
 
-import bahnRoutes from '../data/ui/routes/bahn.json';
-import bahnStops from '../data/ui/stops/bahn.json';
-
 import busRoutes from '../data/ui/routes/bus.json';
 import busStops from '../data/ui/stops/bus.json';
 
@@ -37,10 +34,6 @@ function processPath(finalPath, processedPath, filters) {
         }
         helpers.mergeArrayIntoArray(airStops, allStops);
         helpers.mergeArrayIntoArray(airRoutes, allRoutes);
-    }
-    if (filters.useBahn === true) {
-        helpers.mergeArrayIntoArray(bahnStops, allStops);
-        helpers.mergeArrayIntoArray(bahnRoutes, allRoutes);
     }
     if (filters.useBus === true) {
         helpers.mergeArrayIntoArray(busStops, allStops);

@@ -153,7 +153,6 @@ import bulletRailNew507 from '../assets/intrarail/bullets new/507.png';
 import bulletRailNew508 from '../assets/intrarail/bullets new/508.png';
 import bulletRailNew509 from '../assets/intrarail/bullets new/509.png';
 
-import bahnData from '../data/ui/routes/bahn.json';
 import railData from '../data/ui/routes/rail.json';
 
 function Bullet(props) {
@@ -319,9 +318,6 @@ function Bullet(props) {
     bulletMap.set('bulletRailNew509', bulletRailNew509);
 
     let routes;
-    if (props.mode === 'bahn') {
-        routes = bahnData;
-    }
     if (props.mode === 'rail') {
         routes = railData;
     }

@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import styles from './Test.module.css';
 
 import airStops from '../intraroute/data/pathfinding/air.json';
-import bahnStops from '../intraroute/data/pathfinding/bahn.json';
 import busStops from '../intraroute/data/pathfinding/bus.json';
 import omegaStops from '../intraroute/data/pathfinding/omega.json';
 import railStops from '../intraroute/data/pathfinding/rail.json';
@@ -21,7 +20,6 @@ function Test1() {
     }
 
     addValidIds(airStops);
-    addValidIds(bahnStops);
     addValidIds(busStops);
     addValidIds(omegaStops);
     addValidIds(railStops);
