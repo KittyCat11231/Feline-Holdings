@@ -1,4 +1,11 @@
-const fs = require('fs');
+require('dotenv').config();
+
+const { google } = require('googleapis');
+
+const googleSheets = google.sheets({
+    version: 'v4',
+    auth: process.env.GOOGLE_SHEETS_API_KEY
+})
 
 const airStopsPath = require('./pathfinding/air.json');
 const railStopsPath = require('./pathfinding/rail.json');
@@ -23,24 +30,29 @@ class Route {
         this.id = id;
     }
     stops = [];
+    type = 'null';
+    num = 'null';
+    name = 'null';
+    destination = 'null';
+    mode = 'null';
 }
 
 class Stop {
     constructor(id) {
         this.id = id;
     }
-    meta1 = null;
-    meta2 = null;
-    nextStop = null;
+    meta1 = 'null';
+    meta2 = 'null';
+    nextStop = 'TERMINUS';
 }
 
-async function placeholder(stopsPath, stopsMeta, routes) {
+async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
 
     let stopsPathMap = new Map();
     let stopsMetaMap = new Map();
     let routesMap = new Map();
 
-    let routeIds = [];
+    let routes = [];
 
     for (let stopJson of stopsPath) {
         let stop = new Stop(stopJson.id);
@@ -51,7 +63,7 @@ async function placeholder(stopsPath, stopsMeta, routes) {
         stopsMetaMap.set(stopJson.id, stopJson);
     }
 
-    for (let routeJson of routes) {
+    for (let routeJson of routesFromJson) {
 
         if (routeJson.id === 'bus313') {
             continue;
@@ -59,7 +71,6 @@ async function placeholder(stopsPath, stopsMeta, routes) {
 
         let route = new Route(routeJson.id);
         routesMap.set(route.id, route);
-        routeIds.push(route.id);
 
         for (let stopJson of stopsMeta) {
 
@@ -84,7 +95,6 @@ async function placeholder(stopsPath, stopsMeta, routes) {
             for (let adjStop of stopPath.adjacentStops) {
                 if (adjStop.routes.includes(route.id)) {
                     stop.nextStop = adjStop.id;
-                    debugger;
                     break;
                 }
             }
@@ -93,11 +103,59 @@ async function placeholder(stopsPath, stopsMeta, routes) {
 
         }
 
-        console.log(route.id);
-        console.log(route.stops);
+        route.type = routeJson.type;
+        route.num = routeJson.num;
+        route.name = routeJson.name;
+        route.mode = mode;
+
+        routes.push(route);
 
     }
 
+    for (let route of routes) {
+
+        if (route.id === 'bus313') {
+            continue;
+        }
+
+        let stopsSorted = [];
+
+        for (let stop of route.stops) {
+            if (stop.nextStop === 'TERMINUS') {
+                stopsSorted.push(stop);
+                route.destination = stop.id;
+            }
+        }
+
+        let stopsLeftToSort = route.stops.length - 1;
+
+        while (stopsLeftToSort > 0) {
+            let continueLoop = false;
+            for (let stop of route.stops) {
+                console.log(stop);
+                if (!stopsSorted[0]) {
+                    console.log('debug');
+                }
+                if (stop.nextStop === stopsSorted[0].id) {
+                    stopsSorted.unshift(stop);
+                    stopsLeftToSort -= 1;
+                    continueLoop = true;
+                }
+            }
+
+            if (!continueLoop) {
+                break;
+            }
+        }
+
+        route.stops = stopsSorted;
+    }
+
+    return routes;
+
 }
 
-placeholder(busStopsPath, busStopsMeta, busRoutes);
+const busData = getRouteList(busStopsPath, busStopsMeta, busRoutes, 'bus');
+const railData = getRouteList(railStopsPath, railStopsMeta, railRoutes, 'rail');
+const sailData = getRouteList(sailStopsPath, sailStopsMeta, sailRoutes, 'sail');
+const omegaData = getRouteList(omegaStopsPath, omegaStopsMeta, omegaRoutes, 'omega');
