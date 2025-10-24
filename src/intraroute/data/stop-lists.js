@@ -4,8 +4,13 @@ const { google } = require('googleapis');
 
 const googleSheets = google.sheets({
     version: 'v4',
-    auth: process.env.GOOGLE_SHEETS_API_KEY
+    auth: new google.auth.GoogleAuth({
+        keyFile: './secret-key.json',
+        scopes: ['https://www.googleapis.com/auth/cloud-platform', 'https://www.googleapis.com/auth/spreadsheets']
+    })
 })
+
+const spreadsheetId = '1jkM-lYy3ryhUfAQtWy7lxYyCGh9DaByjthEqaCyy6Ws';
 
 const airStopsPath = require('./pathfinding/air.json');
 const railStopsPath = require('./pathfinding/rail.json');
@@ -25,6 +30,8 @@ const busRoutes = require('./ui/routes/bus.json');
 const sailRoutes = require('./ui/routes/sail.json');
 const omegaRoutes = require('./ui/routes/omega.json');
 
+const excludeList = ['bus313', 'rail_2Xnorth', 'rail_2Xsouth'];
+
 class Route {
     constructor(id) {
         this.id = id;
@@ -34,7 +41,6 @@ class Route {
     num = 'null';
     name = 'null';
     destination = 'null';
-    mode = 'null';
 }
 
 class Stop {
@@ -46,7 +52,7 @@ class Stop {
     nextStop = 'TERMINUS';
 }
 
-async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
+function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
 
     let stopsPathMap = new Map();
     let stopsMetaMap = new Map();
@@ -65,7 +71,7 @@ async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
 
     for (let routeJson of routesFromJson) {
 
-        if (routeJson.id === 'bus313') {
+        if (excludeList.includes(routeJson.id)) {
             continue;
         }
 
@@ -106,7 +112,6 @@ async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
         route.type = routeJson.type;
         route.num = routeJson.num;
         route.name = routeJson.name;
-        route.mode = mode;
 
         routes.push(route);
 
@@ -114,7 +119,7 @@ async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
 
     for (let route of routes) {
 
-        if (route.id === 'bus313') {
+        if (excludeList.includes(route.id)) {
             continue;
         }
 
@@ -132,7 +137,6 @@ async function getRouteList(stopsPath, stopsMeta, routesFromJson, mode) {
         while (stopsLeftToSort > 0) {
             let continueLoop = false;
             for (let stop of route.stops) {
-                console.log(stop);
                 if (!stopsSorted[0]) {
                     console.log('debug');
                 }
@@ -159,3 +163,70 @@ const busData = getRouteList(busStopsPath, busStopsMeta, busRoutes, 'bus');
 const railData = getRouteList(railStopsPath, railStopsMeta, railRoutes, 'rail');
 const sailData = getRouteList(sailStopsPath, sailStopsMeta, sailRoutes, 'sail');
 const omegaData = getRouteList(omegaStopsPath, omegaStopsMeta, omegaRoutes, 'omega');
+
+function makeRows(modeData) {
+
+    let rows = [];
+
+    for (let route of modeData) {
+
+        if (!route.stops[0]) {
+            console.log('debug here');
+        }
+
+        rows.push([route.id, route.type, route.num, route.name, route.destination, route.stops[0].id, route.stops[0].meta1, route.stops[0].meta2, 'null', 'null', 'null', 'null']);
+
+        for (let stop of route.stops) {
+
+            if (stop.id === route.stops[0].id) {
+                continue;
+            }
+
+            rows.push(['', '', '', '', '', stop.id, stop.meta1, stop.meta2, 'null', 'null', 'null', 'null']);
+
+        }
+
+        rows.push(['', '', '', '', '', '', '', '', '', '', '', '']);
+
+    }
+
+    return rows;
+}
+
+const busRows = makeRows(busData);
+const railRows = makeRows(railData);
+const sailRows = makeRows(sailData);
+const omegaRows = makeRows(omegaData);
+
+async function uploadRows(modeRows, sheet) {
+
+    try {
+        
+        await googleSheets.spreadsheets.values.append({
+            spreadsheetId,
+            range: `'${sheet}'A:L`,
+            insertDataOption: 'INSERT_ROWS',
+            requestBody: {
+                values: modeRows
+            }
+        })
+        console.log(`Uploaded ${sheet} to Google Sheets.`);
+
+    } catch (error) {
+        console.error(`Failed to upload ${sheet} to Google Sheets.`);
+        console.error(error);
+    }
+}
+
+async function uploadAllRows() {
+
+    await uploadRows(busRows, 'bus routes');
+    await uploadRows(railRows, 'rail routes');
+    await uploadRows(sailRows, 'sail routes');
+    await uploadRows(omegaRows, 'omega routes');
+
+    console.log('finish');
+
+}
+
+uploadAllRows();
