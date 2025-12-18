@@ -152,8 +152,8 @@ function IntraStatus() {
                     statusColor='gold'
                     statusTextColor='black'
                     description='Trains are suspended between Rosemary and Spring Valley Fifth Street.'
-                    descriptionBoxColor='gold'
-                    descriptionColor='black'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
                 />
