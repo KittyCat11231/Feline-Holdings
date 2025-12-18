@@ -8,6 +8,7 @@ import intraSailLogo from '../intraroute/logos/intrasail-white.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn-white.svg';
 
 import intraBusLogoGray from '../intraroute/logos/intrabus.svg';
+import intraAirLogoGray from '../intraroute/logos/intraair.svg';
 
 import intraRail51 from '../intraroute/assets/intrarail/bullets/51-white.png';
 import intraRail54 from '../intraroute/assets/intrarail/bullets/54.png';
@@ -99,20 +100,60 @@ function IntraStatus() {
         <div className={styles.container}>
             <div className={styles.line}>
                 <StatusLine
+                    logoSrc={intraAirLogoGray}
+                    logoAlt='IntraAir'
+                    modeColor='white'
+                    routeColor='#4d4d4d'
+                    routeName='All Flights'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='Expect service disruptions and some duplicate flight numbers as IntraAir rolls out its 2025 network changes.'
+                    descriptionBoxColor='#4d4d4d'
+                    descriptionColor='white'
+                    showLink={false}
+                    link=''
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#f082a5'
-                    routeName='10X East Mesan'
+                    routeName='1X Republic Express'
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Stop Skipped'
-                    statusColor='olive'
+                    status='Special Service'
+                    statusColor='blue'
                     statusTextColor='white'
-                    description='Trains bypass Plage Rouge-Seki City.'
+                    description='Trains make an additional stop at Laclede Theater District - Xavier Airport for the 2025 MRT Transit Awards.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='2 Mountain Lion'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='gold'
+                    statusTextColor='black'
+                    description='Trains are suspended between Rosemary and Spring Valley Fifth Street.'
+                    descriptionBoxColor='gold'
+                    descriptionColor='black'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
                 />
@@ -135,6 +176,106 @@ function IntraStatus() {
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='10X East Mesan'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Stop Skipped'
+                    statusColor='olive'
+                    statusTextColor='white'
+                    description='Trains bypass Plage Rouge-Seki City.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#808080'
+                    routeName='224'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Buses make an additional stop at Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
+                    descriptionBoxColor='#808080'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='302'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Buses are not running on this route.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f3be42'
+                    routeName='703'
+                    routeNameColor='black'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Special event service between Central City Beltway Terminal and Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
+                    descriptionBoxColor='#f3be42'
+                    descriptionColor='black'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f3be42'
+                    routeName='704'
+                    routeNameColor='black'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Special event service between Whitechapel Waterfront and Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
+                    descriptionBoxColor='#f3be42'
+                    descriptionColor='black'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
                 />
             </div>
         </div>
