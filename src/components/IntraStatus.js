@@ -144,26 +144,6 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#63dbd6'
-                    routeName='2 Mountain Lion'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='gold'
-                    statusTextColor='black'
-                    description='Trains are suspended between Rosemary and Spring Valley Fifth Street.'
-                    descriptionBoxColor='#63dbd6'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#63dbd6'
                     routeName='6 Grand Northern'
                     routeNameColor='white'
                     showRouteSymbol={false}
