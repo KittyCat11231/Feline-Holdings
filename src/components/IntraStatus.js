@@ -128,10 +128,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Trains make an additional stop at Laclede Theater District - Xavier Airport for the 2025 MRT Transit Awards.'
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Laclede Central and Zaquar Tanzanite Station.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
@@ -223,26 +223,6 @@ function IntraStatus() {
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
-                    routeColor='#808080'
-                    routeName='224'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Buses make an additional stop at Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
-                    descriptionBoxColor='#808080'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
                     routeColor='#b3b3b3'
                     routeName='302'
                     routeNameColor='white'
@@ -294,46 +274,6 @@ function IntraStatus() {
                     description='Buses are not running on this route. Use route 1.'
                     descriptionBoxColor='#b3b3b3'
                     descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
-                    routeColor='#f3be42'
-                    routeName='703'
-                    routeNameColor='black'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Special event service between Central City Beltway Terminal and Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
-                    descriptionBoxColor='#f3be42'
-                    descriptionColor='black'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
-                    routeColor='#f3be42'
-                    routeName='704'
-                    routeNameColor='black'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Special event service between Whitechapel Waterfront and Laclede Excalibur Theater for the 2025 MRT Transit Awards.'
-                    descriptionBoxColor='#f3be42'
-                    descriptionColor='black'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
                 />
