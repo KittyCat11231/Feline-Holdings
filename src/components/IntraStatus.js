@@ -123,26 +123,6 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
-                    routeColor='#f082a5'
-                    routeName='1X Republic Express'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Laclede Central and Zaquar Tanzanite Station.'
-                    descriptionBoxColor='#f082a5'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
                     routeColor='#63dbd6'
                     routeName='6 Grand Northern'
                     routeNameColor='white'
