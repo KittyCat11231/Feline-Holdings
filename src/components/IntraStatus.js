@@ -160,46 +160,6 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#DA1714'
-                    routeName='211 Taiga Crescent'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Larkspur and Willow. After Willow, makes 214 stops between Borealia and Skogheim.'
-                    descriptionBoxColor='#DA1714'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#DA1714'
-                    routeName='214 Lilyflower'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Skogheim and Snowtopic.'
-                    descriptionBoxColor='#DA1714'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
                     logoSrc={intraBusLogoGray}
                     logoAlt='IntraBus'
                     modeColor='white'
