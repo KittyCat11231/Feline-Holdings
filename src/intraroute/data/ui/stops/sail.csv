@@ -390,7 +390,11 @@ Weston,Harbour,sailWES,WES,sail3Beast,Dock 12,null,,
 Whitechapel,South Whitechapel Ferry Terminal,sailWHF,WHF,sail2north,null,null,Whitechapel Waterfront,
 Whitechapel,South Whitechapel Ferry Terminal,sailWHF,WHF,sail2south,null,null,Whitechapel Waterfront,
 ,,,,,,,,
-Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2north,null,null,Xandar,Vekta
-Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2south,null,null,Xandar,Vekta
-Xandar-Vekta,Transfer Station,sailXVT,XVT,sail3west,null,null,Xandar,Vekta
-Xandar-Vekta,Transfer Station,sailXVT,XVT,sail3east,null,null,Xandar,Vekta
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2north,Slip 1,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2south,Slip 8,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2Xnorth,Slip 4,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail2Xsouth,Slip 5,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail3west,Slip 7,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail3east,Slip 2,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail6north,Slip 6,null,,
+Xandar-Vekta,Transfer Station,sailXVT,XVT,sail6south,Slip 3,null,,
