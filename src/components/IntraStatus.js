@@ -6,9 +6,11 @@ import intraRailLogo from '../intraroute/logos/intrarail-white.svg';
 import intraBusLogo from '../intraroute/logos/intrabus-white.svg';
 import intraSailLogo from '../intraroute/logos/intrasail-white.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn-white.svg';
+import mcrLogo from '../intraroute/logos/mcr-white.svg';
 
 import intraBusLogoGray from '../intraroute/logos/intrabus.svg';
 import intraAirLogoGray from '../intraroute/logos/intraair.svg';
+import mcrLogoBlue from '../intraroute/logos/mcr.svg';
 
 import intraRail51 from '../intraroute/assets/intrarail/bullets/51-white.png';
 import intraRail54 from '../intraroute/assets/intrarail/bullets/54.png';
@@ -163,6 +165,26 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='106 Joeliner'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Some trains terminate at Marblegate-Lakeview Heathrow Airport instead of Marblegate Centraal.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
                     routeColor='#DA1714'
                     routeName='211 Taiga Crescent'
                     routeNameColor='white'
@@ -193,6 +215,46 @@ function IntraStatus() {
                     statusTextColor='black'
                     description='Suspended between Skogheim and Snowtopic.'
                     descriptionBoxColor='#DA1714'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={mcrLogoBlue}
+                    logoAlt='MCR'
+                    modeColor='white'
+                    routeColor='#0000ff'
+                    routeName='502 Manuelia Line'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Thunderbird and Scarborough.'
+                    descriptionBoxColor='#0000ff'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={mcrLogoBlue}
+                    logoAlt='MCR'
+                    modeColor='white'
+                    routeColor='#0000ff'
+                    routeName='505 Salvador Line'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. Use the IntraRail 106 or IntraBus routes 1, 201, and 313.'
+                    descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -272,6 +334,26 @@ function IntraStatus() {
                     statusColor='red'
                     statusTextColor='white'
                     description='Buses are not running on this route. Use route 1.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='405'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Stop Skipped'
+                    statusColor='olive'
+                    statusTextColor='white'
+                    description='Buses skip Larkspur Beckham Cross Terminal.'
                     descriptionBoxColor='#b3b3b3'
                     descriptionColor='white'
                     showLink={true}
