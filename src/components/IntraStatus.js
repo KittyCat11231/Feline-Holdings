@@ -286,6 +286,26 @@ function IntraStatus() {
                     logoAlt='IntraBus'
                     modeColor='white'
                     routeColor='#4D4D4D'
+                    routeName='103'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Bean City and Blackberry City Main Street. Use the IntraRail 107.'
+                    descriptionBoxColor='#4D4D4D'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#4D4D4D'
                     routeName='112'
                     routeNameColor='white'
                     showRouteSymbol={false}
