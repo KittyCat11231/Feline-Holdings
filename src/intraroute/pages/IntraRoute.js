@@ -55,8 +55,8 @@ function IntraRoute() {
 
     const showErrorNotice = true;
     const errorNoticeDate = 'Service Alert';
-    const errorText1 = 'IntraAir is rolling out its 2025 network changes.'
-    const errorText2 = 'Expect service disruptions and some duplicate flight numbers as we transition to our new network.';
+    const errorText1 = 'Service changes are in effect on IntraAir, IntraRail, and IntraBus that may affect your trip.';
+    const errorText2 = `See the Service Status section on the Intra page for details on service disruptions. We apologize for any inconvenience.`;
     
     return (
         <div>

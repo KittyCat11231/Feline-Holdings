@@ -226,26 +226,6 @@ function IntraStatus() {
                     logoAlt='MCR'
                     modeColor='white'
                     routeColor='#0000ff'
-                    routeName='502 Manuelia Line'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Thunderbird and Scarborough.'
-                    descriptionBoxColor='#0000ff'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={mcrLogoBlue}
-                    logoAlt='MCR'
-                    modeColor='white'
-                    routeColor='#0000ff'
                     routeName='505 Salvador Line'
                     routeNameColor='white'
                     showRouteSymbol={false}
