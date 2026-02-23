@@ -146,6 +146,26 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#f082a5'
+                    routeName='7X Sunshine Limited'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Stop Skipped'
+                    statusColor='olive'
+                    statusTextColor='white'
+                    description='Trains bypass San Dzobiak Union Square. Use the 7.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
                     routeName='10X East Mesan'
                     routeNameColor='white'
                     showRouteSymbol={false}
