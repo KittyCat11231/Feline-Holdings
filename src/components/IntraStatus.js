@@ -250,10 +250,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Suspended'
-                    statusColor='red'
-                    statusTextColor='white'
-                    description='Trains are not running. Use the IntraRail 106 or IntraBus routes 1, 201, and 313.'
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Scarborough and MLH Airport. Use the 106. Makes an additional stop at Scarborough City Plaza.'
                     descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
