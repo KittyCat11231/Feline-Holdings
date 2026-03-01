@@ -145,15 +145,35 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='7 Tundrean Bear'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='Trains now stop at Scarborough New Kent Terminal and Scarborough City Plaza. Trains no longer stop at Scarborough MRT Plaza. This is a permanent change.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
                     routeColor='#f082a5'
                     routeName='7X Sunshine Limited'
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Stop Skipped'
-                    statusColor='olive'
-                    statusTextColor='white'
-                    description='Trains bypass San Dzobiak Union Square. Use the 7.'
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='Trains now stop at Scarborough New Kent Terminal. This is a permanent change.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
@@ -190,10 +210,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
+                    status='Discontinued'
+                    statusColor='red'
                     statusTextColor='white'
-                    description='Some trains terminate at Marblegate-Lakeview Heathrow Airport instead of Marblegate Centraal.'
+                    description='This service has been discontinued. Use the MCR 505. This is a permanent change.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -250,10 +270,30 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
+                    status='Special Notice'
+                    statusColor='orange'
                     statusTextColor='black'
-                    description='Suspended between Scarborough and MLH Airport. Use the 106. Makes an additional stop at Scarborough City Plaza.'
+                    description='Trains now stop at all former IntraRail 106 stops between Central City and Siletz, and at Marblegate Centraal. Trains no longer stop at Marblegate-Lakeview Heathrow Airport. This is a permanent change.'
+                    descriptionBoxColor='#0000ff'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={mcrLogoBlue}
+                    logoAlt='MCR'
+                    modeColor='white'
+                    routeColor='#0000ff'
+                    routeName='506 West Line'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='Trains are extended from Scarborough to Marblegate-Lakeview Heathrow Airport via Montagnas, Saint Roux, and Lakeview. This is a permanent change.'
                     descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
