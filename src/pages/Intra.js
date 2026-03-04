@@ -147,19 +147,6 @@ function Intra() {
             descriptorText: "Intra's passenger ferry service.",
             link: 'https://wiki.minecartrapidtransit.net/index.php/IntraSail'
         },
-        {
-            boxColor: '#4d4d4d',
-            textColor: 'white',
-            imgBoxColor: 'white',
-            imgSrc: intraBahnLogo,
-            imgHeightDesktop: '65px',
-            imgHeightMobile: '100px',
-            imgAlt: 'IntraBahn',
-            headerText: 'IntraBahn',
-            subHeaderText: 'Ride the open rails.',
-            descriptorText: "Intra's traincart rail service.",
-            link: 'https://wiki.minecartrapidtransit.net/index.php/IntraBahn'
-        },
     ]
 
     let gridPropsAir = [
