@@ -460,6 +460,26 @@ function IntraStatus() {
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
                 />
             </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraSailLogo}
+                    logoAlt='IntraSail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='901 Sybil Shuttle'
+                    routeNameColor='black'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Port Sybil and Oparia to replace IntraBus route 4.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='black'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraSail#Service_Changes'
+                />
+            </div>
         </div>
     )
 }
