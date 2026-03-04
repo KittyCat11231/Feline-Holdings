@@ -22,7 +22,7 @@ function StopDot(props) {
     if (props.mode === 'air' && ['origin', 'mainline', 'heli', 'poseidon'].includes(props.type)) {
         stopDotSrc = stopDotGray;
     }
-    if (props.mode === 'bus') {
+    if (props.mode === 'bus' && props.type === 'intercity') {
         stopDotSrc = stopDotGray;
     }
 

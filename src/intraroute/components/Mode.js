@@ -107,6 +107,13 @@ function Mode(props) {
         srcToUse = busLogo;
         boxStyles = styles.intraBox;
         logoStyles = styles.intraLogos;
+        if (props.type === 'trunk') {
+            boxStyles = styles.busTrunkBox;
+        } else if (props.type === 'regional') {
+            boxStyles = styles.busRegionalBox;
+        } else {
+            boxStyles = styles.intraBox;
+        }
     }
     if (props.mode === 'omega') {
         srcToUse = omegaLogo;
@@ -143,7 +150,7 @@ function Mode(props) {
     if (props.mode === 'air' && (props.type === 'mainline' || props.type === 'heli' || props.type === 'poseidon')) {
         outlineStyle = styles.whiteOutline;
     }
-    if ((props.mode === 'rail' && (props.type ==='mcr' || props.type === 'mcrNew')) || props.mode === 'bus' || props.mode === 'railScar' || props.mode === 'railLumeva') {
+    if ((props.mode === 'rail' && (props.type ==='mcr' || props.type === 'mcrNew')) || (props.mode === 'bus' && ['trunk', 'intercity', 'regional'].includes(props.type)) || props.mode === 'railScar' || props.mode === 'railLumeva') {
         outlineStyle = styles.whiteOutline;
     }
 

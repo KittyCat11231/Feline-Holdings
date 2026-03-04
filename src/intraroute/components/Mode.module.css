@@ -14,6 +14,14 @@
     background-color: #4d4d4d;
 }
 
+.busTrunkBox {
+    background-color: #333333;
+}
+
+.busRegionalBox {
+    background-color: #808080;
+}
+
 .omegaBox {
     background-color: #7f0000;
 }

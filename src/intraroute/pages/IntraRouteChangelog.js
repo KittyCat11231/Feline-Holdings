@@ -33,6 +33,17 @@ function IntraRouteChangelog() {
 
     versions.push(
         new versionObj(
+            'Beta 1.0.9',
+            '3/4/2026',
+            [
+                'Added different colors for different IntraBus route types.',
+                'Added a gold colored route type for IntraSail special routes.'
+            ]
+        )
+    )
+
+    versions.push(
+        new versionObj(
             'Beta 1.0.8',
             '10/27/2025',
             [

@@ -105,7 +105,33 @@ function parseFiles(mode) {
                 }
             }
         }
-        if (mode === 'bus' || mode === 'omega') {
+        if (mode === 'bus') {
+            for (let i = 0; i < rows.length; i++) {
+                let row = rows[i].split(',');
+                let id = row[0]
+                let routeMode = mode;
+                let type = row[1];
+                let bullet = null;
+                let num = row[2];
+                let altText = null;
+                let routeName = `Route ${num}`;
+                let destination = row[3];
+                let destinationCity = row[4];
+                let destinationStopName = row[5];
+                let useFullNameIn = [];
+                for (let j = 6; j < Infinity; j++) {
+                    if (!(row[j])) {
+                        break;
+                    }
+                    useFullNameIn.push(row[j]);
+                }
+                let codeshares = null;
+                if (id) {
+                    routes.push(new route(id, routeMode, type, bullet, num, altText, routeName, destination, destinationCity, destinationStopName, useFullNameIn, codeshares));
+                }
+            }
+        }
+        if (mode === 'omega') {
             for (let i = 0; i < rows.length; i++) {
                 let row = rows[i].split(',');
                 let id = row[0]

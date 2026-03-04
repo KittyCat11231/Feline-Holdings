@@ -2,11 +2,16 @@ import React from 'react';
 import styles from './Circle.module.css';
 
 import busGray from '../assets/circle-icons/bus-gray.svg';
+import busTrunk from '../assets/circle-icons/bus-trunk.svg';
+import busRegional from '../assets/circle-icons/bus-regional.svg';
+import busLocal from '../assets/circle-icons/bus-local.svg';
+import busSpecial from '../assets/circle-icons/bus-special.svg';
 import busOmega from '../assets/circle-icons/bus-omega.svg';
 import ferryGray from '../assets/circle-icons/ferry-gray.svg';
 import ferrySailMainline from '../assets/circle-icons/ferry-sail-mainline.svg';
 import ferrySailExpress from '../assets/circle-icons/ferry-sail-express.svg';
 import ferrySailBranch from '../assets/circle-icons/ferry-sail-branch.svg';
+import ferrySailSpecial from '../assets/circle-icons/ferry-sail-special.svg';
 import heliGray from '../assets/circle-icons/heli-gray.svg';
 import heliEastern from '../assets/circle-icons/heli-eastern.svg';
 import heliHeampstead from '../assets/circle-icons/heli-heampstead.svg';
@@ -53,8 +58,20 @@ import mrtLogo from '../assets/mrt-logo.svg';
 
 function Circle(props) {
     let srcToUse;
-    if (props.mode === 'bus') {
+    if (props.mode === 'bus' && (props.type === 'origin' || props.type === 'intercity')) {
         srcToUse = busGray;
+    }
+    if (props.mode === 'bus' && props.type === 'trunk') {
+        srcToUse = busTrunk;
+    }
+    if (props.mode === 'bus' && props.type === 'regional') {
+        srcToUse = busRegional;
+    }
+    if (props.mode === 'bus' && props.type === 'local') {
+        srcToUse = busLocal;
+    }
+    if (props.mode === 'bus' && props.type === 'special') {
+        srcToUse = busSpecial;
     }
     if (props.mode === 'omega' && props.type === 'origin') {
         srcToUse = busGray;
@@ -73,6 +90,9 @@ function Circle(props) {
     }
     if (props.mode === 'sail' && props.type === 'branch') {
         srcToUse = ferrySailBranch;
+    }
+    if (props.mode === 'sail' && props.type === 'special') {
+        srcToUse = ferrySailSpecial;
     }
     if (props.mode === 'air' && props.type === 'heli') {
         srcToUse = heliGray;

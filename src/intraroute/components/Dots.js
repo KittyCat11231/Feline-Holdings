@@ -17,18 +17,20 @@ function Dots(props) {
 
     colors(colorStyles, colorObj, props.mode, props.type);
 
+    let filter = colorObj.filterColor;
+
     let src = dotsColor;
     if (props.mode === 'air') {
         if (['origin', 'mainline', 'heli', 'poseidon'].includes(props.type)) {
             src = dotsGray;
         }
     }
-    if (props.mode === 'bus') {
+    if (props.mode === 'bus' && props.type === 'intercity') {
         src = dotsGray;
     }
     
     return (
-        <img className={`${styles.dots} ${colorObj.filterColor}`} src={src} alt='A dotted line' />
+        <img className={`${styles.dots} ${filter}`} src={src} alt='A dotted line' />
     )
 }
 

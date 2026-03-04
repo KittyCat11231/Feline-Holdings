@@ -194,8 +194,30 @@ function colors(colorStyles, colorObj, mode, type) {
         }
     }
     if (mode === 'bus') {
-        colorObj.containerColor = colorStyles.grayBackground;
-        colorObj.mainColor = colorStyles.grayColor;
+        if (type === 'origin' || type === 'intercity') {
+            colorObj.containerColor = colorStyles.grayBackground;
+            colorObj.mainColor = colorStyles.grayColor;
+        }
+        if (type === 'trunk') {
+            colorObj.containerColor = colorStyles.busTrunkBackground;
+            colorObj.mainColor = colorStyles.busTrunkColor;
+            colorObj.filterColor = colorStyles.busTrunkFilter;
+        }
+        if (type === 'regional') {
+            colorObj.containerColor = colorStyles.busRegionalBackground;
+            colorObj.mainColor = colorStyles.busRegionalColor;
+            colorObj.filterColor = colorStyles.busRegionalFilter;
+        }
+        if (type === 'local') {
+            colorObj.containerColor = colorStyles.busLocalBackground;
+            colorObj.mainColor = colorStyles.busLocalColor;
+            colorObj.filterColor = colorStyles.busLocalFilter;
+        }
+        if (type === 'special') {
+            colorObj.containerColor = colorStyles.busSpecialBackground;
+            colorObj.mainColor = colorStyles.busSpecialColor;
+            colorObj.filterColor = colorStyles.busSpecialFilter;
+        }
     }
     if (mode === 'omega') {
         if (type === 'origin') {
@@ -226,6 +248,11 @@ function colors(colorStyles, colorObj, mode, type) {
             colorObj.containerColor = colorStyles.sailBranchBackground;
             colorObj.mainColor = colorStyles.sailBranchColor;
             colorObj.filterColor = colorStyles.sailBranchFilter;
+        }
+        if (type === 'special') {
+            colorObj.containerColor = colorStyles.sailSpecialBackground;
+            colorObj.mainColor = colorStyles.sailSpecialColor;
+            colorObj.filterColor = colorStyles.sailSpecialFilter;
         }
     }
     if (['railScar', 'railLumeva'].includes(mode)) {
