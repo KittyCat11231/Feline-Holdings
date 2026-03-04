@@ -325,6 +325,26 @@ function IntraStatus() {
                     logoSrc={intraBusLogoGray}
                     logoAlt='IntraBus'
                     modeColor='white'
+                    routeColor='#333333'
+                    routeName='4'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Puerto Hilaga and Oparia.'
+                    descriptionBoxColor='#333333'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
                     routeColor='#4D4D4D'
                     routeName='103'
                     routeNameColor='white'
@@ -355,6 +375,26 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Extended from Inkwell to Eastbourne via route 1. Buses make an additional stop at Ellerton Fosby Ferry Port.'
                     descriptionBoxColor='#4D4D4D'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#808080'
+                    routeName='237'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Extended to Puerto Hilaga Congress Building to replace route 4.'
+                    descriptionBoxColor='#808080'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
