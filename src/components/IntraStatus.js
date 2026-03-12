@@ -125,6 +125,86 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='1X Republic Express'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Segville and Zaquar. Use the 7X. Makes an additional stop at Siletz Salvador Station.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='2 Mountain Lion'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Reroute'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description="Trains don't stop at Utopia Plano, Delta City Henry Avenue, or Matheson Araya Avenue. Use the 404 and IntraBus 906. Trains run via the 103 between Utopia and Schillerton, and via the MCR 501 between Schillerton and Zaquar."
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='4 Imperial Service'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Siletz and Zaquar. Use the 7, 7X, and MCR 501, and IntraBus 107 and 906.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='4X Mason Limited'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. Use the 7X.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
                     routeColor='#63dbd6'
                     routeName='6 Grand Northern'
                     routeNameColor='white'
@@ -150,11 +230,51 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Makes an additional stop at Zaquar North to replace the 4.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='7 Tundrean Bear'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
                     status='Special Notice'
                     statusColor='orange'
                     statusTextColor='black'
                     description='Trains now stop at Scarborough New Kent Terminal and Scarborough City Plaza. Trains no longer stop at Scarborough MRT Plaza. This is a permanent change.'
                     descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='7X Sunshine Limited'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Extended from Siletz to Oparia via all 4X stops to replace the 4X.'
+                    descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -195,6 +315,26 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Trains bypass Plage Rouge-Seki City.'
                     descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='103 Anthony Fokker'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. Use the 2, 7X, and 405.'
+                    descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -255,6 +395,66 @@ function IntraStatus() {
                     statusTextColor='black'
                     description='Suspended between Skogheim and Snowtopic.'
                     descriptionBoxColor='#DA1714'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='404 Southern Cardinal'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Utopia and Delta City to replace the 2.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='405 Waterloo Shuttle'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Boston Waterloo Station and Boston Clapham Junction to replace the 103.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={mcrLogo}
+                    logoAlt='MCR'
+                    modeColor='#0000ff'
+                    routeColor='white'
+                    routeName='501 Pioneer Line'
+                    routeNameColor='#0000ff'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Makes an additional stop at Isle of Chez to replace the IntraRail 4.'
+                    descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -395,6 +595,26 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Buses skip Larkspur Beckham Cross Terminal.'
                     descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='906'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Utopia, Matheson, and Zaquar to replace the IntraRail 2 and 4.'
+                    descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
