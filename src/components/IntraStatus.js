@@ -525,6 +525,26 @@ function IntraStatus() {
                     logoSrc={intraBusLogoGray}
                     logoAlt='IntraBus'
                     modeColor='white'
+                    routeColor='#333333'
+                    routeName='4'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Buses make an additional stop at Antioch-Bay Point Garvey International Airport.'
+                    descriptionBoxColor='#333333'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
                     routeColor='#4D4D4D'
                     routeName='112'
                     routeNameColor='white'
@@ -574,6 +594,26 @@ function IntraStatus() {
                     statusColor='red'
                     statusTextColor='white'
                     description='Buses are not running on this route. Use route 1.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='399'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Buses are not running on this route. Use route 4.'
                     descriptionBoxColor='#b3b3b3'
                     descriptionColor='white'
                     showLink={true}
