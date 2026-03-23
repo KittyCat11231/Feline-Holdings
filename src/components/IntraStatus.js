@@ -173,7 +173,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Siletz and Zaquar. Use the 7, 7X, and MCR 501, and IntraBus 107 and 906.'
+                    description='Suspended between Matheson and Zaquar. Use the 7 and 7X, IntraBus 906, and RaiLinQ IC 0500.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -413,7 +413,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary service between Utopia and Delta City to replace the 2.'
+                    description='Temporary service between Utopia and Matheson to replace the 2.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
@@ -435,26 +435,6 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Temporary service between Boston Waterloo Station and Boston Clapham Junction to replace the 103.'
                     descriptionBoxColor='#f4bd21'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={mcrLogo}
-                    logoAlt='MCR'
-                    modeColor='#0000ff'
-                    routeColor='white'
-                    routeName='501 Pioneer Line'
-                    routeNameColor='#0000ff'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Makes an additional stop at Isle of Chez to replace the IntraRail 4.'
-                    descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -653,7 +633,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary service between Utopia, Matheson, and Zaquar to replace the IntraRail 2 and 4.'
+                    description='Temporary service between Matheson and Zaquar to replace the IntraRail 2 and 4.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
