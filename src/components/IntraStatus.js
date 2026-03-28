@@ -173,7 +173,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Matheson and Zaquar. Use the 7 and 7X, IntraBus 906, and RaiLinQ IC 0500.'
+                    description='Suspended between Sweet Sand Dunes and Zaquar. Use the 7 and 7X, IntraBus 906, and RaiLinQ IC 0500.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -413,7 +413,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary service between Utopia and Matheson to replace the 2.'
+                    description='Temporary service between Utopia and Sweet Sand Dunes to replace the 2.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
