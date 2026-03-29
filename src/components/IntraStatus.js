@@ -233,7 +233,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Makes an additional stop at Zaquar North to replace the 4.'
+                    description='Makes an additional stop at Zaquar North to replace the 4. Some trains are rerouted north of Zaquar to Isle of Chez.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
