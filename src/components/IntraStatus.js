@@ -640,6 +640,26 @@ function IntraStatus() {
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
                 />
             </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='907'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Larkspur Lilyflower Bus Station and Larkspur Public Hospital.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
         </div>
     )
 }
