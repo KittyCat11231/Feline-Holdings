@@ -173,7 +173,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Sweet Sand Dunes and Zaquar. Use the 7 and 7X, IntraBus 906, and RaiLinQ IC 0500.'
+                    description='Suspended between Siletz and Zaquar. Use the 2X and IntraBus 390 and 906. Makes additional stops to replace the 7 between Siletz and Elecna Bay.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -190,10 +190,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Suspended'
-                    statusColor='red'
-                    statusTextColor='white'
-                    description='Trains are not running. Use the 7X.'
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Siletz and Zaquar. Use IntraBus 906. Makes additional stops to replace the 7X between Siletz and Elecna Bay.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
@@ -230,30 +230,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Makes an additional stop at Zaquar North to replace the 4. Some trains are rerouted north of Zaquar to Isle of Chez.'
-                    descriptionBoxColor='#63dbd6'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#63dbd6'
-                    routeName='7 Tundrean Bear'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Notice'
-                    statusColor='orange'
+                    status='Part Suspended'
+                    statusColor='yellow'
                     statusTextColor='black'
-                    description='Trains now stop at Scarborough New Kent Terminal and Scarborough City Plaza. Trains no longer stop at Scarborough MRT Plaza. This is a permanent change.'
+                    description='Suspended between Siletz and Zaquar. Use the 4 and IntraBus 906.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -270,30 +250,10 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Extended from Siletz to Oparia via all 4X stops to replace the 4X.'
-                    descriptionBoxColor='#f082a5'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#f082a5'
-                    routeName='7X Sunshine Limited'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Notice'
-                    statusColor='orange'
+                    status='Part Suspended'
+                    statusColor='yellow'
                     statusTextColor='black'
-                    description='Trains now stop at Scarborough New Kent Terminal. This is a permanent change.'
+                    description='Suspended between Siletz and Zaquar. Use the 4X and IntraBus 906.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
@@ -326,14 +286,14 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#63dbd6'
-                    routeName='103 Anthony Fokker'
+                    routeName='101 Whiteliner'
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Suspended'
-                    statusColor='red'
-                    statusTextColor='white'
-                    description='Trains are not running. Use the 2, 7X, and 405.'
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Whiteley and Zaquar. Use the 2.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -346,14 +306,34 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#63dbd6'
-                    routeName='106 Joeliner'
+                    routeName='102 EPIC Express'
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
-                    status='Discontinued'
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Zaquar and Elecna Bay. Use IntraBus 906.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='103 Anthony Fokker'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
                     statusColor='red'
                     statusTextColor='white'
-                    description='This service has been discontinued. Use the MCR 505. This is a permanent change.'
+                    description='Trains are not running. Use the 2, 7X, and 405.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -405,6 +385,26 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
+                    routeColor='#27d950'
+                    routeName='301 Zaquar Zephyr'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Zaquar Shores and Zaquar Hummingbird Dock. For Zaquar North, use IntraBus 390.'
+                    descriptionBoxColor='#27d950'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
                     routeColor='#f4bd21'
                     routeName='404 Southern Cardinal'
                     routeNameColor='white'
@@ -413,7 +413,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary service between Utopia and Sweet Sand Dunes to replace the 2.'
+                    description='Temporary service between Utopia and Isle of Chez to replace the 2.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
@@ -435,46 +435,6 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Temporary service between Boston Waterloo Station and Boston Clapham Junction to replace the 103.'
                     descriptionBoxColor='#f4bd21'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={mcrLogoBlue}
-                    logoAlt='MCR'
-                    modeColor='white'
-                    routeColor='#0000ff'
-                    routeName='505 Salvador Line'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Notice'
-                    statusColor='orange'
-                    statusTextColor='black'
-                    description='Trains now stop at all former IntraRail 106 stops between Central City and Siletz, and at Marblegate Centraal. Trains no longer stop at Marblegate-Lakeview Heathrow Airport. This is a permanent change.'
-                    descriptionBoxColor='#0000ff'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={mcrLogoBlue}
-                    logoAlt='MCR'
-                    modeColor='white'
-                    routeColor='#0000ff'
-                    routeName='506 West Line'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Notice'
-                    statusColor='orange'
-                    statusTextColor='black'
-                    description='Trains are extended from Scarborough to Marblegate-Lakeview Heathrow Airport via Montagnas, Saint Roux, and Lakeview. This is a permanent change.'
-                    descriptionBoxColor='#0000ff'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -553,7 +513,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary service between Matheson and Zaquar to replace the IntraRail 2 and 4.'
+                    description='Temporary service stopping at Siletz, Matheson, Elecna Bay, and Zaquar to replace the IntraRail 2, 4, 4X, 7, 7X, and 102.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
