@@ -150,11 +150,71 @@ function IntraStatus() {
                     routeNameColor='white'
                     showRouteSymbol={false}
                     routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description="Suspended between Skogheim and Eagleshore. Use the 406 and 407 and IntraBus 2, 405, and 407. Makes additional stops to replace the 403 between Eagleshore and Larkspur."
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='2 Mountain Lion'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
                     status='Reroute'
                     statusColor='blue'
                     statusTextColor='white'
                     description="Trains don't stop at Utopia Plano, Delta City Henry Avenue, or Matheson Araya Avenue. Use the 404 and IntraBus 906. Trains run via the 103 between Utopia and Schillerton, and via the MCR 501 between Schillerton and Zaquar."
                     descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='2X Centralen'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Some trains terminate at Larkspur Greenwood Station instead of Whitechapel Border.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='2X Centralen'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Makes additional stops to replace the 4 between Siletz and Isle of Chez.'
+                    descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -353,7 +413,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Larkspur and Willow. After Willow, makes 214 stops between Borealia and Skogheim.'
+                    description='Suspended between Larkspur and Savage City. Use IntraBus 2 and 405.'
                     descriptionBoxColor='#DA1714'
                     descriptionColor='white'
                     showLink={true}
@@ -373,7 +433,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Skogheim and Snowtopic.'
+                    description='Suspended between Skogheim and Larkspur. Use the 407 and IntraBus 2, 405, and 407.'
                     descriptionBoxColor='#DA1714'
                     descriptionColor='white'
                     showLink={true}
@@ -395,6 +455,26 @@ function IntraStatus() {
                     statusTextColor='black'
                     description='Suspended between Zaquar Shores and Zaquar Hummingbird Dock. For Zaquar North, use IntraBus 390.'
                     descriptionBoxColor='#27d950'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='403 Aurian'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Discontinued'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='This service has been discontinued. Use the 2. This is a permanent change.'
+                    descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
@@ -434,6 +514,46 @@ function IntraStatus() {
                     statusColor='blue'
                     statusTextColor='white'
                     description='Temporary service between Boston Waterloo Station and Boston Clapham Junction to replace the 103.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='406 Birchwood Line'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Savage City and Spring Valley to replace the 2.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='407 Borealian'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Skogheim and Borealia to replace the 2 and 214.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
@@ -485,26 +605,6 @@ function IntraStatus() {
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
-                    routeColor='#b3b3b3'
-                    routeName='405'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Stop Skipped'
-                    statusColor='olive'
-                    statusTextColor='white'
-                    description='Buses skip Larkspur Beckham Cross Terminal.'
-                    descriptionBoxColor='#b3b3b3'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
                     routeColor='#f4bd21'
                     routeName='906'
                     routeNameColor='white'
@@ -514,26 +614,6 @@ function IntraStatus() {
                     statusColor='blue'
                     statusTextColor='white'
                     description='Temporary service stopping at Siletz, Matheson, Elecna Bay, and Zaquar to replace the IntraRail 2, 4, 4X, 7, 7X, and 102.'
-                    descriptionBoxColor='#f4bd21'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
-                    routeColor='#f4bd21'
-                    routeName='907'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Temporary service between Larkspur Lilyflower Bus Station and Larkspur Public Hospital.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
