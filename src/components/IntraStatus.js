@@ -353,7 +353,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Whiteley and Zaquar. Use the 2.'
+                    description='Suspended between Deadbush Far East Interchange and Zaquar. Use the 2 and 108 and IntraBus 7.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -394,6 +394,27 @@ function IntraStatus() {
                     statusColor='red'
                     statusTextColor='white'
                     description='Trains are not running. Use the 2, 7X, and 405.'
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='108 Utopiary'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Deadbush and Birdhall. Use IntraBus 7 and 350. Makes an additional stop in Whiteley to replace the 101.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -454,6 +475,46 @@ function IntraStatus() {
                     statusColor='yellow'
                     statusTextColor='black'
                     description='Suspended between Zaquar Shores and Zaquar Hummingbird Dock. For Zaquar North, use IntraBus 390.'
+                    descriptionBoxColor='#27d950'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#27d950'
+                    routeName='304 Totsworth Branch'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. There is no service to Totsworth.'
+                    descriptionBoxColor='#27d950'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#27d950'
+                    routeName='305 Rooster Shuttle'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. There is no service to Haskaa.'
                     descriptionBoxColor='#27d950'
                     descriptionColor='white'
                     showLink={true}
