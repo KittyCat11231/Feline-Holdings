@@ -1,7 +1,7 @@
 bus1west,trunk,1,busCBT,Central City,Beltway Terminal,,,,,,
 bus1east,trunk,1,busIWS,Inkwell,Station,,,,,,
 bus2north,trunk,2,busOAI,Refuge,Ozora Area International Airport,busREF,,,,,
-bus2south,trunk,2,busCBT,Central City,Beltway Terminal,,,,,,
+bus2south,trunk,2,busBAR,Central City,BART Building,busCBT,,,,,
 bus3west,trunk,3,busLAR,Larkspur,Lilyflower Bus Station,,,,,,
 bus3east,trunk,3,busCNW,Cornwall,Great Union Terminal,,,,,,
 bus4north,trunk,4,busKBN,Kleinsburg,Noord Airfield,busKLN,,,,,
