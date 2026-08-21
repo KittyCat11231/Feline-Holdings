@@ -336,6 +336,9 @@ Starfall,Pride Memorial Park Ferry,sailSTF,STF,sail6Csouth,null,null,,
 St. Helena,null,sailHEL,HEL,sail1west,null,null,St Helena,Saint Helena
 St. Helena,null,sailHEL,HEL,sail1east,null,null,St Helena,Saint Helena
 ,,,,,,,,
+St. Louise,Canalside,busSTL,STL,sail3west,null,null,St Louise Canalside Saint Louise Canalside,
+St. Louise,Canalside,busSTL,STL,sail3east,null,null,St Louise Canalside Saint Louise Canalside,
+,,,,,,,,
 Sunshine Coast,null,sailSSC,SSC,sail5north,null,null,,
 Sunshine Coast,null,sailSSC,SSC,sail5south,null,null,,
 Sunshine Coast,null,sailSSC,SSC,sail5Anorth,null,null,,
