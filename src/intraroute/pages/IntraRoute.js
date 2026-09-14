@@ -53,10 +53,10 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = false;
-    const errorNoticeDate = 'Service Alert';
-    const errorText1 = 'Service changes are in effect on IntraAir, IntraRail, and IntraBus that may affect your trip.';
-    const errorText2 = `See the Service Status section on the Intra page for details on service disruptions. We apologize for any inconvenience.`;
+    const showErrorNotice = true;
+    const errorNoticeDate = 'September 13, 2026';
+    const errorText1 = 'Some IntraRail route information may be out of date as we work on restoring service to Zaquar following construction.';
+    const errorText2 = `We apologize for any inconvenience.`;
     
     return (
         <div>
