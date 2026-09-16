@@ -493,7 +493,7 @@ function IntraStatus() {
                     status='Special Service'
                     statusColor='blue'
                     statusTextColor='white'
-                    description='Temporary express service between Siletz and Elecna Bay to replace the 7.'
+                    description='Temporary express service between Siletz and Elecna Bay to replace the 7X.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
