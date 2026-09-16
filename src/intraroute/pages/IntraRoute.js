@@ -53,7 +53,7 @@ function IntraRoute() {
 
     const [returnError, setReturnError] = useState(false);
 
-    const showErrorNotice = true;
+    const showErrorNotice = false;
     const errorNoticeDate = 'September 13, 2026';
     const errorText1 = 'Some IntraRail route information may be out of date as we work on restoring service to Zaquar following construction.';
     const errorText2 = `We apologize for any inconvenience.`;
