@@ -126,6 +126,26 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#63dbd6'
+                    routeName='1 Spruce Regional'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description="Extended from BirchView to Oparia to replace the 4."
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
                     routeName='2 Mountain Lion'
                     routeNameColor='white'
                     showRouteSymbol={false}
@@ -133,7 +153,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description="Suspended between Skogheim and Eagleshore. Use the 406 and 407 and IntraBus 2, 405, and 407. Makes additional stops to replace the 403 between Eagleshore and Larkspur."
+                    description="Suspended between Skogheim and Eagleshore. Use the 406 and 407 and IntraBus 2, 249, and 407. Makes additional stops to replace the 403 between Eagleshore and Larkspur."
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -154,6 +174,46 @@ function IntraStatus() {
                     statusColor='blue'
                     statusTextColor='white'
                     description='Some trains terminate at Larkspur Greenwood Station instead of Whitechapel Border.'
+                    descriptionBoxColor='#f082a5'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#63dbd6'
+                    routeName='4 Imperial Service'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description="Suspended between Oparia and Benion. Use the 1 and 4X and IntraBus 908."
+                    descriptionBoxColor='#63dbd6'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f082a5'
+                    routeName='4X Mason Limited'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Reroute'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Rerouted via the 207 and 307 between BirchView and ATC International (via MRT Marina). Use the 4 and IntraBus 908.'
                     descriptionBoxColor='#f082a5'
                     descriptionColor='white'
                     showLink={true}
@@ -306,6 +366,26 @@ function IntraStatus() {
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
                     routeColor='#DA1714'
+                    routeName='207 Merchanter'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between BirchView and MRT Marina. Use the 4X.'
+                    descriptionBoxColor='#DA1714'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#DA1714'
                     routeName='211 Taiga Crescent'
                     routeNameColor='white'
                     showRouteSymbol={false}
@@ -313,7 +393,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Larkspur and Savage City. Use IntraBus 2 and 405.'
+                    description='Suspended between Larkspur and Savage City. Use IntraBus 2 and 249.'
                     descriptionBoxColor='#DA1714'
                     descriptionColor='white'
                     showLink={true}
@@ -333,7 +413,7 @@ function IntraStatus() {
                     status='Part Suspended'
                     statusColor='yellow'
                     statusTextColor='black'
-                    description='Suspended between Skogheim and Larkspur. Use the 407 and IntraBus 2, 405, and 407.'
+                    description='Suspended between Skogheim and Larkspur. Use the 407 and IntraBus 2, 249, and 407.'
                     descriptionBoxColor='#DA1714'
                     descriptionColor='white'
                     showLink={true}
@@ -394,6 +474,26 @@ function IntraStatus() {
                     statusColor='red'
                     statusTextColor='white'
                     description='Trains are not running. There is no service to Haskaa.'
+                    descriptionBoxColor='#27d950'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraRailLogo}
+                    logoAlt='IntraRail'
+                    modeColor='#4d4d4d'
+                    routeColor='#27d950'
+                    routeName='307 Lakeshore Line'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Trains are not running. Use the 4X.'
                     descriptionBoxColor='#27d950'
                     descriptionColor='white'
                     showLink={true}
@@ -514,6 +614,26 @@ function IntraStatus() {
                     statusColor='blue'
                     statusTextColor='white'
                     description='Temporary service stopping at Elecna Bay and Zaquar to replace the IntraRail 7, 7X, and 102.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='908'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between BirchView and Benion to replace the IntraRail 4 and 4X.'
                     descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
