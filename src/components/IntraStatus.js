@@ -502,6 +502,46 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#4d4d4d'
+                    routeName='112'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Victorville and Inkwell. Use route 415 and the IntraSail 902.'
+                    descriptionBoxColor='#4d4d4d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='702'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Buses are not running. Use route 415 and the IntraSail 5 and 902.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
@@ -518,6 +558,26 @@ function IntraStatus() {
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraSailLogo}
+                    logoAlt='IntraSail'
+                    modeColor='#4d4d4d'
+                    routeColor='#f4bd21'
+                    routeName='902'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Temporary service between Victorville and Inkwell to replace IntraBus 112 and 702.'
+                    descriptionBoxColor='#f4bd21'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraSail#Service_Changes'
                 />
             </div>
         </div>
