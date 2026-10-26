@@ -505,6 +505,26 @@ function IntraStatus() {
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
+                    routeColor='#808080'
+                    routeName='229'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Stop Skipped'
+                    statusColor='olive'
+                    statusTextColor='white'
+                    description='Buses skip Grisville Central.'
+                    descriptionBoxColor='#808080'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
                     routeColor='#f4bd21'
                     routeName='906'
                     routeNameColor='white'
