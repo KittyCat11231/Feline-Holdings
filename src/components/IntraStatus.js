@@ -7,10 +7,12 @@ import intraBusLogo from '../intraroute/logos/intrabus-white.svg';
 import intraSailLogo from '../intraroute/logos/intrasail-white.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn-white.svg';
 import mcrLogo from '../intraroute/logos/mcr-white.svg';
+import omegaLogo from '../intraroute/logos/omegabus-white.svg';
 
 import intraBusLogoGray from '../intraroute/logos/intrabus.svg';
 import intraAirLogoGray from '../intraroute/logos/intraair.svg';
 import mcrLogoBlue from '../intraroute/logos/mcr.svg';
+import omegaLogoRed from '../intraroute/logos/omegabus.svg';
 
 import intraRail51 from '../intraroute/assets/intrarail/bullets/51-white.png';
 import intraRail54 from '../intraroute/assets/intrarail/bullets/54.png';
@@ -538,6 +540,46 @@ function IntraStatus() {
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={omegaLogoRed}
+                    logoAlt='OMEGAbus!'
+                    modeColor='white'
+                    routeColor='#ff0000'
+                    routeName='804'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='This route has no direct connection to other Intra services. Exit at Bluemont and walk 300 meters east to Mandela Station for OMEGAbus! routes 803 and 814.'
+                    descriptionBoxColor='#ff0000'
+                    descriptionColor='white'
+                    showLink={false}
+                    link=''
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={omegaLogoRed}
+                    logoAlt='OMEGAbus!'
+                    modeColor='white'
+                    routeColor='#ff0000'
+                    routeName='816'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='This route has no direct connection to other Intra services. Exit at Forestville and take the MRT Yellow Line one stop north to Parkour City for OMEGAbus! route 808.'
+                    descriptionBoxColor='#ff0000'
+                    descriptionColor='white'
+                    showLink={false}
+                    link=''
                 />
             </div>
         </div>
