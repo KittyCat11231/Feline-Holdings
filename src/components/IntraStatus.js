@@ -187,46 +187,6 @@ function IntraStatus() {
                     logoSrc={intraRailLogo}
                     logoAlt='IntraRail'
                     modeColor='#4d4d4d'
-                    routeColor='#63dbd6'
-                    routeName='7 Tundrean Bear'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Siletz and Zaquar. Use the 4X, 408, and IntraBus 906.'
-                    descriptionBoxColor='#63dbd6'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#f082a5'
-                    routeName='7X Sunshine Limited'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Siletz and Zaquar. Use the 4X, 408X, and IntraBus 906.'
-                    descriptionBoxColor='#f082a5'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
                     routeColor='#f082a5'
                     routeName='10X East Mesan'
                     routeNameColor='white'
@@ -256,26 +216,6 @@ function IntraStatus() {
                     statusColor='yellow'
                     statusTextColor='black'
                     description='Suspended between Deadbush Far East Interchange and Zaquar. Use the 108 and IntraBus 7.'
-                    descriptionBoxColor='#63dbd6'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#63dbd6'
-                    routeName='102 EPIC Express'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Part Suspended'
-                    statusColor='yellow'
-                    statusTextColor='black'
-                    description='Suspended between Zaquar and Elecna Bay. Use IntraBus 906.'
                     descriptionBoxColor='#63dbd6'
                     descriptionColor='white'
                     showLink={true}
@@ -464,46 +404,6 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#f4bd21'
-                    routeName='408 Elecna Regional'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Temporary local service between Siletz and Elecna Bay to replace the 7.'
-                    descriptionBoxColor='#f4bd21'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraRailLogo}
-                    logoAlt='IntraRail'
-                    modeColor='#4d4d4d'
-                    routeColor='#f4bd21'
-                    routeName='408X Elecna Express'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Temporary express service between Siletz and Elecna Bay to replace the 7X.'
-                    descriptionBoxColor='#f4bd21'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraRail#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
@@ -517,26 +417,6 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Buses skip Grisville Central.'
                     descriptionBoxColor='#808080'
-                    descriptionColor='white'
-                    showLink={true}
-                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
-                />
-            </div>
-            <div className={styles.line}>
-                <StatusLine
-                    logoSrc={intraBusLogo}
-                    logoAlt='IntraBus'
-                    modeColor='#4d4d4d'
-                    routeColor='#f4bd21'
-                    routeName='906'
-                    routeNameColor='white'
-                    showRouteSymbol={false}
-                    routeSymbol={null}
-                    status='Special Service'
-                    statusColor='blue'
-                    statusTextColor='white'
-                    description='Temporary service stopping at Elecna Bay and Zaquar to replace the IntraRail 7, 7X, and 102.'
-                    descriptionBoxColor='#f4bd21'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
