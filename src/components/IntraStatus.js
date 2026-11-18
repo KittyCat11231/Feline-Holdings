@@ -404,6 +404,46 @@ function IntraStatus() {
             </div>
             <div className={styles.line}>
                 <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#333333'
+                    routeName='1'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Sunshine Cove and Peach Bay. Use route 112 and the IntraSail 5. Makes an additional stop at Sunshine Cove Waterside to connect to the IntraSail 5, replacing route 347.'
+                    descriptionBoxColor='#333333'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogoGray}
+                    logoAlt='IntraBus'
+                    modeColor='white'
+                    routeColor='#4d4d4d'
+                    routeName='112'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Service'
+                    statusColor='blue'
+                    statusTextColor='white'
+                    description='Extended from Inkwell to Eastbourne to replace route 1. Makes an additional stop at Ellerton Fosby Ferry Port to connect to the IntraSail 5, replacing route 332.'
+                    descriptionBoxColor='#4d4d4d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
                     logoSrc={intraBusLogo}
                     logoAlt='IntraBus'
                     modeColor='#4d4d4d'
@@ -417,6 +457,46 @@ function IntraStatus() {
                     statusTextColor='white'
                     description='Buses skip Grisville Central.'
                     descriptionBoxColor='#808080'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='332'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Buses are not running. Use route 112.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='347'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Buses are not running. Use route 1.'
+                    descriptionBoxColor='#b3b3b3'
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
