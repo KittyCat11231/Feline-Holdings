@@ -8,11 +8,15 @@ import intraSailLogo from '../intraroute/logos/intrasail-white.svg';
 import intraBahnLogo from '../intraroute/logos/intrabahn-white.svg';
 import mcrLogo from '../intraroute/logos/mcr-white.svg';
 import omegaLogo from '../intraroute/logos/omegabus-white.svg';
+import waypointLogo from '../intraroute/logos/waypoint-white.svg';
+import acaciaAirLogo from '../intraroute/logos/acaciaair-white.svg';
 
 import intraBusLogoGray from '../intraroute/logos/intrabus.svg';
 import intraAirLogoGray from '../intraroute/logos/intraair.svg';
 import mcrLogoBlue from '../intraroute/logos/mcr.svg';
 import omegaLogoRed from '../intraroute/logos/omegabus.svg';
+import waypointLogoGold from '../intraroute/logos/waypoint.svg';
+import acaciaAirLogoOrange from '../intraroute/logos/acaciaair.svg';
 
 import intraRail51 from '../intraroute/assets/intrarail/bullets/51-white.png';
 import intraRail54 from '../intraroute/assets/intrarail/bullets/54.png';
@@ -120,6 +124,46 @@ function IntraStatus() {
                     descriptionColor='white'
                     showLink={false}
                     link=''
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={waypointLogoGold}
+                    logoAlt='Waypoint'
+                    modeColor='white'
+                    routeColor='#f6ab4d'
+                    routeName='Flight 4023 (EIA - RBR)'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Suspended due to Rainer Bay Regional Airfield (RBR) re-construction.'
+                    descriptionBoxColor='#f6ab4d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraAir#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={acaciaAirLogoOrange}
+                    logoAlt='AcaciaAir'
+                    modeColor='white'
+                    routeColor='#f9801d'
+                    routeName='Flight 5024 (NPR - RBR)'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Suspended'
+                    statusColor='red'
+                    statusTextColor='white'
+                    description='Suspended due to Rainer Bay Regional Airfield (RBR) re-construction.'
+                    descriptionBoxColor='#f9801d'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraAir#Service_Changes'
                 />
             </div>
             <div className={styles.line}>
@@ -500,6 +544,46 @@ function IntraStatus() {
                     descriptionColor='white'
                     showLink={true}
                     link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='379'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Part Suspended'
+                    statusColor='yellow'
+                    statusTextColor='black'
+                    description='Suspended between Rainer Bay Central and Rainer Bay Regional Airfield.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://wiki.minecartrapidtransit.net/index.php/IntraBus#Service_Changes'
+                />
+            </div>
+            <div className={styles.line}>
+                <StatusLine
+                    logoSrc={intraBusLogo}
+                    logoAlt='IntraBus'
+                    modeColor='#4d4d4d'
+                    routeColor='#b3b3b3'
+                    routeName='379'
+                    routeNameColor='white'
+                    showRouteSymbol={false}
+                    routeSymbol={null}
+                    status='Special Notice'
+                    statusColor='orange'
+                    statusTextColor='black'
+                    description='This route has no direct connection to other Intra services due to temporary IntraAir airline suspensions. This route is not included on IntraRoute until connecting flights are restored.'
+                    descriptionBoxColor='#b3b3b3'
+                    descriptionColor='white'
+                    showLink={true}
+                    link='https://files.felineholdings.com/intrabus-service-changes-11-19-2026.pdf'
                 />
             </div>
             <div className={styles.line}>
