@@ -55,7 +55,7 @@ function IntraRoute() {
 
     const showErrorNotice = true;
     const errorNoticeDate = 'November 27, 2026';
-    const errorText1 = 'Some IntraAir flights from the following airports may show different flight numbers than shown in IntraRoute: STE, SVS, SVA, SSI, SSR, TBI, TSA, TFA, JDL, VCA, VFW, VEX, VER, VIC, RSZ, VIP';
+    const errorText1 = 'Some IntraAir flights from the following airports may show different flight numbers than shown in IntraRoute: STE, SVS, SVA, SSI, SSR, TBI, TSA, TFA, JDL, VCA, VFW, VEX, VER, VIC, RSZ, VIP.';
     const errorText2 = `We're updating flight numbers as part of our 2025-2026 network redesign. Please be patient as we update our system.`;
     
     return (
